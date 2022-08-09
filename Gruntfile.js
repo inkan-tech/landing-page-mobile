@@ -16,7 +16,7 @@ module.exports = grunt => {
               localeExtension: true,
             },
             files: {
-              "dist/index.html": ["src/pug/*.pug", "src/pug/includes/*.pug"],
+              "dist/index.html": ["src/pug/*.pug"],
             }
           }
         },
@@ -43,6 +43,12 @@ module.exports = grunt => {
         expand: true,
         cwd: 'src',
         src: ['assets/**'],
+        dest: 'dist/'
+      },
+      redirect: {
+        expand: true,
+        cwd: 'src',
+        src: ['index.html'],
         dest: 'dist/'
       }
     },

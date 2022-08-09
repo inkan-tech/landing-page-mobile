@@ -1,0 +1,19 @@
+<html>
+    <script type="text/javascript">
+
+    var language = navigator.language || navigator.browserLanguage;
+// split to keep the first part of language
+    switch (language.split(/_(.*)/s)[0].toLowerCase()) {
+  case 'fr':
+    document.location.pathname = 'fr/';
+    break;
+  case 'es':
+    document.location.pathname = 'es/';
+    break;
+  default:
+  document.location.pathname = 'en/';
+}
+
+
+</script>
+</html>
