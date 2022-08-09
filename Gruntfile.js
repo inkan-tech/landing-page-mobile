@@ -1,4 +1,4 @@
-const sass = require('node-sass');
+const sass = require('sass');
 module.exports = grunt => {
 
   grunt.initConfig({
@@ -21,39 +21,34 @@ module.exports = grunt => {
       }
     },
 
-    sass: { // Task
-        dist: {
-            options: {
-                      style: 'inline',
-                      implementation: sass,
-                     },
-          files: [{
-              // Set to true for recursive search
-              expand: true,
-              cwd: 'scss/',
-              src: ['**/*.scss'],
-              dest: 'css/',
-              ext: '.css'
-          }]
-        }
-     },
     //    // sass task
-    // sass: {
-    //   dist: {
-    //     options: {
-    //       style: 'inline',
-    //       implementation: scss,
-    //      },
-    //     // files: [{
-    //     //   src: '[^_]*.sass',
-    //     //   cwd: 'src/scss/',
-    //     //   dest: 'dist/css',
-    //     //   expand: true,
-    //     //   ext: '.css'
-    //     // }]
-    //     files: { "dist/css/styles.css" : [ "node_modules/bootstrap/scss/bootstrap.scss", "src/scss/*.scss"]}
-    //   }
-    // },
+    sass: {
+      dist: {
+        options: {
+          style: 'inline',
+          implementation: sass,
+          sourceMap: true
+         },
+        // files: [{
+        //     src: '**/*.scss',
+        //     cwd: 'node_modules/bootstrap/scss/',
+        //     dest: 'dist/css',
+        //     expand: true,
+        //     ext: '.css'
+        //   },
+        //   {
+        //   src: '**/[^_]*.scss',
+        //   cwd: 'src/scss/',
+        //   dest: 'dist/css',
+        //   expand: true,
+        //   ext: '.css'
+        // }]
+        files: {
+            'dist/css/styles.css': ['node_modules/bootstrap/scss/bootstrap.scss','src/scss/**/[^_]*.scss'],
+        
+        }
+        }
+    },
 
     // copy task (copy src/libraries to dist/libraries)
     copy: {
@@ -143,7 +138,24 @@ module.exports = grunt => {
           'dist/js/scripts.js': 'src/js/scripts.js'
         }
       }
-    }
+    },
+    pugi18n: {
+        templates: {
+          options: {
+            // Pug i18n specific options
+            i18n: {
+              locales: 'locales/*.json',
+              namespace: '$i18n'
+            },
+            // Pug specific options
+            pretty: true,
+            localeExtension: true,
+          },
+          files: {
+            "dist": ["src/pug/*.pug", "src/pug/includes/*.pug"]
+          }
+        }
+      }
   });
 
   // initial
@@ -155,7 +167,7 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-babel');
-
+  grunt.loadNpmTasks('grunt-pug-i18n');
   //register default task
   if(process.env.NODE_ENV == 'production')
   {

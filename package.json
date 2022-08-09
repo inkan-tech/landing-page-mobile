@@ -61,11 +61,12 @@
         "grunt-contrib-pug": "^3.0.0",
         "grunt-contrib-watch": "latest",
         "grunt-pug-i18n": "^1.0.1",
+        "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
         "postcss": "8.4.12",
         "prettier": "2.6.0",
         "pug": "3.0.2",
-        "sass": "1.49.9",
+        "sass": "^1.49.9",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
