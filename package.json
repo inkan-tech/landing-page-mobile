@@ -1,16 +1,14 @@
 {
-    "title": "New Age",
-    "name": "startbootstrap-new-age",
-    "version": "6.0.6",
+    "title": "Sealfie Landing page multi",
+    "name": "landing-page-mobile",
+    "version": "0.1.0",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
+        "build": "NODE_ENV=production grunt",
+        "build:assets": "grunt copy",
+        "build:pug": "grunt pug",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start": "grunt  "
     },
     "description": "A one page app landing page HTML theme for Bootstrap.",
     "keywords": [
@@ -19,7 +17,8 @@
         "html",
         "responsive",
         "theme",
-        "template"
+        "template",
+        "i18n"
     ],
     "homepage": "https://startbootstrap.com/theme/new-age",
     "bugs": {
@@ -44,11 +43,12 @@
         "node-sass": "^7.0.1"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.4",
-        "browser-sync": "2.27.9",
+        "autoprefixer": "10.4.8",
+        "browser-sync": "2.27.10",
         "chokidar": "3.5.3",
-        "concurrently": "6.3.0",
+        "concurrently": "7.3.0",
         "grunt": "^1.5.3",
+        "grunt-cli": "^1.4.3",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
         "grunt-contrib-compass": "latest",
@@ -63,10 +63,10 @@
         "grunt-pug-i18n": "^1.0.1",
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
-        "postcss": "8.4.12",
-        "prettier": "2.6.0",
+        "postcss": "8.4.16",
+        "prettier": "2.7.1",
         "pug": "3.0.2",
-        "sass": "^1.49.9",
+        "sass": "^1.54.3",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
