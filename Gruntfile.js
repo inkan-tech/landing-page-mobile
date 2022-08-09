@@ -21,33 +21,18 @@ module.exports = grunt => {
       }
     },
 
-    //    // sass task
-    sass: {
-      dist: {
-        options: {
-          style: 'inline',
-          implementation: sass,
-          sourceMap: true
-         },
-        // files: [{
-        //     src: '**/*.scss',
-        //     cwd: 'node_modules/bootstrap/scss/',
-        //     dest: 'dist/css',
-        //     expand: true,
-        //     ext: '.css'
-        //   },
-        //   {
-        //   src: '**/[^_]*.scss',
-        //   cwd: 'src/scss/',
-        //   dest: 'dist/css',
-        //   expand: true,
-        //   ext: '.css'
-        // }]
-        files: {
-            'dist/css/styles.css': ['node_modules/bootstrap/scss/bootstrap.scss','src/scss/**/[^_]*.scss'],
-        
-        }
-        }
+    //    //sass task
+    run: {
+        run: {
+            options: {
+              // Task-specific options go here.
+            },
+            your_target: {
+              args: [
+                'scripts/build-scss.js'
+              ]
+            }
+          }
     },
 
     // copy task (copy src/libraries to dist/libraries)
@@ -161,6 +146,7 @@ module.exports = grunt => {
   // initial
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-run');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -174,7 +160,7 @@ module.exports = grunt => {
     grunt.registerTask('default', ['pug', 'sass', 'copy', 'imagemin', 'cssmin', 'babel'])
   }else
   {
-    grunt.registerTask('default', ['pug', 'sass', 'copy', 'imagemin', 'browserSync', 'babel', 'watch'])
+    grunt.registerTask('default', ['pug', 'run', 'copy', 'imagemin', 'browserSync', 'babel', 'watch'])
   }
 };
 
