@@ -16,7 +16,7 @@ module.exports = grunt => {
               localeExtension: true,
             },
             files: {
-              "dist/index.html": ["src/pug/*.pug"],
+              "docs/index.html": ["src/pug/*.pug"],
             }
           }
         },
@@ -37,30 +37,30 @@ module.exports = grunt => {
 
     },
 
-    // copy task (copy src/libraries to dist/libraries)
+    // copy task (copy src/libraries to docs/libraries)
     copy: {
       library: {
         expand: true,
         cwd: 'src',
         src: ['assets/**'],
-        dest: 'dist/'
+        dest: 'docs/'
       },
       redirect: {
         expand: true,
         cwd: 'src',
         src: ['index.html'],
-        dest: 'dist/'
+        dest: 'docs/'
       }
     },
 
-    // image compress task (compress all image src/images to dist/images)
+    // image compress task (compress all image src/images to docs/images)
     imagemin : {
       dynamic: {
           files: [{
               expand: true,
               cwd: 'src/',
               src: ['assets/**/*.{png,jpg,gif}'],
-              dest: 'dist'
+              dest: 'docs'
           }]
       }
     },
@@ -70,25 +70,25 @@ module.exports = grunt => {
       target: {
         files: [{
           expand: true,
-          cwd: 'dist/css',
+          cwd: 'docs/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'dist/css',
+          dest: 'docs/css',
           ext: '.css'
         }]
       }
     },
 
-    // auto refresh view on change in dist directory
+    // auto refresh view on change in docs directory
     browserSync: {
       dev: {
         bsFiles: {
             src : [
-                'dist/**.*'
+                'docs/**.*'
             ]
         },
         options: {
             watchTask: true,
-            server: './dist'
+            server: './docs'
         }
       }
     },
@@ -126,9 +126,9 @@ module.exports = grunt => {
       options: {
         sourceMap: false
       },
-      dist: {
+      docs: {
         files: {
-          'dist/js/scripts.js': 'src/js/scripts.js'
+          'docs/js/scripts.js': 'src/js/scripts.js'
         }
       }
     },
@@ -145,7 +145,7 @@ module.exports = grunt => {
             localeExtension: true,
           },
           files: {
-            "dist": ["src/pug/*.pug", "src/pug/includes/*.pug"]
+            "docs": ["src/pug/*.pug", "src/pug/includes/*.pug"]
           }
         }
       }
