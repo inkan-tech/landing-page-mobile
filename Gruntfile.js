@@ -1,38 +1,40 @@
-const sass = require('sass');
 module.exports = grunt => {
 
   grunt.initConfig({
     // pug task src: https://github.com/yussan/grunt-pug-sass-skeleton/
     pug: {
-      compile: {
-        options: {
-          data: {
-            debug: true
-          },
-          pretty: true
+        templates: {
+            options: {
+              // Pug i18n specific options
+              i18n: {
+                locales: 'locales/*.json',
+                namespace: '$i18n',
+                defaultExt: '.html'
+              },
+              // Pug specific options
+              pretty: true,
+              localeExtension: true,
+            },
+            files: {
+              "dist/index.html": ["src/pug/*.pug", "src/pug/includes/*.pug"],
+            }
+          }
         },
-        files: [{
-          src: '[^_]*.pug',
-          cwd: 'src/pug/',
-          dest: 'dist',
-          expand: true,
-          ext: '.html'
-        }]
-      }
-    },
 
     //    //sass task
     run: {
         run: {
             options: {
+                failOnError: true,
+                itterable: true
               // Task-specific options go here.
             },
-            your_target: {
-              args: [
+//            cmd: 'node',
+          args: [
                 'scripts/build-scss.js'
               ]
             }
-          }
+
     },
 
     // copy task (copy src/libraries to dist/libraries)
@@ -145,7 +147,6 @@ module.exports = grunt => {
 
   // initial
   grunt.loadNpmTasks('grunt-contrib-pug');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-run');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
@@ -157,7 +158,7 @@ module.exports = grunt => {
   //register default task
   if(process.env.NODE_ENV == 'production')
   {
-    grunt.registerTask('default', ['pug', 'sass', 'copy', 'imagemin', 'cssmin', 'babel'])
+    grunt.registerTask('default', ['pug', 'run', 'copy', 'imagemin', 'cssmin', 'babel'])
   }else
   {
     grunt.registerTask('default', ['pug', 'run', 'copy', 'imagemin', 'browserSync', 'babel', 'watch'])
