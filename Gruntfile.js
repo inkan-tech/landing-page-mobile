@@ -2,6 +2,15 @@ module.exports = grunt => {
 
   grunt.initConfig({
     // pug task src: https://github.com/yussan/grunt-pug-sass-skeleton/
+    watch: {
+        scripts: {
+          files: ['locales/*.json'],
+          tasks: ['pug'],
+          options: {
+            spawn: true,
+          },
+        },
+      },
     pug: {
         templates: {
             options: {

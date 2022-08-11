@@ -1,10 +1,44 @@
 {
-	"hello": {
-		"world": "Bonjour le monde"
-	},
-	"Hello": "Hello",
-	"F": "F",
-	"Salut": "Salut",
-	"Hello World": "Hello World",
-	"hello.world": "hello.world"
+    "title": "campagne d'éssais",
+    "banner": {
+        "main": "protége vos décisions",
+        "features": "fonctionnalités",
+        "download": "téléchargement",
+        "action": "Venez l'essayer"
+    },
+    "head": {
+        "title": "Protégez vos decisions des usurpateurs",
+        "subtitle": "Sealfie prévient les fraudes telles que la fraude au faux président"
+    },
+    "testimonial": "Utilise la puissance de la blockchaine pour vous assurez une transmission sure, auditable et automatisable",
+    "features": {
+        "person": {
+            "title": "Auditable",
+            "text": "Toutes les transactions sont auditable et irrépudiable"
+        },
+        "send": {
+            "title": "Protége les transactions",
+            "text": "Protége toutes sortent de transactions, même non digitales, des falsifications et des usurpations d'identités "
+        },
+        "shield": {
+            "title": "Auditable",
+            "text": "Toutes les transactions sont auditables et irrépudiables"
+        },
+        "path": {
+            "title": "Multi attestations",
+            "text": "Sealfie prouve vos déclarations comme un enqueteur. Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action"
+        }
+    },
+    "description": {
+        "title": "Innovation par chainage d'attestations",
+        "text": "PLUS DE BLA BLA BLA"
+    },
+    "action": {
+        "stop": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions",
+        "start": "Retrouvez la confiance dans les actions les plus critiques pour votre entreprise",
+        "linktext": "Je veux essayer Sealfie"
+    },
+    "appstore": {
+        "download": "Venez challenger Sealfie"
+    }
 }
