@@ -26,16 +26,16 @@
         },
         "path": {
             "title": "Multi attestations",
-            "text": "Sealfie prouve vos déclarations comme un enqueteur. Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action"
+            "text": "Sealfie prouve vos déclarations comme le ferait un expert judiciaire."
         }
     },
     "description": {
         "title": "Innovation par chainage d'attestations",
-        "text": "PLUS DE BLA BLA BLA"
+        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. etrouvez la confiance dans les actions les plus critiques pour votre entreprise"
     },
     "action": {
-        "stop": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions",
-        "start": "Retrouvez la confiance dans les actions les plus critiques pour votre entreprise",
+        "stop": "Moins d'inquietudes ",
+        "start": "Retrouvez le sommeil.",
         "linktext": "Je veux essayer Sealfie"
     },
     "appstore": {

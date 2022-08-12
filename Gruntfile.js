@@ -2,15 +2,7 @@ module.exports = grunt => {
 
   grunt.initConfig({
     // pug task src: https://github.com/yussan/grunt-pug-sass-skeleton/
-    watch: {
-        scripts: {
-          files: ['locales/*.json'],
-          tasks: ['pug'],
-          options: {
-            spawn: true,
-          },
-        },
-      },
+
     pug: {
         templates: {
             options: {
@@ -92,12 +84,12 @@ module.exports = grunt => {
       dev: {
         bsFiles: {
             src : [
-                'docs/**.*'
+                'docs/**.*',  'docs/**/index.html'
             ]
         },
         options: {
             watchTask: true,
-            server: './docs'
+            server: './docs/'
         }
       }
     },
@@ -105,12 +97,12 @@ module.exports = grunt => {
     // watch change inside directory to run task
     watch: {
       pug: {
-        files: ['src/pug/**/*.pug'],
+        files: ['src/pug/**/*.pug', 'locales/*.json'],
         tasks: ['pug']
       },
-      sass: {
+      run: {
         files: ['src/scss/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['run']
       },
       js: {
         files: ['src/js/**/*.js'],
