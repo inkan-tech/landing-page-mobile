@@ -2,7 +2,6 @@ doctype html
 html(lang=$localeName)
 
   head
-
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
@@ -24,6 +23,7 @@ html(lang=$localeName)
 
     // Core theme CSS (includes Bootstrap)
     link(href='/css/styles.css', rel='stylesheet')
+
 
   body#page-top
     // Navigation
@@ -67,12 +67,13 @@ html(lang=$localeName)
               .device-wrapper
                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                   .screen.bg-black
+
                     // PUT CONTENTS HERE:
                     // * * This can be a video, image, or just about anything else.
                     // * * Set the max width of your media to 100% and the height to
                     // * * 100% like the demo example below.
                     video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src='/assets/img/demo1.webm', type='video/webm')
+                      source(src="/assets/img/"+$i18n.videos.document, type='video/webm')
 
     // Quote/testimonial aside
     aside.text-center.bg-gradient-primary-to-secondary
@@ -128,7 +129,7 @@ html(lang=$localeName)
                     // * * Set the max width of your media to 100% and the height to
                     // * * 100% like the demo example below.
                     video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src='/assets/img/demo1.webm', type='video/webm')
+                      source(src='/assets/img/'+ $i18n.videos.document, type='video/webm')
 
     // Basic features section
     section.bg-light

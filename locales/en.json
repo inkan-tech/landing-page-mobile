@@ -1,0 +1,45 @@
+{
+    "title": "beta testing",
+    "banner": {
+        "main": "protect your decisions",
+        "features": "features",
+        "download": "download",
+        "action": "Try now"
+    },
+    "head": {
+        "title": "Protect your decisions from identity thieves.",
+        "subtitle": "Sealfie protects from fake CEO frauds, deep fake and others."
+    },
+    "testimonial": "Based on proactive forensic, anchor in a public blockchain for verification and automation",
+    "features": {
+        "person": {
+            "title": "Auditable",
+            "text": "Toutes les transactions sont auditable et irrépudiable"
+        },
+        "send": {
+            "title": "Protége les transactions",
+            "text": "Protége toutes sortent de transactions, même non digitales, des falsifications et des usurpations d'identités "
+        },
+        "shield": {
+            "title": "Auditable",
+            "text": "Toutes les transactions sont auditables et irrépudiables"
+        },
+        "path": {
+            "title": "Multi attestations",
+            "text": "Sealfie prouve vos déclarations comme le ferait un expert judiciaire."
+        }
+    },
+    "description": {
+        "title": "Innovation par chainage d'attestations",
+        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. etrouvez la confiance dans les actions les plus critiques pour votre entreprise"
+    },
+    "action": {
+        "stop": "Moins d'inquietudes ",
+        "start": "Retrouvez le sommeil.",
+        "linktext": "Je veux essayer Sealfie"
+    },
+    "appstore": {
+        "download": "Venez challenger Sealfie"
+    },
+    "videos": {"document": "Landing-en.webm"}
+}

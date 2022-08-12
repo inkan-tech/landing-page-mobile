@@ -51,7 +51,8 @@ module.exports = grunt => {
         cwd: 'src',
         src: ['index.html'],
         dest: 'docs/'
-      }
+      },
+
     },
 
     // image compress task (compress all image src/images to docs/images)
