@@ -1,10 +1,10 @@
 {
     "title": "beta testing",
     "banner": {
-        "main": "protect your decisions",
+        "main": "Sealfie protect your decisions",
         "features": "features",
         "download": "download",
-        "action": "Join the waiting list"
+        "action": "Join the beta testers list"
     },
     "head": {
         "title": "Protect your decisions from identity thieves.",
@@ -13,28 +13,28 @@
     "testimonial": "Based on proactive forensic, anchor in a public blockchain for verification and automation",
     "features": {
         "person": {
-            "title": "Auditable",
-            "text": "Toutes les transactions sont auditable et irrépudiable"
+            "title": "Simple",
+            "text": "If you can take a picture with a smartphone, you can use Sealfie"
         },
         "send": {
-            "title": "Protége les transactions",
-            "text": "Protége toutes sortent de transactions, même non digitales, des falsifications et des usurpations d'identités "
-        },
-        "shield": {
-            "title": "Auditable",
-            "text": "Toutes les transactions sont auditables et irrépudiables"
+            "title": "Certify transcations",
+            "text": "Certify  all sorts of transactions, physical and digital. Prevent tempering and identity theft "
         },
         "path": {
-            "title": "Multi attestations",
-            "text": "Sealfie prouve vos déclarations comme le ferait un expert judiciaire."
+            "title": "Auditable",
+            "text": "Data can be audited and automated"
+        },
+        "shield": {
+            "title": "Multi factor certification",
+            "text": "Sealfie proactively chain evidences, similar to a forensic expert"
         }
     },
     "description": {
-        "title": "Innovation par chainage d'attestations",
-        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. etrouvez la confiance dans les actions les plus critiques pour votre entreprise"
+        "title": "Trust in data by chaining multiple certifications",
+        "text": "Sleep at night by trusting the critical information is certified. We use only the data you generated on different systems, for your own protection. Imagine how simpler your digital processes with data you can trust"
     },
     "action": {
-        "stop": "Less false digitalisation of process ",
+        "stop": "Stop depending on the weakest trained person",
         "start": "Trust the data you receive",
         "linktext": "I want to try Sealfie"
     },
