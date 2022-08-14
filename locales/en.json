@@ -34,12 +34,32 @@
         "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. etrouvez la confiance dans les actions les plus critiques pour votre entreprise"
     },
     "action": {
-        "stop": "Moins d'inquietudes ",
-        "start": "Retrouvez le sommeil.",
-        "linktext": "Je veux essayer Sealfie"
+        "stop": "Less false digitalisation of process ",
+        "start": "Trust the data you receive",
+        "linktext": "I want to try Sealfie"
     },
     "appstore": {
-        "download": "Venez challenger Sealfie"
+        "download": "Challenge Sealfie"
     },
-    "videos": {"document": "Landing-en.webm"}
+    "videos": {"document": "Landing-en.webm"},
+    "modal": {
+        "title": "Join the waiting list",
+        "mail": {
+            "title": "Email",
+            "feedback": "a valid email is mandatory",
+            "error": "invalid email"
+        },
+        "phone": {
+            "title": "Phone number",
+            "feedback": "a valid phone number is mandatory",
+            "error": "invalid phone number"
+        },
+        "phonetype": {
+            "title": "Type of phone",
+            "feedback": "We need you type of phone",
+            "error": "invalid type of phone"
+        },
+        "lang": {"fr": "3277967", "en": "3277966"},
+        "sendbutton": "Send"
+    }
 }

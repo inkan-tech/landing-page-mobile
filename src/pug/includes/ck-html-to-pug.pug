@@ -14,11 +14,17 @@ form.seva-form.formkit-form(action='https://app.convertkit.com/forms/3520168/sub
         .formkit-field
           input.formkit-input(aria-label='Phone' name='fields[phone]' required='' placeholder='Phone' type='text' style='color: rgb(105, 113, 119); font-weight: 400; background-color: rgb(27, 27, 27); border-radius: 4px;')
         .formkit-field
-          .formkit-2461(data-group='dropdown' group='field' type='Custom' order='2' save_as='Tag')
+          .formkit-2461(data-group='dropdown' type='Custom' order='2' save_as='Tag' group='field')
             select.formkit-select(data-element='tags-select' name='tags[]' required='' style='color: rgb(105, 113, 119); font-weight: 400; background-color: rgb(27, 27, 27); border-radius: 4px;')
               option(value='') Type of phone
               option(value='3277907') iPhone
               option(value='3277908') Android
+        .formkit-field
+          .formkit-5284(data-group='dropdown' type='Custom' order='3' save_as='Tag' group='field')
+            select.formkit-select(data-element='tags-select' name='tags[]' style='color: rgb(105, 113, 119); font-weight: 400; background-color: rgb(27, 27, 27); border-radius: 4px;')
+              option(value='') Lang
+              option(value='3277966') English
+              option(value='3277967') French
         button.formkit-submit.formkit-submit(data-element='submit' style='color: rgb(255, 255, 255); background-color: rgb(217, 11, 11); border-radius: 4px; font-weight: 700;')
           .formkit-spinner
             div

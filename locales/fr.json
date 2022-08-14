@@ -41,5 +41,27 @@
     "appstore": {
         "download": "Venez challenger Sealfie"
     },
-    "videos": {"document": "Landing-fr.webm"}
+    "videos": {
+        "document": "Landing-fr.webm"
+    },
+    "modal": {
+        "title": "Inscrivez vous à la liste d'attente",
+        "mail": {
+            "title": "Email",
+            "feedback": "un email est necessaire",
+            "error": "l'email est invalide"
+        },
+        "phone": {
+            "title": "Téléphone",
+            "feedback": "un email est necessaire",
+            "error": "l'email est invalide"
+        },
+        "phonetype": {
+            "title": "Type de télephone utilisé",
+            "feedback": "un email est necessaire",
+            "error": "l'email est invalide"
+        },
+        "lang": {"fr": "3277967", "en": "3277966"},
+        "sendbutton": "Envoyez"
+    }
 }
