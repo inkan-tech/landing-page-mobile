@@ -8,23 +8,23 @@
     },
     "head": {
         "title": "Protégez vos decisions des usurpateurs",
-        "subtitle": "Sealfie prévient les fraudes telles que la fraude au faux président"
+        "subtitle": "Sealfie prévient la fraude au faux président et certifie toutes sortent de décisions"
     },
-    "testimonial": "Utilise la puissance de la blockchaine pour vous assurez une transmission sure, auditable et automatisable",
+    "testimonial": "Utilise la blockchaine pour collecter les attestations des systèmes que vous utilisé. Le résultat est irrépudiable, extrement couteu à falsifié, auditable et automatisable",
     "features": {
         "person": {
-            "title": "Auditable",
-            "text": "Toutes les transactions sont auditable et irrépudiable"
+            "title": "Simplissime",
+            "text": "Vous savez faire une photo: vous savez utilisez Sealfie."
         },
         "send": {
             "title": "Protége les transactions",
-            "text": "Protége toutes sortent de transactions, même non digitales, des falsifications et des usurpations d'identités "
+            "text": "Protége toutes sortes de transactions, digitales ou non. Empeche les falsifications et usurpations d'identités "
         },
-        "shield": {
+        "path": {
             "title": "Auditable",
             "text": "Toutes les transactions sont auditables et irrépudiables"
         },
-        "path": {
+        "shield": {
             "title": "Multi attestations",
             "text": "Sealfie prouve vos déclarations comme le ferait un expert judiciaire."
         }
@@ -34,8 +34,8 @@
         "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. etrouvez la confiance dans les actions les plus critiques pour votre entreprise"
     },
     "action": {
-        "stop": "Arrtez la numerasse ",
-        "start": "Basez vous sur de la donnée fiabilisée à l'entrée",
+        "stop": "Arretez de ne dépendre que du comportement de chacun",
+        "start": "Basez vous sur des données fiabilisées à l'origine",
         "linktext": "Je veux essayer Sealfie"
     },
     "appstore": {
@@ -48,7 +48,7 @@
         "title": "Inscrivez vous à la liste d'attente",
         "mail": {
             "title": "Email",
-            "feedback": "un email est necessaire",
+            "feedback": "un email est nécessaire",
             "error": "l'email est invalide"
         },
         "phone": {
