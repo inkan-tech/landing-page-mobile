@@ -11949,16 +11949,6 @@ html {
   scroll-padding-top: 4.5rem;
 }
 
-.en, .fr, .it {
-  display: none;
-}
-
-/* hide all elements with a language class */
-.en:lang(en), .fr:lang(fr), .it:lang(it) {
-  display: block;
-}
-
-/* show those elements that match their language class */
 .bg-black {
   background-color: #000 !important;
 }

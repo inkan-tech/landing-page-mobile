@@ -1,12 +1,7 @@
 //
 // Scripts
 //
-let urlfile  = $i18n.videos.document;
-let locals = {
-    urlfile: urlfile,
-    siteLang:  $i18n.lang
-};
-res.render("index", locals);
+
 
 window.addEventListener('DOMContentLoaded', event => {
 

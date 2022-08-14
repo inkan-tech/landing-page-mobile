@@ -11,10 +11,6 @@ html {
     scroll-padding-top: 4.5rem;
 }
 
-// locales auto with css
-.en, .fr, .it { display:none; } /* hide all elements with a language class */
-.en:lang(en), .fr:lang(fr), .it:lang(it) { display:block; } /* show those elements that match their language class */
-
 // Custom utilities
 
 .bg-black {
