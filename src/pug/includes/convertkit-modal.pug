@@ -13,7 +13,7 @@
                     | #{$i18n.modal.mail.feedback}
                 .invalid-feedback(data-sb-feedback='email:email')
                     |  #{$i18n.modal.mail.error}
-                input#email.form-control(type='email',  placeholder='name@email.com' name='email_address' style="height:80px;"
+                input#email.form-control(type='email',  placeholder='name@email.com' required='true' name='email_address' style="height:80px;"
                     data-sb-validations='required,email' )
               .form-floating.mb-3
                 input#phone.form-control(aria-label='Phone' name='fields[phone]' required='true' placeholder='Phone' type='text')
@@ -22,7 +22,7 @@
                     | #{$i18n.modal.phone.feedback}
               .formkit-2461(data-group='dropdown' group='field' type='Custom' order='2' save_as='Tag')
                 |  #{$i18n.modal.phonetype.title}
-                select.formkit-select(data-element='tags-select' name='tags[]' required='' )
+                select.formkit-select(data-element='tags-select' name='tags[]' required='true' )
                     option(value='') #{$i18n.modal.phonetype.title}
                     option(value='3277907') iPhone
                     option(value='3277908') Android

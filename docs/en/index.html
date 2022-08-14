@@ -217,7 +217,7 @@
               <label for="email_address">Email</label>
               <div class="invalid-feedback" data-sb-feedback="email:required">a valid email is mandatory</div>
               <div class="invalid-feedback" data-sb-feedback="email:email"> invalid email</div>
-              <input class="form-control" id="email" type="email" placeholder="name@email.com" name="email_address" style="height:80px;" data-sb-validations="required,email">
+              <input class="form-control" id="email" type="email" placeholder="name@email.com" required="true" name="email_address" style="height:80px;" data-sb-validations="required,email">
             </div>
             <div class="form-floating mb-3">
               <input class="form-control" id="phone" aria-label="Phone" name="fields[phone]" required="true" placeholder="Phone" type="text">
@@ -225,7 +225,7 @@
               <div class="invalid-feedback" data-sb-feedback="phone:required">a valid phone number is mandatory</div>
             </div>
             <div class="formkit-2461" data-group="dropdown" group="field" type="Custom" order="2" save_as="Tag"> Type of phone
-              <select class="formkit-select" data-element="tags-select" name="tags[]" required="">
+              <select class="formkit-select" data-element="tags-select" name="tags[]" required="true">
                 <option value="">Type of phone</option>
                 <option value="3277907">iPhone</option>
                 <option value="3277908">Android</option>
