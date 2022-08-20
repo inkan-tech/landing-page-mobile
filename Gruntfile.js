@@ -17,7 +17,9 @@ module.exports = grunt => {
               localeExtension: true,
             },
             files: {
-              "docs/index.html": ["src/pug/*.pug"],
+              "docs/index.html": ["src/pug/index.pug"],
+              "docs/privacy-ios.html": ["src/pug/privacy-ios.pug"],
+
             }
           }
         },
