@@ -29,10 +29,8 @@ html(lang=en)
     nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
       .container.px-5
         a.navbar-brand.fw-bold(href='#page-top') Sealfie #{$i18n.banner.main}
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          | Menu
-          i.bi-list
 
+  header.masthead
     p Last modified: 25 May 2022
     p
     | By using the Sealfie website, mobile applications and making use of a Sealfie Account (the &ldquo;Account&rdquo;) and
@@ -44,7 +42,8 @@ html(lang=en)
     | complement to our  terms of service
     | .
     p
-    h2#1-legal-framework 1. Legal framework
+  section#features
+    h2#1-legal-framework Legal framework
     p
     | The Services are operated by Inkan.link SAS (the &ldquo;Company&rdquo;, &ldquo;We&rdquo;), domiciled at 41 rue Victor Hugo 38920 Crolles. It is therefore governed
     | by the laws and regulations of France.
@@ -92,6 +91,7 @@ html(lang=en)
     |                                     devices and operating systems (e.g. percentage of Android 6.x v. Android 7.x), total
     |                                     number of installs and uninstalls, and the total number of active users.
     p
+section.bg-light
     h2#5-data-subprocessors 5. Data subprocessors
     p
     | To provide the Services, we rely on different data subprocessors, which process
@@ -150,7 +150,7 @@ html(lang=en)
     //- p
     //- | In case of violation of your rights, you have the right to lodge a complaint to the
     //- | competent supervisory authority.
-
+footer.bg-black.text-center.py-5.text-white-50.small
     h2#8-modifications-to-privacy-policy Modifications to privacy policy
     p
     | We reserve the right to periodically review and change this policy from time to time
