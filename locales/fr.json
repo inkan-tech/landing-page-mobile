@@ -1,13 +1,13 @@
 {
     "title": "campagne d'éssais",
     "banner": {
-        "main": "protége vos décisions",
+        "main": "protège vos décisions",
         "features": "fonctionnalités",
         "download": "téléchargement",
         "action": "Venez l'essayer"
     },
     "head": {
-        "title": "Protégez vos decisions des usurpateurs",
+        "title": "protègez vos decisions des usurpateurs",
         "subtitle": "Sealfie prévient la fraude au faux président et certifie toutes sortent de décisions"
     },
     "testimonial": "Utilise la blockchaine pour collecter les attestations des systèmes que vous utilisé. Le résultat est irrépudiable, extrement couteu à falsifié, auditable et automatisable",
@@ -17,8 +17,8 @@
             "text": "Vous savez faire une photo: vous savez utilisez Sealfie."
         },
         "send": {
-            "title": "Protége les transactions",
-            "text": "Protége toutes sortes de transactions, digitales ou non. Empeche les falsifications et usurpations d'identités "
+            "title": "protège les transactions",
+            "text": "protège toutes sortes de transactions, digitales ou non. Empeche les falsifications et usurpations d'identités "
         },
         "path": {
             "title": "Auditable",
@@ -35,7 +35,7 @@
     },
     "action": {
         "stop": "Arretez de blamer les utilisateurs",
-        "start": "Impliquez les dans votre protéction",
+        "start": "Impliquez les dans votre protèction",
         "linktext": "Je veux essayer Sealfie"
     },
     "appstore": {
