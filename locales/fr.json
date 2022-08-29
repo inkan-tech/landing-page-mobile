@@ -1,16 +1,16 @@
 {
-    "title": "campagne d'éssais",
+    "title": "Test en beta de Sealfie",
     "banner": {
         "main": "protège vos décisions",
         "features": "fonctionnalités",
         "download": "téléchargement",
-        "action": "Venez l'essayer"
+        "action": "Rejoignez les testeurs"
     },
     "head": {
-        "title": "protègez vos decisions des usurpateurs",
+        "title": "Protégez vos decisions des usurpateurs",
         "subtitle": "Sealfie prévient la fraude au faux président et certifie toutes sortent de décisions"
     },
-    "testimonial": "Utilise la blockchaine pour collecter les attestations des systèmes que vous utilisé. Le résultat est irrépudiable, extrement couteu à falsifié, auditable et automatisable",
+    "testimonial": "Utilise la blockchain pour collecter les attestations des systèmes que vous utilisez. Le résultat est non répudiable, extrêmement coûteux à falsifié, auditable et automatisable",
     "features": {
         "person": {
             "title": "Simplissime",
@@ -18,11 +18,11 @@
         },
         "send": {
             "title": "protège les transactions",
-            "text": "protège toutes sortes de transactions, digitales ou non. Empeche les falsifications et usurpations d'identités "
+            "text": "protège toutes sortes de transactions, digitales ou non. Empêche les falsifications et usurpations d'identités "
         },
         "path": {
             "title": "Auditable",
-            "text": "Toutes les transactions sont auditables et irrépudiables"
+            "text": "Toutes les transactions sont auditable, non répudiable et permettent l'automatisation"
         },
         "shield": {
             "title": "Multi attestations",
@@ -30,16 +30,16 @@
         }
     },
     "description": {
-        "title": "Innovation par chainage d'attestations",
-        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Elle n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. Retrouvez la confiance dans les actions les plus critiques pour votre entreprise"
+        "title": "Innovation par chaînage d'attestations",
+        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Sealfie n'utilise que dès données vous appartenant et avec votre accord explicite à chaque action. Retrouvez la confiance dans les actions les plus critiques pour votre entreprise"
     },
     "action": {
-        "stop": "Arretez de blamer les utilisateurs",
-        "start": "Impliquez les dans votre protèction",
-        "linktext": "Je veux essayer Sealfie"
+        "stop": "Arrêtez de blamer les utilisateurs",
+        "start": "Impliquez les dans votre protection",
+        "linktext": "Essayez Sealfie"
     },
     "appstore": {
-        "download": "Venez challenger Sealfie"
+        "download": "Essayez Sealfie"
     },
     "videos": {
         "document": "Landing-fr.webm"
@@ -53,12 +53,12 @@
         },
         "phone": {
             "title": "Téléphone",
-            "feedback": "un email est necessaire",
+            "feedback": "un email est nécessaire",
             "error": "l'email est invalide"
         },
         "phonetype": {
-            "title": "Type de télephone utilisé",
-            "feedback": "un email est necessaire",
+            "title": "Type de téléphone utilisé",
+            "feedback": "un email est nécessaire",
             "error": "l'email est invalide"
         },
         "lang": {"fr": "3277967", "en": "3277966"},
