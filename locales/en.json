@@ -1,10 +1,10 @@
 {
-    "title": "beta testing",
+    "title": "beta testing Sealfie",
     "banner": {
         "main": "Sealfie protect your decisions",
         "features": "features",
         "download": "download",
-        "action": "Join the beta testers list"
+        "action": "Join the beta testers"
     },
     "head": {
         "title": "Protect your decisions from identity thieves.",
@@ -36,10 +36,10 @@
     "action": {
         "stop": "Stop depending on the weakest trained person",
         "start": "Trust the data you receive",
-        "linktext": "I want to try Sealfie"
+        "linktext": "Try Sealfie"
     },
     "appstore": {
-        "download": "Challenge Sealfie"
+        "download": "Try Sealfie"
     },
     "videos": {"document": "Landing-en.webm"},
     "modal": {
