@@ -1,7 +1,7 @@
 {
     "title": "Sealfie Landing page multi",
     "name": "landing-page-mobile",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "scripts": {
         "build": "NODE_ENV=production grunt",
         "build:assets": "grunt copy",
@@ -40,7 +40,8 @@
         "coffeescript": "^2.7.0",
         "grunt-cli": "^1.4.3",
         "i18n": "^0.15.0",
-        "node-sass": "^7.0.1"
+        "node-sass": "^7.0.1",
+        "react-intl": "^6.1.0"
     },
     "devDependencies": {
         "autoprefixer": "10.4.8",
@@ -48,9 +49,9 @@
         "chokidar": "3.5.3",
         "concurrently": "7.3.0",
         "grunt": "^1.5.3",
-        "grunt-cli": "^1.4.3",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
+        "grunt-cli": "^1.4.3",
         "grunt-contrib-compass": "latest",
         "grunt-contrib-concat": "latest",
         "grunt-contrib-connect": "latest",
@@ -66,7 +67,7 @@
         "postcss": "8.4.16",
         "prettier": "2.7.1",
         "pug": "3.0.2",
-        "sass": "^1.54.3",
+        "sass": "^1.54.8",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
