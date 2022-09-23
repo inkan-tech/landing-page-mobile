@@ -36,18 +36,18 @@
     },
     "dependencies": {
         "-": "^0.0.1",
-        "bootstrap": "5.2.0",
+        "bootstrap": "5.2.1",
         "coffeescript": "^2.7.0",
         "grunt-cli": "^1.4.3",
         "i18n": "^0.15.0",
-        "node-sass": "^7.0.1",
-        "react-intl": "^6.1.0"
+        "node-sass": "^7.0.3",
+        "react-intl": "^6.1.1"
     },
     "devDependencies": {
         "autoprefixer": "10.4.8",
         "browser-sync": "2.27.10",
         "chokidar": "3.5.3",
-        "concurrently": "7.3.0",
+        "concurrently": "7.4.0",
         "grunt": "^1.5.3",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
@@ -67,7 +67,7 @@
         "postcss": "8.4.16",
         "prettier": "2.7.1",
         "pug": "3.0.2",
-        "sass": "^1.54.8",
+        "sass": "^1.54.9",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
