@@ -22,7 +22,7 @@
         },
         "path": {
             "title": "Auditable",
-            "text": "Toutes les transactions sont auditable, non répudiable et permettent l'automatisation"
+            "text": "Toutes les transactions sont auditables, non répudiables et permettent l'automatisation"
         },
         "shield": {
             "title": "Multi attestations",
