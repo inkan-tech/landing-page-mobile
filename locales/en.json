@@ -1,16 +1,16 @@
 {
     "title": "beta testing Sealfie",
     "banner": {
-        "main": "protects from identity thieves",
+        "main": "",
         "features": "features",
         "download": "download",
         "action": "Join the beta testers"
     },
     "head": {
         "title": "Protects you from identity thieves.",
-        "subtitle": "Sealfie protects from fake CEO frauds, deep fake, fake suppliers and more."
+        "subtitle": "Sealfie protects from fake CEO frauds, fake suppliers and more. In the Top5 attempts of frauds 4 involve identity thieves. 1 in 4 company was actual victim of fraud in 2021."
     },
-    "testimonial": "Based on proactive forensic, anchor in a public blockchain for verification and automation",
+    "testimonial": "Based on proactive, automatic, forensic, anchor in a public blockchain for verification and automation",
     "features": {
         "person": {
             "title": "Simple",

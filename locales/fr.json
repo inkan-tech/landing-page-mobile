@@ -1,14 +1,14 @@
 {
     "title": "Test en beta de Sealfie",
     "banner": {
-        "main": "Protégez vous des usurpateurs",
+        "main": "",
         "features": "fonctionnalités",
         "download": "téléchargement",
         "action": "Rejoignez les testeurs"
     },
     "head": {
         "title": "Protégez vous des usurpateurs",
-        "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021 47% des entreprises on subi une tentative."
+        "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021 1 entreprise sur 4 a subi une fraude avérée. Dans le Top5 des tentatives 4 utilisent l'usurpation d'identité "
     },
     "testimonial": "Collecte des attestations des systèmes que vous utilisez. Ancre le résultat sur une blockchain. Un cauchemar pour les hackers.",
     "features": {
@@ -26,7 +26,7 @@
         },
         "shield": {
             "title": "Multi attestations",
-            "text": "Sealfie prouve vos déclarations comme le ferait un expert judiciaire."
+            "text": "Sealfie prouve vos déclarations à la manière d'un expert judiciaire."
         }
     },
     "description": {
