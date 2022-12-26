@@ -20,14 +20,14 @@
         "template",
         "i18n"
     ],
-    "homepage": "https://startbootstrap.com/theme/new-age",
+    "homepage": "https://sealf.ie",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age/issues",
-        "email": "feedback@startbootstrap.com"
+        "email": "support@sealf.ie"
     },
-    "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
+    "license": "Proprietary",
+    "author": "Inkan.link",
+    "contributors": [ "Inkan.link (https://inkan.link)",
         "David Miller (https://davidmiller.io/)"
     ],
     "repository": {
@@ -36,18 +36,18 @@
     },
     "dependencies": {
         "-": "^0.0.1",
-        "bootstrap": "5.2.1",
+        "bootstrap": "5.2.3",
         "coffeescript": "^2.7.0",
         "grunt-cli": "^1.4.3",
-        "i18n": "^0.15.0",
-        "node-sass": "^7.0.3",
-        "react-intl": "^6.1.1"
+        "i18n": "^0.15.1",
+        "node-sass": "^8.0.0",
+        "react-intl": "^6.2.5"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.8",
-        "browser-sync": "2.27.10",
+        "autoprefixer": "10.4.13",
+        "browser-sync": "2.27.11",
         "chokidar": "3.5.3",
-        "concurrently": "7.4.0",
+        "concurrently": "7.6.0",
         "grunt": "^1.5.3",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
@@ -64,10 +64,10 @@
         "grunt-pug-i18n": "^1.0.1",
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
-        "postcss": "8.4.16",
-        "prettier": "2.7.1",
+        "postcss": "8.4.20",
+        "prettier": "2.8.1",
         "pug": "3.0.2",
-        "sass": "^1.54.9",
+        "sass": "^1.57.1",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
