@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Sealfie Landing page multi v1.0.0 (https://sealf.ie)
-* Copyright 2013-2022 Inkan.link
+* Copyright 2013-2023 Inkan.link
 * Licensed under Proprietary (https://github.com/StartBootstrap/landing-page-mobile/blob/master/LICENSE)
 */
 /*!
@@ -11159,4 +11159,25 @@ footer a:hover, footer a:active, footer a:focus {
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 17rem;
   }
+}
+
+section.support {
+  position: relative;
+  padding: 15rem 0;
+  background-image: url("../assets/img/contact-us.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+section.support .support-content {
+  position: relative;
+  z-index: 1;
+}
+section.support:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }

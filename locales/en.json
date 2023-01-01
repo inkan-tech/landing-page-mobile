@@ -1,5 +1,5 @@
 {
-    "title": "beta testing Sealfie",
+    "title": "Sealfie app",
     "banner": {
         "main": "",
         "features": "features",
@@ -61,5 +61,5 @@
         },
         "lang": {"fr": "3277967", "en": "3277966"},
         "sendbutton": "Send"
-    }
+    }, "support": "To get help please send a detailed email with your phone number used in the test for us to speed up understanding the issue."
 }
