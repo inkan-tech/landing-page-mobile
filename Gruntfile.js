@@ -51,7 +51,7 @@ module.exports = grunt => {
       redirect: {
         expand: true,
         cwd: 'src',
-        src: ['index.html'],
+        src: ['index.html', 'support.html'],
         dest: 'docs/'
       },
 
