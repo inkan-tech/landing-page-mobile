@@ -134,7 +134,7 @@ module.exports = grunt => {
             dist: {
               pattern: ['docs/**/*.html' ],
               siteRoot: 'docs/'
-        ,
+        ,changefreq: 'weekly',
             extension: {
               required: false,
               trailingSlash: true
