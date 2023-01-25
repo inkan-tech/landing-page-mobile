@@ -20,14 +20,15 @@
         "template",
         "i18n"
     ],
-    "homepage": "https://sealf.ie",
+    "homepage": "https://sealf.ie/",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age/issues",
         "email": "support@sealf.ie"
     },
     "license": "Proprietary",
     "author": "Inkan.link",
-    "contributors": [ "Inkan.link (https://inkan.link)",
+    "contributors": [
+        "Inkan.link (https://inkan.link)",
         "David Miller (https://davidmiller.io/)"
     ],
     "repository": {
@@ -64,6 +65,7 @@
         "grunt-pug-i18n": "^1.0.1",
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
+        "grunt-sitemap": "^2.0.1",
         "postcss": "8.4.20",
         "prettier": "2.8.1",
         "pug": "3.0.2",

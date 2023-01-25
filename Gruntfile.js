@@ -1,6 +1,8 @@
 module.exports = grunt => {
 
   grunt.initConfig({
+
+
     // pug task src: https://github.com/yussan/grunt-pug-sass-skeleton/
 
     pug: {
@@ -123,8 +125,27 @@ module.exports = grunt => {
       imagemin: {
         files: ['src/assets/**'],
         tasks: ['imagemin']
-      }
+      },
+
     },
+      // sitemap as mutlitask
+      sitemap: {
+
+            dist: {
+              pattern: ['docs/**/*.html' ],
+              siteRoot: 'docs/'
+        ,
+            extension: {
+              required: false,
+              trailingSlash: true
+            },
+           },
+        //  pug: { siteRoot: 'docs/',tasks: ['pug']},
+        //     copy: {
+        //         siteRoot: 'docs/',
+        //         tasks: ['copy']
+        //       },
+      },
 
     // babel
     babel: {
@@ -166,13 +187,14 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-pug-i18n');
+  grunt.loadNpmTasks('grunt-sitemap');
   //register default task
   if(process.env.NODE_ENV == 'production')
   {
-    grunt.registerTask('default', ['pug', 'run', 'copy', 'imagemin', 'cssmin', 'babel'])
+    grunt.registerTask('default', ['pug'  ,'run', 'copy','sitemap', 'imagemin', 'cssmin', 'babel'])
   }else
   {
-    grunt.registerTask('default', ['pug', 'run', 'copy', 'imagemin', 'browserSync', 'babel', 'watch'])
+    grunt.registerTask('default', ['pug','run', 'copy',  'sitemap', 'imagemin', 'browserSync', 'babel', 'watch'])
   }
 };
 
