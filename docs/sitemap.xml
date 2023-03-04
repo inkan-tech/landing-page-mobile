@@ -2,49 +2,49 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sealf.ie/en/</loc>
-    <lastmod>2023-01-28T09:45:10.843Z</lastmod>
+    <lastmod>2023-03-04T16:43:32.843Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/en/privacy-ios/</loc>
-    <lastmod>2023-01-28T09:45:10.863Z</lastmod>
+    <loc>https://sealf.ie/en/privacy-ios.html</loc>
+    <lastmod>2023-03-04T16:43:32.861Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/en/privacy/</loc>
-    <lastmod>2023-01-28T09:45:10.877Z</lastmod>
+    <loc>https://sealf.ie/en/privacy.html</loc>
+    <lastmod>2023-03-04T16:43:32.875Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/en/support/</loc>
-    <lastmod>2023-01-28T09:45:10.899Z</lastmod>
+    <loc>https://sealf.ie/en/support.html</loc>
+    <lastmod>2023-03-04T16:43:32.897Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sealf.ie/fr/</loc>
-    <lastmod>2023-01-28T09:45:10.937Z</lastmod>
+    <lastmod>2023-03-04T16:43:32.935Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/fr/privacy-ios/</loc>
-    <lastmod>2023-01-28T09:45:10.947Z</lastmod>
+    <loc>https://sealf.ie/fr/privacy-ios.html</loc>
+    <lastmod>2023-03-04T16:43:32.945Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/fr/privacy/</loc>
-    <lastmod>2023-01-28T09:45:10.956Z</lastmod>
+    <loc>https://sealf.ie/fr/privacy.html</loc>
+    <lastmod>2023-03-04T16:43:32.956Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/fr/support/</loc>
-    <lastmod>2023-01-28T09:45:10.971Z</lastmod>
+    <loc>https://sealf.ie/fr/support.html</loc>
+    <lastmod>2023-03-04T16:43:32.971Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -55,7 +55,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sealf.ie/support/</loc>
+    <loc>https://sealf.ie/support.html</loc>
     <lastmod>2023-01-01T16:10:05.634Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -136,7 +136,7 @@ module.exports = grunt => {
               siteRoot: 'docs/'
         ,changefreq: 'weekly',
             extension: {
-              required: false,
+              required: true,
               trailingSlash: true
             },
            },
