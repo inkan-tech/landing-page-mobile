@@ -8,7 +8,7 @@
     },
     "head": {
         "title": "Protégez vous des usurpateurs",
-        "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021 1 entreprise sur 4 a subi une fraude avérée. Dans le Top5 des tentatives 4 utilisent l'usurpation d'identité "
+        "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021: une entreprise sur quatre a subi une fraude avérée. Dans le Top5 des tentatives 4 utilisent l'usurpation d'identité "
     },
     "testimonial": "Collecte des attestations des systèmes que vous utilisez. Ancre le résultat sur une blockchain. Un cauchemar pour les hackers.",
     "features": {
@@ -22,7 +22,7 @@
         },
         "path": {
             "title": "Auditable",
-            "text": "Toutes les transactions sont auditables, infalsifiables et permettent l'automatisation"
+            "text": "Toutes les transactions sont auditable, infalsifiables et permettent l'automatisation"
         },
         "shield": {
             "title": "Multi attestations",
