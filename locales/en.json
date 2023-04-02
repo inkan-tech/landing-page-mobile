@@ -1,16 +1,20 @@
 {
     "title": "Sealfie app",
+    "meta": {
+        "description": "SEALFIE The first digital companion for protection against the scam at the false president. The most damaging type of fraud targeting companies."
+    },
     "banner": {
         "main": "",
-        "features": "features",
-        "download": "download",
-        "action": "Newsletter/Waiting list"
+        "pricing": "Pricing",
+        "docs": "Docs",
+        "action": "Get Sealfie"
     },
     "head": {
         "title": "Protects you from identity thieves.",
         "subtitle": "Sealfie protects from fake CEO frauds, fake suppliers and more. In the Top5 attempts of frauds 4 involve identity thieves. 1 in 4 company falls victim of fraud in 2021."
     },
     "testimonial": "Based on proactive, automatic, forensic, anchor in a public blockchain for verification and automation",
+    "post_register": "Thank you for registering. We will contact you soon, check your mail to validate registration to the mailing list.",
     "features": {
         "person": {
             "title": "Simple",
@@ -29,6 +33,32 @@
             "text": "Sealfie proactively chains evidences, similar to a forensic expert"
         }
     },
+    "pricing": {
+        "users": {
+            "title": "Users",
+            "text": "Up to 5 users per certification process"
+        },
+        "cost": {
+            "title": "Tarif",
+            "text": "2100 Euros (excl. taxes) per year or 200 Euros per month "
+        },
+        "support": {
+            "title": "Support",
+            "text": "We are here to help make the technologie invisible. Change phone, adapt the process, verify technical data included."
+        },
+        "period": {
+            "title": "Availability",
+            "text": "Yearly subscription with a discount. Always free: then monthly list price apply."
+        },
+        "onboard": {
+            "title": "Onboarding",
+            "text": "Contact us by e-mail to schedule on-boarding of the selected users"
+        },
+        "techno": {
+            "title": "Technology",
+            "text": "Lists of verifiable certificates, encrypted and linked on a blockchain"
+        }
+    },
     "description": {
         "title": "Trust in data by chaining multiple certifications",
         "text": "Sleep at night by trusting the critical information is certified. We use only the data you generated on different systems, for your own protection. Imagine how simpler your digital processes with data you can trust"
@@ -36,14 +66,21 @@
     "action": {
         "stop": "Stop depending on the weakest trained person",
         "start": "Trust the data you receive",
-        "linktext": "Try Sealfie"
+        "linktext": "Get Sealfie"
+    },
+    "contactus": {
+        "main": "Contact us to get a subscription.",
+        "custom": "We also propose to adapt and co-create services using our technology.",
+         "linktext": "Contact us"
     },
     "appstore": {
         "download": "Try Sealfie"
     },
-    "videos": {"document": "Landing-en.webm"},
+    "videos": {
+        "document": "Landing-en.webm"
+    },
     "modal": {
-        "title": "Join the waiting list",
+        "title": "Contact form",
         "mail": {
             "title": "Email",
             "feedback": "a valid email is mandatory",
@@ -59,7 +96,29 @@
             "feedback": "We need you type of phone",
             "error": "invalid type of phone"
         },
-        "lang": {"fr": "3277967", "en": "3277966"},
+        "lang": {
+            "fr": "3277967",
+            "en": "3277966"
+        },
         "sendbutton": "Send"
-    }, "support": "To get help please send a detailed email with your phone number used in the test for us to speed up understanding the issue."
+    },
+    "support": "To get help please send a detailed email with your phone number used in the test for us to speed up understanding the issue.",
+    "docs": {
+        "title": "How to use Sealfie?",
+        "subtitle": "Once registered in our systems, which is done by contacting us",
+        "stepstart": {
+            "one": "I need to validate a document linked to a transaction request.",
+            "two": "I start sealfie, choose document",
+            "tree": "I take a photo of the document, a selfie and add a message (option)",
+            "biometric": "I confirm with the biometric of my smartphone"
+        },
+        "intersteps": "The validation request is processed, we add additional certificates if available. The other members of the group receive notifications.",
+        "stepvalidate": {
+            "one": "Another person receive a validation request.",
+            "two": "She checks the photos and consistency of information.",
+            "tree": "It validates and adds a selfie.",
+            "biometric": "She confirms with the biometric of her smartphone"
+        },
+        "completed": "The applicant may verify that the right people have approved the request. Contact us for technical details and computer automation."
+    }
 }

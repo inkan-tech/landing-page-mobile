@@ -42,18 +42,18 @@
         "grunt-cli": "^1.4.3",
         "i18n": "^0.15.1",
         "node-sass": "^8.0.0",
-        "react-intl": "^6.2.5"
+        "react-intl": "^6.3.2"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.13",
-        "browser-sync": "2.27.11",
+        "autoprefixer": "10.4.14",
+        "browser-sync": "2.29.1",
         "chokidar": "3.5.3",
-        "concurrently": "7.6.0",
-        "grunt": "^1.5.3",
+        "concurrently": "8.0.1",
+        "grunt": "^1.6.1",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
         "grunt-cli": "^1.4.3",
-        "grunt-contrib-compass": "latest",
+        "grunt-contrib-compass": "^1.1.1",
         "grunt-contrib-concat": "latest",
         "grunt-contrib-connect": "latest",
         "grunt-contrib-copy": "^1.0.0",
@@ -66,10 +66,10 @@
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
         "grunt-sitemap": "^2.0.1",
-        "postcss": "8.4.20",
-        "prettier": "2.8.1",
+        "postcss": "8.4.21",
+        "prettier": "2.8.7",
         "pug": "3.0.2",
-        "sass": "^1.57.1",
+        "sass": "^1.60.0",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }

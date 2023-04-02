@@ -1,16 +1,20 @@
 {
     "title": "Test en beta de Sealfie",
+    "meta": {
+        "description": "Sealfie la premier compagnon digital de protection contre l'arnaque au faux président. Le premier type de fraude visant les entreprises."
+    },
     "banner": {
         "main": "",
-        "features": "fonctionnalités",
-        "download": "téléchargement",
-        "action": "Newsletter/Liste d'attente"
+        "pricing": "Tarifs",
+        "docs": "Documentation",
+        "action": "Obtenez Sealfie"
     },
     "head": {
         "title": "Protégez vous des usurpateurs",
         "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021: une entreprise sur quatre a subi une fraude avérée. Dans le Top5 des tentatives 4 utilisent l'usurpation d'identité "
     },
     "testimonial": "Collecte des attestations des systèmes que vous utilisez. Ancre le résultat sur une blockchain. Un cauchemar pour les hackers.",
+    "post_register": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas.",
     "features": {
         "person": {
             "title": "Simplissime",
@@ -29,6 +33,32 @@
             "text": "Sealfie prouve vos déclarations à la manière d'un expert judiciaire."
         }
     },
+    "pricing": {
+        "users": {
+            "title": "Utilisateurs",
+            "text": "Jusqu'à 5 utilisateurs par processus de certification"
+        },
+        "cost": {
+            "title": "Tarif",
+            "text": "2100 euros HT par an ou 200 euros HT par mois "
+        },
+        "support": {
+            "title": "Support",
+            "text": "Nous sommes là pour aider à rendre la technologie invisible. Changement de téléphone, adapter le processus, vérifier les données techniques incluses."
+        },
+        "period": {
+            "title": "Disponibilité",
+            "text": "Abonnement annuel avec une remise. Toujours libre: prix mensuel pour les mois consommés."
+        },
+        "onboard": {
+            "title": "Mise en place",
+            "text": "Contactez-nous par e-mail pour planifier l'intégration des utilisateurs sélectionnés"
+        },
+        "techno": {
+            "title": "Technology",
+            "text": "Listes d'attestations vérifiables, chiffrés et liées sur une blockchain"
+        }
+    },
     "description": {
         "title": "Innovation par chaînage d'attestations",
         "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Sealfie n'utilise que des données vous appartenant et avec votre accord explicite à chaque action. Retrouvez la confiance dans les actions les plus critiques pour votre entreprise"
@@ -36,16 +66,21 @@
     "action": {
         "stop": "Les deepfake sont communes",
         "start": "Votre protection doit être à la hauteur",
-        "linktext": "Essayez Sealfie"
+        "linktext": "Obtenez Sealfie"
+    },
+    "contactus": {
+        "main": "Nous contactez pour obtenir un abonnement.",
+        "custom": "Nous proposons aussi d'adapter et co-créer des services utilisant notre technologie.",
+        "linktext": "Contactez nous"
     },
     "appstore": {
-        "download": "Essayez Sealfie"
+        "download": "Obtenez Sealfie"
     },
     "videos": {
         "document": "Landing-fr.webm"
     },
     "modal": {
-        "title": "Inscrivez vous à la liste d'attente",
+        "title": "Formulaire de contact",
         "mail": {
             "title": "Email",
             "feedback": "un email est nécessaire",
@@ -61,7 +96,29 @@
             "feedback": "un email est nécessaire",
             "error": "l'email est invalide"
         },
-        "lang": {"fr": "3277967", "en": "3277966"},
+        "lang": {
+            "fr": "3277967",
+            "en": "3277966"
+        },
         "sendbutton": "Envoyez"
-    },"support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème."
+    },
+    "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
+    "docs": {
+        "title": "Comment utiliser Sealfie?",
+        "subtitle": "Une fois enregistré dans nos systèmes (nous contacter)",
+        "stepstart": {
+            "one": "J'ai besoin de valider un document lié à une demande de transaction.",
+            "two": "Je démarre Sealfie, choisit document",
+            "tree": "Je prend une photo du document, un selfie et ajoute un message (option)",
+            "biometric": "Je confirme avec la biométrie de mon smartphone"
+        },
+        "intersteps": "La demande de validation est traitée, nous ajoutons des attestations complémentaires si disponible. Les autres membres du groupe reçoivent des notifications.",
+        "stepvalidate": {
+            "one": "Une autre personne reçois une demande de validation.",
+            "two": "Elle vérifie les photos et la cohérence des information.",
+            "tree": "Elle valide et ajoute un selfie.",
+            "biometric": "Elle confirme avec la biométrie de son smartphone"
+        },
+        "completed": "Le demandeur peux vérifier que les bonnes personnes ont approuvées la demande. Nous contacter pour les détails techniques et l'automatisation informatique."
+    }
 }
