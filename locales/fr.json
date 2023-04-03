@@ -110,14 +110,16 @@
             "one": "J'ai besoin de valider un document lié à une demande de transaction.",
             "two": "Je démarre Sealfie, choisit document",
             "tree": "Je prend une photo du document, un selfie et ajoute un message (option)",
-            "biometric": "Je confirme avec la biométrie de mon smartphone"
+            "biometric": "Je confirme avec la biométrie de mon smartphone",
+            "video": "Landing-Doc-FR.webm"
         },
         "intersteps": "La demande de validation est traitée, nous ajoutons des attestations complémentaires si disponible. Les autres membres du groupe reçoivent des notifications.",
         "stepvalidate": {
             "one": "Une autre personne reçois une demande de validation.",
             "two": "Elle vérifie les photos et la cohérence des information.",
             "tree": "Elle valide et ajoute un selfie.",
-            "biometric": "Elle confirme avec la biométrie de son smartphone"
+            "biometric": "Elle confirme avec la biométrie de son smartphone",
+            "video": "Landing-Doc-FR2.webm"
         },
         "completed": "Le demandeur peux vérifier que les bonnes personnes ont approuvées la demande. Nous contacter pour les détails techniques et l'automatisation informatique."
     }

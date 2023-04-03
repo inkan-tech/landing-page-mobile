@@ -110,14 +110,16 @@
             "one": "I need to validate a document linked to a transaction request.",
             "two": "I start sealfie, choose document",
             "tree": "I take a photo of the document, a selfie and add a message (option)",
-            "biometric": "I confirm with the biometric of my smartphone"
+            "biometric": "I confirm with the biometric of my smartphone",
+            "video": "Landing-Doc-EN.webm"
         },
         "intersteps": "The validation request is processed, we add additional certificates if available. The other members of the group receive notifications.",
         "stepvalidate": {
             "one": "Another person receive a validation request.",
             "two": "She checks the photos and consistency of information.",
             "tree": "It validates and adds a selfie.",
-            "biometric": "She confirms with the biometric of her smartphone"
+            "biometric": "She confirms with the biometric of her smartphone",
+            "video": "Landing-Doc-EN2.webm"
         },
         "completed": "The applicant may verify that the right people have approved the request. Contact us for technical details and computer automation."
     }
