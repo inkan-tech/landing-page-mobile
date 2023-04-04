@@ -1,7 +1,7 @@
 {
     "title": "Sealfie app",
     "meta": {
-        "description": "SEALFIE The first digital companion for protection against the scam at the false president. The most damaging type of fraud targeting companies."
+        "description": "SEALFIE is the first digital companion designed to protect you against scams and false presidents. It prevents identity theft, which is one of the most damaging types of fraud targeting companies."
     },
     "banner": {
         "main": "",
@@ -10,53 +10,53 @@
         "action": "Get Sealfie"
     },
     "head": {
-        "title": "Protects you from identity thieves.",
-        "subtitle": "Sealfie protects from fake CEO frauds, fake suppliers and more. In the Top5 attempts of frauds 4 involve identity thieves. 1 in 4 company falls victim of fraud in 2021."
+        "title": "Protect Yourself From Identity Thieves",
+        "subtitle": "Sealfie safeguards you against fake CEO fraud, fake suppliers, and more. Did you know that 4 out of the top 5 attempted frauds involve identity theft? And that 1 in 4 companies fall victim to fraud in 2021?"
     },
-    "testimonial": "Based on proactive, automatic, forensic, anchor in a public blockchain for verification and automation",
-    "post_register": "Thank you for registering. We will contact you soon, check your mail to validate registration to the mailing list.",
+    "testimonial": "SEALFIE uses proactive, automatic, forensic technology anchored in a public blockchain for verification and automation.",
+    "post_register": "Thank you for registering! We will be in touch shortly. Please check your email to validate your registration for our mailing list.",
     "features": {
         "person": {
-            "title": "Simple",
-            "text": "If you can take a picture with a smartphone, you can use Sealfie"
+            "title": "Simple to Use",
+            "text": "Using Sealfie is as easy as taking a picture with your smartphone."
         },
         "send": {
-            "title": "Certify transactions",
-            "text": "Certify  all sorts of transactions, physical and digital. Prevent tempering and identity theft "
+            "title": "Certify All Transactions",
+            "text": "Certify all sorts of transactions, whether physical or digital. Prevent tampering and identity theft with Sealfie."
         },
         "path": {
-            "title": "Auditable",
-            "text": "Data can be audited and automated"
+            "title": "Auditable Data",
+            "text": "Your data can be audited and automated, giving you peace of mind that your critical information is certified."
         },
         "shield": {
-            "title": "Multi factor certification",
-            "text": "Sealfie proactively chains evidences, similar to a forensic expert"
+            "title": "Multi-Factor Certification",
+            "text": "Sealfie proactively chains evidence together, much like a forensic expert, to ensure that all of your transactions are securely verified."
         }
     },
     "pricing": {
         "users": {
             "title": "Users",
-            "text": "Up to 5 users per certification process"
+            "text": "Sealfie allows up to 5 users per certification process."
         },
         "cost": {
-            "title": "Tarif",
-            "text": "2100 Euros (excl. taxes) per year or 200 Euros per month "
+            "title": "Pricing",
+            "text": "Sealfie costs 2100 Euros (excl. taxes) per year or 200 Euros per month."
         },
         "support": {
             "title": "Support",
-            "text": "We are here to help make the technologie for all. Change phone, adapt the process, verify technical data included."
+            "text": "Our support team is here to help make our technology work for you. Need to change your phone? Adapt the process? Verify technical data? We've got you covered."
         },
         "period": {
             "title": "Availability",
-            "text": "Yearly subscription. You are always free: monthly list price apply if you leave."
+            "text": "Sealfie is available via yearly subscription. And don't worry - you're always free to leave. Monthly list prices apply if you do."
         },
         "onboard": {
             "title": "Onboarding",
-            "text": "Contact us by e-mail to schedule on-boarding of the selected users"
+            "text": "Contact us by email to schedule onboarding for your selected users."
         },
         "techno": {
             "title": "Technology",
-            "text": "Lists of verifiable certificates, encrypted and linked on a blockchain"
+            "text": "Our technology uses lists of verifiable certificates that are encrypted and linked together on a blockchain."
         }
     },
     "description": {
@@ -71,7 +71,7 @@
     "contactus": {
         "main": "Contact us to get a subscription.",
         "custom": "We also propose to adapt and co-create services using our technology.",
-         "linktext": "Contact us"
+        "linktext": "Contact us"
     },
     "appstore": {
         "download": "Try Sealfie"
@@ -83,18 +83,18 @@
         "title": "Contact form",
         "mail": {
             "title": "Email",
-            "feedback": "a valid email is mandatory",
-            "error": "invalid email"
+            "feedback": "Please enter a valid email address.",
+            "error": "Invalid email address."
         },
         "phone": {
             "title": "Phone number",
-            "feedback": "a valid phone number is mandatory",
-            "error": "invalid phone number"
+            "feedback": "Please enter a valid phone number.",
+            "error": "Invalid phone number."
         },
         "phonetype": {
             "title": "Type of phone",
-            "feedback": "We need you type of phone",
-            "error": "invalid type of phone"
+            "feedback": "Please select your type of phone.",
+            "error": "Invalid type of phone."
         },
         "lang": {
             "fr": "3277967",
@@ -102,23 +102,23 @@
         },
         "sendbutton": "Send"
     },
-    "support": "To get help please send a detailed email with your phone number used in the test for us to speed up understanding the issue.",
+    "support": "To get help, please send a detailed email with your phone number used in the test for us to better understand the issue.",
     "docs": {
         "title": "How to use Sealfie?",
-        "subtitle": "Once registered in our systems, which is done by contacting us",
+        "subtitle": "Once registered in our system, which can be done by contacting us.",
         "stepstart": {
             "one": "I need to validate a document linked to a transaction request.",
-            "two": "I start sealfie, choose document",
-            "tree": "I take a photo of the document, a selfie and add a message (option)",
-            "biometric": "I confirm with the biometric of my smartphone",
+            "two": "I start Sealfie and choose the document.",
+            "tree": "I take a photo of the document, a selfie, and add a message (optional).",
+            "biometric": "I confirm with the biometric of my smartphone.",
             "video": "Landing-Doc-EN.webm"
         },
         "intersteps": "The validation request is processed, we add additional certificates if available. The other members of the group receive notifications.",
         "stepvalidate": {
-            "one": "Another person receive a validation request.",
+            "one": "Another person receives a validation request.",
             "two": "She checks the photos and consistency of information.",
-            "tree": "It validates and adds a selfie.",
-            "biometric": "She confirms with the biometric of her smartphone",
+            "tree": "She validates and adds a selfie.",
+            "biometric": "She confirms with the biometric of her smartphone.",
             "video": "Landing-Doc-EN2.webm"
         },
         "completed": "The applicant may verify that the right people have approved the request. Contact us for technical details and computer automation."
