@@ -35,8 +35,8 @@
     },
     "pricing": {
         "users": {
-            "title": "Utilisateurs",
-            "text": "Jusqu'à 5 utilisateurs par processus de certification."
+            "title": "1 groupe",
+            "text": "Les personnes pouvant faire des transferts et celles devant approuver. (2-5)"
         },
         "cost": {
             "title": "Tarif",
