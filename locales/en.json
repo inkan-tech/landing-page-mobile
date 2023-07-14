@@ -22,7 +22,7 @@
         },
         "send": {
             "title": "Certify All Transactions",
-            "text": "Certify all sorts of transactions, whether physical or digital. Prevent tampering and identity theft with Sealfie."
+            "text": "Certify all sorts of transactions, whether physical or digital. Prevent tampering and identity theft with Sealfie. "
         },
         "path": {
             "title": "Auditable Data",
@@ -30,17 +30,17 @@
         },
         "shield": {
             "title": "Multi-Factor Certification",
-            "text": "Sealfie proactively chains evidence together, much like a forensic expert, to ensure that all of your transactions are securely verified."
+            "text": "Sealfie proactively chains evidence together, much like a forensic expert, to ensure that all of your transactions are securely verified. Ideal for preventing Business Email Compromise (BEC) fraud related to fake presidents and fake suppliers"
         }
     },
     "pricing": {
         "users": {
-            "title": "1 group",
-            "text": "The ones who are allowed to transfer money and the approvers. (2-5)"
+            "title": "Streamlined Approval Process",
+            "text": "Experience a seamless approval process with support for pre-defined workflows. Tailor the process to your specific needs with customizable options and explore additional add-ons. Contact us for a personalized quote."
         },
         "cost": {
             "title": "Pricing",
-            "text": "Sealfie costs 100 Euros per month per users, 1000 if paid annually."
+            "text": "Sealfie costs 100 Euros per month per users, 1100 if paid annually. Customization to your specific processes upon request."
         },
         "support": {
             "title": "Support",

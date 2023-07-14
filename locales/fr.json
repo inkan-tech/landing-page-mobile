@@ -22,7 +22,7 @@
         },
         "send": {
             "title": "Protège les transactions",
-            "text": "Protège toutes sortes de transactions, digitales ou non. Empêche les falsifications et usurpations d'identités."
+            "text": "Protège toutes sortes de transactions, digitales ou non. Empêche les falsifications et usurpations d'identités. Idéal pour éviter la fraude aux faux présidents (FOVI) et aux faux fournisseurs."
         },
         "path": {
             "title": "Auditable",
@@ -34,13 +34,12 @@
         }
     },
     "pricing": {
-        "users": {
-            "title": "1 groupe",
-            "text": "Les personnes pouvant faire des transferts et celles devant approuver. (2-5)"
+        "users": {"title": "Processus d'approbation pré-défini",
+        "text": "Inclut l'approbation générique et prédéfinie. Pour personnaliser le processus, ajouter des certificats contactez-nous pour un devis."
         },
         "cost": {
             "title": "Tarif",
-            "text": "100 euros HT par mois par utilisateurs, 1 mois gratuit payment annuel"
+            "text": "100 euros HT par mois par utilisateurs, 1100 payment annuel. Adaptation à vos processus spécifiques sur demande."
         },
         "support": {
             "title": "Support",
