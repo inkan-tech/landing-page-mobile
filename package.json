@@ -1,7 +1,7 @@
 {
     "title": "Sealfie Landing page multi",
     "name": "landing-page-mobile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scripts": {
         "build": "NODE_ENV=production grunt",
         "build:assets": "grunt copy",
@@ -10,15 +10,13 @@
         "clean": "node scripts/clean.js",
         "start": "grunt  "
     },
-    "description": "A one page app landing page HTML theme for Bootstrap.",
+    "description": "Landing page for Sealfie",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template",
-        "i18n"
+        "Sealfie",
+        "BEC protection",
+        "deeptech",
+        "mobile application",
+        "cybersecurity"
     ],
     "homepage": "https://sealf.ie/",
     "bugs": {
@@ -37,19 +35,19 @@
     },
     "dependencies": {
         "-": "^0.0.1",
-        "bootstrap": "5.3.0",
+        "bootstrap": "5.3.2",
         "coffeescript": "^2.7.0",
         "grunt-cli": "^1.4.3",
         "i18n": "^0.15.1",
         "node-sass": "^9.0.0",
         "package.json": "^2.0.1",
-        "react-intl": "^6.4.4"
+        "react-intl": "^6.5.5"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.14",
+        "autoprefixer": "10.4.16",
         "browser-sync": "2.29.3",
         "chokidar": "3.5.3",
-        "concurrently": "8.2.0",
+        "concurrently": "8.2.2",
         "grunt": "^1.6.1",
         "grunt-babel": "^8.0.0",
         "grunt-browser-sync": "^2.2.0",
@@ -67,10 +65,10 @@
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
         "grunt-sitemap": "^2.0.1",
-        "postcss": "8.4.25",
-        "prettier": "3.0.0",
+        "postcss": "8.4.32",
+        "prettier": "3.1.0",
         "pug": "3.0.2",
-        "sass": "^1.63.6",
+        "sass": "^1.69.5",
         "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
