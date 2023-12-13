@@ -21,7 +21,6 @@ module.exports = grunt => {
             files: {
               "docs/index.html": ["src/pug/index.pug"],
               "docs/privacy-ios.html": ["src/pug/privacy-ios.pug"],
-              "docs/privacy.html": ["src/pug/privacy-ios.pug"],
               "docs/support.html": ["src/pug/support.pug"],
               "docs/post-register.html": ["src/pug/post-register.pug"],
               "docs/documentation.html": ["src/pug/documentation.pug"],
