@@ -60,6 +60,7 @@
         "grunt-contrib-jshint": "^3.2.0",
         "grunt-contrib-pug": "^3.0.0",
         "grunt-contrib-watch": "latest",
+        "grunt-move": "^2.0.0",
         "grunt-pug-i18n": "^1.0.1",
         "grunt-run": "^0.8.1",
         "grunt-sass": "^3.1.0",
