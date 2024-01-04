@@ -44,7 +44,7 @@
     },
     "devDependencies": {
         "autoprefixer": "10.4.16",
-        "browser-sync": "2.29.3",
+        "browser-sync": "3.0.2",
         "chokidar": "3.5.3",
         "concurrently": "8.2.2",
         "grunt": "^1.6.1",
