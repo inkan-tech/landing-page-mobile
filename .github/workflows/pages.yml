@@ -33,3 +33,4 @@ jobs:
             GITHUB_TOKEN: ${{ github.token }}
         with:
           folder: docs # The folder the action should deploy.
+          branch: master
