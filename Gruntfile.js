@@ -59,6 +59,12 @@ module.exports = grunt => {
                 src: ['**'],
                 dest: 'docs/'
             },
+            robots: {
+                expand: true,
+                cwd: 'src',
+                src: ['robots.txt', 'CNAME'],
+                dest: 'docs/'
+            },
 
 
         },
