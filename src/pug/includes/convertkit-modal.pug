@@ -6,7 +6,10 @@
                 h5#generickModalLabel.modal-title.font-alt.text-white #{$i18n.modal.title}
                 button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
             .modal-body.border-1.p-1
-            form.seva-form.formkit-form(action='https://app.convertkit.com/forms/3520168/subscriptions' method='post' data-sv-form='3520168' data-uid='dff826ec47' data-format='modal' data-version='5' data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}' min-width='400 500 600 700 800' style='border-radius: 0px;')
+            form(
+                action="https://sealf.us21.list-manage.com/subscribe/post?u=716e8fcfd71b495b7e4af1e92&amp;id=b40b67347a&amp;v_id=213&amp;f_id=009af2e6f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate=""
+                min-width='400 500 600 700 800' style='border-radius: 0px;')
               .form-floating.border-1.p-1(style="height:auto;")
                 label(for='email_address') #{$i18n.modal.mail.title}
                 .invalid-feedback(data-sb-feedback='email:required')
@@ -15,25 +18,8 @@
                     |  #{$i18n.modal.mail.error}
                 input#email.form-control(type='email',  placeholder='name@email.com' required='true' name='email_address' style="height:80px;"
                     data-sb-validations='required,email' )
-              .form-floating.mb-3
-                input#phone.form-control(aria-label='Phone' name='fields[phone]' required='true' placeholder='Phone' type='text')
-                label(for='fields[phone]') #{$i18n.modal.phone.title}
-                .invalid-feedback(data-sb-feedback='phone:required')
-                    | #{$i18n.modal.phone.feedback}
-              .formkit-2461(data-group='dropdown' group='field' type='Custom' order='2' save_as='Tag')
-                |  #{$i18n.modal.phonetype.title}
-                select.formkit-select(data-element='tags-select' name='tags[]' required='true' )
-                    option(value='') #{$i18n.modal.phonetype.title}
-                    option(value='3277907') iPhone
-                    option(value='3277908') Android
-              .formkit-5284(data-group='dropdown' group='field' type='Custom' order='3' save_as='Tag' ).visually-hidden
-                select.formkit-select(data-element='tags-select' name='tags[]' required='' )
-                    if $localeName == "fr"
-                        option(value='3277967')
-                    else
-                        option(value='3277966')
-
               .d-grid.border-2.p-1
-                  button.btn.btn-primary.rounded-pill.btn-lg(type="submit", name="asdf") #{$i18n.modal.sendbutton}
+                  button.btn.btn-primary.rounded-pill.btn-lg(type="submit", name="subscribe", id="mc-embedded-subscribe", value="Subscribe") #{$i18n.modal.sendbutton}
 //                 button#submitButton.btn.btn-primary.rounded-pill.btn-lg.disabled(type='submit', , name="asdf") Submit
+//                 <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
 
