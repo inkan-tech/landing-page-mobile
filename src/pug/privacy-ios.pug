@@ -10,7 +10,10 @@ html(lang=en)
 
     title(Privacy policy)
 
-    link(rel='canonical', href='https://sealf.ie/en/privacy-ios.html')
+    if $localeName !== 'fr'
+        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
+    else
+        link(rel='canonical', href='https://sealf.ie/')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 

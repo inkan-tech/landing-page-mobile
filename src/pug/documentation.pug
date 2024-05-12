@@ -11,7 +11,11 @@ html(lang=$localeName)
     meta(name='author', content='nicolas.thomas@inkan.link')
 
 
-    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
+    if $localeName !== 'fr'
+        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
+    else
+        link(rel='canonical', href='https://sealf.ie/')
+
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 
     // Bootstrap icons
