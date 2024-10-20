@@ -8,13 +8,10 @@ html(lang=$localeName)
     meta(name='author', content='nicolas.thomas@inkan.link')
 
 
-    title #{$i18n.title}
+    title #{$i18n.pricing.title}
 
-    if $localeName !== 'fr'
-        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
-    else
-        link(rel='canonical', href='https://sealf.ie/')
 
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/'+'pricing.html')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 

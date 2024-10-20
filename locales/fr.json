@@ -14,7 +14,9 @@
         "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021 : une entreprise sur quatre a subi une fraude avérée. Dans le Top 5 des tentatives 4 utilisent l'usurpation d'identité."
     },
     "testimonial": "Tout comprendre avec l'interview de notre fondateur:",
-    "post_register": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas.",
+
+   "post_register": { "title": "Page post enregistrement",
+        "main":  "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."},
     "features": {
         "person": {
             "title": "Simplissime",
@@ -34,6 +36,7 @@
         }
     },
     "pricing": {
+        "title": "Tarifs",
         "users": {"title": "Processus d'approbation pré-défini",
         "text": "Inclut l'approbation générique et prédéfinie. Pour personnaliser le processus, ajouter des certificats contactez-nous pour un devis."
         },

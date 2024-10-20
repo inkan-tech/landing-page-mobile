@@ -8,12 +8,9 @@ html(lang=$localeName)
     meta(name='author', content='nicolas.thomas@inkan.link')
 
 
-    title #{$i18n.title}
+    title #{$i18n.post_register.title}
 
-    if $localeName !== 'fr'
-        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
-    else
-        link(rel='canonical', href='https://sealf.ie/')
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/post-register.html')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 
@@ -55,7 +52,7 @@ html(lang=$localeName)
       .container.px-5
         .row.gx-5.justify-content-center
           .col-l-8
-            .h2.fs-1.text-white.mb-4 #{$i18n.post_register}
+            .h2.fs-1.text-white.mb-4 #{$i18n.post_register.main}
             img(src='/assets/img/InkanLogo-32x32.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
 
     // App badge section

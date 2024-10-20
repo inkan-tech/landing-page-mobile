@@ -3,7 +3,7 @@ html(lang=$localeName)
 
   head
 
-    title #{$i18n.title}
+    title #{$i18n.docs.title}
 
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -11,10 +11,8 @@ html(lang=$localeName)
     meta(name='author', content='nicolas.thomas@inkan.link')
 
 
-    if $localeName !== 'fr'
-        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
-    else
-        link(rel='canonical', href='https://sealf.ie/')
+
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 
