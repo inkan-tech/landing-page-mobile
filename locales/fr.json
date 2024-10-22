@@ -10,60 +10,62 @@
         "action": "Newsletter sur la fraude"
     },
     "head": {
-        "title": "Protégez-vous des usurpateurs !",
-        "subtitle": "Sealfie prévient la fraude au président, fraude aux virements et faux fournisseurs.  En 2021 : une entreprise sur quatre a subi une fraude avérée. Dans le Top 5 des tentatives 4 utilisent l'usurpation d'identité."
+        "title": "Sécurisez vos finances contre les deepfakes !",
+        "subtitle": "Sealfie vous protège contre la fraude au faux PDG, aux faux fournisseurs et plus encore. Saviez-vous que chaque année, 5 milliards de dollars sont volés par la fraude au PDG ? Et qu'1 entreprise sur 4 est victime de fraude ?"
     },
-    "testimonial": "Tout comprendre avec l'interview de notre fondateur:",
-
-   "post_register": { "title": "Page post enregistrement",
-        "main":  "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."},
+    "testimonial": "Sealfie : Une sécurité inviolable alliée à une transparence cristalline, propulsée par la technologie d'attestation de pointe d'Inkan.link.",
+    "post_register": {
+        "title": "Page post enregistrement",
+        "main": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."
+    },
     "features": {
         "person": {
             "title": "Simplissime",
             "text": "Vous savez faire une photo : vous savez utiliser Sealfie."
         },
         "send": {
-            "title": "Protège les transactions",
-            "text": "Protège toutes sortes de transactions, digitales ou non. Empêche les falsifications et usurpations d'identités. Idéal pour éviter la fraude aux faux présidents (FOVI) et aux faux fournisseurs."
+            "title": "Certifiez Toutes les Transactions",
+            "text": "Certifiez tous types de transactions, qu'elles soient physiques ou numériques. Prévenez la falsification et le vol d'identité."
         },
         "path": {
             "title": "Auditable",
             "text": "Toutes les transactions sont auditable, infalsifiables et permettent l'automatisation."
         },
         "shield": {
-            "title": "Multi attestations",
-            "text": "Sealfie prouve vos déclarations à la manière d'un expert judiciaire."
+            "title": "Attestation Multi-Sources",
+            "text": "Notre solution deeptech brevetée, conçue pour gagner une confiance inégalée auprès des professionnels de la cybersécurité."
         }
     },
     "pricing": {
-        "title": "Tarifs",
-        "users": {"title": "Processus d'approbation pré-défini",
-        "text": "Inclut l'approbation générique et prédéfinie. Pour personnaliser le processus, ajouter des certificats contactez-nous pour un devis."
+        "title": "Tarification",
+        "users": {
+            "title": "Processus d'approbation simplissime",
+            "text": "Bénéficiez d'approbations fluides, de vérifications cyber non intrusives et d'une tranquillité d'esprit absolue."
         },
         "cost": {
-            "title": "Tarif",
-            "text": "100 euros HT par mois par utilisateur, 1100 payment annuel. Adaptation à vos processus spécifiques sur demande."
+            "title": "Tarification",
+            "text": "Sealfie coûte 95 euros par mois par utilisateur, 1050 euros si payé annuellement. Personnalisation selon vos processus spécifiques sur demande."
         },
         "support": {
             "title": "Support",
-            "text": "Nous sommes là pour aider à rendre la technologie accessible à tous. Changement de téléphone, adapter le processus, vérifier les données techniques incluses."
+            "text": "Sans tracas dès le premier jour : Support complet inclus, aucune formation ni intégration requise."
         },
         "period": {
-            "title": "Abonnements",
-            "text": "Abonnement annuel. Toujours libre : prix mensuel pour les mois consommés. Et abonnement mensuel."
+            "title": "Disponibilité",
+            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment."
         },
         "onboard": {
             "title": "Mise en place",
-            "text": "Contactez-nous par e-mail pour planifier l'intégration des utilisateurs sélectionnés."
+            "text": "Contactez-nous par email pour planifier l'intégration de vos utilisateurs sélectionnés."
         },
         "techno": {
-            "title": "Technology",
-            "text": "Listes d'attestations vérifiables, chiffrés et liées sur une blockchain."
+            "title": "Technologie",
+            "text": "Notre solution deeptech brevetée, conçue pour gagner une confiance inégalée auprès des professionnels de la cybersécurité. Basée sur des attestations multi-sources."
         }
     },
     "description": {
-        "title": "Innovation par chaînage d'attestations.",
-        "text": "Ne restez plus à la merci des hackers, éliminez l'incertitude des décisions.  Sealfie n'utilise que des données vous appartenant et avec votre accord explicite pour chaque action. Retrouvez la confiance dans les actions les plus critiques pour votre entreprise."
+        "title": "Confiance par Attestation Multi-Sources",
+        "text": "Nous n'utilisons que les données que vous avez générées à travers divers systèmes, assurant ainsi votre protection. Imaginez des processus numériques rationalisés basés sur des données en lesquelles vous pouvez avoir une confiance implicite."
     },
     "action": {
         "stop": "Les deepfake sont communes",
