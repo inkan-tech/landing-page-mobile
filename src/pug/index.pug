@@ -51,15 +51,33 @@ html(lang=$localeName)
               i.bi-envelope-fill.me-2
               span.small #{$i18n.banner.action}
 
-  //- Video Trailer
+    //- Video Trailer
   aside.text-center.bg-gradient-primary-to-secondary
-       .container.px-5
-           .row.gx-5.justify-content-center
-               .col-l-8
-                   .h2.fs-1.text-white.mb-4 #{$i18n.trailer}
-                   video.w-100(autoplay muted playsinline loop controls )
-                       source(src="/assets/videos/CES25-filmTrailer.mp4" type="video/mp4")
-                       | Votre navigateur ne supporte pas la lecture de vidéos.
+    .container.px-5
+       .row.gx-5.justify-content-center
+        .col-l-8
+            .h2.fs-1.text-white.mb-4 #{$i18n.trailer}
+            .ratio.ratio-16x9
+                if $localeName == "fr"
+                    iframe(
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/-zetGGK4UKo?autoplay=1&mute=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    )
+                else
+                    iframe(
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/-kDaGpo5LO0?autoplay=1&mute=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    )
 
 
   // Mashead header
