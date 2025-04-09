@@ -1,3 +1,10 @@
 {
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "codeQL.createQuery.qlPackLocation": "/Users/nicolasthomas/inkan/landing-page-mobile",
+    "vcpkg.target.defaultTriplet": "arm64-osx",
+    "vcpkg.target.hostTriplet": "-osx",
+    "vcpkg.target.useStaticLib": false,
+    "cmake.configureArgs": [
+        "-DVCPKG_TARGET_TRIPLET=arm64-osx"
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "title": "Sealfie l'application",
     "meta": {
-        "description": "Sealfie la premier compagnon digital de protection contre l'arnaque au faux président. Le premier type de fraude visant les entreprises."
+        "description": "Sealfie le premier compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
     },
     "banner": {
         "main": "",
@@ -9,13 +9,12 @@
         "docs": "Documentation",
         "action": "Newsletter sur la fraude"
     },
-
     "otherlang": "English",
     "head": {
-        "title": "Sécurisez vos finances contre les deepfakes !",
-        "subtitle": "Sealfie vous protège contre la fraude au faux PDG, aux faux fournisseurs et plus encore. Saviez-vous que chaque année, 5 milliards de dollars sont volés par la fraude au PDG ? Et qu'1 entreprise sur 4 est victime de fraude ?"
+        "title": "Protégez votre trésorerie des deepfakes !",
+        "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA. Avec Sealfie, il vous suffit de prendre une photo. Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique."
     },
-    "testimonial": "Sealfie : Une sécurité inviolable alliée à une transparence cristalline, propulsée par la technologie d'attestation de pointe d'Inkan.link.",
+    "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
     "trailer": "Fraude au président: 5 milliards volés par an !",
     "post_register": {
         "title": "Page post enregistrement",
@@ -24,19 +23,19 @@
     "features": {
         "person": {
             "title": "Simplissime",
-            "text": "Vous savez faire une photo : vous savez utiliser Sealfie."
+            "text": "Vous savez faire une photo : vous êtes formé ! Sealfie s'occupe automatiquement des vérifications techniques pour vous."
         },
         "send": {
-            "title": "Certifiez Toutes les Transactions",
-            "text": "Certifiez tous types de transactions, qu'elles soient physiques ou numériques. Prévenez la falsification et le vol d'identité."
-        },
-        "path": {
-            "title": "Auditable",
-            "text": "Toutes les transactions sont auditable, infalsifiables et permettent l'automatisation."
+            "title": "Sécurité Inégalée",
+            "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
         },
         "shield": {
-            "title": "Attestation Multi-Sources",
-            "text": "Notre solution deeptech brevetée, conçue pour gagner une confiance inégalée auprès des professionnels de la cybersécurité."
+            "title": "Adaptable et Extensible",
+            "text": "Sealfie s'adapte parfaitement aux processus de votre entreprise. Contactez-nous pour découvrir comment personnaliser notre solution selon vos besoins."
+        },
+        "path": {
+            "title": "Automatisation et Audit",
+            "text": "Sealfie automatise les vérifications et conserve les preuves pour chaque transaction, garantissant une traçabilité totale."
         }
     },
     "pricing": {

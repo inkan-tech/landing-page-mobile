@@ -112,8 +112,12 @@ module.exports = grunt => {
         // watch change inside directory to run task
         watch: {
             pug: {
-                files: ['src/pug/**/*.pug', 'locales/*.json'],
+                files: ['src/pug/**/*.pug'],
                 tasks: ['pug']
+            },
+            pug18n: {
+                files: [ 'locales/*.json'],
+                tasks: ['babel', 'copy', 'run', 'pug']
             },
             run: {
                 files: ['src/scss/**/*.scss'],
@@ -167,23 +171,8 @@ module.exports = grunt => {
                 }
             }
         },
-        pugi18n: {
-            templates: {
-                options: {
-                    // Pug i18n specific options
-                    i18n: {
-                        locales: 'locales/*.json',
-                        namespace: '$i18n'
-                    },
-                    // Pug specific options
-                    pretty: true,
-                    localeExtension: false,
-                },
-                files: {
-                    "docs": ["src/pug/*.pug", "src/pug/includes/*.pug"]
-                }
-            }
-        }
+
+
     });
 
     // initial
