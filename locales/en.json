@@ -1,8 +1,9 @@
 {
     "title": "Sealfie app",
     "meta": {
-        "description": "Sealfie is the first digital companion designed to protect you against scams and false presidents. It prevents identity theft, which is one of the most damaging types of fraud targeting companies."
-    },
+   "description": "Sealfie, the only digital companion protecting against fake president scams. The most lucrative fraud for criminals."
+},
+
     "banner": {
         "main": "",
         "pricing": "Pricing",
@@ -11,12 +12,14 @@
     },
     "otherlang": "Français",
     "head": {
-        "title": "Deepfake-proof your business finances",
-        "subtitle": "Sealfie safeguards you against fake CEO fraud, fake suppliers, and more. Did you know that every year, $5 billion is stolen through CEO fraud? And that 1 in 4 companies fall victim to fraud ?"
-    },
+    "title": "Protect Your Treasury from Deepfakes!",
+    "subtitle": "Your business is a target for criminals: €5 billion stolen each year. CEO fraud attacks are now undetectable thanks to new AI!",
+    "subtitle2": "With Sealfie, all you need to do is take a photo. We automatically perform multi-source technical verifications for each transaction at the critical moment."
+},
+
     "testimonial": "Sealfie: Ironclad security meets crystal-clear transparency, powered by Inkan.link's cutting-edge attestation technology.",
-    "trailer": "Business email compromise: the 5 billions annual heist !",
-       "post_register": {
+   "centeredmsg": "As simple as a selfie, automatically secured by cybersecurity experts.",    "trailer": "Business email compromise: the 5 billions annual heist !",
+    "post_register": {
         "title": "Post registration page",
         "main": "Thank you for registering! We will be in touch shortly. Please check your email to validate your registration for our mailing list."
     },
@@ -66,13 +69,16 @@
         }
     },
     "description": {
-        "title": "Trust Through Multi-Source Attestation",
-        "text": "We leverage only the data you've generated across various systems, ensuring your protection. Envision streamlined digital processes built on data you can trust implicitly."
-    },
+    "title": "Revolutionize Your Cybersecurity",
+    "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
+    "text2": "Sealfie radically changes the equation: follow ONE simple process instead of knowing ALL possible attacks. A selfie automatically triggers an unbreakable chorus of multi-source attestations, creating protection that even the most advanced fraudsters cannot bypass.",
+    "text3": "Our deeptech technology works behind the scenes to transform each validation into an impregnable fortress, while your teams enjoy a seamless experience as simple as taking a photo."
+},
+
     "action": {
-        "stop": "Stop depending on the weakest trained person",
-        "start": "Trust the data you receive",
-        "linktext": "Get Sealfie"
+        "stop": "Criminals have automated and improved their attacks.",
+        "start": "Being on permanent red alert is counterproductive.",
+        "linktext": "Contact us now"
     },
     "contactus": {
         "main": "Contact us to get a subscription.",
@@ -83,7 +89,8 @@
         "download": "Try Sealfie"
     },
     "videos": {
-        "document": "Landing-en.webm"
+        "demo1": "Landing-en.webm",
+        "demo2": "Landing-Doc-EN2.webm"
     },
     "modal": {
         "title": "Contact form",

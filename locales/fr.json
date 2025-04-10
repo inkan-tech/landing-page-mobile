@@ -1,7 +1,7 @@
 {
     "title": "Sealfie l'application",
     "meta": {
-        "description": "Sealfie le premier compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
+        "description": "Sealfie le seul compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
     },
     "banner": {
         "main": "",
@@ -12,9 +12,11 @@
     "otherlang": "English",
     "head": {
         "title": "Protégez votre trésorerie des deepfakes !",
-        "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA. Avec Sealfie, il vous suffit de prendre une photo. Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique."
+        "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
+        "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique."
     },
     "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
+    "centeredmsg": "Aussi simple qu'un selfie, fiabilisé automatiquement par les experts en cybersécurité ",
     "trailer": "Fraude au président: 5 milliards volés par an !",
     "post_register": {
         "title": "Page post enregistrement",
@@ -66,13 +68,15 @@
         }
     },
     "description": {
-        "title": "Confiance par Attestation Multi-Sources",
-        "text": "Nous n'utilisons que les données que vous avez générées à travers divers systèmes, assurant ainsi votre protection. Imaginez des processus numériques rationalisés basés sur des données en lesquelles vous pouvez avoir une confiance implicite."
+        "title": "Révolutionnez votre cybersécurité",
+        "text": "Face aux deepfakes et aux usurpations d'identité toujours plus sophistiqués, la cybersécurité traditionnelle vous épuise : formations interminables, alertes constantes et MFA complexes.",
+        "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie déclenche automatiquement un chœur indestructible d'attestations multi-sources, créant une protection que même les fraudeurs les plus avancés ne peuvent contourner.",
+        "text3": "Notre technologie deeptech travaille en coulisses pour transformer chaque validation en une forteresse imprenable, pendant que vos équipes profitent d'une expérience fluide comme une simple photo. "
     },
     "action": {
-        "stop": "Les deepfake sont communes",
-        "start": "Votre protection doit être à la hauteur.",
-        "linktext": "Obtenez Sealfie"
+        "stop": "Les criminels ont automatisés et améliorer leurs attaques.",
+        "start": "Etre en alerte rouge permanente est contre-productif.",
+        "linktext": "Contactez nous maintenant"
     },
     "contactus": {
         "main": "Contactez nous pour obtenir un abonnement.",
@@ -83,7 +87,8 @@
         "download": "Obtenez Sealfie"
     },
     "videos": {
-        "document": "Landing-fr.webm"
+        "demo1": "Landing-fr.webm",
+        "demo2": "Landing-Doc-FR2.webm"
     },
     "modal": {
         "title": "Formulaire de contact",
