@@ -43,28 +43,28 @@
     "pricing": {
         "title": "Tarification",
         "users": {
-            "title": "Processus d'approbation simplissime",
-            "text": "Bénéficiez d'approbations fluides, de vérifications cyber non intrusives et d'une tranquillité d'esprit absolue."
+            "title": "Un process simplissime",
+            "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir reperé la derniere méthode d'attaque."
         },
         "cost": {
             "title": "Tarification",
-            "text": "Sealfie coûte 95 euros par mois par utilisateur, 1050 euros si payé annuellement. Personnalisation selon vos processus spécifiques sur demande."
+            "text": "A partir de 195 euros/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, integration avec vos SI et sources supplémentaires."
         },
         "support": {
             "title": "Support",
-            "text": "Sans tracas dès le premier jour : Support complet inclus, aucune formation ni intégration requise."
+            "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos supports et SI sur demande."
         },
         "period": {
             "title": "Disponibilité",
-            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment."
+            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou process particulier prenons contact pour que nous adaption notre offre à vos besoins."
         },
         "onboard": {
             "title": "Mise en place",
-            "text": "Contactez-nous par email pour planifier l'intégration de vos utilisateurs sélectionnés."
+            "text": "Vous serez opérationnel 30 minutes après nous avoir contacté. Nous avons une integration minimale avec les SI pour être le rempart pendant une attaque."
         },
         "techno": {
             "title": "Technologie",
-            "text": "Notre solution deeptech brevetée, conçue pour gagner une confiance inégalée auprès des professionnels de la cybersécurité. Basée sur des attestations multi-sources."
+            "text": "Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
         }
     },
     "description": {
@@ -84,7 +84,7 @@
         "linktext": "Contactez nous"
     },
     "appstore": {
-        "download": "Obtenez Sealfie"
+        "download": "Sealfie est sur les appstores"
     },
     "videos": {
         "demo1": "Landing-fr.webm",

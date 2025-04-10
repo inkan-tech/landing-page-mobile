@@ -29,12 +29,11 @@ html(lang=$localeName)
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 
-
   body#page-top
     // Navigation
     nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
       .container.px-5
-        a.navbar-brand.fw-bold(href='/') Sealfie #{$i18n.banner.main}
+        a.navbar-brand.fw-bold(href='#page-top') Sealfie #{$i18n.banner.main}
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
           | Menu
           i.bi-list
@@ -44,11 +43,14 @@ html(lang=$localeName)
               a.nav-link.me-lg-3(href='pricing.html') #{$i18n.banner.pricing}
             li.nav-item
               a.nav-link.me-lg-3(href='documentation.html') #{$i18n.banner.docs}
+            if $localeName == "en"
+              a.nav-link.me-lg-3(href='../fr/pricing.html') #{$i18n.otherlang}
+            else
+              a.nav-link.me-lg-3(href='../en/pricing.html') #{$i18n.otherlang}
           a.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0.button(href="http://eepurl.com/ix1tjg")
             span.d-flex.align-items-center
               i.bi-envelope-fill.me-2
               span.small #{$i18n.banner.action}
-
 
     // App features section
     section#pricing
@@ -103,11 +105,11 @@ html(lang=$localeName)
     section.cta
       .cta-content
         .container.px-5
-          h2.text-white.display-1.lh-1.mb-4
+         h2.text-white.display-1.lh-1.mb-4
             | #{$i18n.contactus.main}
             br
             |#{$i18n.contactus.custom}
-          a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="#", onClick="showMailChimpPopup()" ) #{$i18n.action.linktext}
+         a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
 
 
     // App badge section

@@ -1,9 +1,8 @@
 {
     "title": "Sealfie app",
     "meta": {
-   "description": "Sealfie, the only digital companion protecting against fake president scams. The most lucrative fraud for criminals."
-},
-
+        "description": "Sealfie, the only digital companion protecting against fake president scams. The most lucrative fraud for criminals."
+    },
     "banner": {
         "main": "",
         "pricing": "Pricing",
@@ -12,13 +11,13 @@
     },
     "otherlang": "Français",
     "head": {
-    "title": "Protect Your Treasury from Deepfakes!",
-    "subtitle": "Your business is a target for criminals: €5 billion stolen each year. CEO fraud attacks are now undetectable thanks to new AI!",
-    "subtitle2": "With Sealfie, all you need to do is take a photo. We automatically perform multi-source technical verifications for each transaction at the critical moment."
-},
-
+        "title": "Protect Your Treasury from Deepfakes!",
+        "subtitle": "Your business is a target for criminals: €5 billion stolen each year. CEO fraud attacks are now undetectable thanks to new AI!",
+        "subtitle2": "With Sealfie, all you need to do is take a photo. We automatically perform multi-source technical verifications for each transaction at the critical moment."
+    },
     "testimonial": "Sealfie: Ironclad security meets crystal-clear transparency, powered by Inkan.link's cutting-edge attestation technology.",
-   "centeredmsg": "As simple as a selfie, automatically secured by cybersecurity experts.",    "trailer": "Business email compromise: the 5 billions annual heist !",
+    "centeredmsg": "As simple as a selfie, automatically secured by cybersecurity experts.",
+    "trailer": "Business email compromise: the 5 billions annual heist !",
     "post_register": {
         "title": "Post registration page",
         "main": "Thank you for registering! We will be in touch shortly. Please check your email to validate your registration for our mailing list."
@@ -44,37 +43,36 @@
     "pricing": {
         "title": "Pricing",
         "users": {
-            "title": "Streamlined Approval Process",
-            "text": "Experience seamless approvals, non-intrusive cyber verifications, and ultimate peace of mind."
+            "title": "A Streamlined Process",
+            "text": "Follow Sealfie's process and reduce the stress of not having detected the latest attack method."
         },
         "cost": {
             "title": "Pricing",
-            "text": "Sealfie costs 95 Euros per month per user, 1050 if paid annually. Customization to your specific processes upon request."
+            "text": "Starting at 195 euros/person/year with standard validation and up to 20 validations per year. Custom quotes available for tailored validations, integration with your IT systems, and additional sources."
         },
         "support": {
             "title": "Support",
-            "text": "Hassle-free from day one: Full support included, no training or integration required."
+            "text": "Full support included, no training or integration required. Adaptation to your systems and IT infrastructure available upon request."
         },
         "period": {
             "title": "Availability",
-            "text": "Sealfie is available via yearly subscription, free to leave anytime."
+            "text": "Sealfie is available via yearly subscription, cancellable at any time. For large enterprises or specific processes, let's get in touch to adapt our offer to your needs."
         },
         "onboard": {
-            "title": "Onboarding",
-            "text": "Contact us by email to schedule onboarding for your selected users."
+            "title": "Setup",
+            "text": "You'll be operational 30 minutes after contacting us. We have minimal integration with IT systems to serve as a defense during an attack."
         },
         "techno": {
             "title": "Technology",
-            "text": "Our patented deeptech solution, engineered to earn unparalleled trust from cybersecurity professionals. Based on multi sources attestations."
+            "text": "We automatically perform multi-source technical verifications for each transaction at the critical moment. We can extend verification sources upon simple request."
         }
     },
     "description": {
-    "title": "Revolutionize Your Cybersecurity",
-    "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
-    "text2": "Sealfie radically changes the equation: follow ONE simple process instead of knowing ALL possible attacks. A selfie automatically triggers an unbreakable chorus of multi-source attestations, creating protection that even the most advanced fraudsters cannot bypass.",
-    "text3": "Our deeptech technology works behind the scenes to transform each validation into an impregnable fortress, while your teams enjoy a seamless experience as simple as taking a photo."
-},
-
+        "title": "Revolutionize Your Cybersecurity",
+        "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
+        "text2": "Sealfie radically changes the equation: follow ONE simple process instead of knowing ALL possible attacks. A selfie automatically triggers an unbreakable chorus of multi-source attestations, creating protection that even the most advanced fraudsters cannot bypass.",
+        "text3": "Our deeptech technology works behind the scenes to transform each validation into an impregnable fortress, while your teams enjoy a seamless experience as simple as taking a photo."
+    },
     "action": {
         "stop": "Criminals have automated and improved their attacks.",
         "start": "Being on permanent red alert is counterproductive.",
