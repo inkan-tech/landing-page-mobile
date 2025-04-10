@@ -115,23 +115,23 @@
     },
     "support": "To get help, please send a detailed email with your phone number used in the test for us to better understand the issue.",
     "docs": {
-        "title": "How to use Sealfie?",
-        "subtitle": "Once registered in our system, which can be done by contacting us.",
+        "title": "Sealfie: How does it work?",
+        "subtitle": "Following registration after being contacted, the system will be operational within 30 minutes.",
         "stepstart": {
-            "one": "I need to validate a document linked to a transaction request.",
-            "two": "I start Sealfie and choose the document.",
-            "tree": "I take a photo of the document, a selfie, and add a message (optional).",
-            "biometric": "I confirm with the biometric of my smartphone.",
-            "video": "Landing-Doc-EN.webm"
+            "one": "I need to obtain an approval.",
+            "two": "I start Sealfie, take a photo of the subject requiring approval.",
+            "tree": "I take a selfie and add a message (optional).",
+            "biometric": "I confirm using my smartphone's biometrics.",
+            "video": "Landing-Doc-FR.webm"
         },
-        "intersteps": "The validation request is processed, we add additional certificates if available. The other members of the group receive notifications.",
+        "intersteps": "The approval request is processed, we automatically add other verifications such as checking for any changes in phone subscription",
         "stepvalidate": {
-            "one": "Another person receives a validation request.",
-            "two": "She checks the photos and consistency of information.",
-            "tree": "She validates and adds a selfie.",
-            "biometric": "She confirms with the biometric of her smartphone.",
-            "video": "Landing-Doc-EN2.webm"
+            "one": "Other group members receive notifications.",
+            "two": "They verify the photos and the consistency of information.",
+            "tree": "Each person validates and adds a selfie.",
+            "biometric": "Each person confirms using their smartphone's biometrics.",
+            "video": "Landing-Doc-FR2.webm"
         },
-        "completed": "The applicant may verify that the right people have approved the request. Contact us for technical details and computer automation."
+        "completed": "The requester is guaranteed that only registered persons have approved the request. We have described the simple process, we offer customized solutions"
     }
 }

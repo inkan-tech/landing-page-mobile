@@ -115,23 +115,23 @@
     },
     "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
     "docs": {
-        "title": "Comment utiliser Sealfie ?",
-        "subtitle": "Une fois enregistré dans nos systèmes (contactez nous).",
+        "title": "Sealfie: commment ça marche ?",
+        "subtitle": "Suite à l'inscription après avoir été contacté, le système sera opérationnel dans un délai de 30 minutes.",
         "stepstart": {
-            "one": "J'ai besoin de valider un document lié à une demande de transaction.",
-            "two": "Je démarre Sealfie, choisis un document.",
-            "tree": "Je prends une photo du document, un selfie et ajoute un message (option).",
+            "one": "J'ai besoin d'obtenir une approbation.",
+            "two": "Je démarre Sealfie, prends une photo du sujet de l'approbation.",
+            "tree": "Je prends un selfie et ajoute un message (option).",
             "biometric": "Je confirme avec la biométrie de mon smartphone.",
             "video": "Landing-Doc-FR.webm"
         },
-        "intersteps": "La demande de validation est traitée, nous ajoutons des attestations complémentaires si disponibles. Les autres membres du groupe reçoivent des notifications.",
+        "intersteps": "La demande d'approbation est traitée, nous ajoutons automatiquement d'autres vérifications comme l'absence de changement d'abonnement téléphonique",
         "stepvalidate": {
-            "one": "Une autre personne reçoit une demande de validation.",
-            "two": "Elle vérifie les photos et la cohérence des informations.",
-            "tree": "Elle valide et ajoute un selfie.",
-            "biometric": "Elle confirme avec la biométrie de son smartphone.",
+            "one": "Les autres membres du groupe reçoivent des notifications.",
+            "two": "Ils vérifient les photos et la cohérence des informations.",
+            "tree": "Chacun valide et ajoute un selfie.",
+            "biometric": "Chacun confirme avec la biométrie de son smartphone.",
             "video": "Landing-Doc-FR2.webm"
         },
-        "completed": "Le demandeur peut vérifier que les bonnes personnes ont approuvé la demande. Contactez nous  pour les détails techniques et l'automatisation informatique."
+        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, nous proposons des solutions sur mesures"
     }
 }
