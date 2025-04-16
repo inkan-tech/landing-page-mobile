@@ -6,14 +6,14 @@
     "banner": {
         "main": "",
         "pricing": "Tarifs",
-        "docs": "Documentation",
+        "docs": "Fonctionnement",
         "action": "Newsletter sur la fraude"
     },
     "otherlang": "English",
     "head": {
         "title": "Protégez votre trésorerie des deepfakes !",
         "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
-        "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique."
+        "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique."
     },
     "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
     "centeredmsg": "Aussi simple qu'un selfie, fiabilisé automatiquement par les experts en cybersécurité ",
@@ -29,7 +29,7 @@
         },
         "send": {
             "title": "Sécurité Inégalée",
-            "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
+            "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionnels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
         },
         "shield": {
             "title": "Adaptable et Extensible",
@@ -44,44 +44,44 @@
         "title": "Tarification",
         "users": {
             "title": "Un process simplissime",
-            "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir reperé la derniere méthode d'attaque."
+            "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir repéré la dernière méthode d'attaque."
         },
         "cost": {
             "title": "Tarification",
-            "text": "A partir de 195 euros/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, integration avec vos SI et sources supplémentaires."
+            "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, intégration avec vos SI et sources supplémentaires."
         },
         "support": {
             "title": "Support",
-            "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos supports et SI sur demande."
+            "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos processus et SI sur demande."
         },
         "period": {
             "title": "Disponibilité",
-            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou process particulier prenons contact pour que nous adaption notre offre à vos besoins."
+            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou processus particulier: prenez contact pour que nous adaptions notre offre."
         },
         "onboard": {
             "title": "Mise en place",
-            "text": "Vous serez opérationnel 30 minutes après nous avoir contacté. Nous avons une integration minimale avec les SI pour être le rempart pendant une attaque."
+            "text": "Vous serez opérationnel 30 minutes après nous avoir contactés. Nous avons une intégration minimale avec les SI pour être le rempart pendant une attaque."
         },
         "techno": {
             "title": "Technologie",
-            "text": "Nous effectuont automatiquement les vérifications techniques multi-sources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
+            "text": "Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
         }
     },
     "description": {
         "title": "Révolutionnez votre cybersécurité",
         "text": "Face aux deepfakes et aux usurpations d'identité toujours plus sophistiqués, la cybersécurité traditionnelle vous épuise : formations interminables, alertes constantes et MFA complexes.",
-        "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie déclenche automatiquement un chœur indestructible d'attestations multi-sources, créant une protection que même les fraudeurs les plus avancés ne peuvent contourner.",
-        "text3": "Notre technologie deeptech travaille en coulisses pour transformer chaque validation en une forteresse imprenable, pendant que vos équipes profitent d'une expérience fluide comme une simple photo. "
+        "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie pour vous, nous nous occupons de la technique et produisons une liste d'attestations plus fiable que les processus MFA traditionnels.",
+        "text3": "Nous fédérons en coulisses les sources techniques d'information pendant que vos équipes profitent d'une expérience fluide comme une simple photo. Grâce à notre technologie deeptech nous adapterons la technologie aux menaces sans complexifier l'utilisation. "
     },
     "action": {
-        "stop": "Les criminels ont automatisés et améliorer leurs attaques.",
+        "stop": "Les criminels ont automatisé et amélioré leurs attaques.",
         "start": "Etre en alerte rouge permanente est contre-productif.",
         "linktext": "Contactez nous maintenant"
     },
     "contactus": {
-        "main": "Contactez nous pour obtenir un abonnement.",
+        "main": "Soyez protegé et serein en 30 minutes.",
         "custom": "Nous proposons aussi d'adapter et co-créer des services utilisant notre technologie.",
-        "linktext": "Contactez nous"
+        "linktext": "Contactez-nous"
     },
     "appstore": {
         "download": "Sealfie est sur les appstores"
@@ -115,8 +115,8 @@
     },
     "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
     "docs": {
-        "title": "Sealfie: commment ça marche ?",
-        "subtitle": "Suite à l'inscription après avoir été contacté, le système sera opérationnel dans un délai de 30 minutes.",
+        "title": "Sealfie: comment ça marche ?",
+        "subtitle": "Suite à l'inscription après avoir été contacté, le système sera opérationnel en 30 minutes.",
         "stepstart": {
             "one": "J'ai besoin d'obtenir une approbation.",
             "two": "Je démarre Sealfie, prends une photo du sujet de l'approbation.",
@@ -132,6 +132,6 @@
             "biometric": "Chacun confirme avec la biométrie de son smartphone.",
             "video": "Landing-Doc-FR2.webm"
         },
-        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez nous pour des solutions sur mesures"
+        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesures"
     }
 }
