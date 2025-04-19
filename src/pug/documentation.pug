@@ -147,6 +147,17 @@ html(lang=$localeName)
       .container.px-5
         h2.text-center.text-white.font-alt.mb-4 #{$i18n.docs.completed}
 
+    // Call to action section
+    section.cta
+      .cta-content
+        .container.px-5
+         h2.text-white.display-1.lh-1.mb-4
+            | #{$i18n.contactus.main}
+            br
+            |#{$i18n.contactus.custom}
+         a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
+
+
     // Footer
     footer.bg-black.text-center.py-5
       .container.px-5
