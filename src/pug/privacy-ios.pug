@@ -27,10 +27,8 @@ html(lang=en)
     link(href='/css/styles.css', rel='stylesheet')
 
 
-  body#page-top
-    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
-      .container.px-5
-        a.navbar-brand.fw-bold(href='#page-top') Sealfie #{$i18n.banner.main}
+
+    include ../pug/includes/navbar.pug
 
   header.masthead
     p Last modified: 25 May 2022

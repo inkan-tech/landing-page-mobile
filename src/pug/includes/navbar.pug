@@ -1,0 +1,35 @@
+body#page-top
+ // Navigation
+ nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
+      .container.px-5
+        a.navbar-brand.fw-bold(href='/'+$localeName) #{$i18n.banner.main}
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.bi-list
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
+            li.nav-item
+              a.nav-link.me-lg-3(href='pricing.html') #{$i18n.banner.pricing}
+            li.nav-item
+              a.nav-link.me-lg-3(href='documentation.html') #{$i18n.banner.docs}
+            li.nav-item
+              a.nav-link.me-lg-3(href='#')#otherLangLink #{$i18n.otherlang.long}
+          a.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0.button(href="http://eepurl.com/ix1tjg")
+            span.d-flex.align-items-center
+              i.bi-envelope-fill.me-2
+              span.small #{$i18n.banner.action}
+
+
+script.
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page name from URL
+    const path = window.location.pathname;
+    const pageName = path.substring(path.lastIndexOf('/') + 1);
+
+    // Update the link
+    const otherLangLink = document.getElementById('otherLangLink');
+    if (otherLangLink) {
+      const href = '../' + '#{$i18n.otherlang.code}' + '/' + pageName;
+      otherLangLink.setAttribute('href', href);
+    }
+  });

@@ -31,28 +31,7 @@ html(lang=$localeName)
         include ../js/mailchimp-popup.js
 
 
-  body#page-top
-    // Navigation
-    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
-      .container.px-5
-        a.navbar-brand.fw-bold(href='#page-top') Sealfie #{$i18n.banner.main}
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          | Menu
-          i.bi-list
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
-            li.nav-item
-              a.nav-link.me-lg-3(href='pricing.html') #{$i18n.banner.pricing}
-            li.nav-item
-              a.nav-link.me-lg-3(href='documentation.html') #{$i18n.banner.docs}
-            if $localeName == "en"
-              a.nav-link.me-lg-3(href='../fr/documentation.html') #{$i18n.otherlang}
-            else
-              a.nav-link.me-lg-3(href='../en/documentation.html') #{$i18n.otherlang}
-          a.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0.button(href="http://eepurl.com/ix1tjg")
-            span.d-flex.align-items-center
-              i.bi-envelope-fill.me-2
-              span.small #{$i18n.banner.action}
+    include ../pug/includes/navbar.pug
 
     // Doc Title
     aside.text-center.bg-gradient-primary-to-secondary
