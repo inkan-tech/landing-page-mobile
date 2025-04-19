@@ -1,137 +1,137 @@
 {
-    "title": "Sealfie l'application",
-    "meta": {
-        "description": "Sealfie le seul compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
+  "title": "Sealfie l'application",
+  "meta": {
+    "description": "Sealfie le seul compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
+  },
+  "banner": {
+    "main": "-",
+    "pricing": "Tarifs",
+    "docs": "Fonctionnement",
+    "action": "Newsletter sur la fraude"
+  },
+  "otherlang": "English",
+  "head": {
+    "title": "Protégez votre trésorerie des deepfakes !",
+    "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
+    "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique."
+  },
+  "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
+  "centeredmsg": "Aussi simple qu'un selfie, fiabilisé automatiquement par les experts en cybersécurité",
+  "trailer": "Fraude au président: 5 milliards volés par an !",
+  "post_register": {
+    "title": "Page post enregistrement",
+    "main": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."
+  },
+  "features": {
+    "person": {
+      "title": "Simplissime",
+      "text": "Vous savez faire une photo : vous êtes formé ! Sealfie s'occupe automatiquement des vérifications techniques pour vous."
     },
-    "banner": {
-        "main": "",
-        "pricing": "Tarifs",
-        "docs": "Fonctionnement",
-        "action": "Newsletter sur la fraude"
+    "send": {
+      "title": "Sécurité Inégalée",
+      "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionnels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
     },
-    "otherlang": "English",
-    "head": {
-        "title": "Protégez votre trésorerie des deepfakes !",
-        "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
-        "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique."
+    "shield": {
+      "title": "Adaptable et Extensible",
+      "text": "Sealfie s'adapte parfaitement aux processus de votre entreprise. Contactez-nous pour découvrir comment personnaliser notre solution selon vos besoins."
     },
-    "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
-    "centeredmsg": "Aussi simple qu'un selfie, fiabilisé automatiquement par les experts en cybersécurité ",
-    "trailer": "Fraude au président: 5 milliards volés par an !",
-    "post_register": {
-        "title": "Page post enregistrement",
-        "main": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."
-    },
-    "features": {
-        "person": {
-            "title": "Simplissime",
-            "text": "Vous savez faire une photo : vous êtes formé ! Sealfie s'occupe automatiquement des vérifications techniques pour vous."
-        },
-        "send": {
-            "title": "Sécurité Inégalée",
-            "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionnels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
-        },
-        "shield": {
-            "title": "Adaptable et Extensible",
-            "text": "Sealfie s'adapte parfaitement aux processus de votre entreprise. Contactez-nous pour découvrir comment personnaliser notre solution selon vos besoins."
-        },
-        "path": {
-            "title": "Automatisation et Audit",
-            "text": "Sealfie automatise les vérifications et conserve les preuves pour chaque transaction, garantissant une traçabilité totale."
-        }
-    },
-    "pricing": {
-        "title": "Tarification",
-        "users": {
-            "title": "Un process simplissime",
-            "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir repéré la dernière méthode d'attaque."
-        },
-        "cost": {
-            "title": "Tarification",
-            "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, intégration avec vos SI et sources supplémentaires."
-        },
-        "support": {
-            "title": "Support",
-            "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos processus et SI sur demande."
-        },
-        "period": {
-            "title": "Disponibilité",
-            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou processus particulier: prenez contact pour que nous adaptions notre offre."
-        },
-        "onboard": {
-            "title": "Mise en place",
-            "text": "Vous serez opérationnel 30 minutes après nous avoir contactés. Nous avons une intégration minimale avec les SI pour être le rempart pendant une attaque."
-        },
-        "techno": {
-            "title": "Technologie",
-            "text": "Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
-        }
-    },
-    "description": {
-        "title": "Révolutionnez votre cybersécurité",
-        "text": "Face aux deepfakes et aux usurpations d'identité toujours plus sophistiqués, la cybersécurité traditionnelle vous épuise : formations interminables, alertes constantes et MFA complexes.",
-        "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie pour vous, nous nous occupons de la technique et produisons une liste d'attestations plus fiable que les processus MFA traditionnels.",
-        "text3": "Nous fédérons en coulisses les sources techniques d'information pendant que vos équipes profitent d'une expérience fluide comme une simple photo. Grâce à notre technologie deeptech nous adapterons la technologie aux menaces sans complexifier l'utilisation. "
-    },
-    "action": {
-        "stop": "Les criminels ont automatisé et amélioré leurs attaques.",
-        "start": "Etre en alerte rouge permanente est contre-productif.",
-        "linktext": "Contactez nous maintenant"
-    },
-    "contactus": {
-        "main": "Soyez protegé et serein en 30 minutes.",
-        "custom": "Nous proposons aussi d'adapter et co-créer des services utilisant notre technologie.",
-        "linktext": "Contactez-nous"
-    },
-    "appstore": {
-        "download": "Sealfie est sur les appstores"
-    },
-    "videos": {
-        "demo1": "Landing-fr.webm",
-        "demo2": "Landing-Doc-FR2.webm"
-    },
-    "modal": {
-        "title": "Formulaire de contact",
-        "mail": {
-            "title": "Email",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
-        },
-        "phone": {
-            "title": "Téléphone",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
-        },
-        "phonetype": {
-            "title": "Type de téléphone utilisé",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
-        },
-        "lang": {
-            "fr": "3277967",
-            "en": "3277966"
-        },
-        "sendbutton": "Envoyez"
-    },
-    "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
-    "docs": {
-        "title": "Sealfie: comment ça marche ?",
-        "subtitle": "Suite à l'inscription après avoir été contacté, le système sera opérationnel en 30 minutes.",
-        "stepstart": {
-            "one": "J'ai besoin d'obtenir une approbation.",
-            "two": "Je démarre Sealfie, prends une photo du sujet de l'approbation.",
-            "tree": "Je prends un selfie et ajoute un message (option).",
-            "biometric": "Je confirme avec la biométrie de mon smartphone.",
-            "video": "Landing-Doc-FR.webm"
-        },
-        "intersteps": "La demande d'approbation est traitée, nous ajoutons automatiquement d'autres vérifications comme l'absence de changement d'abonnement téléphonique",
-        "stepvalidate": {
-            "one": "Les autres membres du groupe reçoivent des notifications.",
-            "two": "Ils vérifient les photos et la cohérence des informations.",
-            "tree": "Chacun valide et ajoute un selfie.",
-            "biometric": "Chacun confirme avec la biométrie de son smartphone.",
-            "video": "Landing-Doc-FR2.webm"
-        },
-        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesures"
+    "path": {
+      "title": "Automatisation et Audit",
+      "text": "Sealfie automatise les vérifications et conserve les preuves pour chaque transaction, garantissant une traçabilité totale."
     }
+  },
+  "pricing": {
+    "title": "Tarification",
+    "users": {
+      "title": "Un process simplissime",
+      "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir repéré la dernière méthode d'attaque."
+    },
+    "cost": {
+      "title": "Tarification",
+      "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, intégration avec vos SI et sources supplémentaires."
+    },
+    "support": {
+      "title": "Support",
+      "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos processus et SI sur demande."
+    },
+    "period": {
+      "title": "Disponibilité",
+      "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou processus particulier: prenez contact pour que nous adaptions notre offre."
+    },
+    "onboard": {
+      "title": "Mise en place",
+      "text": "Vous serez opérationnel 30 minutes après nous avoir contactés. Nous avons une intégration minimale avec les SI pour être le rempart pendant une attaque."
+    },
+    "techno": {
+      "title": "Technologie",
+      "text": "Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
+    }
+  },
+  "description": {
+    "title": "Révolutionnez votre cybersécurité",
+    "text": "Face aux deepfakes et aux usurpations d'identité toujours plus sophistiqués, la cybersécurité traditionnelle vous épuise : formations interminables, alertes constantes et MFA complexes.",
+    "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie pour vous, nous nous occupons de la technique et produisons une liste d'attestations plus fiable que les processus MFA traditionnels.",
+    "text3": "Nous fédérons en coulisses les sources techniques d'information pendant que vos équipes profitent d'une expérience fluide comme une simple photo. Grâce à notre technologie deeptech nous adapterons la technologie aux menaces sans complexifier l'utilisation."
+  },
+  "action": {
+    "stop": "Les criminels ont automatisé et amélioré leurs attaques.",
+    "start": "Etre en alerte rouge permanente est contre-productif.",
+    "linktext": "Contactez nous maintenant"
+  },
+  "contactus": {
+    "main": "Soyez protegé et serein en 30 minutes.",
+    "custom": "Nous proposons aussi d'adapter et co-créer des services utilisant notre technologie.",
+    "linktext": "Contactez-nous"
+  },
+  "appstore": {
+    "download": "Sealfie est sur les appstores"
+  },
+  "videos": {
+    "demo1": "Landing-fr.webm",
+    "demo2": "Landing-Doc-FR2.webm"
+  },
+  "modal": {
+    "title": "Formulaire de contact",
+    "mail": {
+      "title": "Email",
+      "feedback": "un email est nécessaire",
+      "error": "l'email est invalide"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "feedback": "un email est nécessaire",
+      "error": "l'email est invalide"
+    },
+    "phonetype": {
+      "title": "Type de téléphone utilisé",
+      "feedback": "un email est nécessaire",
+      "error": "l'email est invalide"
+    },
+    "lang": {
+      "fr": "3277967",
+      "en": "3277966"
+    },
+    "sendbutton": "Envoyez"
+  },
+  "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
+  "docs": {
+    "title": "Sealfie: comment ça marche ?",
+    "subtitle": "Suite à l'inscription, après avoir été contacté, le système sera opérationnel en 30 minutes.",
+    "stepstart": {
+      "one": "J'ai besoin d'obtenir une approbation.",
+      "two": "Je démarre Sealfie, prends une photo du sujet de l'approbation.",
+      "tree": "Je prends un selfie et ajoute un message (option).",
+      "biometric": "Je confirme avec la biométrie de mon smartphone.",
+      "video": "Landing-Doc-FR.webm"
+    },
+    "intersteps": "La demande d'approbation est traitée, nous ajoutons automatiquement d'autres vérifications comme l'absence de changement d'abonnement téléphonique",
+    "stepvalidate": {
+      "one": "Les autres membres du groupe reçoivent des notifications.",
+      "two": "Ils vérifient les photos et la cohérence des informations.",
+      "tree": "Chacun valide et ajoute un selfie.",
+      "biometric": "Chacun confirme avec la biométrie de son smartphone.",
+      "video": "Landing-Doc-FR2.webm"
+    },
+    "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesures"
+  }
 }

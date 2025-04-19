@@ -38,6 +38,7 @@
         "bootstrap": "5.3.5",
         "coffeescript": "2.7.0",
         "i18n": "0.15.1",
+        "i18n-json-to-xlsx-converter": "^2.0.0",
         "node-sass": "^9.0.0",
         "pkg.json": "^2.0.9",
         "react-intl": "7.1.10"
