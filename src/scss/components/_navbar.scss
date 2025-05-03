@@ -1,14 +1,19 @@
-// 
+//
 // Navbar
-// 
+//
 
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: $white;
+    background-color: rgba($washi, 0.98);
+    border-bottom: 1px solid rgba($primary, 0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
     .navbar-brand {
-        font-family: $alt-font-family;
+        font-family: $heading-font-japanese;
+        letter-spacing: 0.02em;
+        position: relative;
+        padding-left: 0.5rem;
 
         &:hover,
         &:active {
@@ -19,20 +24,54 @@
     .navbar-toggler {
         font-size: $font-size-sm;
         padding: 0.75rem 1rem;
-        color: $gray-900;
+        color: $sumi;
+        border: 1px solid rgba($primary, 0.2);
     }
 
     .navbar-nav {
         .nav-item {
             .nav-link {
-                color: $gray-900;
-                &:hover {
-                    color: $gray-600;
+                color: $sumi;
+                transition: all 0.2s ease;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    background-color: $primary;
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
                 }
+
+                &:hover {
+                    color: $primary;
+
+                    &:after {
+                        width: 80%;
+                    }
+                }
+
                 &.active {
                     color: $primary;
+
+                    &:after {
+                        width: 80%;
+                    }
                 }
             }
+        }
+    }
+
+    .btn-primary {
+        transform: rotate(-1deg);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: rotate(0deg) translateY(-2px);
         }
     }
 }

@@ -17,12 +17,28 @@ html {
     background-color: $black !important;
 }
 
+.bg-washi {
+    background-color: $washi !important;
+}
+
 .bg-gradient-primary-to-secondary {
     background: linear-gradient(275deg, #{$primary}, #{$secondary}) !important;
 }
 
+.bg-gradient-japanese {
+    background: linear-gradient(275deg, #{$primary}, #{$indigo-ai}) !important;
+}
+
 .font-alt {
     font-family: $alt-font-family !important;
+}
+
+.font-jp {
+    font-family: $body-font-japanese !important;
+}
+
+.font-jp-heading {
+    font-family: $heading-font-japanese !important;
 }
 
 .text-gradient {
@@ -30,6 +46,46 @@ html {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-jp-gradient {
+    background: -webkit-linear-gradient(#{$primary}, #{$indigo-ai});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Japanese-inspired utilities
+.vertical-text-jp {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: $body-font-japanese;
+    letter-spacing: 0.1em;
+}
+
+.bg-seigaiha {
+    background-color: $washi;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,0 C77.6,0 100,22.4 100,50 C100,77.6 77.6,100 50,100 C22.4,100 0,77.6 0,50 C0,22.4 22.4,0 50,0 Z' fill='%23f5f5f5' fill-opacity='0.4'/%3E%3C/svg%3E");
+    background-size: 100px 100px;
+}
+
+.hanko-border {
+    border: 1px solid rgba($primary, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba($primary, 0.1);
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba($primary, 0.3);
+        border-radius: 3px;
+        z-index: -1;
+    }
 }
 
 // Padding for sections
