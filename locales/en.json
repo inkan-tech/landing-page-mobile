@@ -1,140 +1,141 @@
 {
-    "title": "Sealfie app",
-    "meta": {
-        "description": "Sealfie, the only digital companion protecting against fake president scams. The most lucrative fraud for criminals."
+  "title": "Sealfie App",
+  "meta": {
+    "description": "Protect your business from deepfake fraud. Sealfie simplifies cybersecurity – it's the only digital companion that effectively fights fake executive scams."
+  },
+  "banner": {
+    "main": "Sealfie",
+    "pricing": "Pricing",
+    "docs": "How it Works",
+    "action": "Newsletter"
+  },
+  "otherlang": {
+    "long": "Français",
+    "code": "fr"
+  },
+  "head": {
+    "title": "Stop Losing to Deepfakes!",
+    "subtitle": "Executive fraud attacks are now undetectable. Sealfie dramatically simplifies the defense – just one photo.",
+    "subtitle2": "We handle the complex technical verifications.  Forget endless MFA training and alerts."
+  },
+  "testimonial": "Sealfie: Unmatched security meets effortless implementation, powered by Inkan.link’s cutting-edge attestation technology.",
+  "centeredmsg": "Protect your organization with the simplest security solution.",
+  "trailer": "Executive email compromise: 5 billion stolen per year!",
+  "post_register": {
+    "title": "Post-Registration Confirmation",
+    "main": "Thank you for your interest.  We’ll be in touch within 24 hours to discuss your specific needs.",
+    "custom": "We’re also available to develop customized solutions tailored to your organization’s requirements."
+  },
+  "features": {
+    "person": {
+      "title": "Simple & Effective",
+      "text": "Just like taking a photo, Sealfie automatically handles all technical verifications for you. No training required."
     },
-    "banner": {
-        "main": "Sealfie",
-        "pricing": "Pricing",
-        "docs": "How it works",
-        "action": "Fraud newsletter"
+    "send": {
+      "title": "Unparalleled Security",
+      "text": "Each transaction is securely verified instantly. We create a bundle of irrefutable digital evidence – far more reliable than traditional MFA."
     },
-    "otherlang": {
-        "long": "Français",
-        "code": "fr"
+    "shield": {
+      "title": "Adaptable & Scalable",
+      "text": "Sealfie integrates seamlessly with your existing processes.  Contact us to discuss your customized integration and expand verification sources."
     },
-    "head": {
-        "title": "Protect Your Treasury from Deepfakes!",
-        "subtitle": "Your business is a target for criminals: €5 billion stolen each year. CEO fraud attacks are now undetectable thanks to new AI!",
-        "subtitle2": "With Sealfie, all you need to do is take a photo. We automatically perform multi-source technical verifications for each transaction at the critical moment."
-    },
-    "testimonial": "Sealfie: Ironclad security meets crystal-clear transparency, powered by Inkan.link's cutting-edge attestation technology.",
-    "centeredmsg": "As simple as a selfie, automatically secured by cybersecurity experts",
-    "trailer": "Business email compromise: 5 billion stolen per year!",
-    "post_register": {
-        "title": "Post registration page",
-        "main": "Thank you for registering to our list. You should have received an email to confirm your subscription to our communications. Check your spam folder if you haven't received it."
-    },
-    "features": {
-        "person": {
-            "title": "Super Simple",
-            "text": "If you know how to take a photo, you're trained! Sealfie automatically handles all technical verifications for you."
-        },
-        "send": {
-            "title": "Unmatched Security",
-            "text": "With Sealfie, each transaction is automatically verified. Traditional MFA only verifies login. Our technology creates a bundle of unfalsifiable digital evidence."
-        },
-        "shield": {
-            "title": "Adaptable and Extensible",
-            "text": "Sealfie adapts perfectly to your company's processes. Contact us to discover how to customize our solution to your needs."
-        },
-        "path": {
-            "title": "Automation and Audit",
-            "text": "Sealfie automates verifications and preserves evidence for each transaction, guaranteeing complete traceability."
-        }
-    },
-    "pricing": {
-        "title": "Pricing",
-        "users": {
-            "title": "A Streamlined Process",
-            "text": "Follow Sealfie's process and reduce the stress of not having detected the latest attack method."
-        },
-        "cost": {
-            "title": "Pricing",
-            "text": "Starting at 195 euros/person/year with standard validation and up to 20 validations per year. Custom quotes available for tailored validations, integration with your IT systems, and additional sources."
-        },
-        "support": {
-            "title": "Support",
-            "text": "Full support included, no training or integration required. Adaptation to your processes and IT systems available upon request."
-        },
-        "period": {
-            "title": "Availability",
-            "text": "Sealfie is available via yearly subscription, cancellable at any time. For large enterprises or specific processes, contact us to adapt our offer."
-        },
-        "onboard": {
-            "title": "Setup",
-            "text": "You'll be operational 30 minutes after contacting us. We have minimal integration with IT systems to serve as a defense during an attack."
-        },
-        "techno": {
-            "title": "Technology",
-            "text": "We automatically perform multi-source technical verifications for each transaction at the critical moment. We can extend verification sources upon simple request."
-        }
-    },
-    "description": {
-        "title": "Revolutionize Your Cybersecurity",
-        "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
-        "text2": "Sealfie radically changes the equation: follow ONE simple process instead of knowing ALL possible attacks. A selfie for you, we handle the technical aspects and produce a list of attestations more reliable than traditional MFA processes.",
-        "text3": "We coordinate technical information sources behind the scenes while your teams enjoy an experience as smooth as taking a photo. Thanks to our deeptech technology, we'll adapt to threats without making usage more complex."
-    },
-    "action": {
-        "stop": "Criminals have automated and improved their attacks.",
-        "start": "Being on permanent red alert is counterproductive.",
-        "linktext": "Contact us now"
-    },
-    "contactus": {
-        "main": "Be protected and at ease in 30 minutes.",
-        "custom": "We also offer to adapt and co-create services using our technology.",
-        "linktext": "Contact us"
-    },
-    "appstore": {
-        "download": "Sealfie is on app stores"
-    },
-    "videos": {
-        "demo1": "Landing-en.webm",
-        "demo2": "Landing-Doc-EN2.webm"
-    },
-    "modal": {
-        "title": "Contact form",
-        "mail": {
-            "title": "Email",
-            "feedback": "An email is required",
-            "error": "The email is invalid"
-        },
-        "phone": {
-            "title": "Phone",
-            "feedback": "An email is required",
-            "error": "The email is invalid"
-        },
-        "phonetype": {
-            "title": "Type of phone used",
-            "feedback": "An email is required",
-            "error": "The email is invalid"
-        },
-        "lang": {
-            "fr": "3277967",
-            "en": "3277966"
-        },
-        "sendbutton": "Send"
-    },
-    "support": "Please send us an email with the phone number used in Sealfie to help us identify the issue more quickly.",
-    "docs": {
-        "title": "Sealfie: How does it work?",
-        "subtitle": "Following registration, after being contacted, the system will be operational within 30 minutes.",
-        "stepstart": {
-            "one": "I need to obtain an approval.",
-            "two": "I start Sealfie, take a photo of the subject requiring approval.",
-            "tree": "I take a selfie and add a message (optional).",
-            "biometric": "I confirm using my smartphone's biometrics.",
-            "video": "Landing-Doc-EN.webm"
-        },
-        "intersteps": "The approval request is processed, we automatically add other verifications such as checking for any changes in phone subscription",
-        "stepvalidate": {
-            "one": "Other group members receive notifications.",
-            "two": "They verify the photos and the consistency of information.",
-            "tree": "Each person validates and adds a selfie.",
-            "biometric": "Each person confirms using their smartphone's biometrics.",
-            "video": "Landing-Doc-EN2.webm"
-        },
-        "completed": "The requester is guaranteed that only registered persons have approved the request. We have described the simple process, contact us for customized solutions"
+    "path": {
+      "title": "Automation & Audit Trail",
+      "text": "Sealfie automates verifications and preserves a complete audit trail for every transaction, ensuring complete traceability and compliance."
     }
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "users": {
+      "title": "Streamlined Security",
+      "text": "Reduce the complexity of security without compromising protection. Starting at $195/person/year."
+    },
+    "cost": {
+      "title": "Pricing",
+      "text": "Includes standard validation and up to 20 validations per year.  Custom quotes available for tailored integrations, increased validation volumes, and priority support."
+    },
+    "support": {
+      "title": "Dedicated Support",
+      "text": "Full support included – no IT integration required.  We adapt to your processes and systems upon request."
+    },
+    "period": {
+      "title": "Subscription Terms",
+      "text": "Annual subscription, cancellable at any time. Larger enterprises and bespoke requirements require a consultation."
+    },
+    "onboard": {
+      "title": "Quick Deployment",
+      "text": "You’ll be operational within 30 minutes – minimal system integration ensures immediate protection during an attack."
+    },
+    "techno": {
+      "title": "Advanced Technology",
+      "text": "We dynamically perform multi-source technical verifications in real-time. Expanding verification sources is simple and seamless."
+    }
+  },
+  "description": {
+    "title": "Revolutionize Your Cybersecurity",
+    "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
+    "text2": "Sealfie radically changes the equation – just one simple process instead of knowing ALL possible attacks. A selfie for you, we handle the technical complexities and produce a list of attestations more reliable than traditional MFA processes.",
+    "text3": "We coordinate technical information sources behind the scenes while your teams enjoy an experience as smooth as taking a photo. Thanks to our deeptech technology, we’ll adapt to threats without making usage more complex."
+  },
+  "action": {
+    "stop": "Criminals have automated and improved their attacks.",
+    "start": "Be proactive – continuous red alert is counterproductive.",
+    "linktext": "Contact us Now"
+  },
+  "contactus": {
+    "main": "Protect your organization and receive a personalized demo in 30 minutes.",
+    "custom": "We also offer to develop customized solutions tailored to your organization’s requirements.",
+    "linktext": "Contact us Now"
+  },
+  "appstore": {
+    "download": "Sealfie is available on app stores"
+  },
+  "videos": {
+    "demo1": "Landing-en.webm",
+    "demo2": "Landing-Doc-EN2.webm"
+  },
+  "modal": {
+    "title": "Contact Form",
+    "mail": {
+      "title": "Email",
+      "feedback": "An email is required",
+      "error": "Please enter a valid email address"
+    },
+    "phone": {
+      "title": "Phone Number",
+      "feedback": "An email is required",
+      "error": "Please enter a valid phone number"
+    },
+    "phonetype": {
+      "title": "Type of Phone Used",
+      "feedback": "An email is required",
+      "error": "Please enter a valid email address"
+    },
+    "lang": {
+      "fr": "3277967",
+      "en": "3277966"
+    },
+    "sendbutton": "Send"
+  },
+  "support": "Please send us an email with your phone number to help us identify the issue more quickly.",
+  "docs": {
+    "title": "Sealfie: How does it work?",
+    "subtitle": "Upon registration, after contacting us, the system will be operational within 30 minutes.",
+    "stepstart": {
+      "one": "Please provide your email address.",
+      "two": "Take a selfie with a neutral expression.",
+      "tree": "Add a short message to the selfie (optional).",
+      "biometric": "Confirm your identity using your smartphone's biometric authentication.",
+      "video": "Landing-Doc-EN.webm"
+    },
+    "intersteps": "The request is processed and additional validations, such as checking for changes in your phone subscription, are performed automatically.",
+    "stepvalidate": {
+      "one": "Other authorized users receive notifications.",
+      "two": "They verify the selfie and the consistency of information.",
+      "tree": "Each user adds their own selfie.",
+      "biometric": "Each user confirms their identity using their smartphone's biometric authentication.",
+      "video": "Landing-Doc-EN2.webm"
+    },
+    "completed": "The requester is guaranteed that only authorized individuals have approved the request. Contact us for customized solutions."
+  }
 }

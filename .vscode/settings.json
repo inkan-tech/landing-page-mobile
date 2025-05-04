@@ -1,5 +1,5 @@
 {
-    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "CodeGPT.apiKey": "Ollama",
     "codeQL.createQuery.qlPackLocation": "/Users/nicolasthomas/inkan/landing-page-mobile",
     "vcpkg.target.defaultTriplet": "arm64-osx",
     "vcpkg.target.hostTriplet": "-osx",

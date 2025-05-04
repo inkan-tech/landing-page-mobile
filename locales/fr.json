@@ -1,7 +1,7 @@
 {
-    "title": "Sealfie l'application",
+    "title": "Sealfie : Protégez Votre Trésorerie",
     "meta": {
-        "description": "Sealfie le seul compagnon digital de protection contre l'arnaque au faux président. La fraude la plus lucrative pour les criminels."
+        "description": "Sealfie est le seul compagnon digital pour contrer les fraudes par faux PDG. Avec 5 milliards d'euros volés chaque année, la menace est réelle. Sealfie offre une protection simple et efficace."
     },
     "banner": {
         "main": "Sealfie",
@@ -14,115 +14,116 @@
         "code": "en"
     },
     "head": {
-        "title": "Protégez votre trésorerie des deepfakes !",
+        "title": "Éliminez le Stress des Attaques au Faux PDG",
         "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
-        "subtitle2": "Avec Sealfie, il vous suffit de prendre une photo. Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique."
+        "subtitle2": "Prenez simplement une photo. Sealfie effectue automatiquement des vérifications multi-sources, au moment critique, pour garantir la sécurité de vos transactions."
     },
-    "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour tout comprendre.",
-    "centeredmsg": "Aussi simple qu'un selfie, fiabilisé automatiquement par les experts en cybersécurité",
-    "trailer": "Fraude au président: 5 milliards volés par an !",
+    "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour comprendre l'impact de Sealfie sur la sécurité de votre entreprise.",
+    "centeredmsg": "Un processus aussi simple qu'un selfie, fiabilisé automatiquement par des experts en cybersécurité.  Nous éliminons le stress lié aux MFA traditionnels.",
+    "trailer": "Fraude au PDG: 5 milliards volés par an !  Ne risquez pas votre entreprise.",
     "post_register": {
-        "title": "Page post enregistrement",
-        "main": "Merci de vous être enregistré sur notre liste. Vous devez avoir reçu un e-mail pour confirmer votre adhésion à nos communications. Vérifiez vos spams si ce n'est pas le cas."
+        "title": "Inscription Simplifiée",
+        "main": "Merci de vous être inscrit. Nous vous enverrons un email de confirmation. Vérifiez vos spams si vous ne le recevez pas.",
+        "text": "L'inscription à Sealfie est rapide et facile. Nous vous guiderons pas à pas pour que vous puissiez immédiatement bénéficier de notre protection."
     },
     "features": {
         "person": {
-            "title": "Simplissime",
-            "text": "Vous savez faire une photo : vous êtes formé ! Sealfie s'occupe automatiquement des vérifications techniques pour vous."
+            "title": "Simplicité Absolue",
+            "text": "Vous savez prendre une photo. Sealfie s'occupe de tout le reste. Pas de formation complexe, pas de surveillance constante."
         },
         "send": {
             "title": "Sécurité Inégalée",
-            "text": "Avec Sealfie, chaque transaction est automatiquement vérifiée. Les MFA traditionnels ne vérifient que le login. Notre technologie crée un faisceau de preuves informatiques infalsifiables."
+            "text": "Chaque transaction est vérifiée en temps réel grâce à une multitude de sources d'information. Sealfie offre une protection plus fiable et plus robuste que les MFA traditionnels."
         },
         "shield": {
-            "title": "Adaptable et Extensible",
-            "text": "Sealfie s'adapte parfaitement aux processus de votre entreprise. Contactez-nous pour découvrir comment personnaliser notre solution selon vos besoins."
+            "title": "Adaptabilité et Extensibilité",
+            "text": "Sealfie s'adapte à vos processus d'entreprise. Contactez-nous pour des solutions sur mesure."
         },
         "path": {
             "title": "Automatisation et Audit",
-            "text": "Sealfie automatise les vérifications et conserve les preuves pour chaque transaction, garantissant une traçabilité totale."
+            "text": "Sealfie automatise les vérifications et conserve les preuves de chaque transaction, garantissant une traçabilité complète."
         }
     },
     "pricing": {
-        "title": "Tarification",
+        "title": "Tarification Flexible",
         "users": {
-            "title": "Un process simplissime",
-            "text": "Suivez le process de Sealfie et réduisez le stress de ne pas avoir repéré la dernière méthode d'attaque."
+            "title": "Un processus simplifié pour vous protéger",
+            "text": "Réduisez le stress lié aux menaces cybernétiques. Sealfie vous offre une protection proactive et sans complications."
         },
         "cost": {
-            "title": "Tarification",
-            "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Sur devis pour des validations sur mesure, intégration avec vos SI et sources supplémentaires."
+            "title": "Tarification sur Mesure",
+            "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Demandez un devis personnalisé pour des besoins spécifiques."
         },
         "support": {
-            "title": "Support",
-            "text": "Support complet inclus, aucune formation ni intégration requise. Adaptation à vos processus et SI sur demande."
+            "title": "Support Technique Prioritaire",
+            "text": "Support complet inclus, sans formation ni intégration requise. Nous adaptons notre solution à vos processus et à vos SI."
         },
         "period": {
-            "title": "Disponibilité",
-            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Grande entreprise ou processus particulier: prenez contact pour que nous adaptions notre offre."
+            "title": "Disponibilité et Résiliance",
+            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment.  Pour les grandes entreprises ou processus spécifiques, contactez-nous pour une offre adaptée."
         },
         "onboard": {
-            "title": "Mise en place",
-            "text": "Vous serez opérationnel 30 minutes après nous avoir contactés. Nous avons une intégration minimale avec les SI pour être le rempart pendant une attaque."
+            "title": "Mise en Place Rapide",
+            "text": "Vous êtes opérationnel en 20 minutes. Nous avons une intégration minimale avec vos SI pour être le rempart contre les attaques."
         },
         "techno": {
-            "title": "Technologie",
-            "text": "Nous effectuons automatiquement les vérifications techniques multisources pour chaque transaction, au moment critique. Nous étendons les sources de vérification sur simple demande."
+            "title": "Technologie Deeptech",
+            "text": "Nous effectuons automatiquement des vérifications techniques multi-sources pour chaque transaction, au moment critique. Nous étudions et ajoutons des sources de vérification sur simple demande."
         }
     },
     "description": {
-        "title": "Révolutionnez votre cybersécurité",
-        "text": "Face aux deepfakes et aux usurpations d'identité toujours plus sophistiqués, la cybersécurité traditionnelle vous épuise : formations interminables, alertes constantes et MFA complexes.",
+        "title": "Révolutionnez Votre Sécurité",
+        "text": "Face aux deepfakes et aux usurpations d'identité, la sécurité traditionnelle est dépassée. Sealfie offre une solution simple, proactive et fiable.",
         "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie pour vous, nous nous occupons de la technique et produisons une liste d'attestations plus fiable que les processus MFA traditionnels.",
-        "text3": "Nous fédérons en coulisses les sources techniques d'information pendant que vos équipes profitent d'une expérience fluide comme une simple photo. Grâce à notre technologie deeptech nous adapterons la technologie aux menaces sans complexifier l'utilisation."
+        "text3": "Nous fédérons en coulisses les sources techniques d'information, garantissant une protection proactive et sans surveillance constante."
     },
     "action": {
-        "stop": "Les criminels ont automatisé et amélioré leurs attaques.",
-        "start": "Etre en alerte rouge permanente est contre-productif.",
+        "stop": "Les criminels ont automatisé et amélioré leurs attaques. Ne restez pas à la traîne.",
+        "start": "La surveillance constante est contre-productive. Sealfie vous offre une tranquillité d'esprit.",
         "linktext": "Contactez nous maintenant"
     },
     "contactus": {
-        "main": "Soyez protegé et serein en 30 minutes.",
-        "custom": "Nous proposons aussi d'adapter et co-créer des services utilisant notre technologie.",
+        "main": "Protégez Votre Entreprise Aujourd'hui",
+        "custom": "Nous proposons également des solutions sur mesure, co-créées avec vous.",
         "linktext": "Contactez-nous"
     },
     "appstore": {
-        "download": "Sealfie est sur les appstores"
+        "download": "Sealfie est disponible sur les appstores."
     },
     "videos": {
         "demo1": "Landing-fr.webm",
         "demo2": "Landing-Doc-FR2.webm"
     },
     "modal": {
-        "title": "Formulaire de contact",
+        "title": "Formulaire de Contact",
         "mail": {
             "title": "Email",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
+            "feedback": "Un email est nécessaire pour vous envoyer des informations.",
+            "error": "L'adresse email est invalide."
         },
         "phone": {
             "title": "Téléphone",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
+            "feedback": "Un email est nécessaire pour vous envoyer des informations.",
+            "error": "L'adresse email est invalide."
         },
         "phonetype": {
-            "title": "Type de téléphone utilisé",
-            "feedback": "un email est nécessaire",
-            "error": "l'email est invalide"
+            "title": "Type de Téléphone Utilisé",
+            "feedback": "Un email est nécessaire pour vous envoyer des informations.",
+            "error": "L'adresse email est invalide."
         },
         "lang": {
             "fr": "3277967",
             "en": "3277966"
         },
-        "sendbutton": "Envoyez"
+        "sendbutton": "Envoyer"
     },
-    "support": "Veuillez nous envoyer un e-mail avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
+    "support": "Veuillez nous envoyer un email avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
     "docs": {
-        "title": "Sealfie: comment ça marche ?",
-        "subtitle": "Suite à l'inscription, après avoir été contacté, le système sera opérationnel en 30 minutes.",
+        "title": "Comment Fonctionne Sealfie ?",
+        "subtitle": "Après l'inscription, après avoir été contacté, le système sera opérationnel en 20 minutes.",
         "stepstart": {
             "one": "J'ai besoin d'obtenir une approbation.",
-            "two": "Je démarre Sealfie, prends une photo du sujet de l'approbation.",
+            "two": "Je démarre Sealfie, je prends une photo du sujet de l'approbation.",
             "tree": "Je prends un selfie et ajoute un message (option).",
             "biometric": "Je confirme avec la biométrie de mon smartphone.",
             "video": "Landing-Doc-FR.webm"
@@ -135,6 +136,6 @@
             "biometric": "Chacun confirme avec la biométrie de son smartphone.",
             "video": "Landing-Doc-FR2.webm"
         },
-        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesures"
+        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesure"
     }
 }
