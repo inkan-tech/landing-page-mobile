@@ -42,17 +42,7 @@ html(lang=$localeName)
             | #{$i18n.support}
           a.btn.btn-outline-light.py-3.px-4.rounded-pill(href=`mailto:support@sealf.ie?subject=Issue found with Sealfie`, target='_blank') Email support
 
-
-    // Footer
-    footer.bg-black.text-center.py-5
-      .container.px-5
-        .text-white-50.small
-          .mb-2 &copy; 2022 Inkan.link . All Rights Reserved.
-          a(href='privacy-ios.html') Privacy
-          span.mx-1 &middot;
-          a(href='#!') Terms
-          span.mx-1 &middot;
-          a(href='https://www.allianz-trade.fr/actualites/etude-fraude-2021.html') [1] Etude Allianz
+    include ../pug/includes/footer.pug
 
 
 

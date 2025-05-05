@@ -1,0 +1,237 @@
+doctype html
+html(lang=$localeName)
+
+  head
+
+    title #{$i18n.docs.title}
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Sealfie la premier compagnon digital de protection contre l\'arnaque au faux président. Le premier type de fraude visant les entreprises.')
+    meta(name='author', content='nicolas.thomas@inkan.link')
+
+
+
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
+
+    link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
+
+    // Bootstrap icons
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css", rel='stylesheet')
+
+    // Google fonts
+    link(rel='preconnect', href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap', rel='stylesheet')
+
+    // Core theme CSS (includes Bootstrap)
+    link(href='/css/styles.css', rel='stylesheet')
+
+    include ../pug/includes/navbar.pug
+
+    if $localeName !== 'fr'
+        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/terms.html')
+        //- Terms of Service (ToS) – Sealfie
+        head
+            meta(charset="UTF-8")
+            title Terms of Service (ToS) – Sealfie
+        body
+            h1 Terms of Service (ToS) – Sealfie
+            p
+            | Last updated: May 5, 2025
+            p
+            | Sealfie is a SaaS biometric authentication service operated by Inkan.link, accessible via mobile and web applications. Use of the Service implies full acceptance of these ToS.
+
+            hr
+
+            h2 1. Purpose
+            p
+            | These ToS govern access to and use of the Sealfie Service, which enables biometric identity verification and management of technical attestations via a mobile application and web platform.
+
+            hr
+
+            h2 2. Access to the Service
+            ul
+            li Access to the Service requires the creation of a user account.
+            li The User must use a compatible device with up-to-date security patches as recommended by the manufacturer.
+            li The User agrees not to share their credentials, passwords, or biometric data, nor to grant access to third parties.
+            li Any change of phone number, device, or biometric data must be promptly reported to Sealfie.
+
+            hr
+
+            h2 3. Subscription, annual quotas, and termination
+
+            h3 3.1 Subscription terms
+            ul
+            li Access to the Service is by annual subscription, granting a quota of biometric validations as specified at sign-up.
+            li Unused quotas at the end of the annual period are not carried over.
+
+            h3 3.2 Termination and refund
+            ul
+            li The Client company may terminate its subscription at any time via the application or by emailing support@sealf.ie.
+            li In case of termination, a refund will be made on a pro-rata basis for the unused validation quota as of the date of the request, according to the following formula:
+                br
+                strong Refund amount = (Remaining quota / Annual quota) x Annual subscription price
+            li The refund will be processed within 14 business days of confirmation of termination.
+
+            hr
+
+            h2 4. Client company responsibilities
+            ul
+            li The Client company is responsible for promptly notifying Inkan.link of any changes in personnel or responsibilities regarding authorized Service users.
+            li The Client company ensures that only authorized members access the Service and use the validation quotas.
+            li The Client company is responsible for managing access and the confidentiality of its users' credentials.
+
+            hr
+
+            h2 5. Collection and use of third-party system data
+            ul
+            li Inkan.link may collect, on behalf of the Client company, information from third-party systems solely for the needs and data of that company.
+            li Consent for such collection is explicit and obtained within the Sealfie application, particularly for information related to telecommunications networks.
+            li Data processing is carried out in accordance with the GDPR and Sealfie's privacy policy.
+
+            hr
+
+            h2 6. Security and obligations
+            ul
+            li The User agrees to use a secure and up-to-date device.
+            li The User agrees to keep their authentication credentials confidential and not to allow access to third parties.
+            li Any unauthorized use or suspected compromise must be reported to Sealfie immediately.
+
+            hr
+
+            h2 7. Intellectual property
+            p
+            | All elements of the Service (software, attestations, trademarks, logos) remain the exclusive property of Inkan.link or its partners.
+
+            hr
+
+            h2 8. Liability
+            ul
+            li Sealfie cannot be held liable for fraudulent use, use of an unsecured device, or interruptions caused by third parties.
+            li The Client company and its users are solely responsible for the use of their accounts and the confidentiality of their access.
+
+            hr
+
+            h2 9. Modification of the ToS
+            p
+            | The ToS may be modified at any time. Users will be informed of changes, which must be accepted to continue using the Service.
+
+            hr
+
+            h2 10. Governing law
+            p
+            | These ToS are governed by French law. Any dispute will fall under the exclusive jurisdiction of the courts of Grenoble.
+
+            hr
+
+            p
+            | For any questions, contact:
+            strong support@sealf.ie
+
+
+
+    else
+        link(rel='canonical', href='https://sealf.ie/fr/terms.html')
+        //- Conditions Générales d’Utilisation (CGU) – Sealfie
+
+        head
+            meta(charset="UTF-8")
+            title Conditions Générales d’Utilisation (CGU) – Sealfie
+        body
+            h1 Conditions Générales d’Utilisation (CGU) – Sealfie
+            p
+            | Dernière mise à jour : 5 mai 2025
+            p
+            | Sealfie est un service SaaS d’authentification biométrique, opéré par la société Inkan.link, accessible via application mobile et web. L’utilisation du Service implique l’acceptation pleine et entière des présentes CGU.
+
+            hr
+
+            h2 1. Objet
+            p
+            | Les présentes CGU régissent l’accès et l’utilisation du Service Sealfie, permettant la vérification d’identité biométrique et la gestion d’attestations techniques, via une application mobile et une plateforme web.
+
+            hr
+
+            h2 2. Accès au Service
+            ul
+            li L’accès au Service nécessite la création d’un compte utilisateur.
+            li L’Utilisateur doit utiliser un appareil compatible, à jour des correctifs de sécurité recommandés par le fabricant.
+            li L’Utilisateur s’engage à ne pas partager ses identifiants, mots de passe ou données biométriques, ni à donner accès à des tiers.
+            li Tout changement de numéro de téléphone, d’appareil ou de données biométriques doit être signalé sans délai à Sealfie.
+
+            hr
+
+            h2 3. Abonnement, quotas annuels et résiliation
+
+            h3 3.1 Modalités d’abonnement
+            ul
+            li L’accès au Service s’effectue par abonnement annuel donnant droit à un quota de validations biométriques, précisé lors de la souscription.
+            li Les quotas non utilisés à la fin de la période annuelle ne sont pas reportés.
+
+            h3 3.2 Résiliation et remboursement
+            ul
+            li L’Entreprise cliente peut résilier son abonnement à tout moment depuis l’application ou par email à support@sealf.ie.
+            li En cas de résiliation, le remboursement est effectué au prorata du quota de validations non utilisées au jour de la demande, selon la formule suivante :
+                br
+                strong Montant remboursé = (Quota restant / Quota annuel) x Prix de l’abonnement annuel
+            li Le remboursement intervient dans un délai de 14 jours ouvrés à compter de la confirmation de résiliation.
+
+            hr
+
+            h2 4. Responsabilités de l’entreprise cliente
+            ul
+            li L’Entreprise cliente est responsable de prévenir Inkan.link sans délai de tout changement de personnel ou de responsabilités concernant les utilisateurs autorisés du Service.
+            li L’Entreprise cliente garantit que seuls les membres autorisés accèdent au Service et utilisent les quotas de validation.
+            li L’Entreprise cliente est responsable de la gestion des accès et de la confidentialité des identifiants de ses utilisateurs.
+
+            hr
+
+            h2 5. Collecte et utilisation des données de systèmes tiers
+            ul
+            li Inkan.link pourra collecter, au nom de l’Entreprise cliente, des informations provenant de systèmes tiers uniquement pour les besoins propres de cette entreprise et pour ses seules données.
+            li L’accord pour ces collectes est explicite et recueilli dans l’application Sealfie, notamment pour les informations liées aux réseaux de téléphonie.
+            li Les traitements de données sont réalisés conformément au RGPD et à la politique de confidentialité de Sealfie.
+
+            hr
+
+            h2 6. Sécurité et obligations
+            ul
+            li L’Utilisateur s’engage à utiliser un appareil sécurisé et à jour.
+            li Il s’engage à préserver la confidentialité de ses moyens d’authentification et à ne pas permettre l’accès à des tiers.
+            li Toute utilisation non autorisée ou suspicion de compromission doit être signalée immédiatement à Sealfie.
+
+            hr
+
+            h2 7. Propriété intellectuelle
+            p
+            | Tous les éléments du Service (logiciel, attestations, marques, logos) restent la propriété exclusive d’Inkan.link ou de ses partenaires.
+
+            hr
+
+            h2 8. Responsabilités
+            ul
+            li Sealfie ne saurait être tenue responsable d’une utilisation frauduleuse, d’un appareil non sécurisé, ou d’une interruption liée à un tiers.
+            li L’Entreprise cliente et ses utilisateurs sont seuls responsables de l’usage de leurs comptes et de la confidentialité de leurs accès.
+
+            hr
+
+            h2 9. Modification des CGU
+            p
+            | Les CGU peuvent être modifiées à tout moment. Les Utilisateurs seront informés des modifications, qui devront être acceptées pour continuer à utiliser le Service.
+
+            hr
+
+            h2 10. Droit applicable
+            p
+            | Les présentes CGU sont régies par le droit français. Tout litige relèvera de la compétence exclusive des tribunaux de Grenoble.
+
+            hr
+
+            p
+            | Pour toute question, contactez :
+            strong support@sealf.ie
+
+    include ../pug/includes/footer.pug
+

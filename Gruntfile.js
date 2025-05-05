@@ -25,6 +25,7 @@ module.exports = grunt => {
                     "docs/post-register.html": ["src/pug/post-register.pug"],
                     "docs/documentation.html": ["src/pug/documentation.pug"],
                     "docs/pricing.html": ["src/pug/pricing.pug"],
+                    "docs/terms.html": ["src/pug/terms.pug"],
                 }
             }
         },
