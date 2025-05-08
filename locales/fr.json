@@ -137,5 +137,9 @@
             "video": "Landing-Doc-FR2.webm"
         },
         "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesure"
+    },
+    "legal": {
+        "terms": "Conditions générales d'utilisation",
+        "privacy": "Politique de confidentialité"
     }
 }

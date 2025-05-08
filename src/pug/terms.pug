@@ -3,16 +3,13 @@ html(lang=$localeName)
 
   head
 
-    title #{$i18n.docs.title}
+    title #{$i18n.legal.terms}
 
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content='Sealfie la premier compagnon digital de protection contre l\'arnaque au faux président. Le premier type de fraude visant les entreprises.')
+    meta(name='description', content='Terms and conditions of Sealfie')
     meta(name='author', content='nicolas.thomas@inkan.link')
 
-
-
-    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 
@@ -27,16 +24,18 @@ html(lang=$localeName)
 
     // Core theme CSS (includes Bootstrap)
     link(href='/css/styles.css', rel='stylesheet')
-
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/terms.html')
     include ../pug/includes/navbar.pug
 
     if $localeName !== 'fr'
-        link(rel='canonical', href='https://sealf.ie/'+$localeName+'/terms.html')
+
         //- Terms of Service (ToS) – Sealfie
-        head
-            meta(charset="UTF-8")
-            title Terms of Service (ToS) – Sealfie
+        p
+        h1 Terms of Service (ToS) – Sealfie
+        p
+
         body
+            p
             h1 Terms of Service (ToS) – Sealfie
             p
             | Last updated: May 5, 2025
@@ -133,14 +132,13 @@ html(lang=$localeName)
 
 
     else
-        link(rel='canonical', href='https://sealf.ie/fr/terms.html')
-        //- Conditions Générales d’Utilisation (CGU) – Sealfie
 
-        head
-            meta(charset="UTF-8")
-            title Conditions Générales d’Utilisation (CGU) – Sealfie
+        p
+        h1 Conditions Générales d’Utilisation (CGU) – Sealfie
+        p
         body
-            h1 Conditions Générales d’Utilisation (CGU) – Sealfie
+            p
+             h1 Conditions Générales d’Utilisation (CGU) – Sealfie
             p
             | Dernière mise à jour : 5 mai 2025
             p
