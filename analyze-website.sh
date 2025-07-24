@@ -27,6 +27,7 @@ echo "📅 Timestamp: $TIMESTAMP"
 
 # Create reports directory
 mkdir -p "$REPORT_DIR/$TIMESTAMP"
+REPORT_PATH="$(pwd)/$REPORT_DIR/$TIMESTAMP"
 cd "$REPORT_DIR/$TIMESTAMP"
 
 echo ""
@@ -38,7 +39,7 @@ echo ""
 echo "2️⃣ Starting local server..."
 
 # Check if server is already running on port 8000
-EXISTING_PID=$(timeout 2 lsof -ti:8000 2>/dev/null || true)
+EXISTING_PID=$(lsof -ti:8000 2>/dev/null || true)
 
 if [ ! -z "$EXISTING_PID" ]; then
     echo "⚠️  Found existing server on port 8000 (PID: $EXISTING_PID)"
@@ -57,110 +58,228 @@ sleep 3
 cd "../$REPORT_DIR/$TIMESTAMP"
 
 echo ""
-echo "3️⃣ Running performance analysis..."
+echo "3️⃣ Extracting pages from sitemap..."
 
-# Lighthouse audit (desktop)
-echo "   📊 Desktop performance..."
-npx lighthouse "$SITE_URL" \
-  --output json \
-  --output html \
-  --output-path lighthouse-desktop \
-  --preset desktop \
-  --quiet \
-  --chrome-flags="--headless" || echo "   ⚠️  Lighthouse desktop audit failed"
+# Extract unique page paths from sitemap 
+# Since sitemap has https://sealf.ie URLs, we'll convert them to local paths
+PAGES=$(grep -o '<loc>https://sealf.ie[^<]*</loc>' "$BUILD_DIR/sitemap.xml" 2>/dev/null | \
+        sed 's|<loc>https://sealf.ie||g' | \
+        sed 's|</loc>||g' | \
+        sort -u || echo "/")
 
-# Lighthouse audit (mobile)
-echo "   📱 Mobile performance..."
-npx lighthouse "$SITE_URL" \
-  --output json \
-  --output html \
-  --output-path lighthouse-mobile \
-  --form-factor mobile \
-  --screenEmulation.mobile \
-  --quiet \
-  --chrome-flags="--headless" || echo "   ⚠️  Lighthouse mobile audit failed"
+# If sitemap parsing fails, analyze at least the main pages
+if [ -z "$PAGES" ]; then
+    echo "   ⚠️  Could not parse sitemap, using default pages"
+    PAGES="/
+/documentation.html
+/pricing.html
+/support.html
+/terms.html
+/privacy-ios.html
+/en/
+/fr/"
+fi
 
-echo ""
-echo "4️⃣ Taking screenshots..."
+# For testing, option to limit pages
+if [ "$1" = "--quick" ]; then
+    echo "   🚀 Quick mode: analyzing only first 3 pages"
+    PAGES=$(echo "$PAGES" | head -3)
+fi
 
-# Screenshots at different viewports
-npx playwright screenshot --viewport-size "320,568" "$SITE_URL" mobile-small.png
-npx playwright screenshot --viewport-size "375,812" "$SITE_URL" mobile-large.png
-npx playwright screenshot --viewport-size "768,1024" "$SITE_URL" tablet.png
-npx playwright screenshot --viewport-size "1920,1080" "$SITE_URL" desktop.png
-
-# Full page screenshots
-npx playwright screenshot --full-page --viewport-size "375,812" "$SITE_URL" mobile-fullpage.png
-npx playwright screenshot --full-page --viewport-size "1920,1080" "$SITE_URL" desktop-fullpage.png
+echo "   📝 Found $(echo "$PAGES" | wc -l | tr -d ' ') pages to analyze"
 
 echo ""
-echo "5️⃣ Running accessibility audits..."
+echo "4️⃣ Running performance analysis..."
 
-# Axe accessibility testing
-echo "   ♿ Running axe-core audit..."
-axe "$SITE_URL" --save axe-results.json --timeout 30000 || echo "   ⚠️  Axe audit completed with issues"
+# Create subdirectories for each page's results
+mkdir -p lighthouse accessibility screenshots
 
-# Pa11y accessibility testing
-echo "   ♿ Running pa11y audit..."
-pa11y "$SITE_URL" --reporter json > pa11y-results.json 2>/dev/null || echo "Pa11y completed with warnings"
+# Analyze each page
+for PAGE in $PAGES; do
+    # Clean page name for file naming
+    PAGE_NAME=$(echo "$PAGE" | sed 's|^/||' | sed 's|/$|index|' | sed 's|/|-|g' | sed 's|\.html$||')
+    [ -z "$PAGE_NAME" ] && PAGE_NAME="index"
+    
+    echo ""
+    echo "   🔍 Analyzing page: $PAGE"
+    PAGE_URL="${SITE_URL}${PAGE}"
+    
+    # Skip Lighthouse if --no-lighthouse flag is provided
+    if [ "$2" != "--no-lighthouse" ]; then
+        # Get absolute path to config
+        CONFIG_PATH="$(cd ../.. && pwd)/lighthouse-config.js"
+        
+        # Lighthouse audit (desktop)
+        echo "      📊 Desktop performance..."
+        npx lighthouse "$PAGE_URL" \
+          --config-path="$CONFIG_PATH" \
+          --output json \
+          --output html \
+          --output-path "lighthouse/desktop-${PAGE_NAME}" \
+          --preset desktop \
+          --quiet \
+          --chrome-flags="--headless" || echo "      ⚠️  Lighthouse desktop audit failed"
+        
+        # Lighthouse audit (mobile)
+        echo "      📱 Mobile performance..."
+        npx lighthouse "$PAGE_URL" \
+          --config-path="$CONFIG_PATH" \
+          --output json \
+          --output html \
+          --output-path "lighthouse/mobile-${PAGE_NAME}" \
+          --form-factor mobile \
+          --screenEmulation.mobile \
+          --quiet \
+          --chrome-flags="--headless" || echo "      ⚠️  Lighthouse mobile audit failed"
+    else
+        echo "      ⚠️  Skipping Lighthouse audits (--no-lighthouse flag)"
+    fi
+done
 
 echo ""
-echo "6️⃣ Analyzing page structure..."
+echo "5️⃣ Taking screenshots..."
 
-# Use curl to get page content for analysis
-curl -s "$SITE_URL" > page-source.html
-
-# Extract key metrics using built-in tools
-echo "   📏 Page metrics:"
-echo "     HTML size: $(wc -c < page-source.html) bytes"
-echo "     HTML lines: $(wc -l < page-source.html)"
-
-# Count images, links, scripts
-echo "     Images: $(grep -o '<img[^>]*>' page-source.html | wc -l)"
-echo "     Links: $(grep -o '<a[^>]*>' page-source.html | wc -l)"
-echo "     Scripts: $(grep -o '<script[^>]*>' page-source.html | wc -l)"
-echo "     Stylesheets: $(grep -o '<link[^>]*stylesheet[^>]*>' page-source.html | wc -l)"
+# Take screenshots for each page
+for PAGE in $PAGES; do
+    PAGE_NAME=$(echo "$PAGE" | sed 's|^/||' | sed 's|/$|index|' | sed 's|/|-|g' | sed 's|\.html$||')
+    [ -z "$PAGE_NAME" ] && PAGE_NAME="index"
+    PAGE_URL="${SITE_URL}${PAGE}"
+    
+    echo "   📸 Screenshots for: $PAGE"
+    
+    # Create page-specific screenshot directory
+    mkdir -p "screenshots/${PAGE_NAME}"
+    
+    # Screenshots at different viewports
+    npx playwright screenshot --viewport-size "320,568" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-small.png"
+    npx playwright screenshot --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-large.png"
+    npx playwright screenshot --viewport-size "768,1024" "$PAGE_URL" "screenshots/${PAGE_NAME}/tablet.png"
+    npx playwright screenshot --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop.png"
+    
+    # Full page screenshots (only for mobile and desktop)
+    npx playwright screenshot --full-page --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-fullpage.png"
+    npx playwright screenshot --full-page --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop-fullpage.png"
+done
 
 echo ""
-echo "7️⃣ Creating analysis summary..."
+echo "6️⃣ Running accessibility audits..."
 
-# Create a summary report
+# Run accessibility audits for each page
+for PAGE in $PAGES; do
+    PAGE_NAME=$(echo "$PAGE" | sed 's|^/||' | sed 's|/$|index|' | sed 's|/|-|g' | sed 's|\.html$||')
+    [ -z "$PAGE_NAME" ] && PAGE_NAME="index"
+    PAGE_URL="${SITE_URL}${PAGE}"
+    
+    echo "   ♿ Accessibility audit for: $PAGE"
+    
+    # Axe accessibility testing
+    echo "      Running axe-core..."
+    axe "$PAGE_URL" --save "accessibility/axe-${PAGE_NAME}.json" --timeout 30000 || echo "      ⚠️  Axe audit completed with issues"
+    
+    # Pa11y accessibility testing
+    echo "      Running pa11y..."
+    pa11y "$PAGE_URL" --reporter json > "accessibility/pa11y-${PAGE_NAME}.json" 2>/dev/null || echo "      Pa11y completed with warnings"
+done
+
+echo ""
+echo "7️⃣ Analyzing page structure..."
+
+# Create directory for page sources
+mkdir -p sources
+
+# Analyze structure for each page
+for PAGE in $PAGES; do
+    PAGE_NAME=$(echo "$PAGE" | sed 's|^/||' | sed 's|/$|index|' | sed 's|/|-|g' | sed 's|\.html$||')
+    [ -z "$PAGE_NAME" ] && PAGE_NAME="index"
+    PAGE_URL="${SITE_URL}${PAGE}"
+    
+    echo "   📏 Page metrics for: $PAGE"
+    
+    # Use curl to get page content for analysis
+    curl -s "$PAGE_URL" > "sources/${PAGE_NAME}.html"
+    
+    # Extract key metrics using built-in tools
+    echo "     HTML size: $(wc -c < "sources/${PAGE_NAME}.html") bytes"
+    echo "     HTML lines: $(wc -l < "sources/${PAGE_NAME}.html")"
+    echo "     Images: $(grep -o '<img[^>]*>' "sources/${PAGE_NAME}.html" | wc -l)"
+    echo "     Links: $(grep -o '<a[^>]*>' "sources/${PAGE_NAME}.html" | wc -l)"
+    echo "     Scripts: $(grep -o '<script[^>]*>' "sources/${PAGE_NAME}.html" | wc -l)"
+    echo "     Stylesheets: $(grep -o '<link[^>]*stylesheet[^>]*>' "sources/${PAGE_NAME}.html" | wc -l)"
+done
+
+echo ""
+echo "8️⃣ Creating analysis summary..."
+
+# Create a comprehensive summary report
 cat > analysis-summary.md << EOF
-# Website Analysis Report
+# Website Analysis Report - All Pages
 **Generated:** $(date)
-**URL Analyzed:** $SITE_URL
+**Base URL:** $SITE_URL
+**Pages Analyzed:** $(echo "$PAGES" | wc -l | tr -d ' ')
 
-## Files Generated
-- \`lighthouse-desktop.html\` - Desktop performance report
-- \`lighthouse-mobile.html\` - Mobile performance report
-- \`lighthouse-desktop.json\` - Desktop performance data
-- \`lighthouse-mobile.json\` - Mobile performance data
-- \`axe-results.json\` - Accessibility issues (axe-core)
-- \`pa11y-results.json\` - Accessibility issues (pa11y)
-- \`mobile-small.png\` - Screenshot (320x568)
-- \`mobile-large.png\` - Screenshot (375x812)
-- \`tablet.png\` - Screenshot (768x1024)
-- \`desktop.png\` - Screenshot (1920x1080)
-- \`mobile-fullpage.png\` - Full mobile page
-- \`desktop-fullpage.png\` - Full desktop page
-- \`page-source.html\` - Raw HTML source
+## Pages Analyzed
+$(echo "$PAGES" | sed 's/^/- /')
+
+## Directory Structure
+\`\`\`
+├── lighthouse/
+│   ├── desktop-*.html  - Desktop performance reports
+│   ├── mobile-*.html   - Mobile performance reports
+│   └── *.json         - Raw performance data
+├── accessibility/
+│   ├── axe-*.json     - Axe accessibility results
+│   └── pa11y-*.json   - Pa11y accessibility results
+├── screenshots/
+│   └── [page-name]/
+│       ├── mobile-small.png    (320x568)
+│       ├── mobile-large.png    (375x812)
+│       ├── tablet.png          (768x1024)
+│       ├── desktop.png         (1920x1080)
+│       ├── mobile-fullpage.png (full height)
+│       └── desktop-fullpage.png (full height)
+└── sources/
+    └── *.html         - Raw HTML source for each page
+\`\`\`
 
 ## Quick Actions
-1. Open \`lighthouse-desktop.html\` for performance insights
-2. Check \`axe-results.json\` for accessibility issues
-3. Review screenshots for visual consistency
-4. Compare mobile vs desktop performance
+1. **Performance Review**: Open \`lighthouse/desktop-index.html\` for homepage performance
+2. **Accessibility Audit**: Check \`accessibility/axe-*.json\` files for violations
+3. **Visual QA**: Browse \`screenshots/\` folders for each page
+4. **Cross-Language Comparison**: Compare en/ vs fr/ page results
 
-## Analysis Tips
-- Focus on Core Web Vitals scores in Lighthouse
-- Address any accessibility violations found
-- Check image optimization opportunities
-- Verify mobile responsiveness in screenshots
+## Analysis Tips by Page Type
+
+### Homepage (/, /en/, /fr/)
+- Check hero section performance impact
+- Verify video loading optimization
+- Review mobile conversion elements
+
+### Documentation Pages
+- Ensure content is accessible
+- Check readability scores
+- Verify navigation consistency
+
+### Legal Pages (terms, privacy)
+- Focus on accessibility compliance
+- Check text contrast ratios
+- Ensure proper heading structure
+
+### Support/Pricing Pages
+- Verify form accessibility
+- Check CTA button contrast
+- Review mobile usability
+
+## Next Steps
+1. Address critical accessibility violations first
+2. Optimize images for pages with poor performance
+3. Review mobile experience for conversion pages
+4. Compare French vs English page performance
 EOF
 
 echo ""
-echo "8️⃣ Cleaning up..."
-cd ../../..
+echo "9️⃣ Cleaning up..."
+# Return to original directory
+cd "$(dirname "$REPORT_PATH")"/..
 
 echo ""
 echo "✅ Analysis complete!"

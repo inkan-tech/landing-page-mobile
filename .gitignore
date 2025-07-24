@@ -5,3 +5,4 @@ dist-grunt
 **/.dccache
 .dccache
 docs
+analysis-reports
