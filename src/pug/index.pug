@@ -255,14 +255,14 @@ html(lang=$localeName)
 
 
   // Call to action section
-  section.cta
+  section.cta(data-lazy-module="contact-form")
     .cta-content
       .container.px-5
         h2.text-white.display-1.lh-1.mb-4
           | #{$i18n.action.stop}
           br
           |#{$i18n.action.start}
-        a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
+        a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie" data-contact-form) #{$i18n.action.linktext}
 
 
   // Tech explanation section
@@ -301,6 +301,9 @@ html(lang=$localeName)
 
   // Core theme JS
   script(src='/js/scripts.js')
+  
+  // Phase 3: Lazy loader for modular loading
+  script(src='/js/lazy-loader.js')
 
   // Performance optimizations - Timer-based video loading with hover-to-play
   script.
@@ -464,4 +467,18 @@ html(lang=$localeName)
     setTimeout(function() {
       !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/716e8fcfd71b495b7e4af1e92/38d3020ee67bdafdc3231e2272e1fa06.js");
     }, 5000);  // Load after 5 seconds (increased from 3)
+
+  // Service Worker Registration
+  script.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
 

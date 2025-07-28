@@ -26,6 +26,7 @@ module.exports = grunt => {
                     "docs/documentation.html": ["src/pug/documentation.pug"],
                     "docs/pricing.html": ["src/pug/pricing.pug"],
                     "docs/terms.html": ["src/pug/terms.pug"],
+                    "docs/offline.html": ["src/pug/offline.pug"],
                 }
             }
         },
@@ -60,6 +61,13 @@ module.exports = grunt => {
                 cwd: 'src/assets/img/optimized',
                 src: ['**/*.{webp,jpg,jpeg,png}'],
                 dest: 'docs/assets/img/optimized/'
+            },
+            // Copy service worker and lazy modules
+            phase3: {
+                expand: true,
+                cwd: 'src',
+                src: ['sw.js', 'js/modules/**/*.js', 'js/lazy-loader.js'],
+                dest: 'docs/'
             },
             fr: {
                 expand: true,
@@ -219,7 +227,8 @@ module.exports = grunt => {
             },
             docs: {
                 files: {
-                    'docs/js/scripts.js': 'src/js/scripts.js'
+                    'docs/js/scripts.js': 'src/js/scripts.js',
+                    'docs/js/lazy-loader.js': 'src/js/lazy-loader.js'
                 }
             }
         },
@@ -241,7 +250,8 @@ module.exports = grunt => {
     //register default task
     if (process.env.NODE_ENV == 'production') {
         grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'babel'])
-        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'babel'])
+        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:phase3', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'babel'])
+        grunt.registerTask('build:phase3', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'babel'])
     } else {
         grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'browserSync', 'babel', 'watch'])
     }
