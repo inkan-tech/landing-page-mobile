@@ -74,6 +74,15 @@ html(lang=$localeName)
     link(rel='dns-prefetch', href='//img.youtube.com')
     link(rel='preconnect', href='https://www.youtube.com', crossorigin)
     link(rel='preconnect', href='https://img.youtube.com', crossorigin)
+    
+    // Preconnect to analytics domains for performance
+    link(rel='dns-prefetch', href='//cdn.matomo.cloud')
+    link(rel='dns-prefetch', href='//chimpstatic.com')
+    
+    // Preload critical resources
+    link(rel='preload', as='image', href='/assets/img/optimized/BlockChainPhone.webp')
+    link(rel='preload', as='image', href='https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg')
+    link(rel='preload', as='image', href='https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg')
 
     // Load Bootstrap icons asynchronously
     link(rel='preload', as='style', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', onload="this.onload=null;this.rel='stylesheet'")
@@ -89,8 +98,18 @@ html(lang=$localeName)
       link(href='https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap', rel='stylesheet')
       link(href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap', rel='stylesheet')
 
-    // Core theme CSS (includes Bootstrap)
-    link(href='/css/styles.css', rel='stylesheet')
+    // Critical CSS inline for above-the-fold content
+    style.
+      /* Critical CSS for hero section and navbar */
+      .masthead { min-height: 100vh; display: flex; align-items: center; }
+      .navbar-brand { font-weight: 600; }
+      .display-1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; }
+      .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      
+    // Core theme CSS (includes Bootstrap) - loaded asynchronously
+    link(rel='preload', as='style', href='/css/styles.css', onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link(href='/css/styles.css', rel='stylesheet')
 
 
     include ../pug/includes/navbar.pug
@@ -405,9 +424,39 @@ html(lang=$localeName)
       setupTimerLoading();
     });
 
+  // Core Web Vitals measurement
+  script.
+    // Web Vitals monitoring
+    function vitals(name, value, id) {
+      console.log('📊 Core Web Vital:', name, Math.round(value), 'ms', id);
+      // Send to analytics if needed
+      if (typeof gtag !== 'undefined') {
+        gtag('event', name, {
+          event_category: 'Web Vitals',
+          event_label: id,
+          value: Math.round(value),
+          non_interaction: true,
+        });
+      }
+    }
+    
+    // Measure LCP, FID, CLS
+    if ('web-vital' in window || 'requestIdleCallback' in window) {
+      import('https://unpkg.com/web-vitals@3/dist/web-vitals.js')
+        .then(({onCLS, onFID, onLCP, onINP, onFCP, onTTFB}) => {
+          onCLS(vitals);
+          onFID(vitals);
+          onLCP(vitals);
+          onINP(vitals);
+          onFCP(vitals);
+          onTTFB(vitals);
+        })
+        .catch(err => console.log('Web Vitals not loaded:', err));
+    }
+
   // Defer Mailchimp popup script
   script.
     setTimeout(function() {
       !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/716e8fcfd71b495b7e4af1e92/38d3020ee67bdafdc3231e2272e1fa06.js");
-    }, 3000);  // Load after 3 seconds
+    }, 5000);  // Load after 5 seconds (increased from 3)
 

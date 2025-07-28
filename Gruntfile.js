@@ -54,6 +54,13 @@ module.exports = grunt => {
                 src: ['assets/**'],
                 dest: 'docs/'
             },
+            // Copy optimized images to docs
+            optimized: {
+                expand: true,
+                cwd: 'src/assets/img/optimized',
+                src: ['**/*.{webp,jpg,jpeg,png}'],
+                dest: 'docs/assets/img/optimized/'
+            },
             fr: {
                 expand: true,
                 cwd: 'docs/fr',
@@ -92,6 +99,50 @@ module.exports = grunt => {
                     dest: 'docs/css',
                     ext: '.css'
                 }]
+            }
+        },
+
+        // Critical CSS extraction for above-the-fold content
+        critical: {
+            index: {
+                options: {
+                    base: 'docs/',
+                    css: ['docs/css/styles.css'],
+                    width: 1200,
+                    height: 900,
+                    timeout: 30000,
+                    ignore: {
+                        atrule: ['@charset', '@import', '@font-face'],
+                        rule: [/\.device/, /\.mockup/, /\.gradient/],
+                        decl: function(node, value) {
+                            return /url\(/.test(value);
+                        }
+                    }
+                },
+                src: 'docs/index.html',
+                dest: 'docs/index.html'
+            },
+            'index-en': {
+                options: {
+                    base: 'docs/',
+                    css: ['docs/css/styles.css'],
+                    width: 1200,
+                    height: 900,
+                    timeout: 30000
+                },
+                src: 'docs/en/index.html',
+                dest: 'docs/en/index.html'
+            },
+            'index-fr': {
+                options: {
+                    base: 'docs/',
+                    css: ['docs/css/styles.css'],
+                    width: 1200,
+                    height: 900,
+                    timeout: 30000
+                },
+                src: 'docs/fr/index.html',
+                dest: 'docs/fr/index.html'
             }
         },
 
@@ -190,6 +241,7 @@ module.exports = grunt => {
     //register default task
     if (process.env.NODE_ENV == 'production') {
         grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'babel'])
+        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'babel'])
     } else {
         grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'browserSync', 'babel', 'watch'])
     }
