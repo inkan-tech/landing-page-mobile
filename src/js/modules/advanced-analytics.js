@@ -91,7 +91,21 @@ export class AdvancedAnalytics {
 
     this.events.push(event);
 
-    // Send to analytics (Google Analytics, Matomo, etc.)
+    // Send to Matomo if available
+    if (typeof _paq !== 'undefined') {
+      const category = data.category || 'User Engagement';
+      const action = eventName;
+      const name = data.name || data.element || data.store || '';
+      const value = data.value || data.seconds || data.depth || null;
+      
+      if (value !== null) {
+        _paq.push(['trackEvent', category, action, name, value]);
+      } else {
+        _paq.push(['trackEvent', category, action, name]);
+      }
+    }
+
+    // Fallback to Google Analytics if available
     if (typeof gtag !== 'undefined') {
       gtag('event', eventName, data);
     }
