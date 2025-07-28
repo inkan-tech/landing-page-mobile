@@ -239,17 +239,17 @@ module.exports = grunt => {
             },
 
         },
-        // sitemap as mutlitask
+        // Sitemap generation with SEO-optimized settings
         sitemap: {
-
             dist: {
                 pattern: ['docs/**/*.html'],
-                siteRoot: 'docs/'
-                , changefreq: 'weekly',
+                siteRoot: 'docs/',
+                changefreq: 'weekly',
+                priority: 0.8,
                 extension: {
                     required: true,
-                    trailingSlash: true
-                },
+                    trailingSlash: false
+                }
             },
             //  pug: { siteRoot: 'docs/',tasks: ['pug']},
             //     copy: {

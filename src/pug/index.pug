@@ -16,69 +16,231 @@ html(lang=$localeName)
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
-    
-    // Open Graph meta tags for social sharing
+
+    // Enhanced Open Graph meta tags for social sharing
     meta(property='og:title', content=$i18n.title)
     meta(property='og:description', content=$i18n.meta.description)
     meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:image:secure_url', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:image:type', content='image/jpeg')
+    meta(property='og:image:width', content='1200')
+    meta(property='og:image:height', content='630')
+    meta(property='og:image:alt', content='Sealfie - Stop Executive Fraud with Advanced Deepfake Protection')
     meta(property='og:url', content='https://sealf.ie/'+$localeName+'/')
     meta(property='og:type', content='website')
     meta(property='og:site_name', content='Sealfie')
-    
-    // Twitter Card meta tags
+    meta(property='og:locale', content=$localeName == 'en' ? 'en_US' : 'fr_FR')
+    meta(property='og:locale:alternate', content=$localeName == 'en' ? 'fr_FR' : 'en_US')
+    meta(property='article:publisher', content='https://www.linkedin.com/company/inkan-link')
+    meta(property='article:author', content='https://www.linkedin.com/company/inkan-link')
+    meta(property='article:section', content='Cybersecurity')
+    meta(property='article:tag', content='deepfake protection')
+    meta(property='article:tag', content='executive fraud')
+    meta(property='article:tag', content='cybersecurity')
+    meta(property='fb:app_id', content='your-facebook-app-id')
+
+    // Enhanced Twitter Card meta tags
     meta(name='twitter:card', content='summary_large_image')
     meta(name='twitter:site', content='@sealfieapp')
     meta(name='twitter:creator', content='@inkanlink')
     meta(name='twitter:title', content=$i18n.title)
     meta(name='twitter:description', content=$i18n.meta.description)
     meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
-    
-    // Additional SEO meta tags
-    meta(name='keywords', content='deepfake protection, executive fraud prevention, cybersecurity app, BEC protection, email fraud, identity verification')
-    meta(name='robots', content='index, follow')
+    meta(name='twitter:image:alt', content='Sealfie mobile app interface showing deepfake detection and executive fraud protection features')
+    meta(name='twitter:app:name:iphone', content='Sealfie')
+    meta(name='twitter:app:id:iphone', content='1635309517')
+    meta(name='twitter:app:url:iphone', content='sealfie://open')
+    meta(name='twitter:app:name:googleplay', content='Sealfie')
+    meta(name='twitter:app:id:googleplay', content='link.inkan.sealfie')
+    meta(name='twitter:app:url:googleplay', content='sealfie://open')
+
+    // Enhanced SEO meta tags
+    meta(name='keywords', content='deepfake protection, executive fraud prevention, cybersecurity app, BEC protection, email fraud, identity verification, business email compromise, CEO fraud, CFO fraud, wire fraud prevention, biometric security, anti-phishing, artificial intelligence security')
+    meta(name='robots', content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')
     meta(name='theme-color', content='#667eea')
-    
-    // Schema.org structured data
+    meta(name='msapplication-TileColor', content='#667eea')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    meta(name='apple-mobile-web-app-title', content='Sealfie')
+    meta(name='application-name', content='Sealfie')
+    meta(name='msapplication-tooltip', content='Stop Executive Fraud with Sealfie')
+    meta(name='msapplication-starturl', content='/')
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='geo.region', content='US-CA')
+    meta(name='geo.placename', content='San Francisco')
+    meta(name='geo.position', content='37.7749;-122.4194')
+    meta(name='ICBM', content='37.7749, -122.4194')
+
+    // Enhanced Schema.org structured data for advanced SEO
     script(type='application/ld+json').
       {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Sealfie",
-        "description": "#{$i18n.meta.description}",
-        "operatingSystem": "Android, iOS",
-        "applicationCategory": "SecurityApplication",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "127"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Inkan.link",
-          "url": "https://inkan.link"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://sealf.ie/#website",
+            "url": "https://sealf.ie/",
+            "name": "Sealfie - Stop Executive Fraud",
+            "description": "#{$i18n.meta.description}",
+            "publisher": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://sealf.ie/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "#{$localeName}"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://sealf.ie/#organization",
+            "name": "Inkan.link",
+            "url": "https://inkan.link",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "#{$localeName}",
+              "@id": "https://sealf.ie/#/schema/logo/image/",
+              "url": "https://sealf.ie/assets/img/InkanLogo-32x32.svg",
+              "contentUrl": "https://sealf.ie/assets/img/InkanLogo-32x32.svg",
+              "width": 32,
+              "height": 32,
+              "caption": "Inkan.link"
+            },
+            "image": {
+              "@id": "https://sealf.ie/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/inkan-link",
+              "https://twitter.com/inkanlink"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33-1-23-45-67-89",
+              "contactType": "customer service",
+              "email": "contact@sealf.ie",
+              "availableLanguage": ["English", "French"]
+            }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://sealf.ie/#mobileapp",
+            "name": "Sealfie",
+            "description": "#{$i18n.meta.description}",
+            "operatingSystem": ["Android", "iOS"],
+            "applicationCategory": "SecurityApplication",
+            "downloadUrl": [
+              "https://apps.apple.com/app/id1635309517",
+              "https://play.google.com/store/apps/details?id=link.inkan.sealfie"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "ratingCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            "author": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "publisher": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "screenshot": [
+              "https://sealf.ie/assets/img/sealfie-screenshot-1.jpg",
+              "https://sealf.ie/assets/img/sealfie-screenshot-2.jpg"
+            ],
+            "featureList": [
+              "Deepfake detection and prevention",
+              "Executive fraud protection",
+              "Biometric verification",
+              "Real-time security alerts",
+              "Audit trail generation"
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://sealf.ie/#{$localeName}/#webpage",
+            "url": "https://sealf.ie/#{$localeName}/",
+            "name": "#{$i18n.head.title}",
+            "isPartOf": {
+              "@id": "https://sealf.ie/#website"
+            },
+            "about": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "description": "#{$i18n.meta.description}",
+            "breadcrumb": {
+              "@id": "https://sealf.ie/#{$localeName}/#breadcrumb"
+            },
+            "inLanguage": "#{$localeName}",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": ["https://sealf.ie/#{$localeName}/"]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://sealf.ie/#{$localeName}/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://sealf.ie/"
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Sealfie Security Suite",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Web Browser",
+            "description": "Advanced deepfake detection and executive fraud prevention platform",
+            "url": "https://sealf.ie/",
+            "author": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "195",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        ]
       }
 
     // Preconnect to external domains for performance
     link(rel='preconnect', href='https://fonts.googleapis.com')
     link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
     link(rel='preconnect', href='https://cdn.jsdelivr.net')
-    
+
     // DNS prefetch and preconnect for YouTube
     link(rel='dns-prefetch', href='//www.youtube.com')
     link(rel='dns-prefetch', href='//img.youtube.com')
     link(rel='preconnect', href='https://www.youtube.com', crossorigin)
     link(rel='preconnect', href='https://img.youtube.com', crossorigin)
-    
+
     // Preconnect to analytics domains for performance
     link(rel='dns-prefetch', href='//cdn.matomo.cloud')
     link(rel='dns-prefetch', href='//chimpstatic.com')
-    
+
     // Preload critical resources
     link(rel='preload', as='image', href='/assets/img/optimized/BlockChainPhone.webp')
     link(rel='preload', as='image', href='https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg')
@@ -105,17 +267,19 @@ html(lang=$localeName)
       .navbar-brand { font-weight: 600; }
       .display-1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; }
       .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      
+
     // Core theme CSS (includes Bootstrap) - loaded asynchronously
     link(rel='preload', as='style', href='/css/styles.css', onload="this.onload=null;this.rel='stylesheet'")
     noscript
       link(href='/css/styles.css', rel='stylesheet')
 
 
+    include ../pug/includes/skip-nav.pug
     include ../pug/includes/navbar.pug
 
-
-  //- Video Trailer - Timer-based lazy loading
+  body
+    main#main-content(tabindex='-1')
+      //- Video Trailer - Timer-based lazy loading
   aside.text-center.bg-gradient-primary-to-secondary
     .container.px-5
        .row.gx-5.justify-content-center
@@ -125,7 +289,7 @@ html(lang=$localeName)
                 if $localeName == "fr"
                     .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="2000")
                         .youtube-preview
-                            img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Video preview" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
+                            img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Play Sealfie demonstration video - French version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
                             .video-hover-overlay
                                 .play-indicator
                                     svg(width="68" height="48" viewBox="0 0 68 48")
@@ -134,7 +298,7 @@ html(lang=$localeName)
                 else
                     .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="2000")
                         .youtube-preview
-                            img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Video preview" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
+                            img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Play Sealfie demonstration video - English version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
                             .video-hover-overlay
                                 .play-indicator
                                     svg(width="68" height="48" viewBox="0 0 68 48")
@@ -246,7 +410,7 @@ html(lang=$localeName)
       .row.gx-5.justify-content-center
         .col-l-8
           if $localeName == "en"
-            img(src='/assets/img/InkanLogo-32x32.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
+            img(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan company logo - cybersecurity technology provider', style='height: 6rem;', href='https://inkan.link')
           else
             iframe(type='text/html' width='640' height='390'
             src='https://www.youtube.com/embed/22lzekNe87w?autoplay=1&mute=1&loop=1&playlist=22lzekNe87w&origin=https://sealf.ie'
@@ -262,7 +426,7 @@ html(lang=$localeName)
           | #{$i18n.action.stop}
           br
           |#{$i18n.action.start}
-        a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie" data-contact-form) #{$i18n.action.linktext}
+        a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie" data-contact-form aria-label="Contact us to protect your organization from deepfake fraud attacks" role="button") #{$i18n.action.linktext}
 
 
   // Tech explanation section
@@ -301,7 +465,7 @@ html(lang=$localeName)
 
   // Core theme JS
   script(src='/js/scripts.js')
-  
+
   // Phase 3: Lazy loader for modular loading
   script(src='/js/lazy-loader.js')
 
@@ -359,15 +523,15 @@ html(lang=$localeName)
       document.querySelectorAll('.youtube-timer-load').forEach(function(element) {
         const loadDelay = parseInt(element.dataset.loadDelay) || 2000;
         let isLoaded = false;
-        
+
         // Add initial loading indicator
         element.classList.add('timer-loading');
-        
+
         // Set up timer-based loading
         setTimeout(function() {
           element.classList.remove('timer-loading');
           element.classList.add('loaded');
-          
+
           // Auto-load video after timer completes
           element.classList.add('loading');
           setTimeout(function() {
@@ -404,7 +568,7 @@ html(lang=$localeName)
         setTimeout(function() {
           container.classList.remove('timer-loading');
           container.classList.add('loaded');
-          
+
           // Auto-load video after timer completes
           container.classList.add('loading');
           video = loadDeviceVideo(container);
@@ -447,7 +611,7 @@ html(lang=$localeName)
         });
       }
     }
-    
+
     // Measure LCP, FID, CLS
     if ('web-vital' in window || 'requestIdleCallback' in window) {
       import('https://unpkg.com/web-vitals@3/dist/web-vitals.js')

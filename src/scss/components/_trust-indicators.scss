@@ -1,0 +1,54 @@
+//
+// Trust Indicators
+//
+
+.trust-indicator {
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+  }
+  
+  i {
+    transition: color 0.3s ease;
+  }
+  
+  &:hover i {
+    color: $primary !important;
+    transform: scale(1.1);
+  }
+  
+  h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $dark;
+  }
+  
+  p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+}
+
+// Mobile responsive improvements
+@media (max-width: 767px) {
+  .trust-indicator {
+    padding: 1rem 0.5rem;
+    
+    i {
+      font-size: 2.5rem !important;
+    }
+    
+    h5 {
+      font-size: 0.9rem;
+    }
+    
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
