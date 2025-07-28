@@ -5,10 +5,16 @@
 section.support {
     position: relative;
     padding: 15rem 0;
-    background-image: url('../assets/img/contact-us.jpeg');
+    // Use WebP with JPEG fallback for better performance
+    background-image: url('../assets/img/optimized/contact-us.webp');
     background-position: center;
     background-size: cover;
     font-size: 1rem;
+    
+    // Fallback for browsers that don't support WebP
+    @supports not (background-image: url('data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=')) {
+        background-image: url('../assets/img/optimized/contact-us.jpeg');
+    }
     .support-content {
         position: relative;
         z-index: 1;

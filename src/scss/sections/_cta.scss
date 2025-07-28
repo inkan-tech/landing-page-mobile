@@ -5,9 +5,15 @@
 section.cta {
     position: relative;
     padding: 15rem 0;
-    background-image: url('../assets/img/photo_sad-businessman-at-desk.jpeg');
+    // Use WebP with JPEG fallback for better performance
+    background-image: url('../assets/img/optimized/photo_sad-businessman-at-desk.webp');
     background-position: center;
     background-size: cover;
+    
+    // Fallback for browsers that don't support WebP
+    @supports not (background-image: url('data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=')) {
+        background-image: url('../assets/img/optimized/photo_sad-businessman-at-desk.jpeg');
+    }
 
     .cta-content {
         position: relative;

@@ -63,7 +63,7 @@ module.exports = grunt => {
                 dest: 'docs/assets/img/optimized/'
             },
             // Copy service worker and lazy modules
-            phase3: {
+            serviceworker: {
                 expand: true,
                 cwd: 'src',
                 src: ['sw.js', 'js/modules/**/*.js', 'js/lazy-loader.js'],
@@ -107,6 +107,44 @@ module.exports = grunt => {
                     dest: 'docs/css',
                     ext: '.css'
                 }]
+            }
+        },
+
+        // PurgeCSS to remove unused CSS from Bootstrap
+        purgecss: {
+            target: {
+                options: {
+                    content: [
+                        'docs/**/*.html',
+                        'docs/js/**/*.js',
+                        'src/pug/**/*.pug'
+                    ],
+                    safelist: {
+                        standard: [
+                            // Bootstrap dynamic classes
+                            /^modal/,
+                            /^fade/,
+                            /^show/,
+                            /^bs-/,
+                            /^collaps/,
+                            /^carousel/,
+                            // Custom animations
+                            /^loading/,
+                            /^timer-loading/,
+                            /^video/,
+                            // Icons
+                            /^bi-/
+                        ],
+                        deep: [
+                            /^device/,
+                            /^screen/,
+                            /^gradient/
+                        ]
+                    }
+                },
+                files: {
+                    'docs/css/styles.css': ['docs/css/styles.css']
+                }
             }
         },
 
@@ -247,11 +285,12 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-pug-i18n');
     grunt.loadNpmTasks('grunt-sitemap');
+    grunt.loadNpmTasks('grunt-purgecss');
     //register default task
     if (process.env.NODE_ENV == 'production') {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'babel'])
-        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:phase3', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'babel'])
-        grunt.registerTask('build:phase3', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'babel'])
+        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
     } else {
         grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'browserSync', 'babel', 'watch'])
     }

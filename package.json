@@ -66,6 +66,7 @@
         "grunt-contrib-watch": "1.1.0",
         "grunt-move": "2.0.0",
         "grunt-pug-i18n": "1.0.1",
+        "grunt-purgecss": "^7.0.2",
         "grunt-run": "0.8.1",
         "grunt-sass": "4.0.0",
         "grunt-sitemap": "2.0.1",
