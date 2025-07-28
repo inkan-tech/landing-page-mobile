@@ -9,7 +9,10 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "grunt  ",
-        "optimize-images": "node scripts/optimize-images.js"
+        "optimize-images": "node scripts/optimize-images.js",
+        "security:scan": "./scripts/run-codeql-local.sh",
+        "security:audit": "npm audit --audit-level=moderate",
+        "security:check": "npm run security:audit && npm run security:scan"
     },
     "description": "Landing page for Sealfie",
     "keywords": [

@@ -6,3 +6,7 @@ dist-grunt
 .dccache
 docs
 analysis-reports
+
+# CodeQL analysis files
+/codeql-database/
+/codeql-results/

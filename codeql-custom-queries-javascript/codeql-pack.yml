@@ -1,7 +1,9 @@
 ---
 library: false
 warnOnImplicitThis: false
-name: getting-started/codeql-extra-queries-javascript
+name: sealfie/security-queries-javascript
 version: 1.0.0
+description: Custom CodeQL queries for Sealfie landing page security analysis
+author: Inkan.link Security Team
 dependencies:
   codeql/javascript-all: ^2.5.1

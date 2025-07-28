@@ -1,0 +1,87 @@
+name: "CodeQL Security Analysis"
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  schedule:
+    - cron: '30 2 * * 1'  # Weekly Monday 2:30 AM
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      # Required for all workflows
+      security-events: write
+      # Required to fetch internal or private CodeQL packs
+      packages: read
+      # Required for workflows in private repositories
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: javascript-typescript
+          build-mode: none
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        npm ci
+        npm install -g grunt-cli
+
+    - name: Build project
+      run: |
+        npm run build
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        build-mode: ${{ matrix.build-mode }}
+        # Custom queries for web security
+        queries: +security-extended,security-and-quality,./codeql-custom-queries-javascript/
+        config: |
+          name: "Sealfie Security Analysis"
+          disable-default-queries: false
+          queries:
+            - uses: security-extended
+            - uses: security-and-quality
+            - uses: ./codeql-custom-queries-javascript/
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:${{ matrix.language }}"
+
+    - name: Upload SARIF results to GitHub
+      uses: github/codeql-action/upload-sarif@v3
+      if: always()
+      with:
+        sarif_file: ${{ runner.temp }}/codeql_databases/results.sarif
+
+    - name: Generate Security Report
+      if: always()
+      run: |
+        echo "## CodeQL Security Analysis Results" >> $GITHUB_STEP_SUMMARY
+        echo "Date: $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "Language: ${{ matrix.language }}" >> $GITHUB_STEP_SUMMARY
+        if [ -f "${{ runner.temp }}/codeql_databases/results.sarif" ]; then
+          echo "SARIF file generated successfully" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "No SARIF file found" >> $GITHUB_STEP_SUMMARY
+        fi
