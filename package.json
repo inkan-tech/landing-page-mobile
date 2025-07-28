@@ -8,7 +8,8 @@
         "build:pug": "grunt pug",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
-        "start": "grunt  "
+        "start": "grunt  ",
+        "optimize-images": "node scripts/optimize-images.js"
     },
     "description": "Landing page for Sealfie",
     "keywords": [
@@ -68,6 +69,10 @@
         "grunt-run": "0.8.1",
         "grunt-sass": "4.0.0",
         "grunt-sitemap": "2.0.1",
+        "imagemin": "^9.0.1",
+        "imagemin-cli": "^8.0.0",
+        "imagemin-mozjpeg": "^10.0.0",
+        "imagemin-webp": "^8.0.0",
         "postcss": "8.5.3",
         "prettier": "3.5.3",
         "pug": "3.0.3",

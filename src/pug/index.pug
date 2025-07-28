@@ -16,53 +16,111 @@ html(lang=$localeName)
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/')
 
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
+    
+    // Open Graph meta tags for social sharing
+    meta(property='og:title', content=$i18n.title)
+    meta(property='og:description', content=$i18n.meta.description)
+    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:url', content='https://sealf.ie/'+$localeName+'/')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content='Sealfie')
+    
+    // Twitter Card meta tags
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@sealfieapp')
+    meta(name='twitter:creator', content='@inkanlink')
+    meta(name='twitter:title', content=$i18n.title)
+    meta(name='twitter:description', content=$i18n.meta.description)
+    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
+    
+    // Additional SEO meta tags
+    meta(name='keywords', content='deepfake protection, executive fraud prevention, cybersecurity app, BEC protection, email fraud, identity verification')
+    meta(name='robots', content='index, follow')
+    meta(name='theme-color', content='#667eea')
+    
+    // Schema.org structured data
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Sealfie",
+        "description": "#{$i18n.meta.description}",
+        "operatingSystem": "Android, iOS",
+        "applicationCategory": "SecurityApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "127"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Inkan.link",
+          "url": "https://inkan.link"
+        }
+      }
 
-    // Bootstrap icons
-    link(href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css", rel='stylesheet')
+    // Preconnect to external domains for performance
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(rel='preconnect', href='https://cdn.jsdelivr.net')
+    
+    // DNS prefetch and preconnect for YouTube
+    link(rel='dns-prefetch', href='//www.youtube.com')
+    link(rel='dns-prefetch', href='//img.youtube.com')
+    link(rel='preconnect', href='https://www.youtube.com', crossorigin)
+    link(rel='preconnect', href='https://img.youtube.com', crossorigin)
 
-    // Google fonts
-    link(rel='preconnect', href='https://fonts.gstatic.com')
-    link(href='https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap', rel='stylesheet')
+    // Load Bootstrap icons asynchronously
+    link(rel='preload', as='style', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', rel='stylesheet')
+
+    // Load Google fonts asynchronously
+    link(rel='preload', as='style', href='https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap', onload="this.onload=null;this.rel='stylesheet'")
+    link(rel='preload', as='style', href='https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap', onload="this.onload=null;this.rel='stylesheet'")
+    link(rel='preload', as='style', href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap', onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link(href='https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap', rel='stylesheet')
+      link(href='https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap', rel='stylesheet')
+      link(href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&display=swap', rel='stylesheet')
 
     // Core theme CSS (includes Bootstrap)
     link(href='/css/styles.css', rel='stylesheet')
-    script(id="mcjs")
-      include ../js/mailchimp-popup.js
 
 
     include ../pug/includes/navbar.pug
 
 
-  //- Video Trailer
+  //- Video Trailer - Timer-based lazy loading
   aside.text-center.bg-gradient-primary-to-secondary
     .container.px-5
        .row.gx-5.justify-content-center
-        .col-l-8
-            .h2.fs-1.text-white.mb-4
-            .ratio.ratio-16x9
+        .col-lg-8
+            .h2.fs-1.text-white.mb-1 #{$i18n.trailer}
+            .video-container
                 if $localeName == "fr"
-                    iframe(
-                    width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/-zetGGK4UKo?autoplay=1&mute=1&loop=1&playlist=-zetGGK4UKo"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    )
+                    .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="2000")
+                        .youtube-preview
+                            img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Video preview" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
+                            .video-hover-overlay
+                                .play-indicator
+                                    svg(width="68" height="48" viewBox="0 0 68 48")
+                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
+                                        path(d="M 45,24 27,14 27,34" fill="#fff")
                 else
-                    iframe(
-                    width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/-kDaGpo5LO0?autoplay=1&mute=1&loop=1&playlist=-kDaGpo5LO0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    )
-            .h2.fs-1.text-white.mb-4 #{$i18n.trailer}
+                    .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="2000")
+                        .youtube-preview
+                            img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Video preview" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
+                            .video-hover-overlay
+                                .play-indicator
+                                    svg(width="68" height="48" viewBox="0 0 68 48")
+                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
+                                        path(d="M 45,24 27,14 27,34" fill="#fff")
 
   // Mashead header
   header.masthead
@@ -93,8 +151,13 @@ html(lang=$localeName)
                   // * * This can be a video, image, or just about anything else.
                   // * * Set the max width of your media to 100% and the height to
                   // * * 100% like the demo example below.
-                  video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                    source(src="/assets/img/"+$i18n.videos.demo1, type='video/webm')
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="3000")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                      .demo-text Sealfie Demo
+                      .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
+                        svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
+                          circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
+                          polygon(points="10,8 16,12 10,16" fill="white")
 
   // Quote/testimonial aside
   aside.text-center.bg-gradient-primary-to-secondary
@@ -149,8 +212,13 @@ html(lang=$localeName)
                   // * * This can be a video, image, or just about anything else.
                   // * * Set the max width of your media to 100% and the height to
                   // * * 100% like the demo example below.
-                  video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                    source(src='/assets/img/'+ $i18n.videos.demo2, type='video/webm')
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo2 data-load-delay="4000")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                      .demo-text Protection Demo
+                      .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
+                        svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
+                          circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
+                          polygon(points="10,8 16,12 10,16" fill="white")
 
 
   // Quote/testimonial aside
@@ -162,7 +230,7 @@ html(lang=$localeName)
             img(src='/assets/img/InkanLogo-32x32.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
           else
             iframe(type='text/html' width='640' height='390'
-            src='https://www.youtube.com/embed/22lzekNe87w?autoplay=1&origin=https://sealf.ie'
+            src='https://www.youtube.com/embed/22lzekNe87w?autoplay=1&mute=1&loop=1&playlist=22lzekNe87w&origin=https://sealf.ie'
             frameborder='0')
           .h2.fs-1.text-white.mb-4 #{$i18n.testimonial}
 
@@ -189,7 +257,10 @@ html(lang=$localeName)
           p.lead.fw-normal.text-muted.mb-5.mb-lg-0 #{$i18n.description.text3}
         .col-sm-8.col-md-6
           .px-5.px-sm-0
-            img.img-fluid.rounded-circle(src='../assets/img/BlockChainPhone.jpeg', alt='...')
+            picture
+              source(srcset='../assets/img/optimized/BlockChainPhone.webp', type='image/webp')
+              source(srcset='../assets/img/optimized/BlockChainPhone.jpeg', type='image/jpeg')
+              img.img-fluid.rounded-circle(src='../assets/img/BlockChainPhone.jpeg', alt='Blockchain phone security illustration showing secure mobile authentication technology', loading='lazy')
 
 
   // App badge section
@@ -211,4 +282,132 @@ html(lang=$localeName)
 
   // Core theme JS
   script(src='/js/scripts.js')
+
+  // Performance optimizations - Timer-based video loading with hover-to-play
+  script.
+    // YouTube timer-based loading
+    function loadYouTubeVideo(element) {
+      const videoId = element.dataset.videoId;
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('width', '100%');
+      iframe.setAttribute('height', '90%');
+      iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1`);
+      iframe.setAttribute('title', 'YouTube video player');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.style.cssText = 'width: 100%; height: 90%; border-radius: 8px;';
+      element.innerHTML = '';
+      element.appendChild(iframe);
+    }
+
+    // Device mockup video loading
+    function loadDeviceVideo(container) {
+      const videoSrc = container.dataset.video;
+      const video = document.createElement('video');
+      video.setAttribute('muted', 'muted');
+      video.setAttribute('autoplay', '');
+      video.setAttribute('loop', '');
+      video.setAttribute('playsinline', '');
+      video.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
+      video.addEventListener('loadeddata', function() {
+        container.classList.remove('loading');
+        // Ensure video starts playing
+        video.play().catch(function(e) {
+          console.log('Auto-play failed:', e);
+        });
+      });
+      const source = document.createElement('source');
+      source.src = videoSrc;
+      source.type = 'video/webm';
+      video.appendChild(source);
+      container.innerHTML = '';
+      container.appendChild(video);
+      return video;
+    }
+
+    // Timer-based loading manager
+    function setupTimerLoading() {
+      // YouTube timer loading
+      document.querySelectorAll('.youtube-timer-load').forEach(function(element) {
+        const loadDelay = parseInt(element.dataset.loadDelay) || 2000;
+        let isLoaded = false;
+        
+        // Add initial loading indicator
+        element.classList.add('timer-loading');
+        
+        // Set up timer-based loading
+        setTimeout(function() {
+          element.classList.remove('timer-loading');
+          element.classList.add('loaded');
+          
+          // Auto-load video after timer completes
+          element.classList.add('loading');
+          setTimeout(function() {
+            loadYouTubeVideo(element);
+            isLoaded = true;
+            element.classList.remove('loading');
+          }, 500);
+        }, loadDelay);
+
+        // Set up hover-to-play functionality (backup if timer hasn't completed)
+        element.addEventListener('mouseenter', function() {
+          if (!isLoaded && !element.classList.contains('loaded') && !element.classList.contains('loading')) {
+            element.classList.remove('timer-loading');
+            element.classList.add('loading');
+            setTimeout(function() {
+              loadYouTubeVideo(element);
+              isLoaded = true;
+              element.classList.remove('loading');
+            }, 300);
+          }
+        });
+      });
+
+      // Device video timer loading
+      document.querySelectorAll('.video-timer-container').forEach(function(container) {
+        const loadDelay = parseInt(container.dataset.loadDelay) || 3000;
+        let video = null;
+        let isLoaded = false;
+
+        // Add initial loading indicator
+        container.classList.add('timer-loading');
+
+        // Set up timer-based loading
+        setTimeout(function() {
+          container.classList.remove('timer-loading');
+          container.classList.add('loaded');
+          
+          // Auto-load video after timer completes
+          container.classList.add('loading');
+          video = loadDeviceVideo(container);
+          isLoaded = true;
+          container.classList.remove('loading');
+        }, loadDelay);
+
+        // Set up hover-to-play functionality (early trigger only)
+        container.addEventListener('mouseenter', function() {
+          if (!isLoaded && !container.classList.contains('loaded') && !container.classList.contains('loading')) {
+            // Manual trigger if timer hasn't completed
+            container.classList.remove('timer-loading');
+            container.classList.add('loading');
+            video = loadDeviceVideo(container);
+            isLoaded = true;
+            container.classList.remove('loading');
+          }
+          // No play/pause control - videos loop continuously once loaded
+        });
+      });
+    }
+
+    // Initialize timer-based loading when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      setupTimerLoading();
+    });
+
+  // Defer Mailchimp popup script
+  script.
+    setTimeout(function() {
+      !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/716e8fcfd71b495b7e4af1e92/38d3020ee67bdafdc3231e2272e1fa06.js");
+    }, 3000);  // Load after 3 seconds
 
