@@ -42,10 +42,15 @@ jobs:
             apt-get update
             apt-get install -y nasm
           fi
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install and Build 🔧
         run: |
           npm install --no-optional
           npm run build
+      - name: Verify build output
+        run: |
+          echo "✅ Build completed successfully!"
+          echo "📁 Generated files in docs/:"
+          ls -la docs/ | head -10
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -37,7 +37,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-        cache: 'npm'
+
+    - name: Verify CodeQL environment
+      run: |
+        echo "Node version: $(node --version)"
+        echo "NPM version: $(npm --version)"
+        echo "JavaScript/TypeScript files found:"
+        find . -name "*.js" -o -name "*.ts" -not -path "./node_modules/*" | wc -l
+        echo "✅ Environment ready for CodeQL analysis"
 
     # Skip dependency installation for JavaScript analysis - CodeQL can analyze source directly
 
