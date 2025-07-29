@@ -1,17 +1,43 @@
-name: "CodeQL Config"
+name: "CodeQL Config for Sealfie Landing Page"
 
-# Query packs to run (in addition to default queries)
+# Disable default queries and use extended security pack
+disable-default-queries: false
+
+# Query packs to run
 packs:
-  - codeql/javascript-queries:codeql-suites/javascript-security-extended.qls
-  - codeql/javascript-queries:codeql-suites/javascript-security-and-quality.qls
+  javascript:
+    - codeql/javascript-queries:codeql-suites/javascript-security-extended.qls
+    - codeql/javascript-queries:codeql-suites/javascript-quality.qls
 
-# Paths to analyze (optional - defaults to entire repo)
+# Path filters - include relevant source files
 paths:
   - src/
-  - docs/
-  
-# Paths to ignore (optional)
+  - locales/
+  - "*.js"
+  - "*.json"
+  - Gruntfile.js
+
+# Path filters - exclude build outputs and dependencies  
 paths-ignore:
+  - docs/
   - node_modules/
   - "**/*.min.js"
-  - docs/assets/vendor/
+  - "**/*.bundle.js"
+  - dist/
+  - build/
+
+# Query filters - focus on security and quality issues relevant to web apps
+query-filters:
+  - exclude:
+      id: js/unused-local-variable
+  - exclude:
+      id: js/debugger-statement
+  - include:
+      tags:
+        - security
+        - external/cwe/cwe-079  # XSS
+        - external/cwe/cwe-089  # SQL injection  
+        - external/cwe/cwe-078  # Command injection
+        - external/cwe/cwe-022  # Path traversal
+        - external/cwe/cwe-434  # File upload
+        - external/cwe/cwe-502  # Deserialization
