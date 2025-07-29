@@ -1,0 +1,37 @@
+# Test workflow for local development with act
+name: Test Build Process
+
+on:
+  # Allows you to run this workflow manually from the Actions tab or with act
+  workflow_dispatch:
+  push:
+    branches: ["test/*"]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install system dependencies
+        run: |
+          if command -v sudo >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y nasm
+          else
+            apt-get update
+            apt-get install -y nasm
+          fi
+      
+      - name: Install and Build 🔧
+        run: |
+          npm install --no-optional
+          npm run build
+      
+      - name: Check build output
+        run: |
+          ls -la docs/
+          echo "✅ Build completed successfully!"
+          echo "📁 Generated files:"
+          find docs/ -name "*.html" -o -name "*.css" -o -name "*.js" | head -10

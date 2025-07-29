@@ -85,17 +85,6 @@ module.exports = grunt => {
 
         },
 
-        // image compress task (compress all image src/images to docs/images)
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/',
-                    src: ['assets/**/*.{png,jpg,gif}'],
-                    dest: 'docs'
-                }]
-            }
-        },
 
         //minify css (only tun in production)
         cssmin: {
@@ -233,10 +222,6 @@ module.exports = grunt => {
                 files: ['src/assets/**'],
                 tasks: ['copy']
             },
-            imagemin: {
-                files: ['src/assets/**'],
-                tasks: ['imagemin']
-            },
 
         },
         // Sitemap generation with SEO-optimized settings
@@ -280,7 +265,6 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-pug-i18n');
@@ -288,11 +272,11 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-purgecss');
     //register default task
     if (process.env.NODE_ENV == 'production') {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
-        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
-        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel'])
     } else {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'imagemin', 'browserSync', 'babel', 'watch'])
+        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'browserSync', 'babel', 'watch'])
     }
 };
 
