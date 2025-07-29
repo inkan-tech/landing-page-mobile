@@ -38,20 +38,15 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age.git"
     },
     "dependencies": {
-        "-": "0.0.1",
         "bootstrap": "5.3.7",
-        "coffeescript": "2.7.0",
-        "help": "^3.0.2",
         "i18n": "0.15.1",
-        "i18n-json-to-xlsx-converter": "^2.0.0",
-        "node-sass": "^9.0.0",
-        "react-intl": "^7.1.11"
+        "node-sass": "^9.0.0"
     },
     "devDependencies": {
         "autoprefixer": "10.4.21",
-        "backstopjs": "^6.3.25",
         "browser-sync": "^3.0.4",
         "chokidar": "4.0.3",
+        "coffeescript": "2.7.0",
         "concurrently": "9.2.0",
         "grunt": "1.6.1",
         "grunt-babel": "8.0.0",
@@ -74,9 +69,9 @@
         "prettier": "3.6.2",
         "pug": "3.0.3",
         "sass": "1.89.2",
+        "sharp": "^0.34.3",
         "shelljs": "0.10.0",
-        "upath": "2.0.1",
-        "webpack-bundle-analyzer": "^4.10.2"
+        "upath": "2.0.1"
     },
     "overrides": {
         "axios": "^1.7.7",
