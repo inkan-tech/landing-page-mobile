@@ -85,6 +85,7 @@
         "nth-check": "^2.1.1",
         "got": "^11.8.6",
         "http-cache-semantics": "^4.1.1",
-        "semver-regex": "^4.0.5"
+        "semver-regex": "^4.0.5",
+        "serve-static": "^1.16.2"
     }
 }
