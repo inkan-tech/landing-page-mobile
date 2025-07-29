@@ -53,14 +53,8 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        # Custom queries for web security
-        queries: +security-extended,security-and-quality
-        config: |
-          name: "Sealfie Security Analysis"
-          disable-default-queries: false
-          query-filters:
-            - exclude:
-                tags: experimental
+        # Use enhanced security query packs
+        queries: security-and-quality
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
@@ -76,7 +70,7 @@ jobs:
         echo "Build Mode: ${{ matrix.build-mode }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Analysis Summary" >> $GITHUB_STEP_SUMMARY
-        echo "- Custom queries directory: ./codeql-custom-queries-javascript/" >> $GITHUB_STEP_SUMMARY
+        echo "- Custom query pack: sealfie/security-queries-javascript" >> $GITHUB_STEP_SUMMARY
         echo "- Query packs: security-extended, security-and-quality" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "✅ CodeQL analysis completed. Results uploaded to GitHub Security tab." >> $GITHUB_STEP_SUMMARY
