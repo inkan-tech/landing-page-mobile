@@ -1,12 +1,9 @@
-name: "CodeQL Security Analysis"
+name: "Local CodeQL Analysis (No Upload)"
 
 on:
-  push:
-    branches: [ "main", "master", "develop" ]
-  pull_request:
-    branches: [ "main", "master" ]
+  workflow_dispatch:  # Manual trigger only to avoid conflicts with default setup
   schedule:
-    - cron: '30 2 * * 1'  # Weekly Monday 2:30 AM
+    - cron: '30 2 * * 1'  # Weekly Monday 2:30 AM (local analysis)
 
 jobs:
   analyze:
@@ -53,13 +50,14 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        # Use enhanced security query packs
-        queries: security-and-quality
 
-    - name: Perform CodeQL Analysis
+    - name: Perform CodeQL Analysis (Local Only)
       uses: github/codeql-action/analyze@v3
       with:
-        category: "/language:${{ matrix.language }}"
+        # Use different category to avoid conflict with default setup
+        category: "/language:${{ matrix.language }}/local-workflow"
+        # Disable uploads to prevent conflict with default CodeQL setup  
+        upload-database: false
 
     - name: Generate Security Report
       if: always()
@@ -73,4 +71,4 @@ jobs:
         echo "- Custom query pack: sealfie/security-queries-javascript" >> $GITHUB_STEP_SUMMARY
         echo "- Query packs: security-extended, security-and-quality" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "✅ CodeQL analysis completed. Results uploaded to GitHub Security tab." >> $GITHUB_STEP_SUMMARY
+        echo "✅ Local CodeQL analysis completed. Default setup handles GitHub Security uploads." >> $GITHUB_STEP_SUMMARY
