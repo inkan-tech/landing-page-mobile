@@ -69,17 +69,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: javascript-typescript
-        queries: +security-extended,security-and-quality,./codeql-custom-queries-javascript/
-        config: |
-          name: "Sealfie Landing Page Security Analysis"
-          disable-default-queries: false
-          queries:
-            - name: Extended Security Queries
-              uses: security-extended
-            - name: Security and Quality
-              uses: security-and-quality  
-            - name: Custom Web Security Queries
-              uses: ./codeql-custom-queries-javascript/
+        config-file: ./.github/codeql/codeql-config.yml
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
@@ -90,7 +80,7 @@ jobs:
       if: always()
       run: |
         echo "## Security Analysis Complete" >> $GITHUB_STEP_SUMMARY
-        echo "- **CodeQL Analysis**: ✅ Complete" >> $GITHUB_STEP_SUMMARY
-        echo "- **Custom Queries**: 5 web security queries executed" >> $GITHUB_STEP_SUMMARY
+        echo "- **CodeQL Analysis**: ✅ Using external config (.github/codeql/codeql-config.yml)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Query Packs**: Security extended + quality + custom queries" >> $GITHUB_STEP_SUMMARY
         echo "- **Target**: Sealfie landing page (Grunt/Pug/JS)" >> $GITHUB_STEP_SUMMARY
         echo "- **Date**: $(date)" >> $GITHUB_STEP_SUMMARY
