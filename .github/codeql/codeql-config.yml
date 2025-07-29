@@ -4,13 +4,6 @@ name: "CodeQL Config"
 packs:
   - codeql/javascript-queries:codeql-suites/javascript-security-extended.qls
   - codeql/javascript-queries:codeql-suites/javascript-security-and-quality.qls
-  # Add your custom pack
-  - ./codeql-custom-queries-javascript
-
-# Individual queries to run
-queries:
-  - name: Custom security queries
-    uses: ./codeql-custom-queries-javascript/unsafe-dom-manipulation.ql
 
 # Paths to analyze (optional - defaults to entire repo)
 paths:
