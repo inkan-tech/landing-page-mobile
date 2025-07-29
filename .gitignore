@@ -10,3 +10,4 @@ analysis-reports
 # CodeQL analysis files
 /codeql-database/
 /codeql-results/
+.actrc

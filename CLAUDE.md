@@ -604,3 +604,246 @@ As you get customers:
 - Zero jargon in first 3 sections
 
 This plan transforms your landing page from feature-focused to conversion-focused while maintaining technical accuracy and the "How it Works" demonstration value.
+
+---
+
+# Development Tools and Testing
+
+## Testing GitHub Actions Locally with Act
+
+Act is a tool that allows you to run GitHub Actions locally. This is useful for testing workflows before pushing to GitHub.
+
+### Installation
+```bash
+# macOS
+brew install act
+
+# Linux
+curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+
+# Or download from https://github.com/nektos/act/releases
+```
+
+### Usage Examples
+
+```bash
+# List all workflows and jobs
+act -l
+
+# Run a specific workflow
+act -W .github/workflows/codeql.yml
+
+# Run with specific event (push, pull_request, etc.)
+act push -W .github/workflows/codeql.yml
+
+# Dry run (see what would be executed)
+act -n push -W .github/workflows/codeql.yml
+
+# For Apple Silicon Macs (M1/M2/M3)
+act push -W .github/workflows/codeql.yml --container-architecture linux/amd64
+
+# Run with secrets (create .secrets file)
+act -s GITHUB_TOKEN=your_token_here
+
+# Run specific job
+act -j analyze -W .github/workflows/codeql.yml
+```
+
+### Common Issues and Solutions
+
+1. **Apple Silicon Architecture**: Always use `--container-architecture linux/amd64` on M1/M2/M3 Macs
+   - See `ARM-COMPATIBILITY.md` for detailed information
+   - CodeQL specifically requires x86_64 emulation
+2. **Docker Required**: Ensure Docker Desktop is running before using act
+3. **Secrets**: Create a `.secrets` file (git-ignored) for testing with secrets
+4. **Large Actions**: Some GitHub Actions may timeout or fail locally due to resource constraints
+
+### Troubleshooting Act Failures
+
+If act fails to run workflows:
+
+1. **Create `.actrc` configuration file**:
+```bash
+# .actrc - Act configuration
+-P ubuntu-latest=node:18
+-P ubuntu-22.04=node:18
+-P ubuntu-20.04=node:16
+--container-architecture linux/amd64
+--use-new-action-cache
+--reuse
+```
+
+2. **Use smaller Docker images**:
+```bash
+# Instead of default Ubuntu image, use Node image
+act -P ubuntu-latest=node:18 push
+```
+
+3. **Test with a simple workflow first**:
+```bash
+# Create a test workflow and run it
+act push -W .github/workflows/test-local.yml
+```
+
+4. **Check Docker is running**:
+```bash
+docker ps
+# If not running, start Docker Desktop
+```
+
+5. **Clear act cache if needed**:
+```bash
+rm -rf ~/.cache/act
+```
+
+6. **Use verbose mode for debugging**:
+```bash
+act push -v
+```
+
+### Testing CodeQL Locally
+
+For CodeQL specifically:
+```bash
+# Test CodeQL workflow
+act push -W .github/workflows/codeql.yml --container-architecture linux/amd64
+
+# Run with verbose output for debugging
+act push -W .github/workflows/codeql.yml --container-architecture linux/amd64 -v
+```
+
+---
+
+# Directories and Files Out of Context
+
+When working on this project, the following directories and files should be considered OUT OF CONTEXT and generally ignored unless specifically requested:
+
+## Build Output Directories
+- `/docs/` - Generated static site files (output of Grunt build)
+- `/dist/` - Distribution files (if present)
+- `/build/` - Build artifacts (if present)
+
+## Dependencies
+- `/node_modules/` - NPM dependencies (never edit)
+- `/vendor/` - Third-party vendor files (if present)
+
+## Analysis and Reports
+- `/analysis-reports/` - Generated analysis reports (read-only)
+- `/lighthouse-results.json` - Performance test results
+- `/codeql-database/` - CodeQL analysis database (auto-generated)
+- `/codeql-results/` - CodeQL analysis results (auto-generated)
+
+## Cache and Temporary Files
+- `/.cache/` - Various cache directories
+- `/tmp/` - Temporary files
+- `*.log` - Log files
+- `.DS_Store` - macOS system files
+- `Thumbs.db` - Windows system files
+
+## Version Control
+- `/.git/` - Git repository data
+
+## IDE and Editor Files
+- `/.vscode/` - VS Code settings (unless modifying workspace settings)
+- `/.idea/` - IntelliJ IDEA settings
+- `*.swp`, `*.swo` - Vim swap files
+
+## Important Notes
+
+1. **Source vs Built Files**: Always edit source files in `/src/` directory, never edit files in `/docs/` directly
+2. **Localization**: Edit `/locales/*.json` for text changes, not the generated HTML
+3. **Styles**: Edit SCSS files in `/src/scss/`, not the compiled CSS
+4. **Scripts**: Edit source JS in `/src/js/`, not the minified versions
+5. **Assets**: Original assets are in `/src/assets/`, optimized versions in `/docs/assets/`
+
+## Build Commands Reference
+
+```bash
+# Development build with watch
+npm start
+
+# Production build
+npm run build
+
+# Clean build directories
+npm run clean
+
+# Run tests
+npm test
+
+# Run linting
+npm run lint
+
+# Run type checking
+npm run typecheck
+```
+
+---
+
+# Claude Code Configuration
+
+## Script Output Configuration
+
+When running scripts with Claude Code, you can control how much output is displayed:
+
+### Environment Variables
+
+```bash
+# Show more lines of script output (default is 30,000 characters)
+export CLAUDE_MAX_OUTPUT_LENGTH=50000
+
+# Or set it for a single command
+CLAUDE_MAX_OUTPUT_LENGTH=50000 claude code
+
+# For very long outputs, consider using file redirection
+npm run build > build-output.log 2>&1
+```
+
+### Best Practices for Script Output
+
+1. **For Long Running Scripts**:
+
+   ```bash
+   # Use tee to see output and save to file
+   npm run build | tee build-output.log
+   
+   # Or redirect to file and tail it
+   npm run build > output.log 2>&1 &
+   tail -f output.log
+   ```
+
+2. **For Debugging**:
+
+   ```bash
+   # Increase verbosity
+   npm run build --verbose
+   
+   # Or use debug mode
+   DEBUG=* npm run build
+   ```
+
+3. **For Testing**:
+
+   ```bash
+   # Run with increased output for test results
+   npm test -- --verbose --no-coverage
+   ```
+
+### Claude Code Specific Tips
+
+- The Bash tool captures up to 30,000 characters by default
+- Output exceeding this limit will be truncated
+- For very long outputs, always redirect to a file and then read it
+- Use `head`, `tail`, or `grep` to extract relevant portions
+
+Example workflow for long outputs:
+
+```bash
+# Run command with output to file
+npm run complex-build > build.log 2>&1
+
+# Then read specific parts
+head -n 100 build.log  # First 100 lines
+tail -n 100 build.log  # Last 100 lines
+grep ERROR build.log   # Just errors
+```
