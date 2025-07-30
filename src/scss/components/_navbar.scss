@@ -69,9 +69,18 @@
     .btn-primary {
         transform: rotate(-1deg);
         transition: all 0.3s ease;
+        min-width: auto !important;
+        width: auto;
+        flex-shrink: 1;
 
         &:hover {
             transform: rotate(0deg) translateY(-2px);
+        }
+
+        // Override Bootstrap px-3 on smaller screens
+        @media (max-width: 991.98px) {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
         }
     }
 }
