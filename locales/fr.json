@@ -1,7 +1,16 @@
 {
     "title": "Sealfie : Protégez Votre Trésorerie",
     "meta": {
-        "description": "Sealfie est le seul compagnon digital pour contrer les fraudes par faux PDG. Avec 5 milliards d'euros volés chaque année, la menace est réelle. Sealfie offre une protection simple et efficace."
+        "description": "Sealfie est le seul compagnon digital pour contrer les fraudes par faux PDG. Avec 5 milliards d'euros volés chaque année, la menace est réelle. Sealfie offre une protection simple et efficace.",
+        "descriptions": {
+            "homepage": "Stopé la fraude au faux PDG avec Sealfie. Protection biométrique avancée contre les deepfakes d'exécutifs. Vérification en une photo.",
+            "documentation": "Comment fonctionne Sealfie : Guide étape par étape pour prévenir la fraude au PDG avec vérification biométrique. Installation 20 min.",
+            "pricing": "Tarifs Sealfie : Protection anti-fraude PDG dès 195€/personne/an. Comparez forfaits et solutions entreprise. Devis personnalisé.",
+            "terms": "Conditions Générales Sealfie : Termes légaux du service de protection anti-fraude PDG. Abonnement, remboursements, responsabilités.",
+            "privacy": "Politique de Confidentialité Sealfie : Protection de vos données biométriques et informations personnelles. Pratiques RGPD sécurité.",
+            "support": "Support Client Sealfie : Aide installation, dépannage, assistance technique protection anti-fraude PDG. Contactez experts sécurité 24h/24.",
+            "post_register": "Inscription Confirmée : Bienvenue dans la protection anti-fraude Sealfie. Prochaines étapes configuration compte et activation vérification biométrique."
+        }
     },
     "banner": {
         "main": "Sealfie",
@@ -139,7 +148,7 @@
         "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesure"
     },
     "legal": {
-        "terms": "Conditions générales d'utilisation",
-        "privacy": "Politique de confidentialité"
+        "terms": "Conditions Générales d'Utilisation",
+        "privacy": "Politique de Confidentialité"
     }
 }

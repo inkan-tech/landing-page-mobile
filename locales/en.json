@@ -1,7 +1,16 @@
 {
     "title": "Sealfie App",
     "meta": {
-        "description": "Protect your business from deepfake fraud. Sealfie simplifies cybersecurity – it's the only digital companion that effectively fights fake executive scams."
+        "description": "Protect your business from deepfake fraud. Sealfie simplifies cybersecurity – it's the only digital companion that effectively fights fake executive scams.",
+        "descriptions": {
+            "homepage": "Stop executive deepfake fraud with Sealfie. Advanced biometric protection against CEO impersonation. One-photo verification prevents $5B losses. Try demo.",
+            "documentation": "Learn how Sealfie works: Step-by-step guide to preventing executive fraud with biometric verification. 30-minute setup, zero training required.",
+            "pricing": "Sealfie pricing: Executive fraud protection starting at $195/person/year. Compare plans, features, enterprise solutions. Get quote.",
+            "terms": "Sealfie Terms of Service: Legal terms for executive fraud protection. Subscription terms, refunds, and user responsibilities explained.",
+            "privacy": "Sealfie Privacy Policy: How we protect your biometric data and personal information. GDPR compliant privacy practices for security.",
+            "support": "Sealfie Customer Support: Get help with executive fraud protection setup, troubleshooting, technical assistance. Contact security experts 24/7.",
+            "post_register": "Registration Confirmed: Welcome to Sealfie executive fraud protection. Next steps for account setup and biometric verification activation."
+        }
     },
     "banner": {
         "main": "Sealfie",
@@ -139,7 +148,7 @@
         "completed": "The requester is guaranteed that only authorized individuals have approved the request. Contact us for customized solutions."
     },
     "legal": {
-        "terms": "terms and conditions",
-        "privacy": "privacy policy"
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy"
     }
 }

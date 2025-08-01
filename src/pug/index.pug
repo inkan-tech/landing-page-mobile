@@ -2,20 +2,18 @@ doctype html
 html(lang=$localeName)
 
   head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content=$i18n.meta.description)
-    meta(name='author', content='nicolas.thomas@inkan.link')
-
+    //- Common headers shared across all pages
+    include includes/common-headers.pug
+    
+    //- Page-specific meta tags
     title #{$i18n.title}
-
-
+    meta(name='description', content=$i18n.meta.descriptions.homepage)
+    
+    //- Page-specific canonical and alternate links
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
     link(rel='alternate', hreflang='x-default', href='https://sealf.ie/')
     link(rel='alternate', hreflang='en', href='https://sealf.ie/en/')
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/')
-
-    link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
 
     // Enhanced Open Graph meta tags for social sharing
     meta(property='og:title', content=$i18n.title)
@@ -71,6 +69,10 @@ html(lang=$localeName)
     meta(name='geo.placename', content='San Francisco')
     meta(name='geo.position', content='37.7749;-122.4194')
     meta(name='ICBM', content='37.7749, -122.4194')
+
+    //- Page-specific cross-origin policies
+    meta(http-equiv='Cross-Origin-Embedder-Policy', content='unsafe-none')
+    meta(http-equiv='Cross-Origin-Opener-Policy', content='same-origin-allow-popups')
 
     // Enhanced Schema.org structured data for advanced SEO
     script(type='application/ld+json').
@@ -226,11 +228,7 @@ html(lang=$localeName)
         ]
       }
 
-    // Preconnect to external domains for performance
-    link(rel='preconnect', href='https://fonts.googleapis.com')
-    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
-    link(rel='preconnect', href='https://cdn.jsdelivr.net')
-
+    //- Page-specific performance optimizations
     // DNS prefetch and preconnect for YouTube
     link(rel='dns-prefetch', href='//www.youtube.com')
     link(rel='dns-prefetch', href='//img.youtube.com')
@@ -241,15 +239,16 @@ html(lang=$localeName)
     link(rel='dns-prefetch', href='https://cdn.matomo.cloud')
     link(rel='dns-prefetch', href='//chimpstatic.com')
 
-    // Preload critical resources
+    // Preload critical resources for LCP optimization
     link(rel='preload', as='image', href='/assets/img/optimized/BlockChainPhone.webp')
     link(rel='preload', as='image', href='https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg')
     link(rel='preload', as='image', href='https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg')
-
-    // Load Bootstrap icons asynchronously
-    link(rel='preload', as='style', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', onload="this.onload=null;this.rel='stylesheet'")
-    noscript
-      link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', rel='stylesheet')
+    
+    // Preload hero video for faster loading
+    if $localeName == "fr"
+      link(rel='preload', as='video', href='/assets/img/Landing-fr.webm')
+    else  
+      link(rel='preload', as='video', href='/assets/img/Landing-en.webm')
 
     // Load Google fonts asynchronously
     link(rel='preload', as='style', href='https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&display=swap', onload="this.onload=null;this.rel='stylesheet'")
@@ -287,7 +286,7 @@ html(lang=$localeName)
             .h2.fs-1.text-white.mb-1 #{$i18n.trailer}
             .video-container
                 if $localeName == "fr"
-                    .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="2000")
+                    .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="4000")
                         .youtube-preview
                             img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Play Sealfie demonstration video - French version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
                             .video-hover-overlay
@@ -296,7 +295,7 @@ html(lang=$localeName)
                                         path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
                                         path(d="M 45,24 27,14 27,34" fill="#fff")
                 else
-                    .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="2000")
+                    .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="4000")
                         .youtube-preview
                             img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Play Sealfie demonstration video - English version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
                             .video-hover-overlay
@@ -334,7 +333,7 @@ html(lang=$localeName)
                   // * * This can be a video, image, or just about anything else.
                   // * * Set the max width of your media to 100% and the height to
                   // * * 100% like the demo example below.
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="3000")
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
                     .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
                       .demo-text Sealfie Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
@@ -395,7 +394,7 @@ html(lang=$localeName)
                   // * * This can be a video, image, or just about anything else.
                   // * * Set the max width of your media to 100% and the height to
                   // * * 100% like the demo example below.
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo2 data-load-delay="4000")
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo2 data-load-delay="6000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
                     .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
                       .demo-text Protection Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
