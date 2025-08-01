@@ -238,7 +238,7 @@ html(lang=$localeName)
     link(rel='preconnect', href='https://img.youtube.com', crossorigin)
 
     // Preconnect to analytics domains for performance
-    link(rel='dns-prefetch', href='//cdn.matomo.cloud')
+    link(rel='dns-prefetch', href='https://cdn.matomo.cloud')
     link(rel='dns-prefetch', href='//chimpstatic.com')
 
     // Preload critical resources
@@ -502,9 +502,27 @@ html(lang=$localeName)
         // Ensure video is muted and starts playing
         video.muted = true; // Double-check muted state before playing
         video.play().catch(function(e) {
-          console.log('Auto-play failed:', e);
+          // Auto-play failed - show static fallback image
+          const img = document.createElement('img');
+          img.src = container.dataset.fallback || '/assets/img/video-fallback.webp';
+          img.alt = 'Sealfie app demo';
+          img.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
+          container.innerHTML = '';
+          container.appendChild(img);
         });
       });
+      // Add error handler for video loading failures
+      video.addEventListener('error', function() {
+        // Video failed to load - show fallback image
+        const img = document.createElement('img');
+        img.src = container.dataset.fallback || '/assets/img/video-fallback.webp';
+        img.alt = 'Sealfie app demo';
+        img.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
+        container.innerHTML = '';
+        container.appendChild(img);
+        container.classList.remove('loading');
+      });
+      
       const source = document.createElement('source');
       source.src = videoSrc;
       source.type = 'video/webm';
@@ -600,7 +618,7 @@ html(lang=$localeName)
   script.
     // Web Vitals monitoring
     function vitals(name, value, id) {
-      console.log('📊 Core Web Vital:', name, Math.round(value), 'ms', id);
+      // Core Web Vital measured
       // Send to Matomo if available
       if (typeof _paq !== 'undefined') {
         _paq.push(['trackEvent', 'Web Vitals', name, id, Math.round(value)]);
@@ -627,7 +645,7 @@ html(lang=$localeName)
           onFCP(vitals);
           onTTFB(vitals);
         })
-        .catch(err => console.log('Web Vitals not loaded:', err));
+        .catch(err => {/* Web Vitals not loaded */});
     }
 
   // Performance monitoring for Matomo
@@ -655,10 +673,10 @@ html(lang=$localeName)
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
           .then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            // ServiceWorker registration successful
           })
           .catch(function(err) {
-            console.log('ServiceWorker registration failed: ', err);
+            // ServiceWorker registration failed
           });
       });
     }

@@ -17,7 +17,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Opened cache');
+        // Cache opened successfully
         return cache.addAll(urlsToCache);
       })
       .then(() => self.skipWaiting())
@@ -31,7 +31,7 @@ self.addEventListener('activate', event => {
       return Promise.all(
         cacheNames.map(cacheName => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
+            // Old cache deleted: cacheName
             return caches.delete(cacheName);
           }
         })
@@ -85,7 +85,7 @@ self.addEventListener('sync', event => {
   if (event.tag === 'contact-form') {
     event.waitUntil(
       // Handle form submission retry
-      console.log('Background sync: contact form')
+      // Background sync: contact form
     );
   }
 });

@@ -13,7 +13,7 @@ export class ContactForm {
 
   setupFormValidation() {
     // Add form validation logic
-    console.log('Contact form validation initialized');
+    // Contact form validation initialized
   }
 
   setupSubmission() {
@@ -53,17 +53,17 @@ export class ContactForm {
 
   queueForLater(formData) {
     // Store in IndexedDB for later submission
-    console.log('Form queued for offline submission');
+    // Form queued for offline submission
     this.showOfflineMessage();
   }
 
   showSuccess() {
     // Show success message
-    console.log('Form submitted successfully');
+    // Form submitted successfully
   }
 
   showOfflineMessage() {
     // Show offline queue message
-    console.log('Form will be submitted when online');
+    // Form will be submitted when online
   }
 }

@@ -85,9 +85,9 @@ class LazyLoader {
     try {
       await loadingPromise;
       this.loadedModules.add(moduleName);
-      console.log(`✅ Module loaded: ${moduleName}`);
+      // Module loaded successfully
     } catch (error) {
-      console.error(`❌ Failed to load module: ${moduleName}`, error);
+      // Module loading failed
     } finally {
       this.loadingPromises.delete(moduleName);
     }

@@ -43,7 +43,7 @@ _paq.push(['enableLinkTracking']);
   _paq.push(['setTrackerUrl', u+'matomo.php']);
   _paq.push(['setSiteId', '1']);
   var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-  g.async=true; g.src='//cdn.matomo.cloud/sealfie.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  g.async=true; g.src='https://cdn.matomo.cloud/sealfie.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
 })();
 
 

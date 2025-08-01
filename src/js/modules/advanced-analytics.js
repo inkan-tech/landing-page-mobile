@@ -126,7 +126,7 @@ export class AdvancedAnalytics {
       
       localStorage.setItem('sealfie_analytics', JSON.stringify(events));
     } catch (e) {
-      console.warn('Could not store analytics event locally:', e);
+      // Could not store analytics event locally
     }
   }
 
