@@ -1,0 +1,123 @@
+//
+// Japanese Inkan-Inspired Theme System
+// CSS Custom Properties for Light/Dark Theme Support
+//
+
+// Light Theme (Default)
+:root {
+  // Primary Brand Colors - Based on Traditional Inkan Red
+  --shu-primary: #FF3500;      // Traditional Vermillion (Shu-iro)
+  --enji-secondary: #C93338;   // Crimson (Enji-iro) for secondary actions
+  --sango-accent: #F8674F;     // Coral (Sango-iro) for highlights
+
+  // Background Colors
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;     // Subtle gray for sections
+  --bg-surface: #FFFFFF;       // Cards and elevated surfaces
+  --bg-device-screen: #000000; // Device screen background (traditional black)
+
+  // Text Colors
+  --text-primary: #374151;     // Primary text
+  --text-secondary: #6B7280;   // Supporting text
+  --text-muted: #9CA3AF;       // Muted text
+
+  // Border and Surface Effects
+  --border-color: #E5E7EB;
+  --surface-elevation: rgba(0, 0, 0, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  // Semantic Colors
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  // Interactive States
+  --focus-ring: var(--shu-primary);
+  --hover-overlay: rgba(255, 53, 0, 0.05);
+}
+
+// Dark Theme
+[data-theme="dark"] {
+  // Primary Brand Colors - Adapted for Dark Backgrounds
+  --shu-primary: #E34234;      // Muted Shu-iro for better contrast
+  --enji-secondary: #B91C1C;   // Deeper crimson
+  --sango-accent: #F87171;     // Lighter coral for dark contrast
+
+  // Background Colors
+  --bg-primary: #0F0F23;       // Deep navy-black
+  --bg-secondary: #1E1E2E;     // Primary surface
+  --bg-surface: #313244;       // Cards and elevated surfaces
+  --bg-device-screen: #000000; // Device screen background (consistent black)
+
+  // Text Colors
+  --text-primary: #F8F9FA;     // High contrast white
+  --text-secondary: #A6ADBB;   // Muted text
+  --text-muted: #6B7280;       // Very muted text
+
+  // Border and Surface Effects
+  --border-color: #45475A;
+  --surface-elevation: rgba(255, 255, 255, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+
+  // Semantic Colors
+  --color-success: #22C55E;
+  --color-warning: #FACC15;
+  --color-error: #F87171;
+  --color-info: #60A5FA;
+
+  // Interactive States
+  --focus-ring: var(--shu-primary);
+  --hover-overlay: rgba(227, 66, 52, 0.05);
+}
+
+// High Contrast Mode Support
+@media (prefers-contrast: high) {
+  :root {
+    --shu-primary: #C91F37;      // Darker red for higher contrast
+    --text-primary: #000000;
+    --bg-primary: #FFFFFF;
+    --border-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --shu-primary: #FF6B6B;      // Brighter red for dark high contrast
+    --text-primary: #FFFFFF;
+    --bg-primary: #000000;
+    --border-color: #FFFFFF;
+  }
+}
+
+// Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Theme Transition Animation
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+// Focus Styles for Accessibility
+*:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+// Screen Reader Only Content
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

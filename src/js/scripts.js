@@ -2,9 +2,54 @@
 // Scripts
 //
 
+//
+// Japanese Inkan-Inspired Light Theme Manager
+// Initializes the light theme styling
+//
 
+class ThemeManager {
+  constructor() {
+    this.currentTheme = 'light';
+    this.initializeTheme();
+    console.log('✅ Module loaded: Japanese Inkan Theme (Light Mode)');
+  }
+  
+  /**
+   * Initializes the light theme on page load
+   */
+  initializeTheme() {
+    document.documentElement.setAttribute('data-theme', 'light');
+    
+    // Track theme initialization with analytics
+    if (typeof _paq !== 'undefined') {
+      _paq.push(['trackEvent', 'Theme', 'initialize', 'light']);
+    }
+  }
+  
+  /**
+   * Gets the current theme (always light)
+   * @returns {string} Current theme ('light')
+   */
+  getCurrentTheme() {
+    return 'light';
+  }
+  
+  /**
+   * Checks if dark theme is active (always false)
+   * @returns {boolean} Always false (light theme only)
+   */
+  isDarkTheme() {
+    return false;
+  }
+}
 
 window.addEventListener('DOMContentLoaded', event => {
+
+    // Initialize Japanese Inkan-inspired theme system
+    const themeManager = new ThemeManager();
+    
+    // Make theme manager globally accessible
+    window.sealfieTheme = themeManager;
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');

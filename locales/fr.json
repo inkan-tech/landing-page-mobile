@@ -22,6 +22,35 @@
         "long": "English",
         "code": "en"
     },
+    "hero": {
+        "title": {
+            "line1": "Votre entreprise est une cible",
+            "line2": "Protégez-la avec un simple selfie"
+        },
+        "subtitle": "La fraude au PDG coûte 5 milliards € par an aux entreprises. Aucun secteur n'est à l'abri des deepfakes sophistiqués.",
+        "stats": {
+            "stat1": {
+                "number": "5 Milliards €",
+                "label": "de pertes annuelles"
+            },
+            "stat2": {
+                "number": "98%",
+                "label": "des entreprises ciblées"
+            },
+            "stat3": {
+                "number": "Vérifications Cyber",
+                "label": "pas de SIM swap, vérification téléphones"
+            }
+        },
+        "example": {
+            "title": "Cas réel :",
+            "text": "Une entreprise de Hong Kong a perdu 25M$ quand des criminels ont créé 6 deepfakes de collègues, incluant leur directeur financier, lors d'une visioconférence. La formation cyber n'a pas protégé."
+        },
+        "cta": {
+            "primary": "Challengez votre processus actuel avec nous",
+            "secondary": "Comment ça marche ?"
+        }
+    },
     "head": {
         "title": "Éliminez le Stress des Attaques au Faux PDG",
         "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
@@ -101,7 +130,8 @@
     },
     "videos": {
         "demo1": "Landing-fr.webm",
-        "demo2": "Landing-Doc-FR2.webm"
+        "demo2": "Landing-Doc-FR2.webm",
+        "hero": "trailer-Fraude-deepfake.webm"
     },
     "modal": {
         "title": "Formulaire de Contact",

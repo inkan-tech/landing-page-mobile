@@ -4,11 +4,11 @@ html(lang=$localeName)
   head
     //- Common headers shared across all pages
     include includes/common-headers.pug
-    
+
     //- Page-specific meta tags
     title #{$i18n.title}
     meta(name='description', content=$i18n.meta.descriptions.homepage)
-    
+
     //- Page-specific canonical and alternate links
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
     link(rel='alternate', hreflang='x-default', href='https://sealf.ie/')
@@ -243,11 +243,11 @@ html(lang=$localeName)
     link(rel='preload', as='image', href='/assets/img/optimized/BlockChainPhone.webp')
     link(rel='preload', as='image', href='https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg')
     link(rel='preload', as='image', href='https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg')
-    
+
     // Preload hero video for faster loading
     if $localeName == "fr"
       link(rel='preload', as='video', href='/assets/img/Landing-fr.webm')
-    else  
+    else
       link(rel='preload', as='video', href='/assets/img/Landing-en.webm')
 
     // Load Google fonts asynchronously
@@ -265,7 +265,7 @@ html(lang=$localeName)
       .masthead { min-height: 100vh; display: flex; align-items: center; }
       .navbar-brand { font-weight: 600; }
       .display-1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; }
-      .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .text-gradient { background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
     // Core theme CSS (includes Bootstrap) - loaded asynchronously
     link(rel='preload', as='style', href='/css/styles.css', onload="this.onload=null;this.rel='stylesheet'")
@@ -278,63 +278,60 @@ html(lang=$localeName)
 
   body
     main#main-content(tabindex='-1')
-      //- Video Trailer - Timer-based lazy loading
-  aside.text-center.bg-gradient-primary-to-secondary
-    .container.px-5
-       .row.gx-5.justify-content-center
-        .col-lg-8
-            .h2.fs-1.text-white.mb-1 #{$i18n.trailer}
-            .video-container
-                if $localeName == "fr"
-                    .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="4000")
-                        .youtube-preview
-                            img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Play Sealfie demonstration video - French version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
-                            .video-hover-overlay
-                                .play-indicator
-                                    svg(width="68" height="48" viewBox="0 0 68 48")
-                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
-                                        path(d="M 45,24 27,14 27,34" fill="#fff")
-                else
-                    .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="4000")
-                        .youtube-preview
-                            img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Play Sealfie demonstration video - English version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
-                            .video-hover-overlay
-                                .play-indicator
-                                    svg(width="68" height="48" viewBox="0 0 68 48")
-                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
-                                        path(d="M 45,24 27,14 27,34" fill="#fff")
-
-  // Mashead header
-  header.masthead
+ 
+  // Japanese Minimalist Hero Section - Following Features Section Pattern
+  header.hero-section
     .container.px-5
       .row.gx-5.align-items-center
-        .col-lg-6
-          // Mashead text and app badges
+        .col-lg-8
+          // Hero text and CTAs
           .mb-5.mb-lg-0.text-center.text-lg-start
-            h1.display-1.lh-1.mb-3 #{$i18n.head.title}
-            p.lead.fw-normal.text-muted.mb-5 #{$i18n.head.subtitle} [1]
-            p.lead.fw-normal.text-muted.mb-5 #{$i18n.head.subtitle2}
-            .d-flex.flex-column.flex-lg-row.align-items-center
-              a.me-lg-3.mb-4.mb-lg-0(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie')
-                img.app-badge(src='/assets/img/google-play-badge.svg', alt='...')
-              a(href='https://apps.apple.com/app/id1635309517')
-                img.app-badge(src='/assets/img/app-store-badge.svg', alt='...')
-        .col-lg-6
-          // Masthead device mockup feature
-          .masthead-device-mockup
+            h1.hero-title
+              | #{$i18n.hero.title.line1}
+              br
+              span.accent-text #{$i18n.hero.title.line2}
+
+            p.hero-subtitle
+              | #{$i18n.hero.subtitle}
+
+            // Trust Statistics
+            .trust-stats
+              .stats-card
+                span.stats-number #{$i18n.hero.stats.stat1.number}
+                span.stats-label #{$i18n.hero.stats.stat1.label}
+              .stats-divider
+              .stats-card
+                span.stats-number #{$i18n.hero.stats.stat2.number}
+                span.stats-label #{$i18n.hero.stats.stat2.label}
+              .stats-divider
+              .stats-card
+                span.stats-number #{$i18n.hero.stats.stat3.number}
+                span.stats-label #{$i18n.hero.stats.stat3.label}
+
+            // Real Case Example
+            .example-box
+              .example-title #{$i18n.hero.example.title}
+              .example-text #{$i18n.hero.example.text}
+
+            // Primary CTA Section
+            .cta-section
+              a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label=$i18n.hero.cta.primary)
+                | #{$i18n.hero.cta.primary}
+              a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
+                | #{$i18n.hero.cta.secondary}
+
+        .col-lg-4
+          // Hero device mockup - using generic styling
+          .device-mockup
             include includes/gradient-circle
             include includes/shape-1
             include includes/shape-2
             .device-wrapper
               .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                .screen.bg-black
-
-                  // PUT CONTENTS HERE:
-                  // * * This can be a video, image, or just about anything else.
-                  // * * Set the max width of your media to 100% and the height to
-                  // * * 100% like the demo example below.
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
-                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                .screen.bg-device-screen
+                  // Professional video demo - MANDATORY and PROTECTED
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
                       .demo-text Sealfie Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
                         svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
@@ -383,19 +380,19 @@ html(lang=$localeName)
                   p.text-muted.mb-0 #{$i18n.features.path.text}
         .col-lg-4.order-lg-0
           // Features section device mockup
-          .features-device-mockup
+          .device-mockup
             include includes/gradient-circle
             include includes/shape-1
             include includes/shape-2
             .device-wrapper
               .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                .screen.bg-black
+                .screen.bg-device-screen
                   // PUT CONTENTS HERE:
                   // * * This can be a video, image, or just about anything else.
                   // * * Set the max width of your media to 100% and the height to
                   // * * 100% like the demo example below.
                   .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo2 data-load-delay="6000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
-                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--sango-accent) 0%, var(--enji-secondary) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
                       .demo-text Protection Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
                         svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
@@ -521,7 +518,7 @@ html(lang=$localeName)
         container.appendChild(img);
         container.classList.remove('loading');
       });
-      
+
       const source = document.createElement('source');
       source.src = videoSrc;
       source.type = 'video/webm';
@@ -653,7 +650,7 @@ html(lang=$localeName)
       // Performance metrics
       const perfData = window.performance.timing;
       const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-      
+
       // Send to Matomo
       if (typeof _paq !== 'undefined') {
         _paq.push(['trackEvent', 'Performance', 'Page Load Time', 'Total', pageLoadTime]);

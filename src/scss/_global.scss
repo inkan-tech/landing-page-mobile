@@ -21,6 +21,10 @@ html {
     background-color: $washi !important;
 }
 
+.bg-device-screen {
+    background-color: var(--bg-device-screen) !important;
+}
+
 .bg-gradient-primary-to-secondary {
     background: linear-gradient(275deg, #{$primary}, #{$secondary}) !important;
 }

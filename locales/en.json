@@ -22,6 +22,35 @@
         "long": "Français",
         "code": "fr"
     },
+    "hero": {
+        "title": {
+            "line1": "Your Business is a Target",
+            "line2": "Protect it with a simple selfie"
+        },
+        "subtitle": "Business Email Compromise costs enterprises $5 billion annually. No industry is safe from sophisticated deepfake attacks.",
+        "stats": {
+            "stat1": {
+                "number": "$5 Billion",
+                "label": "annual global losses"
+            },
+            "stat2": {
+                "number": "98%",
+                "label": "of businesses targeted"
+            },
+            "stat3": {
+                "number": "Cyber Checks",
+                "label": "no SIM swap, phone verification"
+            }
+        },
+        "example": {
+            "title": "Real Case:",
+            "text": "A Hong Kong firm lost $25M when criminals created 6 deepfakes of colleagues, including their CFO, in a video conference call. Cyber training didn't protect them."
+        },
+        "cta": {
+            "primary": "Challenge your current process with us",
+            "secondary": "How does it work?"
+        }
+    },
     "head": {
         "title": "Stop Losing to Deepfakes!",
         "subtitle": "Executive fraud attacks are now undetectable. Sealfie dramatically simplifies the defense – just one photo.",
@@ -101,7 +130,8 @@
     },
     "videos": {
         "demo1": "Landing-en.webm",
-        "demo2": "Landing-Doc-EN2.webm"
+        "demo2": "Landing-Doc-EN2.webm",
+        "hero": "trailer-Business-Email-compromise.webm"
     },
     "modal": {
         "title": "Contact Form",

@@ -1,0 +1,365 @@
+//
+// Japanese Inkan-Inspired Button Components
+// Traditional red aesthetics with modern accessibility
+//
+
+// Primary CTA Button - Traditional Shu-iro (Vermillion)
+.cta-primary {
+  background: var(--shu-primary);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 53, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:hover {
+    background: var(--enji-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 53, 0, 0.35);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(255, 53, 0, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+// Large Primary CTA - Hero sections
+.cta-primary-large {
+  background: var(--shu-primary);
+  color: #FFFFFF;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 53, 0, 0.25);
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:hover {
+    background: var(--enji-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 53, 0, 0.4);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  .cta-icon {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+}
+
+// Secondary CTA - Outlined style
+.cta-secondary {
+  background: transparent;
+  color: var(--shu-primary);
+  padding: 14px 28px;
+  border: 2px solid var(--shu-primary);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:hover {
+    background: var(--shu-primary);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 53, 0, 0.25);
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  .play-icon {
+    font-size: 0.9em;
+    line-height: 1;
+  }
+}
+
+// Subtle Ghost Button - Minimalist approach
+.cta-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:hover {
+    background: var(--bg-secondary);
+    border-color: var(--shu-primary);
+    color: var(--shu-primary);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+// Compact Button - Small spaces
+.cta-compact {
+  background: var(--shu-primary);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:hover {
+    background: var(--enji-secondary);
+    transform: translateY(-1px);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
+  }
+}
+
+// Japanese-inspired Download Button - App stores
+.cta-download {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  min-width: 160px;
+
+  &:hover {
+    background: var(--bg-secondary);
+    border-color: var(--shu-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px var(--shadow-color);
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  .download-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+  }
+
+  .download-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .download-label {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      line-height: 1;
+    }
+
+    .download-store {
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+// Icon Button - Circular with icon only
+.cta-icon {
+  background: var(--bg-surface);
+  color: var(--shu-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--shu-primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 53, 0, 0.25);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .cta-primary-large {
+    padding: 16px 28px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .cta-download {
+    min-width: 140px;
+    padding: 10px 16px;
+  }
+}
+
+// Dark theme specific adjustments
+[data-theme="dark"] {
+  .cta-ghost {
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  .cta-download {
+    .download-icon {
+      filter: brightness(1.2);
+    }
+  }
+}
+
+// Button group layouts
+.cta-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    width: 100%;
+
+    .cta-primary,
+    .cta-secondary,
+    .cta-primary-large {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Loading state
+.cta-loading {
+  position: relative;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: button-spin 1s linear infinite;
+  }
+
+  .cta-icon,
+  .play-icon {
+    opacity: 0;
+  }
+}
+
+@keyframes button-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -57,14 +57,14 @@ html(lang=$localeName)
                     i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
                     p.text-muted.mb-0 #{$i18n.docs.stepstart.biometric}
           .col-lg-6
-            // Masthead device mockup feature
-            .masthead-device-mockup
+            // Generic device mockup feature
+            .device-mockup
               include includes/gradient-circle
               include includes/shape-1
               include includes/shape-2
               .device-wrapper
                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                  .screen.bg-black
+                  .screen.bg-device-screen
 
                     // PUT CONTENTS HERE:
                     // * * This can be a video, image, or just about anything else.
@@ -110,14 +110,14 @@ html(lang=$localeName)
                     i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
                     p.text-muted.mb-0 #{$i18n.docs.stepvalidate.biometric}
           .col-lg-4.order-lg-0
-            // Features section device mockup
-            .features-device-mockup
+            // Generic device mockup
+            .device-mockup
               include includes/gradient-circle
               include includes/shape-1
               include includes/shape-2
               .device-wrapper
                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                  .screen.bg-black
+                  .screen.bg-device-screen
                     // PUT CONTENTS HERE:
                     // * * This can be a video, image, or just about anything else.
                     // * * Set the max width of your media to 100% and the height to

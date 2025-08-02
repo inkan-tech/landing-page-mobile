@@ -1,15 +1,49 @@
 //
-// Colors
+// Japanese Inkan-Inspired Color System
 //
 
-// Override Bootstrap color systel colors
+// Traditional Japanese Inkan Colors (Light Theme)
+$shu-primary: #FF3500;      // Traditional Vermillion (Shu-iro)
+$enji-secondary: #C93338;   // Crimson (Enji-iro) for secondary actions
+$sango-accent: #F8674F;     // Coral (Sango-iro) for highlights
 
+// Light Theme Neutrals
+$white: #FFFFFF;
+$light-surface: #F8FAFC;    // Subtle gray for sections
+$medium-gray: #6B7280;      // Supporting text
+$dark-gray: #374151;        // Primary text
+$black: #111827;
+
+// Light Theme Semantic Colors
+$success: #10B981;
+$warning: #F59E0B;
+$error: #EF4444;
+
+// Dark Theme Inkan Colors
+$shu-primary-dark: #E34234;    // Muted Shu-iro for better contrast
+$enji-secondary-dark: #B91C1C; // Deeper crimson
+$sango-accent-dark: #F87171;   // Lighter coral for dark contrast
+
+// Dark Theme Neutrals
+$black-surface: #0F0F23;       // Deep navy-black
+$dark-surface: #1E1E2E;        // Primary surface
+$medium-surface: #313244;      // Cards, modals
+$light-surface-dark: #45475A;  // Borders, dividers
+$text-primary: #F8F9FA;        // High contrast white
+$text-secondary: #A6ADBB;      // Muted text
+
+// Dark Theme Semantics
+$success-dark: #22C55E;
+$warning-dark: #FACC15;
+$error-dark: #F87171;
+
+// Legacy Bootstrap overrides (for backwards compatibility)
 $blue: #2937f0;
 $purple: #9f1ae2;
-$redlight: #d90b0b;
-$reddark: #9d2933;
+$redlight: $shu-primary;
+$reddark: $enji-secondary;
 
-// Japanese-inspired color palette
+// Japanese-inspired color palette (legacy, keeping for existing usage)
 $indigo-ai: #233D6B;     // Traditional Japanese indigo (藍色)
 $matcha: #88B04B;        // Ceremonial tea green (抹茶色)
 $washi: #F3F1E9;         // Traditional paper color (和紙色)
@@ -17,6 +51,5 @@ $sumi: #1A1A1A;          // Japanese ink color (墨色)
 $sakura: #FFB7C5;        // Cherry blossom pink (桜色)
 
 // Override Bootstrap default state colors
-
-$primary: $redlight;
-$secondary: $reddark;
+$primary: $shu-primary;
+$secondary: $enji-secondary;

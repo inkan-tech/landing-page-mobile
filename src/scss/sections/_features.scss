@@ -1,13 +1,14 @@
 //
-// Features
+// Features Section with Japanese Inkan-Inspired Theme Support
 //
 
 section#features {
-    background-color: $washi;
+    background-color: var(--bg-secondary);
     position: relative;
     overflow: hidden;
+    transition: background-color 0.2s ease;
 
-    // Add Japanese-inspired pattern background
+    // Subtle Japanese pattern background (theme-aware)
     &:before {
         content: "";
         position: absolute;
@@ -15,9 +16,16 @@ section#features {
         top: 20%;
         width: 30%;
         height: 60%;
-        background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23d90b0b' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23FF3500' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
         background-size: 120px 120px;
         z-index: 0;
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+    }
+
+    // Dark theme pattern adjustment
+    [data-theme="dark"] &:before {
+        opacity: 0.2;
     }
 
     h3 {
@@ -25,19 +33,24 @@ section#features {
         letter-spacing: 0.02em;
         position: relative;
         display: inline-block;
+        color: var(--text-primary);
+        transition: color 0.2s ease;
     }
 }
 
-// Styling for the features icons - only applied to the main page features section
+// Styling for the features icons - updated for theme system
 section#features {
     .icon-feature {
         font-size: 4rem;
-        background: -webkit-linear-gradient(45deg, $primary, $indigo-ai);
+        background: linear-gradient(45deg, var(--shu-primary), var(--sango-accent));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
         position: relative;
+        transition: all 0.3s ease;
 
-        // Add subtle circular background
+        // Add subtle circular background with theme support
         &:before {
             content: "";
             position: absolute;
@@ -46,13 +59,20 @@ section#features {
             transform: translate(-50%, -50%);
             width: 80px;
             height: 80px;
-            background-color: rgba($primary, 0.05);
+            background-color: var(--hover-overlay);
             border-radius: 50%;
             z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        // Hover effect
+        &:hover:before {
+            background-color: var(--shu-primary);
+            transform: translate(-50%, -50%) scale(1.1);
         }
     }
 
-    // Add hanko stamp-like styling to feature items
+    // Japanese hanko stamp-like accent lines
     .text-center {
         .icon-feature + h3 {
             &:after {
@@ -60,27 +80,35 @@ section#features {
                 display: block;
                 width: 40px;
                 height: 2px;
-                background-color: $primary;
+                background: linear-gradient(90deg, var(--shu-primary), var(--sango-accent));
                 margin: 0.5rem auto 1rem;
                 opacity: 0.7;
+                transition: all 0.3s ease;
+            }
+
+            &:hover:after {
+                width: 60px;
+                opacity: 1;
             }
         }
     }
 }
 
-// Default styling for other pages
+// Default styling for other pages with theme support
 .icon-feature {
     font-size: 4rem;
+    color: var(--shu-primary);
+    transition: color 0.2s ease;
 }
 
-// Styling for the iPhone X mockup in the features section
-.features-device-mockup {
+// Generic styling for device mockups (used across all sections)
+.device-mockup {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 
-    // SVG that sits behind the phone mockup
+    // SVG that sits behind the phone mockup with theme support
     .circle {
         position: absolute;
         left: 0;
@@ -89,45 +117,51 @@ section#features {
         display: none;
 
         .gradient-start-color {
-            stop-color: $primary;
+            stop-color: var(--shu-primary);
         }
 
         .gradient-end-color {
-            stop-color: $indigo-ai;
+            stop-color: var(--sango-accent);
         }
     }
 
-    // First shape to the bottom left of the mockup - now Japanese-inspired
+    // Japanese-inspired decorative shapes with theme colors
     .shape-1 {
         position: absolute;
         height: 1.2rem;
         width: 1.2rem;
         transform: rotate(15deg);
-        fill: $sakura;
+        fill: var(--sango-accent);
         top: 15%;
         right: 10%;
+        transition: fill 0.2s ease;
     }
 
-    // Second shape to the top right of the mockup - now Japanese-inspired
     .shape-2 {
         position: absolute;
         height: 0.8rem;
         width: 0.8rem;
-        fill: $indigo-ai;
+        fill: var(--shu-primary);
         bottom: 15%;
         left: 10%;
+        transition: fill 0.2s ease;
     }
 
-    // Set a max width for the device mockup on smallest screen sizes
+    // Device wrapper with theme-aware shadow
     .device-wrapper {
         max-width: 10rem;
-        box-shadow: 0 10px 20px rgba($sumi, 0.1);
+        box-shadow: 0 10px 20px var(--shadow-color);
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 15px 30px var(--shadow-color);
+        }
     }
 }
 
 // Sizing for the device and SVG background circle (sm screen size breakpoint)
 @include media-breakpoint-up(sm) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 70%;
             display: block;
@@ -142,7 +176,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (md screen size breakpoint)
 @include media-breakpoint-up(md) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 60%;
             left: auto;
@@ -156,7 +190,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (lg screen size breakpoint)
 @include media-breakpoint-up(lg) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 90%;
             left: -25%;
@@ -181,7 +215,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (xl screen size breakpoint)
 @include media-breakpoint-up(xl) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 75%;
             left: 0;
@@ -200,7 +234,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (xxl screen size breakpoint)
 @include media-breakpoint-up(xxl) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 80%;
             left: 0;
