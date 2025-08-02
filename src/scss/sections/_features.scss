@@ -101,8 +101,8 @@ section#features {
     transition: color 0.2s ease;
 }
 
-// Styling for the iPhone X mockup in the features section
-.features-device-mockup {
+// Generic styling for device mockups (used across all sections)
+.device-mockup {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +161,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (sm screen size breakpoint)
 @include media-breakpoint-up(sm) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 70%;
             display: block;
@@ -176,7 +176,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (md screen size breakpoint)
 @include media-breakpoint-up(md) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 60%;
             left: auto;
@@ -190,7 +190,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (lg screen size breakpoint)
 @include media-breakpoint-up(lg) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 90%;
             left: -25%;
@@ -215,7 +215,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (xl screen size breakpoint)
 @include media-breakpoint-up(xl) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 75%;
             left: 0;
@@ -234,7 +234,7 @@ section#features {
 
 // Sizing for the device and SVG background circle (xxl screen size breakpoint)
 @include media-breakpoint-up(xxl) {
-    .features-device-mockup {
+    .device-mockup {
         .circle {
             width: 80%;
             left: 0;
