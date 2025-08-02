@@ -5,9 +5,16 @@
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba($washi, 0.98);
-    border-bottom: 1px solid rgba($primary, 0.2);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: rgba($washi, 0.98); /* Changed from transparent to ensure visibility */
+    border-bottom: 1px solid rgba($primary, 0.2); /* Added border for contrast */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Added subtle shadow for depth */
+    transition: background-color 0.3s ease-in-out;
+
+    &.navbar-scrolled {
+        background-color: rgba($washi, 0.98);
+        border-bottom: 1px solid rgba($primary, 0.2);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
     .navbar-brand {
         font-family: $heading-font-japanese;
@@ -24,14 +31,14 @@
     .navbar-toggler {
         font-size: $font-size-sm;
         padding: 0.75rem 1rem;
-        color: $sumi;
+        color: $washi; /* Changed from $sumi to $washi for readability on red */
         border: 1px solid rgba($primary, 0.2);
     }
 
     .navbar-nav {
         .nav-item {
             .nav-link {
-                color: $sumi;
+                color: $washi; /* Changed from $sumi to $washi for readability on red */
                 transition: all 0.2s ease;
                 position: relative;
 
