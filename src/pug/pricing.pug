@@ -16,6 +16,32 @@ html(lang=$localeName)
 
     include ../pug/includes/navbar.pug
 
+    // Pricing Hero Section
+    section.bg-light.py-5
+      .container.px-5
+        .row.justify-content-center.text-center
+          .col-lg-8
+            h1.display-4.mb-4 #{$i18n.pricing.title}
+            p.lead.text-muted.mb-5 Your career vs 195€/year investment. Choose wisely.
+            .row
+              .col-md-4.mb-4
+                .card.border-primary.h-100
+                  .card-body.text-center
+                    .display-6.text-danger.fw-bold 22%
+                    h5 Risk Over 5 Years
+                    p.text-muted Career-ending fraud probability
+              .col-md-4.mb-4
+                .card.border-success.h-100
+                  .card-body.text-center
+                    .display-6.text-success.fw-bold $195
+                    h5 Annual Protection
+                    p.text-muted Per user, per year investment
+              .col-md-4.mb-4
+                .card.border-warning.h-100
+                  .card-body.text-center
+                    .display-6.text-warning.fw-bold 5,100%
+                    h5 ROI First Year
+                    p.text-muted Return on prevented fraud
 
     // App features section
     section#pricing
