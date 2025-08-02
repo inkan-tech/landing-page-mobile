@@ -278,32 +278,7 @@ html(lang=$localeName)
 
   body
     main#main-content(tabindex='-1')
-      //- Video Trailer - Timer-based lazy loading
-  aside.text-center.bg-gradient-primary-to-secondary
-    .container.px-5
-       .row.gx-5.justify-content-center
-        .col-lg-8
-            .h2.fs-1.text-white.mb-1 #{$i18n.trailer}
-            .video-container
-                if $localeName == "fr"
-                    .youtube-timer-load(data-video-id="-zetGGK4UKo" data-load-delay="4000")
-                        .youtube-preview
-                            img(src="https://img.youtube.com/vi/-zetGGK4UKo/maxresdefault.jpg" alt="Play Sealfie demonstration video - French version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
-                            .video-hover-overlay
-                                .play-indicator
-                                    svg(width="68" height="48" viewBox="0 0 68 48")
-                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
-                                        path(d="M 45,24 27,14 27,34" fill="#fff")
-                else
-                    .youtube-timer-load(data-video-id="-kDaGpo5LO0" data-load-delay="4000")
-                        .youtube-preview
-                            img(src="https://img.youtube.com/vi/-kDaGpo5LO0/maxresdefault.jpg" alt="Play Sealfie demonstration video - English version showing how to protect against executive deepfake fraud" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;")
-                            .video-hover-overlay
-                                .play-indicator
-                                    svg(width="68" height="48" viewBox="0 0 68 48")
-                                        path(d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42-6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00")
-                                        path(d="M 45,24 27,14 27,34" fill="#fff")
-
+ 
   // Japanese Minimalist Hero Section - Following Features Section Pattern
   header.hero-section
     .container.px-5
@@ -312,41 +287,38 @@ html(lang=$localeName)
           // Hero text and CTAs
           .mb-5.mb-lg-0.text-center.text-lg-start
             h1.hero-title
-              | Sécurisez votre entreprise
+              | #{$i18n.hero.title.line1}
               br
-              span.accent-text avec un simple selfie
+              span.accent-text #{$i18n.hero.title.line2}
 
             p.hero-subtitle
-              | Protection automatisée contre la fraude au PDG.
-              | Plus fiable que les MFA traditionnels,
-              | aussi simple qu'un
-              em hanko
-              |  numérique.
+              | #{$i18n.hero.subtitle}
 
             // Trust Statistics
             .trust-stats
               .stats-card
-                span.stats-number 5 Milliards €
-                span.stats-label de fraude évités par an
+                span.stats-number #{$i18n.hero.stats.stat1.number}
+                span.stats-label #{$i18n.hero.stats.stat1.label}
               .stats-divider
               .stats-card
-                span.stats-number < 2 sec
-                span.stats-label Vérification instantanée
+                span.stats-number #{$i18n.hero.stats.stat2.number}
+                span.stats-label #{$i18n.hero.stats.stat2.label}
+              .stats-divider
+              .stats-card
+                span.stats-number #{$i18n.hero.stats.stat3.number}
+                span.stats-label #{$i18n.hero.stats.stat3.label}
+
+            // Real Case Example
+            .example-box
+              .example-title #{$i18n.hero.example.title}
+              .example-text #{$i18n.hero.example.text}
 
             // Primary CTA Section
             .cta-section
-              button.cta-primary-large
-                span.cta-icon 📸
-                | Commencer la Démo
-              button.cta-secondary
-                span.play-icon ▶
-                | Voir Comment Ça Marche
-
-            // Verification badges
-            .verification-badges
-              span.badge.ssl SSL
-              span.badge.iso ISO 27001
-              span.badge.gdpr RGPD
+              a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label=$i18n.hero.cta.primary)
+                | #{$i18n.hero.cta.primary}
+              a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
+                | #{$i18n.hero.cta.secondary}
 
         .col-lg-4
           // Hero device mockup - using generic styling
@@ -358,7 +330,7 @@ html(lang=$localeName)
               .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                 .screen.bg-device-screen
                   // Professional video demo - MANDATORY and PROTECTED
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
                     .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
                       .demo-text Sealfie Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
