@@ -1,5 +1,5 @@
 {
-    "title": "Sealfie : Protégez Votre Trésorerie",
+    "title": "Sealfie : protégez votre trésorerie",
     "meta": {
         "description": "Sealfie est le seul compagnon digital pour contrer les fraudes par faux PDG. Avec 5 milliards d'euros volés chaque année, la menace est réelle. Sealfie offre une protection simple et efficace.",
         "descriptions": {
@@ -108,25 +108,25 @@
     "centeredmsg": "Un processus aussi simple qu'un selfie, fiabilisé automatiquement par des experts en cybersécurité.  Nous éliminons le stress lié aux MFA traditionnels.",
     "trailer": "Fraude au PDG: 5 milliards volés par an !  Ne risquez pas votre entreprise.",
     "post_register": {
-        "title": "Inscription Simplifiée",
+        "title": "Inscription simplifiée",
         "main": "Merci de vous être inscrit. Nous vous enverrons un email de confirmation. Vérifiez vos spams si vous ne le recevez pas.",
         "text": "L'inscription à Sealfie est rapide et facile. Nous vous guiderons pas à pas pour que vous puissiez immédiatement bénéficier de notre protection."
     },
     "features": {
         "person": {
-            "title": "Simplicité Absolue",
+            "title": "Simplicité absolue",
             "text": "Vous savez prendre une photo. Sealfie s'occupe de tout le reste. Pas de formation complexe, pas de surveillance constante."
         },
         "send": {
-            "title": "Sécurité Inégalée",
+            "title": "Sécurité inégalée",
             "text": "Chaque transaction est vérifiée en temps réel grâce à une multitude de sources d'information. Sealfie offre une protection plus fiable et plus robuste que les MFA traditionnels."
         },
         "shield": {
-            "title": "Adaptabilité et Extensibilité",
+            "title": "Adaptabilité et extensibilité",
             "text": "Sealfie s'adapte à vos processus d'entreprise. Contactez-nous pour des solutions sur mesure."
         },
         "path": {
-            "title": "Automatisation et Audit",
+            "title": "Automatisation et audit",
             "text": "Sealfie automatise les vérifications et conserve les preuves de chaque transaction, garantissant une traçabilité complète."
         }
     },
@@ -137,23 +137,23 @@
             "text": "Réduisez le stress lié aux menaces cybernétiques. Sealfie vous offre une protection proactive et sans complications."
         },
         "cost": {
-            "title": "Tarification sur Mesure",
+            "title": "Tarification sur mesure",
             "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Demandez un devis personnalisé pour des besoins spécifiques."
         },
         "support": {
-            "title": "Support Technique Prioritaire",
+            "title": "Support technique prioritaire",
             "text": "Support complet inclus, sans formation ni intégration requise. Nous adaptons notre solution à vos processus et à vos SI."
         },
         "period": {
-            "title": "Disponibilité et Résiliance",
+            "title": "Disponibilité et résilience",
             "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment.  Pour les grandes entreprises ou processus spécifiques, contactez-nous pour une offre adaptée."
         },
         "onboard": {
-            "title": "Mise en Place Rapide",
+            "title": "Mise en place rapide",
             "text": "Vous êtes opérationnel en 20 minutes. Nous avons une intégration minimale avec vos SI pour être le rempart contre les attaques."
         },
         "techno": {
-            "title": "Technologie Deeptech",
+            "title": "Technologie deeptech",
             "text": "Nous effectuons automatiquement des vérifications techniques multi-sources pour chaque transaction, au moment critique. Nous étudions et ajoutons des sources de vérification sur simple demande."
         }
     },
@@ -262,31 +262,31 @@
         "seePresentation": "Voir la Présentation ITU-T"
     },
     "howItWorks": {
-        "title": "Comment Fonctionne Sealfie",
+        "title": "Comment fonctionne Sealfie",
         "subtitle": "Trois capacités essentielles qui arrêtent la fraude à millions"
     },
     "howItWorksDetailed": {
-        "title": "Protection Simple Contre Attaques Sophistiquées",
+        "title": "Protection simple contre attaques sophistiquées",
         "subtitle": "Un selfie crée un bouclier d'identité numérique incassable",
         "steps": {
             "step1": {
                 "number": "01",
-                "title": "Prenez un Selfie",
+                "title": "Prenez un selfie",
                 "description": "Comme toute app photo - un selfie capture votre signature biométrique et crée votre identité numérique unique."
             },
             "step2": {
                 "number": "02",
-                "title": "Vérification Instantanée", 
+                "title": "Vérification instantanée", 
                 "description": "Notre IA vérifie instantanément votre identité et crée un ensemble irréfutable de preuves numériques liées à la blockchain."
             },
             "step3": {
                 "number": "03",
-                "title": "Protection Automatique",
+                "title": "Protection automatique",
                 "description": "Chaque transaction est automatiquement protégée. Aucune formation requise - Sealfie gère toutes les vérifications techniques pour vous."
             }
         },
         "benefits": {
-            "title": "Pourquoi la Sécurité Traditionnelle Échoue",
+            "title": "Pourquoi la sécurité traditionnelle échoue",
             "items": [
                 "Les mots de passe peuvent être volés",
                 "Les jetons MFA peuvent être contournés",
@@ -295,18 +295,18 @@
             ]
         },
         "solution": {
-            "title": "L'Avantage de Sealfie",
+            "title": "L'avantage de Sealfie",
             "description": "Contrairement à la sécurité traditionnelle qui repose sur ce que vous savez ou avez, Sealfie utilise qui vous êtes - créant un lien incassable entre votre identité et vos transactions."
         }
     },
     "press": {
-        "title": "Presse & Reconnaissance",
+        "title": "Presse & reconnaissance",
         "subtitle": "Reconnaissance internationale pour les solutions pionnières de prévention de fraude IA",
         "sections": {
             "speaking": {
-                "title": "Conférences Internationales",
+                "title": "Conférences internationales",
                 "ituWorkshop": {
-                    "title": "Atelier ITU-T sur la Sécurisation de l'IA",
+                    "title": "Atelier ITU-T sur la sécurisation de l'IA",
                     "date": "19 février 2024",
                     "venue": "Union Internationale des Télécommunications (ONU)",
                     "topic": "Criminels Alimentés par l'IA - Nouvelle Frontière Cybersécurité",
@@ -315,7 +315,7 @@
                 }
             },
             "media": {
-                "title": "Couverture Médiatique & Interviews",
+                "title": "Couverture médiatique & interviews",
                 "figaro": {
                     "title": "Interview Le Figaro",
                     "description": "Commentaire d'expert sur les tendances cybersécurité et prévention fraude dirigeants.",
@@ -323,7 +323,7 @@
                 }
             },
             "recognition": {
-                "title": "Reconnaissance Industrielle",
+                "title": "Reconnaissance industrielle",
                 "description": "Prix, certifications et partenariats industriels reconnaissant notre expertise cybersécurité."
             }
         }
@@ -333,22 +333,22 @@
         "subtitle": "Protégez-vous avec nos connaissances d'experts",
         "resources": {
             "guide": {
-                "title": "Guide des Menaces BEC",
+                "title": "Guide des menaces BEC",
                 "description": "PLACEHOLDER: Guide complet sur les attaques de compromission d'e-mails professionnels",
                 "cta": "Télécharger PDF Gratuit"
             },
             "checklist": {
-                "title": "Liste de Contrôle Sécurité",
+                "title": "Liste de contrôle sécurité",
                 "description": "PLACEHOLDER: Liste de contrôle de protection des dirigeants pour mise en œuvre immédiate",
                 "cta": "Obtenir la Liste"
             },
             "assessment": {
-                "title": "Évaluation des Risques",
+                "title": "Évaluation des risques",
                 "description": "PLACEHOLDER: Outil en ligne gratuit pour évaluer le niveau de risque de votre organisation",
                 "cta": "Faire l'Évaluation"
             },
             "challenge": {
-                "title": "Challenge Gratuit de Sécurité",
+                "title": "Challenge gratuit de sécurité",
                 "description": "Découvrez si votre protection actuelle résiste vraiment aux nouvelles menaces",
                 "cta": "Réserver mon Challenge"
             }
@@ -359,29 +359,29 @@
         "subtitle": "Soyez parmi les premiers à vous défendre contre les attaques IA",
         "benefits": {
             "earlyAccess": {
-                "title": "Accès Anticipé",
+                "title": "Accès anticipé",
                 "description": "PLACEHOLDER: Obtenez un accès exclusif à notre technologie de sécurité avant la disponibilité générale"
             },
             "directInput": {
-                "title": "Contribution Directe",
+                "title": "Contribution directe",
                 "description": "PLACEHOLDER: Façonnez le produit avec des retours directs à notre équipe de développement"
             },
             "pricing": {
-                "title": "Tarification Pionnier",
+                "title": "Tarification pionnier",
                 "description": "PLACEHOLDER: Verrouillez une tarification spéciale pour les adopteurs précoces et partenaires long terme"
             },
             "support": {
-                "title": "Support Premium",
+                "title": "Support premium",
                 "description": "PLACEHOLDER: Accès direct à nos experts en sécurité et assistance prioritaire"
             }
         },
         "cta": {
-            "apply": "Postuler au Programme Pionnier",
+            "apply": "Postuler au programme pionnier",
             "disclaimer": "Places limitées - demandes sérieuses uniquement"
         }
     },
     "modal": {
-        "title": "Formulaire de Contact",
+        "title": "Formulaire de contact",
         "mail": {
             "title": "Email",
             "feedback": "Un email est nécessaire pour vous envoyer des informations.",
@@ -393,7 +393,7 @@
             "error": "L'adresse email est invalide."
         },
         "phonetype": {
-            "title": "Type de Téléphone Utilisé",
+            "title": "Type de téléphone utilisé",
             "feedback": "Un email est nécessaire pour vous envoyer des informations.",
             "error": "L'adresse email est invalide."
         },
@@ -405,7 +405,7 @@
     },
     "support": "Veuillez nous envoyer un email avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
     "docs": {
-        "title": "Comment Fonctionne Sealfie ?",
+        "title": "Comment fonctionne Sealfie ?",
         "subtitle": "Après l'inscription, après avoir été contacté, le système sera opérationnel en 20 minutes.",
         "stepstart": {
             "one": "J'ai besoin d'obtenir une approbation.",

@@ -33,7 +33,16 @@
 }
 ```
 
-#### **2. i18n (Internationalization) Compliance**
+#### **2. Title Capitalization Requirements**
+**MUST use sentence case (not Title Case) for all titles:**
+- ✅ **CORRECT**: "Current threat landscape"
+- ✅ **CORRECT**: "How Sealfie works" 
+- ❌ **WRONG**: "Current Threat Landscape"
+- ❌ **WRONG**: "How It Works"
+
+**Keep capitalized**: Proper nouns (Sealfie, Inkan), acronyms (AI, BEC), first word of sentence
+
+#### **3. i18n (Internationalization) Compliance**
 **NEVER hardcode text - ALWAYS use i18n variables:**
 
 ```pug
@@ -64,7 +73,7 @@ h2.section-title Current Threat Landscape
 }
 ```
 
-#### **3. Component Structure Requirements**
+#### **4. Component Structure Requirements**
 **ALWAYS follow this structure for new components:**
 
 ```pug
@@ -82,7 +91,7 @@ section.component-name-section
           // All text via #{$i18n.section.content}
 ```
 
-#### **4. Mandatory Checks Before Implementation**
+#### **5. Mandatory Checks Before Implementation**
 **For EVERY new component or change:**
 
 1. ✅ **Design Check**: Uses Japanese color variables
@@ -240,6 +249,12 @@ h2 Current Threat Landscape  // WRONG
 .component {
   color: #000;  // WRONG - use var(--text-primary)
 }
+```
+
+❌ **NEVER use Title Case for every word:**
+```json
+"title": "Current Threat Landscape"  // WRONG - Title Case
+"title": "Current threat landscape"  // CORRECT - Sentence case
 ```
 
 ✅ **ALWAYS follow proper patterns:**
