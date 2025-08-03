@@ -52,7 +52,7 @@
         }
     },
     "head": {
-        "title": "Éliminez le Stress des Attaques au Faux PDG",
+        "title": "Éliminez le stress des attaques au faux PDG",
         "subtitle": "Votre entreprise est une cible pour les criminels: 5 milliards d'euros volés chaque année. Les attaques au faux PDG sont désormais indétectables grâce aux nouvelles IA!",
         "subtitle2": "Prenez simplement une photo. Sealfie effectue automatiquement des vérifications multi-sources, au moment critique, pour garantir la sécurité de vos transactions."
     },
@@ -83,7 +83,7 @@
         }
     },
     "pricing": {
-        "title": "Tarification Flexible",
+        "title": "Tarification flexible",
         "users": {
             "title": "Un processus simplifié pour vous protéger",
             "text": "Réduisez le stress lié aux menaces cybernétiques. Sealfie vous offre une protection proactive et sans complications."
@@ -110,7 +110,7 @@
         }
     },
     "description": {
-        "title": "Révolutionnez Votre Sécurité",
+        "title": "Révolutionnez votre sécurité",
         "text": "Face aux deepfakes et aux usurpations d'identité, la sécurité traditionnelle est dépassée. Sealfie offre une solution simple, proactive et fiable.",
         "text2": "Sealfie change radicalement l'équation : suivez UN SEUL processus simple plutôt que de connaître TOUTES les attaques possibles. Un selfie pour vous, nous nous occupons de la technique et produisons une liste d'attestations plus fiable que les processus MFA traditionnels.",
         "text3": "Nous fédérons en coulisses les sources techniques d'information, garantissant une protection proactive et sans surveillance constante."
@@ -134,7 +134,7 @@
         "hero": "trailer-Fraude-deepfake.webm"
     },
     "carousel": {
-        "title": "Paysage des Menaces Actuelles",
+        "title": "Paysage des menaces actuelles",
         "subtitle": "Renseignements récents d'août 2025",
         "source": "Source : Rapports de l'industrie août 2025",
         "slides": {
@@ -200,7 +200,7 @@
         "readMore": "Lire le Rapport Complet"
     },
     "founder": {
-        "title": "Pourquoi Nous Avons Créé Sealfie",
+        "title": "Pourquoi nous avons créé Sealfie",
         "subtitle": "Par des experts en cybersécurité qui comprennent la vraie menace",
         "story": {
             "lead": "PLACEHOLDER: Histoire du fondateur - pourquoi nous avons créé ceci, notre expérience en cybersécurité, ce que nous avons appris des attaques d'entreprise, et pourquoi les solutions traditionnelles échouent.",
@@ -213,7 +213,7 @@
         }
     },
     "education": {
-        "title": "Ressources de Sécurité Gratuites",
+        "title": "Ressources de sécurité gratuites",
         "subtitle": "Protégez-vous avec nos connaissances d'experts",
         "resources": {
             "guide": {
@@ -234,7 +234,7 @@
         }
     },
     "pioneer": {
-        "title": "Rejoignez Notre Programme Pionnier",
+        "title": "Rejoignez notre programme pionnier",
         "subtitle": "Soyez parmi les premiers à vous défendre contre les attaques IA",
         "benefits": {
             "earlyAccess": {

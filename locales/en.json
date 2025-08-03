@@ -52,7 +52,7 @@
         }
     },
     "head": {
-        "title": "Stop Losing to Deepfakes!",
+        "title": "Stop losing to deepfakes!",
         "subtitle": "Executive fraud attacks are now undetectable. Sealfie dramatically simplifies the defense – just one photo.",
         "subtitle2": "We handle the complex technical verifications.  Forget endless MFA training and alerts."
     },
@@ -83,7 +83,7 @@
         }
     },
     "pricing": {
-        "title": "Pricing Options",
+        "title": "Pricing options",
         "users": {
             "title": "Streamlined Security",
             "text": "Reduce the complexity of security without compromising protection. Starting at $195/person/year."
@@ -110,7 +110,7 @@
         }
     },
     "description": {
-        "title": "Revolutionize Your Cybersecurity",
+        "title": "Revolutionize your cybersecurity",
         "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
         "text2": "Sealfie radically changes the equation – just one simple process instead of knowing ALL possible attacks. A selfie for you, we handle the technical complexities and produce a list of attestations more reliable than traditional MFA processes.",
         "text3": "We coordinate technical information sources behind the scenes while your teams enjoy an experience as smooth as taking a photo. Thanks to our deeptech technology, we’ll adapt to threats without making usage more complex."
@@ -134,7 +134,7 @@
         "hero": "trailer-Business-Email-compromise.webm"
     },
     "carousel": {
-        "title": "Current Threat Landscape",
+        "title": "Current threat landscape",
         "subtitle": "Latest intelligence from August 2025",
         "source": "Source: Industry reports August 2025",
         "slides": {
@@ -200,7 +200,7 @@
         "readMore": "Read Full Report"
     },
     "founder": {
-        "title": "Why We Built Sealfie",
+        "title": "Why we built Sealfie",
         "subtitle": "From cybersecurity experts who understand the real threat",
         "story": {
             "lead": "PLACEHOLDER: Founder story goes here - why we built this, our background in cybersecurity, what we learned from enterprise attacks, and why traditional solutions fail.",
@@ -213,7 +213,7 @@
         }
     },
     "education": {
-        "title": "Free Security Resources",
+        "title": "Free security resources",
         "subtitle": "Protect yourself with our expert knowledge",
         "resources": {
             "guide": {
@@ -234,7 +234,7 @@
         }
     },
     "pioneer": {
-        "title": "Join Our Pioneer Program",
+        "title": "Join our pioneer program",
         "subtitle": "Be among the first to defend against AI-powered attacks",
         "benefits": {
             "earlyAccess": {
