@@ -16,7 +16,55 @@
         "main": "Sealfie",
         "pricing": "Tarifs",
         "docs": "Fonctionnement",
+        "press": "Presse & Reconnaissance",
         "action": "Newsletter sur la fraude"
+    },
+    "footer": {
+        "navigation": {
+            "product": {
+                "title": "Produit",
+                "links": {
+                    "overview": "Aperçu",
+                    "howItWorks": "Fonctionnement",
+                    "pricing": "Tarifs",
+                    "challenge": "Défi Sécurité"
+                }
+            },
+            "company": {
+                "title": "Entreprise",
+                "links": {
+                    "about": "À Propos",
+                    "press": "Presse & Reconnaissance",
+                    "blog": "Blog",
+                    "contact": "Contact"
+                }
+            },
+            "support": {
+                "title": "Support",
+                "links": {
+                    "help": "Centre d'Aide",
+                    "documentation": "Documentation",
+                    "privacy": "Politique de Confidentialité",
+                    "terms": "Conditions d'Utilisation"
+                }
+            },
+            "connect": {
+                "title": "Connexion",
+                "links": {
+                    "newsletter": "Newsletter",
+                    "linkedin": "LinkedIn",
+                    "email": "Nous Écrire"
+                }
+            }
+        },
+        "download": {
+            "title": "Télécharger Sealfie",
+            "subtitle": "Disponible sur iOS et Android"
+        },
+        "legal": {
+            "copyright": "© 2024 Inkan.link. Tous Droits Réservés.",
+            "sources": "Sources de Recherche"
+        }
     },
     "otherlang": {
         "long": "English",
@@ -201,15 +249,83 @@
     },
     "founder": {
         "title": "Pourquoi nous avons créé Sealfie",
-        "subtitle": "Par des experts en cybersécurité qui comprennent la vraie menace",
+        "subtitle": "Par des experts en sécurité IA reconnus internationalement",
         "story": {
-            "lead": "PLACEHOLDER: Histoire du fondateur - pourquoi nous avons créé ceci, notre expérience en cybersécurité, ce que nous avons appris des attaques d'entreprise, et pourquoi les solutions traditionnelles échouent.",
-            "bio": "PLACEHOLDER: Brève biographie du/des fondateur(s), marqueurs de crédibilité, déclaration de mission sur la simplification de la cybersécurité sans compromettre la sécurité."
+            "lead": "En février 2024, j'ai alerté l'Union Internationale des Télécommunications de l'ONU sur la montée de la fraude alimentée par l'IA. Le cas de deepfake à Hong Kong de 25 millions $ que j'ai présenté est devenu réalité quelques mois plus tard.",
+            "bio": "Les solutions de cybersécurité traditionnelles échouent car elles sont réactives. Ayant prédit cette vague de fraude IA, nous avons conçu Sealfie comme la défense proactive - assez simple pour tous, assez sophistiquée pour arrêter des attaques à millions."
         },
         "credentials": {
-            "experience": "PLACEHOLDER: Années en cybersécurité",
-            "enterprise": "PLACEHOLDER: Expérience entreprise",
-            "achievements": "PLACEHOLDER: Certifications/réalisations"
+            "experience": "15+ années d'expertise en cybersécurité",
+            "enterprise": "Conférencier ITU-T (Organisme Standards ONU)",
+            "achievements": "Prédiction de la montée de fraude IA - présentation fév. 2024"
+        },
+        "seePresentation": "Voir la Présentation ITU-T"
+    },
+    "howItWorks": {
+        "title": "Comment Fonctionne Sealfie",
+        "subtitle": "Trois capacités essentielles qui arrêtent la fraude à millions"
+    },
+    "howItWorksDetailed": {
+        "title": "Protection Simple Contre Attaques Sophistiquées",
+        "subtitle": "Un selfie crée un bouclier d'identité numérique incassable",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "Prenez un Selfie",
+                "description": "Comme toute app photo - un selfie capture votre signature biométrique et crée votre identité numérique unique."
+            },
+            "step2": {
+                "number": "02",
+                "title": "Vérification Instantanée", 
+                "description": "Notre IA vérifie instantanément votre identité et crée un ensemble irréfutable de preuves numériques liées à la blockchain."
+            },
+            "step3": {
+                "number": "03",
+                "title": "Protection Automatique",
+                "description": "Chaque transaction est automatiquement protégée. Aucune formation requise - Sealfie gère toutes les vérifications techniques pour vous."
+            }
+        },
+        "benefits": {
+            "title": "Pourquoi la Sécurité Traditionnelle Échoue",
+            "items": [
+                "Les mots de passe peuvent être volés",
+                "Les jetons MFA peuvent être contournés",
+                "La formation n'arrête pas les attaques sophistiquées", 
+                "Les solutions actuelles sont réactives, pas proactives"
+            ]
+        },
+        "solution": {
+            "title": "L'Avantage de Sealfie",
+            "description": "Contrairement à la sécurité traditionnelle qui repose sur ce que vous savez ou avez, Sealfie utilise qui vous êtes - créant un lien incassable entre votre identité et vos transactions."
+        }
+    },
+    "press": {
+        "title": "Presse & Reconnaissance",
+        "subtitle": "Reconnaissance internationale pour les solutions pionnières de prévention de fraude IA",
+        "sections": {
+            "speaking": {
+                "title": "Conférences Internationales",
+                "ituWorkshop": {
+                    "title": "Atelier ITU-T sur la Sécurisation de l'IA",
+                    "date": "19 février 2024",
+                    "venue": "Union Internationale des Télécommunications (ONU)",
+                    "topic": "Criminels Alimentés par l'IA - Nouvelle Frontière Cybersécurité",
+                    "description": "Présentation de recherches révolutionnaires sur les menaces émergentes de fraude pilotée par l'IA et solutions préventives à l'organisme de normalisation télécoms de l'ONU.",
+                    "watchVideo": "Voir la Présentation"
+                }
+            },
+            "media": {
+                "title": "Couverture Médiatique & Interviews",
+                "figaro": {
+                    "title": "Interview Le Figaro",
+                    "description": "Commentaire d'expert sur les tendances cybersécurité et prévention fraude dirigeants.",
+                    "readMore": "Lire l'Interview"
+                }
+            },
+            "recognition": {
+                "title": "Reconnaissance Industrielle",
+                "description": "Prix, certifications et partenariats industriels reconnaissant notre expertise cybersécurité."
+            }
         }
     },
     "education": {

@@ -16,7 +16,55 @@
         "main": "Sealfie",
         "pricing": "Pricing",
         "docs": "How it Works",
+        "press": "Press & Recognition",
         "action": "Newsletter"
+    },
+    "footer": {
+        "navigation": {
+            "product": {
+                "title": "Product",
+                "links": {
+                    "overview": "Overview",
+                    "howItWorks": "How it Works",
+                    "pricing": "Pricing",
+                    "challenge": "Security Challenge"
+                }
+            },
+            "company": {
+                "title": "Company",
+                "links": {
+                    "about": "About",
+                    "press": "Press & Recognition", 
+                    "blog": "Blog",
+                    "contact": "Contact"
+                }
+            },
+            "support": {
+                "title": "Support",
+                "links": {
+                    "help": "Help Center",
+                    "documentation": "Documentation",
+                    "privacy": "Privacy Policy",
+                    "terms": "Terms of Service"
+                }
+            },
+            "connect": {
+                "title": "Connect",
+                "links": {
+                    "newsletter": "Newsletter",
+                    "linkedin": "LinkedIn",
+                    "email": "Email Us"
+                }
+            }
+        },
+        "download": {
+            "title": "Download Sealfie",
+            "subtitle": "Available on iOS and Android"
+        },
+        "legal": {
+            "copyright": "© 2024 Inkan.link. All Rights Reserved.",
+            "sources": "Research Sources"
+        }
     },
     "otherlang": {
         "long": "Français",
@@ -201,15 +249,83 @@
     },
     "founder": {
         "title": "Why we built Sealfie",
-        "subtitle": "From cybersecurity experts who understand the real threat",
+        "subtitle": "From internationally recognized AI security experts",
         "story": {
-            "lead": "PLACEHOLDER: Founder story goes here - why we built this, our background in cybersecurity, what we learned from enterprise attacks, and why traditional solutions fail.",
-            "bio": "PLACEHOLDER: Brief bio of founder(s), credibility markers, mission statement about making cybersecurity simple without compromising security."
+            "lead": "In February 2024, I warned the UN's International Telecommunication Union about the coming surge in AI-powered fraud. The $25 million Hong Kong deepfake case I presented became reality just months later.",
+            "bio": "Traditional cybersecurity solutions fail because they're reactive. Having predicted this AI fraud wave, we built Sealfie as the proactive defense - simple enough for anyone to use, sophisticated enough to stop million-dollar attacks."
         },
         "credentials": {
-            "experience": "PLACEHOLDER: Years in cybersecurity",
-            "enterprise": "PLACEHOLDER: Enterprise experience", 
-            "achievements": "PLACEHOLDER: Certifications/achievements"
+            "experience": "15+ years cybersecurity expertise",
+            "enterprise": "ITU-T Workshop Speaker (UN Standards Body)",
+            "achievements": "Predicted AI fraud surge - Feb 2024 presentation"
+        },
+        "seePresentation": "Watch ITU-T Presentation"
+    },
+    "howItWorks": {
+        "title": "How Sealfie Works",
+        "subtitle": "Three core capabilities that stop million-dollar fraud"
+    },
+    "howItWorksDetailed": {
+        "title": "Simple Protection Against Sophisticated Attacks",
+        "subtitle": "One selfie creates an unbreakable digital identity shield",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "Take a Selfie",
+                "description": "Just like any photo app - one selfie captures your biometric signature and creates your unique digital identity."
+            },
+            "step2": {
+                "number": "02", 
+                "title": "Instant Verification",
+                "description": "Our AI instantly verifies your identity and creates an irrefutable bundle of digital evidence tied to the blockchain."
+            },
+            "step3": {
+                "number": "03",
+                "title": "Automatic Protection",
+                "description": "Every transaction is automatically protected. No training required - Sealfie handles all technical verifications for you."
+            }
+        },
+        "benefits": {
+            "title": "Why Traditional Security Fails",
+            "items": [
+                "Passwords can be stolen",
+                "MFA tokens can be bypassed", 
+                "Training doesn't stop sophisticated attacks",
+                "Current solutions are reactive, not proactive"
+            ]
+        },
+        "solution": {
+            "title": "Sealfie's Advantage",
+            "description": "Unlike traditional security that relies on what you know or have, Sealfie uses who you are - creating an unbreakable link between your identity and your transactions."
+        }
+    },
+    "press": {
+        "title": "Press & Recognition",
+        "subtitle": "International recognition for pioneering AI fraud prevention solutions",
+        "sections": {
+            "speaking": {
+                "title": "International Speaking Engagements",
+                "ituWorkshop": {
+                    "title": "ITU-T Workshop on Securing AI",
+                    "date": "February 19, 2024",
+                    "venue": "International Telecommunication Union (UN)",
+                    "topic": "AI-Powered Criminals - A New Cybersecurity Frontier",
+                    "description": "Presented groundbreaking research on emerging AI-driven fraud threats and preventive solutions to the UN's telecommunications standards body.",
+                    "watchVideo": "Watch Presentation"
+                }
+            },
+            "media": {
+                "title": "Media Coverage & Interviews",
+                "figaro": {
+                    "title": "Le Figaro Interview",
+                    "description": "Featured expert commentary on cybersecurity trends and executive fraud prevention.",
+                    "readMore": "Read Interview"
+                }
+            },
+            "recognition": {
+                "title": "Industry Recognition",
+                "description": "Awards, certifications, and industry partnerships recognizing our cybersecurity expertise."
+            }
         }
     },
     "education": {

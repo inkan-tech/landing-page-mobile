@@ -32,7 +32,7 @@ html(lang=$localeName)
     header.masthead
       .container.px-5
         .row.gx-5.align-items-center
-          .col-lg-6.mb-5.mb-lg-0
+          .col-lg-8.mb-5.mb-lg-0
             .container-fluid.px-5
               .row.gx-5
                 .col-md-6.mb-5
@@ -56,7 +56,7 @@ html(lang=$localeName)
                   .text-center
                     i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
                     p.text-muted.mb-0 #{$i18n.docs.stepstart.biometric}
-          .col-lg-6
+          .col-lg-4
             // Generic device mockup feature
             .device-mockup
               include includes/gradient-circle
@@ -142,16 +142,7 @@ html(lang=$localeName)
          a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
 
 
-    // Footer
-    footer.bg-black.text-center.py-5
-      .container.px-5
-        .text-white-50.small
-          .mb-2 &copy; 2022 Inkan.link . All Rights Reserved.
-          a(href='privacy-ios.html') Privacy
-          span.mx-1 &middot;
-          a(href='#!') Terms
-          span.mx-1 &middot;
-          a(href='https://www.allianz-trade.fr/actualites/etude-fraude-2021.html') [1] Etude Allianz
+    include ../pug/includes/footer.pug
 
     // Bootstrap core JS
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js')

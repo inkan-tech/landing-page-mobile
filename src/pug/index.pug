@@ -283,8 +283,26 @@ html(lang=$localeName)
   header.hero-section
     .container.px-5
       .row.gx-5.align-items-center
-        .col-lg-8
-          // Hero text and CTAs
+        .col-lg-3.order-2.order-lg-1
+          // Hero device mockup - moved to left, 1/4 width
+          .device-mockup
+            include includes/gradient-circle
+            include includes/shape-1
+            include includes/shape-2
+            .device-wrapper
+              .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
+                .screen.bg-device-screen
+                  // Professional video demo - MANDATORY and PROTECTED
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                      .demo-text Sealfie Demo
+                      .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
+                        svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
+                          circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
+                          polygon(points="10,8 16,12 10,16" fill="white")
+        
+        .col-lg-9.order-1.order-lg-2
+          // Hero text and CTAs - 3/4 width
           .mb-5.mb-lg-0.text-center.text-lg-start
             h1.hero-title
               | #{$i18n.hero.title.line1}
@@ -319,24 +337,6 @@ html(lang=$localeName)
                 | #{$i18n.hero.cta.primary}
               a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
                 | #{$i18n.hero.cta.secondary}
-
-        .col-lg-4
-          // Hero device mockup - using generic styling
-          .device-mockup
-            include includes/gradient-circle
-            include includes/shape-1
-            include includes/shape-2
-            .device-wrapper
-              .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                .screen.bg-device-screen
-                  // Professional video demo - MANDATORY and PROTECTED
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
-                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
-                      .demo-text Sealfie Demo
-                      .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
-                        svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
-                          circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
-                          polygon(points="10,8 16,12 10,16" fill="white")
 
   // BEC Trends Carousel - Authority Through Current Data
   section.bec-trends-section
@@ -494,92 +494,96 @@ html(lang=$localeName)
                 .credential-item
                   i.bi-award.text-gradient
                   span #{$i18n.founder.credentials.achievements}
+              
+              .text-center.mt-4
+                a.cta-ghost(href="https://inkan.link/posts/news-itu-t-workshop-securing-ai/" target="_blank" rel="noopener noreferrer" aria-label=$i18n.founder.seePresentation)
+                  i.bi-play-circle.me-2
+                  | #{$i18n.founder.seePresentation}
 
-  // Educational Resources Section - Authority Through Education
-  section.education-section
+
+  // Visual Break & Brand Statement
+  aside.text-center.bg-gradient-primary-to-secondary.py-5
     .container.px-5
-      .row.gx-5.justify-content-center
+      .row.justify-content-center
+        .col-lg-8
+          img.mb-4(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan company logo - cybersecurity technology provider', style='height: 4rem;')
+          .h3.text-white.mb-0 #{$i18n.centeredmsg}
+
+  // How It Works - Streamlined Features
+  section#features.bg-light
+    .container.px-5
+      .row.justify-content-center
         .col-lg-10
           .text-center.mb-5
             h2.section-title
-              span #{$i18n.education.title}
-            p.section-subtitle #{$i18n.education.subtitle}
+              span #{$i18n.howItWorks.title}
+            p.section-subtitle #{$i18n.howItWorks.subtitle}
           
           .row.g-4
-            .col-md-6.col-lg-3
-              .resource-card
-                .resource-icon
-                  i.bi-file-earmark-text.text-gradient
-                h4 #{$i18n.education.resources.guide.title}
-                p #{$i18n.education.resources.guide.description}
-                a.cta-ghost(href="#") #{$i18n.education.resources.guide.cta}
-            
-            .col-md-6.col-lg-3
-              .resource-card
-                .resource-icon
-                  i.bi-list-check.text-gradient
-                h4 #{$i18n.education.resources.checklist.title}
-                p #{$i18n.education.resources.checklist.description}
-                a.cta-ghost(href="#") #{$i18n.education.resources.checklist.cta}
-            
-            .col-md-6.col-lg-3
-              .resource-card
-                .resource-icon
-                  i.bi-graph-up.text-gradient
-                h4 #{$i18n.education.resources.assessment.title}
-                p #{$i18n.education.resources.assessment.description}
-                a.cta-ghost(href="#") #{$i18n.education.resources.assessment.cta}
-            
-            .col-md-6.col-lg-3
-              .resource-card
-                .resource-icon
-                  i.bi-shield-check.text-gradient
-                h4 #{$i18n.education.resources.challenge.title}
-                p #{$i18n.education.resources.challenge.description}
-                a.cta-primary(href=`/${$localeName}/challenge.html`) #{$i18n.education.resources.challenge.cta}
+            .col-md-4
+              .feature-card.text-center.h-100
+                i.bi-camera.icon-feature.text-gradient.d-block.mb-3
+                h4 #{$i18n.features.person.title}
+                p.text-muted.mb-0 #{$i18n.features.person.text}
+            .col-md-4
+              .feature-card.text-center.h-100
+                i.bi-shield-check.icon-feature.text-gradient.d-block.mb-3
+                h4 #{$i18n.features.send.title}
+                p.text-muted.mb-0 #{$i18n.features.send.text}
+            .col-md-4
+              .feature-card.text-center.h-100
+                i.bi-file-earmark-check.icon-feature.text-gradient.d-block.mb-3
+                h4 #{$i18n.features.path.title}
+                p.text-muted.mb-0 #{$i18n.features.path.text}
 
-  // Quote/testimonial aside
-  aside.text-center.bg-gradient-primary-to-secondary
+  // How Sealfie Works - With Device Mockup Demo
+  section.how-it-works-section.bg-light
     .container.px-5
-      .row.gx-5.justify-content-center
-        .col-l-8
-          .h2.fs-1.text-white.mb-4 #{$i18n.centeredmsg}
-        img(src='/assets/img/InkanLogo-32x32.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
-
-  // App features section
-  section#features
-    .container.px-5
-      .row.gx-5.align-items-center
-        .col-lg-8.order-lg-1.mb-5.mb-lg-0
-          .container-fluid.px-5
-            .row.gx-5
-              .col-md-6.mb-5
-                // Feature item list is at: https://icons.getbootstrap.com/
-                .text-center
-                  i.bi-send-check.icon-feature.text-gradient.d-block.mb-3
-                  h3.font-alt #{$i18n.features.person.title}
-                  p.text-muted.mb-0 #{$i18n.features.person.text}
-              .col-md-6.mb-5
-                // Feature item
-                .text-center
-                  i.bi-person-check.icon-feature.text-gradient.d-block.mb-3
-                  h3.font-alt #{$i18n.features.send.title}
-                  p.text-muted.mb-0 #{$i18n.features.send.text}
-            .row
-              .col-md-6.mb-5.mb-md-0
-                // Feature item
-                .text-center
-                  i.bi-award.icon-feature.text-gradient.d-block.mb-3
-                  h3.font-alt #{$i18n.features.shield.title}
-                  p.text-muted.mb-0 #{$i18n.features.shield.text}
-              .col-md-6
-                // Feature item
-                .text-center
-                  i.bi-shield-check.icon-feature.text-gradient.d-block.mb-3
-                  h3.font-alt #{$i18n.features.path.title}
-                  p.text-muted.mb-0 #{$i18n.features.path.text}
-        .col-lg-4.order-lg-0
-          // Features section device mockup
+      .row.gx-5.align-items-center.justify-content-center
+        .col-lg-6.order-2.order-lg-1
+          .mb-5.mb-lg-0
+            h2.section-title
+              span #{$i18n.howItWorksDetailed.title}
+            p.section-subtitle.mb-4 #{$i18n.howItWorksDetailed.subtitle}
+            
+            // Step-by-step process
+            .steps-container
+              .step-item.mb-4
+                .step-header.d-flex.align-items-center.mb-2
+                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step1.number}
+                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step1.title}
+                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step1.description}
+              
+              .step-item.mb-4
+                .step-header.d-flex.align-items-center.mb-2
+                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step2.number}
+                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step2.title}
+                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step2.description}
+              
+              .step-item.mb-4
+                .step-header.d-flex.align-items-center.mb-2
+                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step3.number}
+                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step3.title}
+                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step3.description}
+            
+            // Benefits vs Traditional Security
+            .benefits-section.mt-5
+              h3.h5.text-gradient.mb-3 #{$i18n.howItWorksDetailed.solution.title}
+              p.text-muted.mb-3 #{$i18n.howItWorksDetailed.solution.description}
+              
+              .solution-highlights
+                .highlight-item.d-flex.align-items-center.mb-2
+                  i.bi-shield-check.text-gradient.me-3
+                  span.small Biometric Identity Verification
+                .highlight-item.d-flex.align-items-center.mb-2
+                  i.bi-link-45deg.text-gradient.me-3
+                  span.small Blockchain-Secured Evidence
+                .highlight-item.d-flex.align-items-center.mb-2
+                  i.bi-lightning.text-gradient.me-3
+                  span.small Zero-Training Required
+        
+        .col-lg-6.order-1.order-lg-2
+          // Device mockup with step-by-step demo video
           .device-mockup
             include includes/gradient-circle
             include includes/shape-1
@@ -587,31 +591,14 @@ html(lang=$localeName)
             .device-wrapper
               .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                 .screen.bg-device-screen
-                  // PUT CONTENTS HERE:
-                  // * * This can be a video, image, or just about anything else.
-                  // * * Set the max width of your media to 100% and the height to
-                  // * * 100% like the demo example below.
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo2 data-load-delay="6000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
-                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--sango-accent) 0%, var(--enji-secondary) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
-                      .demo-text Protection Demo
+                  // Step-by-step demo video - shows how Sealfie works
+                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.demo1 data-load-delay="7000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
+                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                      .demo-text How It Works Demo
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
                         svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
                           circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
                           polygon(points="10,8 16,12 10,16" fill="white")
-
-
-  // Quote/testimonial aside
-  aside.text-center.bg-gradient-primary-to-secondary
-    .container.px-5
-      .row.gx-5.justify-content-center
-        .col-l-8
-          if $localeName == "en"
-            img(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan company logo - cybersecurity technology provider', style='height: 6rem;', href='https://inkan.link')
-          else
-            iframe(type='text/html' width='640' height='390'
-            src='https://www.youtube.com/embed/22lzekNe87w?autoplay=1&mute=1&loop=1&playlist=22lzekNe87w&origin=https://sealf.ie'
-            frameborder='0')
-          .h2.fs-1.text-white.mb-4 #{$i18n.testimonial}
 
   // Pioneer Program Section - First Customer Acquisition
   section.pioneer-section.bg-light
@@ -658,43 +645,10 @@ html(lang=$localeName)
                 | #{$i18n.pioneer.cta.apply}
               p.small.text-muted.mt-2 #{$i18n.pioneer.cta.disclaimer}
 
-  // Call to action section
-  section.cta(data-lazy-module="contact-form")
-    .cta-content
-      .container.px-5
-        h2.text-white.display-1.lh-1.mb-4
-          | #{$i18n.action.stop}
-          br
-          |#{$i18n.action.start}
-        a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie" data-contact-form aria-label="Contact us to protect your organization from deepfake fraud attacks" role="button") #{$i18n.action.linktext}
 
 
-  // Tech explanation section
-  section.bg-light
-    .container.px-5
-      .row.gx-5.align-items-center.justify-content-center.justify-content-lg-between
-        .col-12.col-lg-5
-          h2.display-4.lh-1.mb-4 #{$i18n.description.title}
-          p.lead.fw-normal.text-muted.mb-5.mb-lg-0 #{$i18n.description.text}
-          p.lead.fw-normal.text-muted.mb-5.mb-lg-0 #{$i18n.description.text2}
-          p.lead.fw-normal.text-muted.mb-5.mb-lg-0 #{$i18n.description.text3}
-        .col-sm-8.col-md-6
-          .px-5.px-sm-0
-            picture
-              source(srcset='/assets/img/optimized/BlockChainPhone.webp', type='image/webp')
-              source(srcset='/assets/img/optimized/BlockChainPhone.jpeg', type='image/jpeg')
-              img.img-fluid.rounded-circle(src='/assets/img/BlockChainPhone.jpeg', alt='Blockchain phone security illustration showing secure mobile authentication technology', loading='lazy')
 
 
-  // App badge section
-  section#download.bg-gradient-primary-to-secondary
-    .container.px-5
-      h2.text-center.text-white.font-alt.mb-4 #{$i18n.appstore.download}
-      .d-flex.flex-column.flex-lg-row.align-items-center.justify-content-center
-        a.me-lg-3.mb-4.mb-lg-0(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie')
-          img.app-badge(src='/assets/img/google-play-badge.svg', alt='...')
-        a(href='https://apps.apple.com/app/id1635309517')
-          img.app-badge(src='/assets/img/app-store-badge.svg', alt='...')
 
 
 
@@ -712,215 +666,18 @@ html(lang=$localeName)
   // BEC Carousel functionality
   script(src='/js/modules/bec-carousel.js')
 
-  // Performance optimizations - Timer-based video loading with hover-to-play
-  script.
-    // YouTube timer-based loading
-    function loadYouTubeVideo(element) {
-      const videoId = element.dataset.videoId;
-      const iframe = document.createElement('iframe');
-      iframe.setAttribute('width', '100%');
-      iframe.setAttribute('height', '90%');
-      iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1`);
-      iframe.setAttribute('title', 'YouTube video player');
-      iframe.setAttribute('frameborder', '0');
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.style.cssText = 'width: 100%; height: 90%; border-radius: 8px;';
-      element.innerHTML = '';
-      element.appendChild(iframe);
-    }
-
-    // Device mockup video loading
-    function loadDeviceVideo(container) {
-      const videoSrc = container.dataset.video;
-      const video = document.createElement('video');
-      video.muted = true; // Set muted property directly
-      video.setAttribute('muted', '');
-      video.setAttribute('autoplay', '');
-      video.setAttribute('loop', '');
-      video.setAttribute('playsinline', '');
-      video.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
-      video.addEventListener('loadeddata', function() {
-        container.classList.remove('loading');
-        // Ensure video is muted and starts playing
-        video.muted = true; // Double-check muted state before playing
-        video.play().catch(function(e) {
-          // Auto-play failed - show static fallback image
-          const img = document.createElement('img');
-          img.src = container.dataset.fallback || '/assets/img/video-fallback.webp';
-          img.alt = 'Sealfie app demo';
-          img.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
-          container.innerHTML = '';
-          container.appendChild(img);
-        });
-      });
-      // Add error handler for video loading failures
-      video.addEventListener('error', function() {
-        // Video failed to load - show fallback image
-        const img = document.createElement('img');
-        img.src = container.dataset.fallback || '/assets/img/video-fallback.webp';
-        img.alt = 'Sealfie app demo';
-        img.style.cssText = 'max-width: 100%; height: 100%; object-fit: cover; border-radius: 4px;';
-        container.innerHTML = '';
-        container.appendChild(img);
-        container.classList.remove('loading');
-      });
-
-      const source = document.createElement('source');
-      source.src = videoSrc;
-      source.type = 'video/webm';
-      video.appendChild(source);
-      container.innerHTML = '';
-      // Final mute enforcement before adding to DOM
-      video.muted = true;
-      video.volume = 0; // Also set volume to 0 as extra precaution
-      container.appendChild(video);
-      return video;
-    }
-
-    // Timer-based loading manager
-    function setupTimerLoading() {
-      // YouTube timer loading
-      document.querySelectorAll('.youtube-timer-load').forEach(function(element) {
-        const loadDelay = parseInt(element.dataset.loadDelay) || 2000;
-        let isLoaded = false;
-
-        // Add initial loading indicator
-        element.classList.add('timer-loading');
-
-        // Set up timer-based loading
-        setTimeout(function() {
-          element.classList.remove('timer-loading');
-          element.classList.add('loaded');
-
-          // Auto-load video after timer completes
-          element.classList.add('loading');
-          setTimeout(function() {
-            loadYouTubeVideo(element);
-            isLoaded = true;
-            element.classList.remove('loading');
-          }, 500);
-        }, loadDelay);
-
-        // Set up hover-to-play functionality (backup if timer hasn't completed)
-        element.addEventListener('mouseenter', function() {
-          if (!isLoaded && !element.classList.contains('loaded') && !element.classList.contains('loading')) {
-            element.classList.remove('timer-loading');
-            element.classList.add('loading');
-            setTimeout(function() {
-              loadYouTubeVideo(element);
-              isLoaded = true;
-              element.classList.remove('loading');
-            }, 300);
-          }
-        });
-      });
-
-      // Device video timer loading
-      document.querySelectorAll('.video-timer-container').forEach(function(container) {
-        const loadDelay = parseInt(container.dataset.loadDelay) || 3000;
-        let video = null;
-        let isLoaded = false;
-
-        // Add initial loading indicator
-        container.classList.add('timer-loading');
-
-        // Set up timer-based loading
-        setTimeout(function() {
-          container.classList.remove('timer-loading');
-          container.classList.add('loaded');
-
-          // Auto-load video after timer completes
-          container.classList.add('loading');
-          video = loadDeviceVideo(container);
-          isLoaded = true;
-          container.classList.remove('loading');
-        }, loadDelay);
-
-        // Set up hover-to-play functionality (early trigger only)
-        container.addEventListener('mouseenter', function() {
-          if (!isLoaded && !container.classList.contains('loaded') && !container.classList.contains('loading')) {
-            // Manual trigger if timer hasn't completed
-            container.classList.remove('timer-loading');
-            container.classList.add('loading');
-            video = loadDeviceVideo(container);
-            isLoaded = true;
-            container.classList.remove('loading');
-          }
-          // No play/pause control - videos loop continuously once loaded
-        });
-      });
-    }
-
-    // Initialize timer-based loading when DOM is ready
-    document.addEventListener('DOMContentLoaded', function() {
-      setupTimerLoading();
-    });
+  // Video loading system - Timer-based video loading with hover-to-play
+  script(src='/js/modules/video-loader.js')
 
   // Core Web Vitals measurement
-  script.
-    // Web Vitals monitoring
-    function vitals(name, value, id) {
-      // Core Web Vital measured
-      // Send to Matomo if available
-      if (typeof _paq !== 'undefined') {
-        _paq.push(['trackEvent', 'Web Vitals', name, id, Math.round(value)]);
-      }
-      // Fallback to Google Analytics if available
-      if (typeof gtag !== 'undefined') {
-        gtag('event', name, {
-          event_category: 'Web Vitals',
-          event_label: id,
-          value: Math.round(value),
-          non_interaction: true,
-        });
-      }
-    }
-
-    // Measure LCP, FID, CLS
-    if ('web-vital' in window || 'requestIdleCallback' in window) {
-      import('https://unpkg.com/web-vitals@3/dist/web-vitals.js')
-        .then(({onCLS, onFID, onLCP, onINP, onFCP, onTTFB}) => {
-          onCLS(vitals);
-          onFID(vitals);
-          onLCP(vitals);
-          onINP(vitals);
-          onFCP(vitals);
-          onTTFB(vitals);
-        })
-        .catch(err => {/* Web Vitals not loaded */});
-    }
+  script(src='/js/modules/web-vitals.js')
 
   // Performance monitoring for Matomo
-  script.
-    window.addEventListener('load', () => {
-      // Performance metrics
-      const perfData = window.performance.timing;
-      const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+  script(src='/js/modules/performance-monitor.js')
 
-      // Send to Matomo
-      if (typeof _paq !== 'undefined') {
-        _paq.push(['trackEvent', 'Performance', 'Page Load Time', 'Total', pageLoadTime]);
-      }
-    });
-
-  // Defer Mailchimp popup script
-  script.
-    setTimeout(function() {
-      !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/716e8fcfd71b495b7e4af1e92/38d3020ee67bdafdc3231e2272e1fa06.js");
-    }, 5000);  // Load after 5 seconds (increased from 3)
+  // Deferred Mailchimp popup script loader
+  script(src='/js/modules/mailchimp-loader.js')
 
   // Service Worker Registration
-  script.
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-          .then(function(registration) {
-            // ServiceWorker registration successful
-          })
-          .catch(function(err) {
-            // ServiceWorker registration failed
-          });
-      });
-    }
+  script(src='/js/modules/service-worker.js')
 
