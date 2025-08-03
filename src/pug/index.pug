@@ -338,6 +338,147 @@ html(lang=$localeName)
                           circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
                           polygon(points="10,8 16,12 10,16" fill="white")
 
+  // BEC Trends Carousel - Authority Through Current Data
+  section.bec-trends-section
+    .container.px-5
+      .row.justify-content-center
+        .col-lg-10
+          .text-center.mb-5
+            h2.section-title Current Threat Landscape
+            p.section-subtitle Latest intelligence from August 2025
+          
+          // Carousel Container
+          .bec-carousel(data-carousel="trends")
+            .carousel-track
+              // Slide 1: Current Surge
+              .carousel-slide.active
+                .trend-card
+                  .trend-icon 📈
+                  .trend-number 37%
+                  .trend-label increase in attacks
+                  .trend-subtitle May-June 2025
+              
+              // Slide 2: AI Revolution
+              .carousel-slide
+                .trend-card
+                  .trend-icon 🤖
+                  .trend-number 40%
+                  .trend-label AI-generated emails
+                  .trend-subtitle Hyper-personalized attacks
+              
+              // Slide 3: Financial Impact
+              .carousel-slide
+                .trend-card
+                  .trend-icon 💰
+                  .trend-number $2.9B
+                  .trend-label US losses in 2024
+                  .trend-subtitle $137K average per incident
+              
+              // Slide 4: Real Case
+              .carousel-slide
+                .trend-card
+                  .trend-icon ✈️
+                  .trend-number 6-Figure
+                  .trend-label aviation company loss
+                  .trend-subtitle Nigerian SilverTerrier attack
+              
+              // Slide 5: Small Business Risk
+              .carousel-slide
+                .trend-card
+                  .trend-icon 🏢
+                  .trend-number 70%
+                  .trend-label weekly attack probability
+                  .trend-subtitle Companies <1000 employees
+              
+              // Slide 6: Multi-Channel
+              .carousel-slide
+                .trend-card
+                  .trend-icon 📱
+                  .trend-number Multi-Channel
+                  .trend-label Email + SMS + Voice
+                  .trend-subtitle Coordinated attack vectors
+            
+            // Carousel Controls
+            .carousel-controls
+              button.carousel-prev(aria-label="Previous trend")
+                svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
+                  path(d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+              
+              .carousel-indicators
+                button.indicator.active(data-slide="0")
+                button.indicator(data-slide="1")
+                button.indicator(data-slide="2")
+                button.indicator(data-slide="3")
+                button.indicator(data-slide="4")
+                button.indicator(data-slide="5")
+              
+              button.carousel-next(aria-label="Next trend")
+                svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
+                  path(d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+          
+          .text-center.mt-4
+            p.text-muted.small Source: Industry reports August 2025
+
+  // Founder Story Section - Authority Through Transparency
+  section.founder-section.bg-light
+    .container.px-5
+      .row.gx-5.align-items-center.justify-content-center
+        .col-lg-10
+          .text-center.mb-5
+            h2.section-title Why We Built Sealfie
+            p.section-subtitle From cybersecurity experts who understand the real threat
+          
+          .founder-content.text-center
+            .founder-story
+              p.lead PLACEHOLDER: Founder story goes here - why we built this, our background in cybersecurity, what we learned from enterprise attacks, and why traditional solutions fail.
+              
+              p PLACEHOLDER: Brief bio of founder(s), credibility markers, mission statement about making cybersecurity simple without compromising security.
+              
+              .founder-credentials
+                .credential-item
+                  i.bi-shield-check.text-gradient
+                  span PLACEHOLDER: Years in cybersecurity
+                .credential-item  
+                  i.bi-building.text-gradient
+                  span PLACEHOLDER: Enterprise experience
+                .credential-item
+                  i.bi-award.text-gradient
+                  span PLACEHOLDER: Certifications/achievements
+
+  // Educational Resources Section - Authority Through Education
+  section.education-section
+    .container.px-5
+      .row.gx-5.justify-content-center
+        .col-lg-10
+          .text-center.mb-5
+            h2.section-title Free Security Resources
+            p.section-subtitle Protect yourself with our expert knowledge
+          
+          .row.g-4
+            .col-md-6.col-lg-4
+              .resource-card
+                .resource-icon
+                  i.bi-file-earmark-text.text-gradient
+                h4 BEC Threat Guide
+                p PLACEHOLDER: Comprehensive guide to Business Email Compromise attacks
+                a.cta-ghost(href="#") Download Free PDF
+            
+            .col-md-6.col-lg-4
+              .resource-card
+                .resource-icon
+                  i.bi-list-check.text-gradient
+                h4 Security Checklist
+                p PLACEHOLDER: Executive protection checklist for immediate implementation
+                a.cta-ghost(href="#") Get Checklist
+            
+            .col-md-6.col-lg-4
+              .resource-card
+                .resource-icon
+                  i.bi-graph-up.text-gradient
+                h4 Risk Assessment
+                p PLACEHOLDER: Free online tool to assess your organization's risk level
+                a.cta-ghost(href="#") Take Assessment
+
   // Quote/testimonial aside
   aside.text-center.bg-gradient-primary-to-secondary
     .container.px-5
@@ -413,6 +554,49 @@ html(lang=$localeName)
             frameborder='0')
           .h2.fs-1.text-white.mb-4 #{$i18n.testimonial}
 
+  // Pioneer Program Section - First Customer Acquisition
+  section.pioneer-section.bg-light
+    .container.px-5
+      .row.gx-5.justify-content-center
+        .col-lg-8
+          .text-center
+            h2.section-title Join Our Pioneer Program
+            p.section-subtitle Be among the first to defend against AI-powered attacks
+            
+            .pioneer-benefits
+              .row.g-4.mt-4
+                .col-md-6
+                  .benefit-item
+                    .benefit-icon
+                      i.bi-lightning.text-gradient
+                    h5 Early Access
+                    p PLACEHOLDER: Get exclusive access to our security technology before general availability
+                
+                .col-md-6
+                  .benefit-item
+                    .benefit-icon
+                      i.bi-people.text-gradient
+                    h5 Direct Input
+                    p PLACEHOLDER: Shape the product with direct feedback to our development team
+                
+                .col-md-6
+                  .benefit-item
+                    .benefit-icon
+                      i.bi-percent.text-gradient
+                    h5 Pioneer Pricing
+                    p PLACEHOLDER: Lock in special pricing for early adopters and long-term partners
+                
+                .col-md-6
+                  .benefit-item
+                    .benefit-icon
+                      i.bi-headset.text-gradient
+                    h5 Premium Support
+                    p PLACEHOLDER: Direct access to our security experts and priority assistance
+            
+            .pioneer-cta.mt-5
+              a.cta-primary-large(href="mailto:contact@sealf.ie?subject=Pioneer Program Interest")
+                | Apply for Pioneer Program
+              p.small.text-muted.mt-2 Limited spots available - serious inquiries only
 
   // Call to action section
   section.cta(data-lazy-module="contact-form")
@@ -464,6 +648,9 @@ html(lang=$localeName)
 
   // Phase 3: Lazy loader for modular loading
   script(src='/js/lazy-loader.js')
+
+  // BEC Carousel functionality
+  script(src='/js/modules/bec-carousel.js')
 
   // Performance optimizations - Timer-based video loading with hover-to-play
   script.
