@@ -344,63 +344,111 @@ html(lang=$localeName)
       .row.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title Current Threat Landscape
-            p.section-subtitle Latest intelligence from August 2025
+            h2.section-title #{$i18n.carousel.title}
+            p.section-subtitle #{$i18n.carousel.subtitle}
           
-          // Carousel Container
+          // Enhanced Carousel Container with Images and Links
           .bec-carousel(data-carousel="trends")
             .carousel-track
-              // Slide 1: Current Surge
+              // Slide 1: Current Surge - BEC Attacks Increase
               .carousel-slide.active
-                .trend-card
-                  .trend-icon 📈
-                  .trend-number 37%
-                  .trend-label increase in attacks
-                  .trend-subtitle May-June 2025
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.attacks.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.attacks.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.attacks.image alt="BEC attack surge chart" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.attacks.number}
+                      .trend-label #{$i18n.carousel.slides.attacks.label}
+                    .trend-subtitle #{$i18n.carousel.slides.attacks.subtitle}
+                    .trend-description #{$i18n.carousel.slides.attacks.description}
+                    .trend-source #{$i18n.carousel.slides.attacks.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
               
-              // Slide 2: AI Revolution
+              // Slide 2: AI Revolution - AI Generated Emails
               .carousel-slide
-                .trend-card
-                  .trend-icon 🤖
-                  .trend-number 40%
-                  .trend-label AI-generated emails
-                  .trend-subtitle Hyper-personalized attacks
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.ai.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.ai.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.ai.image alt="AI-generated emails visualization" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.ai.number}
+                      .trend-label #{$i18n.carousel.slides.ai.label}
+                    .trend-subtitle #{$i18n.carousel.slides.ai.subtitle}
+                    .trend-description #{$i18n.carousel.slides.ai.description}
+                    .trend-source #{$i18n.carousel.slides.ai.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
               
-              // Slide 3: Financial Impact
+              // Slide 3: Financial Impact - FBI Losses Report
               .carousel-slide
-                .trend-card
-                  .trend-icon 💰
-                  .trend-number $2.9B
-                  .trend-label US losses in 2024
-                  .trend-subtitle $137K average per incident
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.financial.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.financial.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.financial.image alt="FBI losses report visualization" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.financial.number}
+                      .trend-label #{$i18n.carousel.slides.financial.label}
+                    .trend-subtitle #{$i18n.carousel.slides.financial.subtitle}
+                    .trend-description #{$i18n.carousel.slides.financial.description}
+                    .trend-source #{$i18n.carousel.slides.financial.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
               
-              // Slide 4: Real Case
+              // Slide 4: Real Case - Aviation Company Attack
               .carousel-slide
-                .trend-card
-                  .trend-icon ✈️
-                  .trend-number 6-Figure
-                  .trend-label aviation company loss
-                  .trend-subtitle Nigerian SilverTerrier attack
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.realCase.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.realCase.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.realCase.image alt="Aviation company attack case study" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.realCase.number}
+                      .trend-label #{$i18n.carousel.slides.realCase.label}
+                    .trend-subtitle #{$i18n.carousel.slides.realCase.subtitle}
+                    .trend-description #{$i18n.carousel.slides.realCase.description}
+                    .trend-source #{$i18n.carousel.slides.realCase.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
               
-              // Slide 5: Small Business Risk
+              // Slide 5: Small Business Risk - SMB Target Analysis
               .carousel-slide
-                .trend-card
-                  .trend-icon 🏢
-                  .trend-number 70%
-                  .trend-label weekly attack probability
-                  .trend-subtitle Companies <1000 employees
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.smallBusiness.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.smallBusiness.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.smallBusiness.image alt="Small business targeting statistics" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.smallBusiness.number}
+                      .trend-label #{$i18n.carousel.slides.smallBusiness.label}
+                    .trend-subtitle #{$i18n.carousel.slides.smallBusiness.subtitle}
+                    .trend-description #{$i18n.carousel.slides.smallBusiness.description}
+                    .trend-source #{$i18n.carousel.slides.smallBusiness.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
               
-              // Slide 6: Multi-Channel
+              // Slide 6: Multi-Channel - Coordinated Attack Vectors
               .carousel-slide
-                .trend-card
-                  .trend-icon 📱
-                  .trend-number Multi-Channel
-                  .trend-label Email + SMS + Voice
-                  .trend-subtitle Coordinated attack vectors
+                a.trend-card.trend-card-link(href=$i18n.carousel.slides.multiChannel.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.multiChannel.description)
+                  .trend-image
+                    img(src=$i18n.carousel.slides.multiChannel.image alt="Multi-channel attack coordination" loading="lazy")
+                  .trend-content
+                    .trend-header
+                      .trend-number #{$i18n.carousel.slides.multiChannel.number}
+                      .trend-label #{$i18n.carousel.slides.multiChannel.label}
+                    .trend-subtitle #{$i18n.carousel.slides.multiChannel.subtitle}
+                    .trend-description #{$i18n.carousel.slides.multiChannel.description}
+                    .trend-source #{$i18n.carousel.slides.multiChannel.source}
+                  .trend-link-indicator
+                    i.bi-arrow-up-right
+                    span #{$i18n.carousel.readMore}
             
             // Carousel Controls
             .carousel-controls
-              button.carousel-prev(aria-label="Previous trend")
+              button.carousel-prev(aria-label=$i18n.carousel.controls.prev)
                 svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
                   path(d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
               
@@ -412,12 +460,12 @@ html(lang=$localeName)
                 button.indicator(data-slide="4")
                 button.indicator(data-slide="5")
               
-              button.carousel-next(aria-label="Next trend")
+              button.carousel-next(aria-label=$i18n.carousel.controls.next)
                 svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
                   path(d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
           
           .text-center.mt-4
-            p.text-muted.small Source: Industry reports August 2025
+            p.text-muted.small #{$i18n.carousel.source}
 
   // Founder Story Section - Authority Through Transparency
   section.founder-section.bg-light
@@ -425,25 +473,25 @@ html(lang=$localeName)
       .row.gx-5.align-items-center.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title Why We Built Sealfie
-            p.section-subtitle From cybersecurity experts who understand the real threat
+            h2.section-title #{$i18n.founder.title}
+            p.section-subtitle #{$i18n.founder.subtitle}
           
           .founder-content.text-center
             .founder-story
-              p.lead PLACEHOLDER: Founder story goes here - why we built this, our background in cybersecurity, what we learned from enterprise attacks, and why traditional solutions fail.
+              p.lead #{$i18n.founder.story.lead}
               
-              p PLACEHOLDER: Brief bio of founder(s), credibility markers, mission statement about making cybersecurity simple without compromising security.
+              p #{$i18n.founder.story.bio}
               
               .founder-credentials
                 .credential-item
                   i.bi-shield-check.text-gradient
-                  span PLACEHOLDER: Years in cybersecurity
+                  span #{$i18n.founder.credentials.experience}
                 .credential-item  
                   i.bi-building.text-gradient
-                  span PLACEHOLDER: Enterprise experience
+                  span #{$i18n.founder.credentials.enterprise}
                 .credential-item
                   i.bi-award.text-gradient
-                  span PLACEHOLDER: Certifications/achievements
+                  span #{$i18n.founder.credentials.achievements}
 
   // Educational Resources Section - Authority Through Education
   section.education-section
@@ -451,33 +499,33 @@ html(lang=$localeName)
       .row.gx-5.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title Free Security Resources
-            p.section-subtitle Protect yourself with our expert knowledge
+            h2.section-title #{$i18n.education.title}
+            p.section-subtitle #{$i18n.education.subtitle}
           
           .row.g-4
             .col-md-6.col-lg-4
               .resource-card
                 .resource-icon
                   i.bi-file-earmark-text.text-gradient
-                h4 BEC Threat Guide
-                p PLACEHOLDER: Comprehensive guide to Business Email Compromise attacks
-                a.cta-ghost(href="#") Download Free PDF
+                h4 #{$i18n.education.resources.guide.title}
+                p #{$i18n.education.resources.guide.description}
+                a.cta-ghost(href="#") #{$i18n.education.resources.guide.cta}
             
             .col-md-6.col-lg-4
               .resource-card
                 .resource-icon
                   i.bi-list-check.text-gradient
-                h4 Security Checklist
-                p PLACEHOLDER: Executive protection checklist for immediate implementation
-                a.cta-ghost(href="#") Get Checklist
+                h4 #{$i18n.education.resources.checklist.title}
+                p #{$i18n.education.resources.checklist.description}
+                a.cta-ghost(href="#") #{$i18n.education.resources.checklist.cta}
             
             .col-md-6.col-lg-4
               .resource-card
                 .resource-icon
                   i.bi-graph-up.text-gradient
-                h4 Risk Assessment
-                p PLACEHOLDER: Free online tool to assess your organization's risk level
-                a.cta-ghost(href="#") Take Assessment
+                h4 #{$i18n.education.resources.assessment.title}
+                p #{$i18n.education.resources.assessment.description}
+                a.cta-ghost(href="#") #{$i18n.education.resources.assessment.cta}
 
   // Quote/testimonial aside
   aside.text-center.bg-gradient-primary-to-secondary
@@ -560,8 +608,8 @@ html(lang=$localeName)
       .row.gx-5.justify-content-center
         .col-lg-8
           .text-center
-            h2.section-title Join Our Pioneer Program
-            p.section-subtitle Be among the first to defend against AI-powered attacks
+            h2.section-title #{$i18n.pioneer.title}
+            p.section-subtitle #{$i18n.pioneer.subtitle}
             
             .pioneer-benefits
               .row.g-4.mt-4
@@ -569,34 +617,34 @@ html(lang=$localeName)
                   .benefit-item
                     .benefit-icon
                       i.bi-lightning.text-gradient
-                    h5 Early Access
-                    p PLACEHOLDER: Get exclusive access to our security technology before general availability
+                    h5 #{$i18n.pioneer.benefits.earlyAccess.title}
+                    p #{$i18n.pioneer.benefits.earlyAccess.description}
                 
                 .col-md-6
                   .benefit-item
                     .benefit-icon
                       i.bi-people.text-gradient
-                    h5 Direct Input
-                    p PLACEHOLDER: Shape the product with direct feedback to our development team
+                    h5 #{$i18n.pioneer.benefits.directInput.title}
+                    p #{$i18n.pioneer.benefits.directInput.description}
                 
                 .col-md-6
                   .benefit-item
                     .benefit-icon
                       i.bi-percent.text-gradient
-                    h5 Pioneer Pricing
-                    p PLACEHOLDER: Lock in special pricing for early adopters and long-term partners
+                    h5 #{$i18n.pioneer.benefits.pricing.title}
+                    p #{$i18n.pioneer.benefits.pricing.description}
                 
                 .col-md-6
                   .benefit-item
                     .benefit-icon
                       i.bi-headset.text-gradient
-                    h5 Premium Support
-                    p PLACEHOLDER: Direct access to our security experts and priority assistance
+                    h5 #{$i18n.pioneer.benefits.support.title}
+                    p #{$i18n.pioneer.benefits.support.description}
             
             .pioneer-cta.mt-5
               a.cta-primary-large(href="mailto:contact@sealf.ie?subject=Pioneer Program Interest")
-                | Apply for Pioneer Program
-              p.small.text-muted.mt-2 Limited spots available - serious inquiries only
+                | #{$i18n.pioneer.cta.apply}
+              p.small.text-muted.mt-2 #{$i18n.pioneer.cta.disclaimer}
 
   // Call to action section
   section.cta(data-lazy-module="contact-form")

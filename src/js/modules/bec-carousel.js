@@ -18,6 +18,7 @@ class BECCarousel {
     this.autoAdvanceInterval = null;
     this.touchStartX = 0;
     this.touchEndX = 0;
+    this.autoAdvanceDelay = 4000; // 4 seconds between slides
     
     this.init();
   }
@@ -27,9 +28,15 @@ class BECCarousel {
     this.updateCarousel();
     this.startAutoAdvance();
     
-    // Pause auto-advance on user interaction
+    // Pause auto-advance on user interaction, resume after delay
     this.carousel.addEventListener('mouseenter', () => this.pauseAutoAdvance());
     this.carousel.addEventListener('mouseleave', () => this.resumeAutoAdvance());
+    
+    // Handle window resize to update carousel layout
+    this.resizeHandler = () => {
+      this.updateCarousel();
+    };
+    window.addEventListener('resize', this.resizeHandler);
   }
   
   setupEventListeners() {
@@ -62,14 +69,15 @@ class BECCarousel {
           this.pauseAutoAdvance();
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
     
     observer.observe(this.carousel);
   }
   
   updateCarousel() {
-    // Update track position
-    const translateX = -this.currentSlide * (100 / this.totalSlides);
+    // For single card display, translate by 100% per slide
+    const translateX = -this.currentSlide * 100;
+    
     this.track.style.transform = `translateX(${translateX}%)`;
     
     // Update active slide
@@ -82,11 +90,16 @@ class BECCarousel {
       indicator.classList.toggle('active', index === this.currentSlide);
     });
     
-    // Update button states
+    // Update button states for multi-card layout
     this.updateButtonStates();
     
     // Announce to screen readers
     this.announceSlideChange();
+  }
+  
+  getSlidesToShow() {
+    // Always show 1 card at a time for a focused experience
+    return 1;
   }
   
   updateButtonStates() {
@@ -94,7 +107,7 @@ class BECCarousel {
       this.prevButton.disabled = this.currentSlide === 0;
     }
     if (this.nextButton) {
-      this.nextButton.disabled = this.currentSlide === this.totalSlides - 1;
+      this.nextButton.disabled = this.currentSlide >= this.totalSlides - 1;
     }
   }
   
@@ -132,7 +145,7 @@ class BECCarousel {
     this.carousel.classList.add('carousel-auto-advancing');
     this.autoAdvanceInterval = setInterval(() => {
       this.nextSlide();
-    }, 5000); // 5 seconds per slide
+    }, this.autoAdvanceDelay);
   }
   
   pauseAutoAdvance() {
@@ -151,7 +164,7 @@ class BECCarousel {
   
   resetAutoAdvance() {
     this.pauseAutoAdvance();
-    setTimeout(() => this.resumeAutoAdvance(), 1000); // Resume after 1 second
+    setTimeout(() => this.resumeAutoAdvance(), 2000); // Resume after 2 seconds
   }
   
   handleTouchStart(e) {
@@ -224,6 +237,10 @@ class BECCarousel {
     this.pauseAutoAdvance();
     // Remove event listeners and clean up
     this.carousel.classList.remove('carousel-auto-advancing');
+    
+    if (this.resizeHandler) {
+      window.removeEventListener('resize', this.resizeHandler);
+    }
   }
 }
 

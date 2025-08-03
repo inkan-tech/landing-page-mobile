@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#F8674F;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF3500" />
+      <stop offset="100%" style="stop-color:#F8674F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg4)" rx="12"/>
+  
+  <!-- Large Commercial Airplane -->
+  <path d="M160 225 L280 205 L320 225 L280 245 Z" fill="url(#planeGrad)"/>
+  <path d="M180 225 L200 185 L220 225" fill="#F8674F"/>
+  <path d="M180 225 L200 265 L220 225" fill="#F8674F"/>
+  <circle cx="340" cy="225" r="16" fill="none" stroke="#FF3500" stroke-width="4"/>
+  <circle cx="340" cy="225" r="8" fill="#FF3500" opacity="0.3"/>
+  
+  <!-- Plane windows -->
+  <circle cx="200" cy="225" r="4" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="220" cy="225" r="4" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="240" cy="225" r="4" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="260" cy="225" r="4" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Airline logo/text -->
+  <text x="250" y="210" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12" font-weight="bold">COMPAGNIE</text>
+  
+  <!-- Threat Actor -->
+  <rect x="440" y="160" width="120" height="80" fill="none" stroke="#FF3500" stroke-width="4" rx="8"/>
+  <circle cx="470" cy="185" r="16" fill="none" stroke="#FF3500" stroke-width="3"/>
+  <circle cx="465" cy="181" r="4" fill="#FF3500"/>
+  <circle cx="475" cy="181" r="4" fill="#FF3500"/>
+  <path d="M455 200 Q470 210 485 200" stroke="#FF3500" stroke-width="3" fill="none"/>
+  
+  <!-- Computer/laptop for hacker -->
+  <rect x="490" y="200" width="50" height="30" fill="none" stroke="#6B7280" stroke-width="2" rx="2"/>
+  <rect x="495" y="205" width="40" height="20" fill="#374151"/>
+  <text x="515" y="217" text-anchor="middle" fill="#00FF00" font-family="monospace" font-size="8">></text>
+  
+  <!-- SilverTerrier Group label -->
+  <text x="500" y="260" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SilverTerrier</text>
+  <text x="500" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">APT Nigérian</text>
+  
+  <!-- Money loss indicator - larger -->
+  <circle cx="640" cy="180" r="50" fill="none" stroke="#FF3500" stroke-width="4" stroke-dasharray="10,5"/>
+  <text x="640" y="170" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="36" font-weight="bold">6</text>
+  <text x="640" y="195" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="18">CHIFFRES</text>
+  <text x="640" y="215" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">Perdus</text>
+  
+  <!-- Attack flow arrows -->
+  <path d="M360 225 L435 200" stroke="#FF3500" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#attackArrow)"/>
+  <path d="M565 190 L585 180" stroke="#FF3500" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#attackArrow)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="attackArrow" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#FF3500"/>
+    </marker>
+  </defs>
+  
+  <!-- Attack method labels -->
+  <rect x="300" y="300" width="200" height="100" fill="rgba(255, 255, 255, 0.9)" rx="8" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="400" y="320" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Vecteur d'Attaque:</text>
+  <text x="400" y="340" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">• Deepfakes de PDG</text>
+  <text x="400" y="360" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">• Demandes de Virement</text>
+  <text x="400" y="380" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">• Ingénierie Sociale</text>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="28" font-weight="bold">Attaque Compagnie Aérienne</text>
+  <text x="400" y="75" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16">Groupe SilverTerrier Nigérian | CrowdStrike Intelligence</text>
+  
+  <!-- Case study highlight -->
+  <text x="400" y="420" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Cas Réel: Campagne BEC Sophistiquée</text>
+</svg>

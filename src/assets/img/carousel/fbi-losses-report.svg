@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#F8674F;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500" />
+      <stop offset="100%" style="stop-color:#F8674F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg3)" rx="12"/>
+  
+  <!-- Large FBI Shield -->
+  <path d="M120 140 L120 260 Q120 300 160 320 Q200 340 240 320 Q280 300 280 260 L280 140 Z" fill="none" stroke="url(#shieldGrad)" stroke-width="6"/>
+  <text x="200" y="230" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="28" font-weight="bold">FBI</text>
+  <text x="200" y="260" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="16">Internet Crime</text>
+  <text x="200" y="280" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="16">Report 2024</text>
+  
+  <!-- Central massive dollar amount -->
+  <text x="500" y="220" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="80" font-weight="bold">$2.9B</text>
+  <text x="500" y="250" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="20">Total US Losses</text>
+  
+  <!-- Floating dollar signs around the main amount -->
+  <text x="350" y="160" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="36" opacity="0.7">$</text>
+  <text x="650" y="140" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="42" opacity="0.6">$</text>
+  <text x="380" y="320" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="28" opacity="0.8">$</text>
+  <text x="620" y="310" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="38" opacity="0.5">$</text>
+  <text x="310" y="240" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="32" opacity="0.6">$</text>
+  <text x="690" y="200" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="34" opacity="0.7">$</text>
+  
+  <!-- Report documents -->
+  <rect x="350" y="280" width="80" height="100" fill="none" stroke="#6B7280" stroke-width="3" rx="4"/>
+  <line x1="365" y1="300" x2="415" y2="300" stroke="#6B7280" stroke-width="2"/>
+  <line x1="365" y1="320" x2="410" y2="320" stroke="#6B7280" stroke-width="2"/>
+  <line x1="365" y1="340" x2="415" y2="340" stroke="#6B7280" stroke-width="2"/>
+  <line x1="365" y1="360" x2="405" y2="360" stroke="#6B7280" stroke-width="2"/>
+  
+  <rect x="570" y="280" width="80" height="100" fill="none" stroke="#6B7280" stroke-width="3" rx="4"/>
+  <line x1="585" y1="300" x2="635" y2="300" stroke="#6B7280" stroke-width="2"/>
+  <line x1="585" y1="320" x2="630" y2="320" stroke="#6B7280" stroke-width="2"/>
+  <line x1="585" y1="340" x2="635" y2="340" stroke="#6B7280" stroke-width="2"/>
+  <line x1="585" y1="360" x2="625" y2="360" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="28" font-weight="bold">$2.9B US Losses in 2024</text>
+  <text x="400" y="75" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16">FBI Internet Crime Report | Average $137K per incident</text>
+  
+  <!-- Statistics breakdown -->
+  <rect x="50" y="350" width="700" height="80" fill="rgba(255, 255, 255, 0.8)" rx="8" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <text x="150" y="375" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18" font-weight="bold">21,489</text>
+  <text x="150" y="395" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">Total Incidents</text>
+  
+  <text x="300" y="375" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="18" font-weight="bold">$137,000</text>
+  <text x="300" y="395" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">Average Loss</text>
+  
+  <text x="450" y="375" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18" font-weight="bold">74%</text>
+  <text x="450" y="395" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">Wire Transfer</text>
+  
+  <text x="600" y="375" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="18" font-weight="bold">+18%</text>
+  <text x="600" y="395" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">vs 2023</text>
+  
+  <text x="650" y="415" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">2024 FBI IC3 Annual Report</text>
+</svg>

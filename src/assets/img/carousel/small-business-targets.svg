@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#F8674F;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="buildingGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#F8674F" />
+      <stop offset="100%" style="stop-color:#FF3500" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg5)" rx="12"/>
+  
+  <!-- Small business district - multiple buildings -->
+  <rect x="120" y="280" width="60" height="120" fill="url(#buildingGrad)" rx="4"/>
+  <rect x="120" y="260" width="60" height="20" fill="#FF3500" rx="2"/>
+  <rect x="140" y="300" width="8" height="12" fill="white"/>
+  <rect x="160" y="300" width="8" height="12" fill="white"/>
+  <rect x="140" y="330" width="8" height="12" fill="white"/>
+  <rect x="160" y="330" width="8" height="12" fill="white"/>
+  <rect x="140" y="360" width="8" height="12" fill="white"/>
+  <rect x="160" y="360" width="8" height="12" fill="white"/>
+  
+  <rect x="200" y="290" width="50" height="110" fill="#FF3500" rx="4"/>
+  <rect x="200" y="270" width="50" height="20" fill="#F8674F" rx="2"/>
+  <rect x="215" y="310" width="6" height="10" fill="white"/>
+  <rect x="230" y="310" width="6" height="10" fill="white"/>
+  <rect x="215" y="340" width="6" height="10" fill="white"/>
+  <rect x="230" y="340" width="6" height="10" fill="white"/>
+  <rect x="215" y="370" width="6" height="10" fill="white"/>
+  <rect x="230" y="370" width="6" height="10" fill="white"/>
+  
+  <rect x="270" y="270" width="70" height="130" fill="url(#buildingGrad)" rx="4"/>
+  <rect x="270" y="250" width="70" height="20" fill="#FF3500" rx="2"/>
+  <rect x="290" y="290" width="8" height="12" fill="white"/>
+  <rect x="310" y="290" width="8" height="12" fill="white"/>
+  <rect x="290" y="320" width="8" height="12" fill="white"/>
+  <rect x="310" y="320" width="8" height="12" fill="white"/>
+  <rect x="290" y="350" width="8" height="12" fill="white"/>
+  <rect x="310" y="350" width="8" height="12" fill="white"/>
+  
+  <!-- Additional smaller buildings -->
+  <rect x="360" y="300" width="40" height="100" fill="#F8674F" rx="3"/>
+  <rect x="360" y="285" width="40" height="15" fill="#FF3500" rx="1"/>
+  <rect x="375" y="320" width="6" height="8" fill="white"/>
+  <rect x="375" y="350" width="6" height="8" fill="white"/>
+  
+  <rect x="80" y="310" width="30" height="90" fill="#FF3500" rx="3"/>
+  <rect x="80" y="300" width="30" height="10" fill="#F8674F" rx="1"/>
+  <rect x="90" y="330" width="4" height="6" fill="white"/>
+  <rect x="90" y="360" width="4" height="6" fill="white"/>
+  
+  <!-- Large central target/crosshair over the business district -->
+  <circle cx="500" cy="225" r="60" fill="none" stroke="#FF3500" stroke-width="6"/>
+  <circle cx="500" cy="225" r="40" fill="none" stroke="#FF3500" stroke-width="4"/>
+  <circle cx="500" cy="225" r="20" fill="none" stroke="#FF3500" stroke-width="4"/>
+  <line x1="440" y1="225" x2="560" y2="225" stroke="#FF3500" stroke-width="4"/>
+  <line x1="500" y1="165" x2="500" y2="285" stroke="#FF3500" stroke-width="4"/>
+  
+  <!-- Pulsing effect circles -->
+  <circle cx="500" cy="225" r="80" fill="none" stroke="#FF3500" stroke-width="2" opacity="0.3" stroke-dasharray="8,8"/>
+  <circle cx="500" cy="225" r="100" fill="none" stroke="#F8674F" stroke-width="2" opacity="0.2" stroke-dasharray="12,12"/>
+  
+  <!-- Large percentage indicator -->
+  <text x="650" y="180" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="72" font-weight="bold">70%</text>
+  <text x="650" y="210" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18">Weekly Attack</text>
+  <text x="650" y="235" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18">Probability</text>
+  
+  <!-- Attack arrows coming from multiple directions -->
+  <path d="M420 180 L465 210" stroke="#FF3500" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#targetArrow)"/>
+  <path d="M420 270 L465 240" stroke="#F8674F" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#targetArrow2)"/>
+  <path d="M580 180 L535 210" stroke="#FF3500" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#targetArrow)"/>
+  <path d="M580 270 L535 240" stroke="#F8674F" stroke-width="4" fill="none" stroke-dasharray="8,8" marker-end="url(#targetArrow2)"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="targetArrow" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#FF3500"/>
+    </marker>
+    <marker id="targetArrow2" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#F8674F"/>
+    </marker>
+  </defs>
+  
+  <!-- Company size indicator box -->
+  <rect x="50" y="350" width="300" height="80" fill="rgba(255, 255, 255, 0.9)" rx="8" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="200" y="375" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Small-Medium Business Profile:</text>
+  <text x="200" y="395" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">• &lt;1,000 employees</text>
+  <text x="200" y="410" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="14">• Limited security resources</text>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="28" font-weight="bold">Small Business Under Attack</text>
+  <text x="400" y="75" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16">70% weekly attack probability | Proofpoint Research</text>
+  
+  <!-- Vulnerability callout -->
+  <text x="400" y="420" text-anchor="middle" fill="#F8674F" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Most Vulnerable: Limited Security Budget &amp; Expertise</text>
+</svg>

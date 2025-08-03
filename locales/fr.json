@@ -133,6 +133,132 @@
         "demo2": "Landing-Doc-FR2.webm",
         "hero": "trailer-Fraude-deepfake.webm"
     },
+    "carousel": {
+        "title": "Paysage des Menaces Actuelles",
+        "subtitle": "Renseignements récents d'août 2025",
+        "source": "Source : Rapports de l'industrie août 2025",
+        "slides": {
+            "attacks": {
+                "number": "37%",
+                "label": "augmentation des attaques",
+                "subtitle": "mai-juin 2025",
+                "description": "Les attaques BEC ont bondi de 37% au premier semestre 2025, les services financiers étant les plus ciblés",
+                "image": "/assets/img/carousel/bec-surge-chart-fr.svg",
+                "url": "https://hoxhunt.com/blog/business-email-compromise-statistics",
+                "source": "Hoxhunt BEC Research 2025"
+            },
+            "ai": {
+                "number": "40%",
+                "label": "e-mails générés par IA",
+                "subtitle": "Attaques hyper-personnalisées",
+                "description": "Les outils IA génèrent désormais 40% des e-mails BEC, les rendant plus difficiles à détecter avec les filtres traditionnels",
+                "image": "/assets/img/carousel/ai-generated-emails-fr.svg",
+                "url": "https://blog.talosintelligence.com/ir-trends-q1-2025/",
+                "source": "Cisco Talos Intelligence"
+            },
+            "financial": {
+                "number": "2,9 Md€",
+                "label": "pertes américaines en 2024",
+                "subtitle": "137K€ moyenne par incident",
+                "description": "Le FBI rapporte 2,9 milliards € de pertes BEC aux États-Unis en 2024, avec un coût moyen par incident de 137 000€",
+                "image": "/assets/img/carousel/fbi-losses-report-fr.svg",
+                "url": "https://www.ic3.gov/Media/PDF/AnnualReports.aspx",
+                "source": "FBI Internet Crime Reports"
+            },
+            "realCase": {
+                "number": "6 Chiffres",
+                "label": "perte compagnie aérienne",
+                "subtitle": "Attaque SilverTerrier nigériane",
+                "description": "Une grande compagnie aérienne perd six chiffres suite à une attaque sophistiquée du groupe nigérian SilverTerrier utilisant des deepfakes de PDG",
+                "image": "/assets/img/carousel/aviation-attack-case-fr.svg",
+                "url": "https://www.crowdstrike.com/resources/reports/",
+                "source": "CrowdStrike Threat Reports"
+            },
+            "smallBusiness": {
+                "number": "70%",
+                "label": "probabilité d'attaque hebdomadaire",
+                "subtitle": "Entreprises <1000 employés",
+                "description": "Les PME font face à 70% de probabilité d'attaque BEC chaque semaine, avec des ressources sécurité limitées pour se défendre",
+                "image": "/assets/img/carousel/small-business-targets-fr.svg",
+                "url": "https://www.proofpoint.com/us/resources/threat-reports",
+                "source": "Proofpoint Threat Research"
+            },
+            "multiChannel": {
+                "number": "Multi-Canal",
+                "label": "E-mail + SMS + Voix",
+                "subtitle": "Vecteurs d'attaque coordonnés",
+                "description": "Les criminels coordonnent désormais leurs attaques via e-mail, SMS et appels vocaux pour des campagnes BEC multi-vecteurs sophistiquées",
+                "image": "/assets/img/carousel/multi-channel-attacks-fr.svg",
+                "url": "https://www.fortra.com/blog/bec-global-insights-report-january-2025",
+                "source": "Fortra BEC Insights 2025"
+            }
+        },
+        "controls": {
+            "prev": "Tendance précédente",
+            "next": "Tendance suivante"
+        },
+        "readMore": "Lire le Rapport Complet"
+    },
+    "founder": {
+        "title": "Pourquoi Nous Avons Créé Sealfie",
+        "subtitle": "Par des experts en cybersécurité qui comprennent la vraie menace",
+        "story": {
+            "lead": "PLACEHOLDER: Histoire du fondateur - pourquoi nous avons créé ceci, notre expérience en cybersécurité, ce que nous avons appris des attaques d'entreprise, et pourquoi les solutions traditionnelles échouent.",
+            "bio": "PLACEHOLDER: Brève biographie du/des fondateur(s), marqueurs de crédibilité, déclaration de mission sur la simplification de la cybersécurité sans compromettre la sécurité."
+        },
+        "credentials": {
+            "experience": "PLACEHOLDER: Années en cybersécurité",
+            "enterprise": "PLACEHOLDER: Expérience entreprise",
+            "achievements": "PLACEHOLDER: Certifications/réalisations"
+        }
+    },
+    "education": {
+        "title": "Ressources de Sécurité Gratuites",
+        "subtitle": "Protégez-vous avec nos connaissances d'experts",
+        "resources": {
+            "guide": {
+                "title": "Guide des Menaces BEC",
+                "description": "PLACEHOLDER: Guide complet sur les attaques de compromission d'e-mails professionnels",
+                "cta": "Télécharger PDF Gratuit"
+            },
+            "checklist": {
+                "title": "Liste de Contrôle Sécurité",
+                "description": "PLACEHOLDER: Liste de contrôle de protection des dirigeants pour mise en œuvre immédiate",
+                "cta": "Obtenir la Liste"
+            },
+            "assessment": {
+                "title": "Évaluation des Risques",
+                "description": "PLACEHOLDER: Outil en ligne gratuit pour évaluer le niveau de risque de votre organisation",
+                "cta": "Faire l'Évaluation"
+            }
+        }
+    },
+    "pioneer": {
+        "title": "Rejoignez Notre Programme Pionnier",
+        "subtitle": "Soyez parmi les premiers à vous défendre contre les attaques IA",
+        "benefits": {
+            "earlyAccess": {
+                "title": "Accès Anticipé",
+                "description": "PLACEHOLDER: Obtenez un accès exclusif à notre technologie de sécurité avant la disponibilité générale"
+            },
+            "directInput": {
+                "title": "Contribution Directe",
+                "description": "PLACEHOLDER: Façonnez le produit avec des retours directs à notre équipe de développement"
+            },
+            "pricing": {
+                "title": "Tarification Pionnier",
+                "description": "PLACEHOLDER: Verrouillez une tarification spéciale pour les adopteurs précoces et partenaires long terme"
+            },
+            "support": {
+                "title": "Support Premium",
+                "description": "PLACEHOLDER: Accès direct à nos experts en sécurité et assistance prioritaire"
+            }
+        },
+        "cta": {
+            "apply": "Postuler au Programme Pionnier",
+            "disclaimer": "Places limitées - demandes sérieuses uniquement"
+        }
+    },
     "modal": {
         "title": "Formulaire de Contact",
         "mail": {

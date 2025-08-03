@@ -2,13 +2,15 @@
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
-2. [Japanese Inkan-Inspired Design System](#japanese-inkan-inspired-design-system)
-3. [Recent Implementation Changes](#recent-implementation-changes)
-4. [Technical Architecture](#technical-architecture)
-5. [Development Workflows](#development-workflows)
-6. [Communication Styles](#communication-styles)
-7. [File Structure & Context](#file-structure--context)
-8. [Implementation History](#implementation-history)
+2. [🚨 CRITICAL Development Requirements](#critical-development-requirements)
+3. [Japanese Inkan-Inspired Design System](#japanese-inkan-inspired-design-system)
+4. [i18n (Internationalization) Requirements](#i18n-internationalization-requirements)
+5. [Recent Implementation Changes](#recent-implementation-changes)
+6. [Technical Architecture](#technical-architecture)
+7. [Development Workflows](#development-workflows)
+8. [Communication Styles](#communication-styles)
+9. [File Structure & Context](#file-structure--context)
+10. [Implementation History](#implementation-history)
 
 ---
 
@@ -23,6 +25,137 @@ Transform Sealfie's cybersecurity landing page by embracing its Japanese heritag
 - ✅ **Theme System**: Light/dark mode with traditional Japanese colors
 - ✅ **Performance**: Optimized loading, accessibility, and mobile-first design
 - ✅ **Maintainability**: Clean, reusable component system
+- ✅ **Internationalization**: Full EN/FR language support
+
+---
+
+## 🚨 CRITICAL Development Requirements
+
+### ⚠️ **MANDATORY FOR EVERY CHANGE** ⚠️
+
+#### **1. Japanese Design System Compliance**
+**NEVER create components without Japanese design principles:**
+- ✅ **ALWAYS** use Ma (間) - generous negative space
+- ✅ **ALWAYS** follow Kanso (簡素) - elegant simplicity
+- ✅ **ALWAYS** implement Mono no Aware (物の哀れ) - subtle beauty
+- ✅ **ALWAYS** use traditional Japanese colors: `--shu-primary`, `--enji-secondary`, `--sango-accent`
+- ✅ **ALWAYS** support light/dark theme with `[data-theme="dark"]`
+
+```scss
+// ✅ CORRECT - Japanese design principles
+.new-component {
+  // Ma - generous spacing
+  padding: 40px 24px;
+  margin-bottom: 48px;
+  
+  // Kanso - simple colors
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  
+  // Mono no Aware - subtle interactions
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 53, 0, 0.15);
+  }
+}
+
+// ❌ INCORRECT - No Japanese principles
+.bad-component {
+  padding: 8px;
+  background: #blue;
+  border: 3px solid red;
+}
+```
+
+#### **2. i18n (Internationalization) Compliance**
+**NEVER hardcode text - ALWAYS use i18n variables:**
+
+```pug
+// ✅ CORRECT - i18n compliant
+h2.section-title #{$i18n.carousel.title}
+p.section-subtitle #{$i18n.carousel.subtitle}
+
+.trend-card
+  .trend-number #{$i18n.carousel.stats.attacks.number}
+  .trend-label #{$i18n.carousel.stats.attacks.label}
+
+// ❌ INCORRECT - Hardcoded text
+h2.section-title Current Threat Landscape
+p.section-subtitle Latest intelligence from August 2025
+```
+
+**Required locale file updates for new content:**
+```json
+// locales/en.json
+{
+  "carousel": {
+    "title": "Current Threat Landscape",
+    "subtitle": "Latest intelligence from August 2025",
+    "stats": {
+      "attacks": {
+        "number": "37%",
+        "label": "increase in attacks"
+      }
+    }
+  }
+}
+
+// locales/fr.json  
+{
+  "carousel": {
+    "title": "Paysage des Menaces Actuelles",
+    "subtitle": "Renseignements récents d'août 2025",
+    "stats": {
+      "attacks": {
+        "number": "37%",
+        "label": "augmentation des attaques"
+      }
+    }
+  }
+}
+```
+
+#### **3. Component Structure Requirements**
+**ALWAYS follow this structure for new components:**
+
+```pug
+// ✅ REQUIRED PATTERN
+section.component-name-section
+  .container.px-5
+    .row.justify-content-center
+      .col-lg-10
+        .text-center.mb-5
+          h2.section-title #{$i18n.section.title}
+          p.section-subtitle #{$i18n.section.subtitle}
+        
+        // Component content with i18n
+        .component-content
+          // All text via #{$i18n.section.content}
+```
+
+#### **4. Mandatory Checks Before Implementation**
+**For EVERY new component or change:**
+
+1. ✅ **Design Check**: Uses Japanese color variables
+2. ✅ **Spacing Check**: Implements Ma (negative space) patterns  
+3. ✅ **Theme Check**: Works in both light and dark modes
+4. ✅ **i18n Check**: No hardcoded text, all content via `#{$i18n.*}`
+5. ✅ **Locale Check**: Content added to both EN and FR locale files
+6. ✅ **Responsive Check**: Mobile-first design with proper breakpoints
+7. ✅ **Accessibility Check**: ARIA labels, keyboard navigation, screen readers
+
+#### **5. Forbidden Practices**
+**NEVER do these - they break project requirements:**
+
+- ❌ Hardcode any text content
+- ❌ Use non-Japanese colors (blue, green, etc.)
+- ❌ Create components without theme support
+- ❌ Skip negative space (cramped layouts)
+- ❌ Use harsh/jarring animations
+- ❌ Ignore mobile-first responsive design
+- ❌ Create content only in English
 
 ---
 
@@ -101,6 +234,212 @@ Transform Sealfie's cybersecurity landing page by embracing its Japanese heritag
 - **Cultural Meaning**: Vitality, highlights, gentle attention
 - **Usage**: Accents, notifications, gradient transitions
 - **Implementation**: `--sango-accent` for highlighting elements
+
+---
+
+## i18n (Internationalization) Requirements
+
+### Supported Languages
+- **EN** (English) - Primary language
+- **FR** (French) - Secondary language  
+
+### Locale File Structure
+```
+locales/
+├── en.json    # English translations
+└── fr.json    # French translations
+```
+
+### i18n Implementation Patterns
+
+#### **1. Pug Template Usage**
+**ALWAYS use i18n variables for ANY text content:**
+
+```pug
+// ✅ CORRECT - All text via i18n
+section.new-section
+  .container.px-5
+    h2.section-title #{$i18n.newSection.title}
+    p.section-subtitle #{$i18n.newSection.subtitle}
+    
+    .content-block
+      h3 #{$i18n.newSection.features.title}
+      p #{$i18n.newSection.features.description}
+      
+      .cta-buttons
+        a.cta-primary(href="mailto:contact@sealf.ie")
+          | #{$i18n.newSection.cta.primary}
+        a.cta-secondary(href=`/${$localeName}/documentation.html`)
+          | #{$i18n.newSection.cta.secondary}
+
+// ❌ FORBIDDEN - Hardcoded text
+section.bad-section
+  h2 New Section Title
+  p Some description text
+```
+
+#### **2. Required Locale File Updates**
+**For every new text content, update BOTH locale files:**
+
+```json
+// locales/en.json - ADD new content
+{
+  "newSection": {
+    "title": "Section Title in English",
+    "subtitle": "Descriptive subtitle for the section",
+    "features": {
+      "title": "Features Overview",
+      "description": "Detailed description of the features and benefits"
+    },
+    "cta": {
+      "primary": "Get Started Now",
+      "secondary": "Learn More"
+    }
+  }
+}
+
+// locales/fr.json - ADD French translations
+{
+  "newSection": {
+    "title": "Titre de Section en Français",
+    "subtitle": "Sous-titre descriptif pour la section",
+    "features": {
+      "title": "Aperçu des Fonctionnalités",
+      "description": "Description détaillée des fonctionnalités et avantages"
+    },
+    "cta": {
+      "primary": "Commencer Maintenant",
+      "secondary": "En Savoir Plus"
+    }
+  }
+}
+```
+
+#### **3. Complex Content Patterns**
+
+**Lists and Arrays:**
+```json
+// Locale file structure
+{
+  "benefits": {
+    "title": "Key Benefits",
+    "items": [
+      "First benefit description",
+      "Second benefit description", 
+      "Third benefit description"
+    ]
+  }
+}
+```
+
+```pug
+// Pug template usage
+h3 #{$i18n.benefits.title}
+ul.benefits-list
+  each item in $i18n.benefits.items
+    li.benefit-item= item
+```
+
+**Nested Objects for Components:**
+```json
+{
+  "carousel": {
+    "title": "Current Threat Landscape",
+    "subtitle": "Latest intelligence from August 2025",
+    "slides": {
+      "attacks": {
+        "number": "37%",
+        "label": "increase in attacks",
+        "subtitle": "May-June 2025"
+      },
+      "ai": {
+        "number": "40%", 
+        "label": "AI-generated emails",
+        "subtitle": "Hyper-personalized attacks"
+      }
+    },
+    "controls": {
+      "prev": "Previous trend",
+      "next": "Next trend"
+    }
+  }
+}
+```
+
+#### **4. Language-Specific Content**
+**For content that differs significantly between languages:**
+
+```pug
+// Conditional content based on language
+if $localeName == "en"
+  .video-container
+    video(src="/assets/img/demo-en.webm")
+else if $localeName == "fr"  
+  .video-container
+    video(src="/assets/img/demo-fr.webm")
+
+// Language-specific links
+a.cta-primary(href=`/${$localeName}/documentation.html`)
+  | #{$i18n.cta.learnMore}
+```
+
+#### **5. Meta Data & SEO**
+**ALL meta tags must be internationalized:**
+
+```pug
+// Page head with i18n
+head
+  title #{$i18n.title}
+  meta(name='description', content=$i18n.meta.descriptions.homepage)
+  meta(property='og:title', content=$i18n.title)
+  meta(property='og:description', content=$i18n.meta.description)
+  link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
+```
+
+### i18n Quality Checklist
+
+**Before implementing ANY new content:**
+
+1. ✅ **No hardcoded text** - All text via `#{$i18n.*}` variables
+2. ✅ **Both languages updated** - EN and FR locale files have new content
+3. ✅ **Consistent structure** - Same JSON structure in both files
+4. ✅ **Cultural adaptation** - French content adapted, not just translated
+5. ✅ **URL structure** - Links use `/${$localeName}/` pattern
+6. ✅ **Asset localization** - Videos/images use language-specific versions when needed
+7. ✅ **Meta tags localized** - SEO content in both languages
+
+### Common i18n Mistakes to Avoid
+
+❌ **NEVER hardcode text:**
+```pug
+h2 Current Threat Landscape  // WRONG
+```
+
+❌ **NEVER update only one language:**
+```json
+// WRONG - Only English updated
+"en.json": { "newField": "content" }
+"fr.json": { } // Missing newField
+```
+
+❌ **NEVER use English text in French locale:**
+```json
+// WRONG - English text in French file
+"fr.json": {
+  "title": "Current Threat Landscape" // Should be French
+}
+```
+
+✅ **ALWAYS follow proper patterns:**
+```pug
+h2.section-title #{$i18n.section.title}  // CORRECT
+```
+
+```json
+// CORRECT - Both languages with proper translations
+"en.json": { "section": { "title": "Current Threat Landscape" }}
+"fr.json": { "section": { "title": "Paysage des Menaces Actuelles" }}
+```
 
 ---
 
@@ -392,6 +731,24 @@ C'est exactement pourquoi Inkan.link a développé https://sealf.ie/
 ---
 
 ## Best Practices & Guidelines
+
+#### **Critical Image URL Verification**
+⚠️ **MANDATORY**: Always verify that image URLs in code match actual file paths on the system. The build process may transform paths differently than expected.
+
+**Required Verification Steps:**
+1. **Source Check**: Verify files exist in `src/assets/img/` directory
+2. **Build Output**: Confirm files are copied to `docs/assets/img/` directory  
+3. **URL Mapping**: Ensure locale file URLs match build output paths (e.g., `/assets/img/carousel/*.svg`)
+4. **Path Consistency**: Never assume URL structure - always verify both source and build directories
+
+**Example Verification Process:**
+```bash
+# Check source files exist
+ls src/assets/img/carousel/
+# Check build output files exist  
+ls docs/assets/img/carousel/
+# Verify URLs in locale files match build paths
+```
 
 ### Code Style
 - **SCSS**: Use theme variables (`var(--shu-primary)`) over hardcoded colors
