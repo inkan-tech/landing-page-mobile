@@ -16,7 +16,7 @@
         "main": "Sealfie",
         "pricing": "Tarifs",
         "docs": "Fonctionnement",
-        "press": "Presse & Reconnaissance",
+        "press": "Actualités entreprise",
         "action": "Newsletter sur la fraude"
     },
     "footer": {
@@ -34,7 +34,7 @@
                 "title": "Entreprise",
                 "links": {
                     "about": "À Propos",
-                    "press": "Presse & Reconnaissance",
+                    "press": "Actualités entreprise",
                     "blog": "Blog",
                     "contact": "Contact"
                 }
@@ -300,7 +300,7 @@
         }
     },
     "press": {
-        "title": "Presse & reconnaissance",
+        "title": "Actualités entreprise",
         "subtitle": "Reconnaissance internationale pour les solutions pionnières de prévention de fraude IA",
         "sections": {
             "speaking": {

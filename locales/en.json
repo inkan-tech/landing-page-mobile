@@ -16,7 +16,7 @@
         "main": "Sealfie",
         "pricing": "Pricing",
         "docs": "How it works",
-        "press": "Press & recognition",
+        "press": "Company news",
         "action": "Newsletter"
     },
     "footer": {
@@ -34,7 +34,7 @@
                 "title": "Company",
                 "links": {
                     "about": "About",
-                    "press": "Press & recognition", 
+                    "press": "Company news", 
                     "blog": "Blog",
                     "contact": "Contact"
                 }
@@ -300,7 +300,7 @@
         }
     },
     "press": {
-        "title": "Press & recognition",
+        "title": "Company news",
         "subtitle": "International recognition for pioneering AI fraud prevention solutions",
         "sections": {
             "speaking": {

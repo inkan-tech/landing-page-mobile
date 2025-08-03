@@ -26,7 +26,7 @@ footer.footer-expanded.bg-black
               li.mb-2
                 a.text-white-50(href="https://inkan.link") #{$i18n.footer.navigation.company.links.about}
               li.mb-2
-                a.text-white-50(href=`/${$localeName}/press.html`) #{$i18n.footer.navigation.company.links.press}
+                a.text-white-50(href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/`, target='_blank', rel='noopener') #{$i18n.footer.navigation.company.links.press}
               li.mb-2
                 if $localeName == "fr"
                   a.text-white-50(href="https://inkan.link/posts/blog-fraude-au-pdg-5milliards-an/") #{$i18n.footer.navigation.company.links.blog}
