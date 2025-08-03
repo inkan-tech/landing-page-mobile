@@ -315,7 +315,7 @@ html(lang=$localeName)
 
             // Primary CTA Section
             .cta-section
-              a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label=$i18n.hero.cta.primary)
+              a.cta-primary-large(href=`/${$localeName}/challenge.html` aria-label=$i18n.hero.cta.primary)
                 | #{$i18n.hero.cta.primary}
               a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
                 | #{$i18n.hero.cta.secondary}
@@ -344,7 +344,8 @@ html(lang=$localeName)
       .row.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title #{$i18n.carousel.title}
+            h2.section-title
+              span #{$i18n.carousel.title}
             p.section-subtitle #{$i18n.carousel.subtitle}
           
           // Enhanced Carousel Container with Images and Links
@@ -473,7 +474,8 @@ html(lang=$localeName)
       .row.gx-5.align-items-center.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title #{$i18n.founder.title}
+            h2.section-title
+              span #{$i18n.founder.title}
             p.section-subtitle #{$i18n.founder.subtitle}
           
           .founder-content.text-center
@@ -499,11 +501,12 @@ html(lang=$localeName)
       .row.gx-5.justify-content-center
         .col-lg-10
           .text-center.mb-5
-            h2.section-title #{$i18n.education.title}
+            h2.section-title
+              span #{$i18n.education.title}
             p.section-subtitle #{$i18n.education.subtitle}
           
           .row.g-4
-            .col-md-6.col-lg-4
+            .col-md-6.col-lg-3
               .resource-card
                 .resource-icon
                   i.bi-file-earmark-text.text-gradient
@@ -511,7 +514,7 @@ html(lang=$localeName)
                 p #{$i18n.education.resources.guide.description}
                 a.cta-ghost(href="#") #{$i18n.education.resources.guide.cta}
             
-            .col-md-6.col-lg-4
+            .col-md-6.col-lg-3
               .resource-card
                 .resource-icon
                   i.bi-list-check.text-gradient
@@ -519,13 +522,21 @@ html(lang=$localeName)
                 p #{$i18n.education.resources.checklist.description}
                 a.cta-ghost(href="#") #{$i18n.education.resources.checklist.cta}
             
-            .col-md-6.col-lg-4
+            .col-md-6.col-lg-3
               .resource-card
                 .resource-icon
                   i.bi-graph-up.text-gradient
                 h4 #{$i18n.education.resources.assessment.title}
                 p #{$i18n.education.resources.assessment.description}
                 a.cta-ghost(href="#") #{$i18n.education.resources.assessment.cta}
+            
+            .col-md-6.col-lg-3
+              .resource-card
+                .resource-icon
+                  i.bi-shield-check.text-gradient
+                h4 #{$i18n.education.resources.challenge.title}
+                p #{$i18n.education.resources.challenge.description}
+                a.cta-primary(href=`/${$localeName}/challenge.html`) #{$i18n.education.resources.challenge.cta}
 
   // Quote/testimonial aside
   aside.text-center.bg-gradient-primary-to-secondary
@@ -608,7 +619,8 @@ html(lang=$localeName)
       .row.gx-5.justify-content-center
         .col-lg-8
           .text-center
-            h2.section-title #{$i18n.pioneer.title}
+            h2.section-title
+              span #{$i18n.pioneer.title}
             p.section-subtitle #{$i18n.pioneer.subtitle}
             
             .pioneer-benefits

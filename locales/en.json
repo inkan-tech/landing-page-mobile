@@ -47,7 +47,7 @@
             "text": "A Hong Kong firm lost $25M when criminals created 6 deepfakes of colleagues, including their CFO, in a video conference call. Cyber training didn't protect them."
         },
         "cta": {
-            "primary": "Challenge your current process with us",
+            "primary": "Challenge your protection",
             "secondary": "How does it work?"
         }
     },
@@ -230,6 +230,11 @@
                 "title": "Risk Assessment",
                 "description": "PLACEHOLDER: Free online tool to assess your organization's risk level",
                 "cta": "Take Assessment"
+            },
+            "challenge": {
+                "title": "Free Security Challenge",
+                "description": "Discover if your current protection really stands against new threats",
+                "cta": "Book my Challenge"
             }
         }
     },
@@ -306,5 +311,67 @@
     "legal": {
         "terms": "Terms of Service",
         "privacy": "Privacy Policy"
+    },
+    "challenge": {
+        "title": "Free security challenge",
+        "subtitle": "Test the resilience of your current protection",
+        "masthead": {
+            "title": "Is your protection really effective?",
+            "subtitle": "Most companies have a false sense of security. Discover the truth about your protection level in 30 minutes.",
+            "cta": "Book my free challenge"
+        },
+        "problem": {
+            "title": "The false security trap",
+            "subtitle": "Why 85% of companies think they're protected... but aren't",
+            "points": [
+                "You've implemented awareness training",
+                "Your teams know the \"best practices\"",
+                "You use traditional MFA solutions",
+                "You think your employees \"will be careful\"",
+                "You believe criminals won't target you"
+            ],
+            "reality": {
+                "title": "The reality:",
+                "text": "Attackers easily bypass these protections with deepfakes, sophisticated social engineering, and AI techniques. They exploit precisely this overconfidence."
+            }
+        },
+        "solution": {
+            "title": "Our free challenge reveals your vulnerabilities",
+            "subtitle": "In 30 minutes, we identify gaps you don't suspect",
+            "process": {
+                "step1": {
+                    "title": "Analysis of your current process",
+                    "description": "We review your existing validation and approval procedures"
+                },
+                "step2": {
+                    "title": "Realistic attack simulation",
+                    "description": "We show you how an attacker would bypass your current protections"
+                },
+                "step3": {
+                    "title": "Personalized action plan",
+                    "description": "You leave with concrete recommendations tailored to your organization"
+                }
+            }
+        },
+        "benefits": {
+            "title": "What you get",
+            "items": [
+                "Objective assessment of your real security level",
+                "Identification of vulnerabilities specific to your organization",
+                "Concrete demonstration of new attack techniques",
+                "Personalized recommendations to strengthen your protection",
+                "No commercial commitment - just free expertise"
+            ]
+        },
+        "cta": {
+            "title": "Ready to discover the truth?",
+            "subtitle": "Book your free 30-minute challenge",
+            "button": "Book now",
+            "disclaimer": "No sales, no commitment - just security expertise"
+        },
+        "testimonial": {
+            "quote": "I was convinced our procedures were solid. The challenge opened my eyes to gaps I couldn't even imagine.",
+            "author": "Chief Financial Officer, 500-employee company"
+        }
     }
 }

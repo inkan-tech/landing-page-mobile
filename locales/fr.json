@@ -47,7 +47,7 @@
             "text": "Une entreprise de Hong Kong a perdu 25M$ quand des criminels ont créé 6 deepfakes de collègues, incluant leur directeur financier, lors d'une visioconférence. La formation cyber n'a pas protégé."
         },
         "cta": {
-            "primary": "Challengez votre processus actuel avec nous",
+            "primary": "Challengez votre protection",
             "secondary": "Comment ça marche ?"
         }
     },
@@ -230,6 +230,11 @@
                 "title": "Évaluation des Risques",
                 "description": "PLACEHOLDER: Outil en ligne gratuit pour évaluer le niveau de risque de votre organisation",
                 "cta": "Faire l'Évaluation"
+            },
+            "challenge": {
+                "title": "Challenge Gratuit de Sécurité",
+                "description": "Découvrez si votre protection actuelle résiste vraiment aux nouvelles menaces",
+                "cta": "Réserver mon Challenge"
             }
         }
     },
@@ -306,5 +311,67 @@
     "legal": {
         "terms": "Conditions Générales d'Utilisation",
         "privacy": "Politique de Confidentialité"
+    },
+    "challenge": {
+        "title": "Challenge gratuit de sécurité",
+        "subtitle": "Testez la résilience de votre protection actuelle",
+        "masthead": {
+            "title": "Votre protection est-elle vraiment efficace ?",
+            "subtitle": "La majorité des entreprises ont une fausse impression de sécurité. Découvrez la vérité sur votre niveau de protection en 30 minutes.",
+            "cta": "Réserver mon challenge gratuit"
+        },
+        "problem": {
+            "title": "Le piège de la fausse sécurité",
+            "subtitle": "Pourquoi 85% des entreprises pensent être protégées... mais ne le sont pas",
+            "points": [
+                "Vous avez mis en place des formations de sensibilisation",
+                "Vos équipes connaissent les \"bonnes pratiques\"",
+                "Vous utilisez des solutions MFA traditionnelles",
+                "Vous pensez que vos employés \"feront attention\"",
+                "Vous croyez que les criminels ne vous cibleront pas"
+            ],
+            "reality": {
+                "title": "La réalité :",
+                "text": "Les attaquants contournent facilement ces protections avec des deepfakes, de l'ingénierie sociale sophistiquée et des techniques d'IA. Ils exploitent précisément cette confiance excessive."
+            }
+        },
+        "solution": {
+            "title": "Notre challenge gratuit révèle vos vulnérabilités",
+            "subtitle": "En 30 minutes, nous identifions les failles que vous ne soupçonnez pas",
+            "process": {
+                "step1": {
+                    "title": "Analyse de votre processus actuel",
+                    "description": "Nous passons en revue vos procédures de validation et d'approbation existantes"
+                },
+                "step2": {
+                    "title": "Simulation d'attaque réaliste",
+                    "description": "Nous vous montrons comment un attaquant contournerait vos protections actuelles"
+                },
+                "step3": {
+                    "title": "Plan d'action personnalisé",
+                    "description": "Vous repartez avec des recommandations concrètes adaptées à votre organisation"
+                }
+            }
+        },
+        "benefits": {
+            "title": "Ce que vous obtenez",
+            "items": [
+                "Évaluation objective de votre niveau de sécurité réel",
+                "Identification des vulnérabilités spécifiques à votre organisation", 
+                "Démonstration concrète des nouvelles techniques d'attaque",
+                "Recommandations personnalisées pour renforcer votre protection",
+                "Aucun engagement commercial - juste de l'expertise gratuite"
+            ]
+        },
+        "cta": {
+            "title": "Prêt à découvrir la vérité ?",
+            "subtitle": "Réservez votre challenge gratuit de 30 minutes",
+            "button": "Réserver maintenant",
+            "disclaimer": "Aucune vente, aucun engagement - seulement de l'expertise sécurité"
+        },
+        "testimonial": {
+            "quote": "J'étais convaincu que nos procédures étaient solides. Le challenge m'a ouvert les yeux sur des failles que je n'imaginais même pas.",
+            "author": "Directeur Financier, Entreprise de 500 employés"
+        }
     }
 }
