@@ -4,11 +4,11 @@ html(lang=$localeName)
   head
     //- Common headers shared across all pages
     include includes/common-headers.pug
-    
+
     //- Page-specific meta tags
     title #{$i18n.banner.docs} | #{$i18n.title}
     meta(name='description', content=$i18n.documentation.meta.description)
-    
+
     //- Page-specific canonical link
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
     script(id="mcjs")
@@ -29,7 +29,7 @@ html(lang=$localeName)
                 br
                 span.accent-text #{$i18n.documentation.hero.title.line2}
               p.hero-subtitle #{$i18n.documentation.hero.subtitle}
-              
+
               // Process Overview
               .process-overview.mt-5
                 .row.justify-content-center
@@ -57,7 +57,7 @@ html(lang=$localeName)
               h2.section-title
                 span #{$i18n.documentation.treasury.title}
               p.section-subtitle #{$i18n.documentation.treasury.context}
-        
+
         .row.gx-5.align-items-center
           .col-lg-7.mb-5.mb-lg-0
             // Treasury Steps
@@ -71,7 +71,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.treasury.step1.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.treasury.step1.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -81,7 +81,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.treasury.step2.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.treasury.step2.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -91,7 +91,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.treasury.step3.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.treasury.step3.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -101,7 +101,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.treasury.step4.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.treasury.step4.benefit}
-          
+
           .col-lg-5
             // Treasury Device Mockup
             .device-mockup
@@ -149,7 +149,7 @@ html(lang=$localeName)
                 span #{$i18n.documentation.technical_verification.title}
               p.section-subtitle #{$i18n.documentation.technical_verification.subtitle}
               p.section-intro.mt-4 #{$i18n.documentation.technical_verification.intro}
-        
+
         .row.g-4.mb-5
           .col-lg-6.mb-4
             .verification-card
@@ -161,7 +161,7 @@ html(lang=$localeName)
                   p.verification-description #{$i18n.documentation.technical_verification.verifications.sim_protection.description}
               .verification-benefits
                 .benefit-tag #{$i18n.documentation.technical_verification.verifications.sim_protection.benefit}
-          
+
           .col-lg-6.mb-4
             .verification-card
               .verification-header
@@ -172,7 +172,7 @@ html(lang=$localeName)
                   p.verification-description #{$i18n.documentation.technical_verification.verifications.device_integrity.description}
               .verification-benefits
                 .benefit-tag #{$i18n.documentation.technical_verification.verifications.device_integrity.benefit}
-          
+
           .col-lg-6.mb-4
             .verification-card
               .verification-header
@@ -183,7 +183,7 @@ html(lang=$localeName)
                   p.verification-description #{$i18n.documentation.technical_verification.verifications.network_analysis.description}
               .verification-benefits
                 .benefit-tag #{$i18n.documentation.technical_verification.verifications.network_analysis.benefit}
-          
+
           .col-lg-6.mb-4
             .verification-card
               .verification-header
@@ -194,7 +194,7 @@ html(lang=$localeName)
                   p.verification-description #{$i18n.documentation.technical_verification.verifications.biometric_liveness.description}
               .verification-benefits
                 .benefit-tag #{$i18n.documentation.technical_verification.verifications.biometric_liveness.benefit}
-        
+
         .row.justify-content-center
           .col-lg-10
             .text-center
@@ -210,7 +210,7 @@ html(lang=$localeName)
               h2.section-title
                 span #{$i18n.documentation.ceo.title}
               p.section-subtitle #{$i18n.documentation.ceo.context}
-        
+
         .row.gx-5.align-items-center
           .col-lg-5.mb-5.mb-lg-0
             // CEO Device Mockup
@@ -223,7 +223,7 @@ html(lang=$localeName)
                   .screen.bg-device-screen
                     video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
                       source(src='/assets/img/'+ $i18n.documentation.ceo.video , type='video/webm')
-          
+
           .col-lg-7
             // CEO Steps
             .scenario-steps
@@ -236,7 +236,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.ceo.step1.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.ceo.step1.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -246,7 +246,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.ceo.step2.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.ceo.step2.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -256,7 +256,7 @@ html(lang=$localeName)
                     p.step-description #{$i18n.documentation.ceo.step3.description}
                 .step-benefits
                   .benefit-tag #{$i18n.documentation.ceo.step3.benefit}
-              
+
               .step-item
                 .step-header
                   .step-icon
@@ -268,36 +268,7 @@ html(lang=$localeName)
                   .benefit-tag #{$i18n.documentation.ceo.step4.benefit}
 
 
-    // Social Proof Section
-    section.social-proof-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.documentation.social_proof.title}
-              p.section-subtitle #{$i18n.documentation.social_proof.subtitle}
-            
-            .testimonials-grid
-              .row.justify-content-center
-                .col-lg-6.mb-4
-                  .testimonial-card
-                    .testimonial-content
-                      p.testimonial-quote "#{$i18n.documentation.social_proof.testimonial1.quote}"
-                    .testimonial-author
-                      .author-info
-                        .author-name #{$i18n.documentation.social_proof.testimonial1.author}
-                        .author-title #{$i18n.documentation.social_proof.testimonial1.title}
-                
-                .col-lg-6.mb-4
-                  .testimonial-card
-                    .testimonial-content
-                      p.testimonial-quote "#{$i18n.documentation.social_proof.testimonial2.quote}"
-                    .testimonial-author
-                      .author-info
-                        .author-name #{$i18n.documentation.social_proof.testimonial2.author}
-                        .author-title #{$i18n.documentation.social_proof.testimonial2.title}
-
+    
     // Final CTA Section
     section.documentation-cta-section
       .container.px-5
@@ -307,7 +278,7 @@ html(lang=$localeName)
               h2.section-title
                 span #{$i18n.documentation.final_cta.title}
               p.section-subtitle #{$i18n.documentation.final_cta.subtitle}
-              
+
               .cta-buttons.mt-5
                 .row.justify-content-center
                   .col-md-6.mb-3
@@ -316,7 +287,7 @@ html(lang=$localeName)
                   .col-md-6.mb-3
                     a.cta-secondary(href="/#{$localeName}/pricing.html" aria-label="#{$i18n.documentation.final_cta.secondary_aria}")
                       | #{$i18n.documentation.final_cta.secondary_text}
-              
+
               .implementation-guarantee.mt-4
                 p.guarantee-text #{$i18n.documentation.final_cta.guarantee}
 
