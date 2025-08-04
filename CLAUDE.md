@@ -270,9 +270,89 @@ h2.section-title #{$i18n.section.title}  // CORRECT
 }
 ```
 
+## **Design Pattern Standards - Always Follow These**
+
+### **Title Hierarchy (Consistent Across All Pages)**
+```pug
+// ✅ CORRECT - Standard section title pattern
+h1.hero-title
+  | #{$i18n.hero.title.line1}
+  br
+  span.accent-text #{$i18n.hero.title.line2}
+
+h2.section-title #{$i18n.section.title}
+p.section-subtitle #{$i18n.section.subtitle}
+```
+
+**Title Styling Requirements:**
+- **Hero titles**: Use `.hero-title` with `.accent-text` span for second line
+- **Section titles**: Always use `.section-title` class (never custom classes)
+- **Sentence case**: "Current threat landscape" NOT "Current Threat Landscape" 
+- **Font scaling**: `clamp(1.75rem, 3vw, 2.5rem)` for responsive sizing
+- **Japanese spacing**: 16px margin-bottom, letter-spacing: -0.02em
+
+### **Button System (Must Match Index Page)**
+```pug
+// ✅ CORRECT - Primary CTA (featured actions)
+a.cta-primary-large(href="url" aria-label="text")
+  | #{$i18n.section.cta}
+
+// ✅ CORRECT - Secondary CTA (supporting actions)  
+a.cta-secondary(href="url" aria-label="text")
+  | #{$i18n.section.cta}
+
+// ✅ CORRECT - Compact CTA (small spaces)
+a.cta-compact(href="url" aria-label="text")
+  | #{$i18n.section.cta}
+```
+
+**Button Styling Standards:**
+- **Primary**: `.cta-primary-large` - Shu-iro red background, white text, box-shadow
+- **Secondary**: `.cta-secondary` - Outlined, transforms to filled on hover
+- **Compact**: `.cta-compact` - Smaller padding, same primary styling
+- **Never use**: Bootstrap `.btn` classes - always use Japanese button system
+- **Hover effects**: translateY(-2px) with enhanced box-shadow
+- **Accessibility**: Always include aria-label attributes
+
+### **Section Layout Pattern (Required Structure)**
+```pug
+// ✅ CORRECT - Standard section pattern
+section.section-name-section
+  .container.px-5
+    .row.justify-content-center
+      .col-lg-10
+        .text-center.mb-5
+          h2.section-title #{$i18n.section.title}
+          p.section-subtitle #{$i18n.section.subtitle}
+        
+        // Section content with proper spacing
+        .section-content
+          // Content with i18n variables
+```
+
+### **Color Usage (Traditional Japanese)**
+- **Primary brand**: `var(--shu-primary)` (#FF3500) - Traditional vermillion
+- **Secondary**: `var(--enji-secondary)` (#C93338) - Crimson for accents  
+- **Accent highlights**: `var(--sango-accent)` (#F8674F) - Coral for features
+- **Backgrounds**: `var(--bg-primary)`, `var(--bg-secondary)`, `var(--bg-surface)`
+- **Text hierarchy**: `var(--text-primary)`, `var(--text-secondary)`
+
+### **Spacing System (Ma - Negative Space)**
+- **Section padding**: 80px vertical, 120px for hero sections
+- **Card internal padding**: 40px for large cards, 32px for standard
+- **Element margins**: 16px, 24px, 32px, 48px (increments of 8px)
+- **Mobile adjustments**: Reduce by 25-30% for mobile breakpoints
+
+### **Never Deviate From These Patterns**
+❌ **Don't create custom button classes** - Use existing Japanese button system  
+❌ **Don't hardcode colors** - Always use CSS custom properties  
+❌ **Don't skip section structure** - Follow container → row → col pattern  
+❌ **Don't use Bootstrap buttons** - They break the Japanese aesthetic  
+❌ **Don't ignore spacing system** - Ma (negative space) is core to design
+
 ---
 
 **For detailed project planning and timeline, see: [PROJECT-PLAN.md](./PROJECT-PLAN.md)**
 
-*Last Updated: August 2025 - Authority Enhancement & UX Optimization*
+*Last Updated: August 2025 - Design Pattern Documentation & Standards*
 *Project: Sealfie Landing Page - Japanese Inkan-Inspired Design System*

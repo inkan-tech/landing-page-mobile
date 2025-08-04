@@ -131,18 +131,53 @@
         }
     },
     "pricing": {
-        "title": "Pricing options",
+        "title": "Pricing",
+        "subtitle": "Executive fraud protection that scales with your business needs",
+        "overview": {
+            "title": "Simple, transparent pricing",
+            "subtitle": "Everything you need to protect your executives from deepfake fraud"
+        },
+        "simple": {
+            "title": "Simplified protection",
+            "subtitle": "Based on our distilled simplest possible process",
+            "period": "per person/year",
+            "features": {
+                "process": "Distilled simplest possible validation process",
+                "phone_validation": "Includes new phone network validations",
+                "validations": "Up to 20 validations per year",
+                "support": "Full support with no IT integration required",
+                "deployment": "30-minute setup with immediate protection"
+            },
+            "cta": "Get in touch"
+        },
+        "enterprise": {
+            "title": "Tailored solutions",
+            "subtitle": "Try simple and expand seamlessly",
+            "price_text": "On quote",
+            "features": {
+                "tailored_process": "Tailored processes for your specific needs",
+                "multiple_validators": "Multiple validators and verification sources",
+                "it_integration": "Full IT system integration and customization",
+                "seamless_expansion": "Seamless expansion from simple to complex",
+                "priority_support": "Priority support and dedicated account management"
+            },
+            "cta": "Talk to us"
+        },
+        "features": {
+            "title": "What's included",
+            "subtitle": "Comprehensive protection with enterprise-grade features"
+        },
         "users": {
             "title": "Streamlined security",
             "text": "Reduce the complexity of security without compromising protection. Starting at $195/person/year."
         },
         "cost": {
             "title": "Pricing",
-            "text": "Includes standard validation and up to 20 validations per year.  Custom quotes available for tailored integrations, increased validation volumes, and priority support."
+            "text": "Includes standard validation and up to 20 validations per year. Custom quotes available for tailored integrations, increased validation volumes, and priority support."
         },
         "support": {
             "title": "Dedicated support",
-            "text": "Full support included – no IT integration required.  We adapt to your processes and systems upon request."
+            "text": "Full support included – no IT integration required. We adapt to your processes and systems upon request."
         },
         "period": {
             "title": "Subscription terms",
@@ -150,7 +185,7 @@
         },
         "onboard": {
             "title": "Quick deployment",
-            "text": "You’ll be operational within 30 minutes – minimal system integration ensures immediate protection during an attack."
+            "text": "You'll be operational within 30 minutes – minimal system integration ensures immediate protection during an attack."
         },
         "techno": {
             "title": "Advanced technology",

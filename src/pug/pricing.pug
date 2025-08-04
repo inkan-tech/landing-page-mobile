@@ -16,51 +16,114 @@ html(lang=$localeName)
 
     include ../pug/includes/navbar.pug
 
-
-    // App features section
-    section#pricing
+    // Pricing overview section
+    section.pricing-overview-section
       .container.px-5
-        .row.gx-30.align-items-center
-          .col-lg-22.order-lg-30.mb-5.mb-lg-0
-            .container-fluid.px-5
-              .row.gx-5
-                .col-md-4.mb-5
-                  // Feature item list is at: https://icons.getbootstrap.com/
-                  .text-center
-                    i.bi-currency-euro.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.cost.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.cost.text}
-                .col-md-4.mb-5
-                  // Feature item
-                  .text-center
-                    i.bi-person-check.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.users.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.users.text}
-                .col-md-4.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-diagram-3.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.onboard.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.onboard.text}
-              .row
-                .col-md-4.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-calendar4-range.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.period.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.period.text}
-                .col-md-4.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-headset.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.support.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.support.text}
-                .col-md-4.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-cpu.icon-feature.text-gradient.d-block.mb-3
-                    h3.font-alt #{$i18n.pricing.techno.title}
-                    p.text-muted.mb-0 #{$i18n.pricing.techno.text}
+        .row.justify-content-center
+          .col-lg-10
+            .text-center.mb-5
+              h2.section-title
+                span #{$i18n.pricing.overview.title}
+              p.section-subtitle #{$i18n.pricing.overview.subtitle}
+            
+            .pricing-grid
+              // Simplified process pricing card
+              .pricing-card.pricing-card-featured
+                .pricing-card-header
+                  .pricing-icon
+                    i.bi-lightning-charge
+                  h3.pricing-card-title #{$i18n.pricing.simple.title}
+                  p.pricing-card-subtitle #{$i18n.pricing.simple.subtitle}
+                  .pricing-amount
+                    span.pricing-currency $
+                    span.pricing-value 195
+                    span.pricing-period #{$i18n.pricing.simple.period}
+                
+                .pricing-card-features
+                  ul.pricing-features-list
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.simple.features.process}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.simple.features.phone_validation}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.simple.features.validations}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.simple.features.support}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.simple.features.deployment}
+                
+                .pricing-card-footer
+                  a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label=$i18n.pricing.simple.cta)
+                    | #{$i18n.pricing.simple.cta}
+              
+              // Enterprise/tailored pricing card
+              .pricing-card.pricing-card-enterprise
+                .pricing-card-header
+                  .pricing-icon
+                    i.bi-gear-wide-connected
+                  h3.pricing-card-title #{$i18n.pricing.enterprise.title}
+                  p.pricing-card-subtitle #{$i18n.pricing.enterprise.subtitle}
+                  .pricing-amount
+                    span.pricing-text #{$i18n.pricing.enterprise.price_text}
+                
+                .pricing-card-features
+                  ul.pricing-features-list
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.enterprise.features.tailored_process}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.enterprise.features.multiple_validators}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.enterprise.features.it_integration}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.enterprise.features.seamless_expansion}
+                    li
+                      i.bi-check-circle-fill
+                      span #{$i18n.pricing.enterprise.features.priority_support}
+                
+                .pricing-card-footer
+                  a.cta-secondary(href="mailto:contact@sealf.ie" aria-label=$i18n.pricing.enterprise.cta)
+                    | #{$i18n.pricing.enterprise.cta}
+
+    // Additional features section
+    section.pricing-features-section
+      .container.px-5
+        .row.justify-content-center
+          .col-lg-10
+            .text-center.mb-5
+              h2.section-title
+                span #{$i18n.pricing.features.title}
+              p.section-subtitle #{$i18n.pricing.features.subtitle}
+            
+            .row.g-4
+              .col-md-6.col-lg-4
+                .feature-card
+                  .feature-icon
+                    i.bi-calendar4-range
+                  h4.feature-title #{$i18n.pricing.period.title}
+                  p.feature-description #{$i18n.pricing.period.text}
+              
+              .col-md-6.col-lg-4
+                .feature-card
+                  .feature-icon
+                    i.bi-headset
+                  h4.feature-title #{$i18n.pricing.support.title}
+                  p.feature-description #{$i18n.pricing.support.text}
+              
+              .col-md-6.col-lg-4
+                .feature-card
+                  .feature-icon
+                    i.bi-diagram-3
+                  h4.feature-title #{$i18n.pricing.onboard.title}
+                  p.feature-description #{$i18n.pricing.onboard.text}
 
 
 

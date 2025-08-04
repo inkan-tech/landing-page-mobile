@@ -131,7 +131,42 @@
         }
     },
     "pricing": {
-        "title": "Tarification flexible",
+        "title": "Tarification",
+        "subtitle": "Protection contre la fraude des dirigeants adaptée aux besoins de votre entreprise",
+        "overview": {
+            "title": "Tarification simple et transparente",
+            "subtitle": "Tout ce dont vous avez besoin pour protéger vos dirigeants contre la fraude deepfake"
+        },
+        "simple": {
+            "title": "Protection simplifiée",
+            "subtitle": "Basée sur notre processus simplifié le plus distillé",
+            "period": "par personne/an",
+            "features": {
+                "process": "Processus de validation le plus simple possible",
+                "phone_validation": "Inclut les nouvelles validations réseau téléphonique",
+                "validations": "Jusqu'à 20 validations par an",
+                "support": "Support complet sans intégration IT requise",
+                "deployment": "Configuration en 30 minutes avec protection immédiate"
+            },
+            "cta": "Nous contacter"
+        },
+        "enterprise": {
+            "title": "Solutions sur mesure",
+            "subtitle": "Essayez simple et étendez facilement",
+            "price_text": "Sur devis",
+            "features": {
+                "tailored_process": "Processus adaptés à vos besoins spécifiques",
+                "multiple_validators": "Multiples validateurs et sources de vérification",
+                "it_integration": "Intégration complète et personnalisation des systèmes IT",
+                "seamless_expansion": "Extension transparente du simple au complexe",
+                "priority_support": "Support prioritaire et gestion de compte dédiée"
+            },
+            "cta": "Contactez-nous"
+        },
+        "features": {
+            "title": "Ce qui est inclus",
+            "subtitle": "Protection complète avec des fonctionnalités de niveau entreprise"
+        },
         "users": {
             "title": "Un processus simplifié pour vous protéger",
             "text": "Réduisez le stress lié aux menaces cybernétiques. Sealfie vous offre une protection proactive et sans complications."
@@ -146,7 +181,7 @@
         },
         "period": {
             "title": "Disponibilité et résilience",
-            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment.  Pour les grandes entreprises ou processus spécifiques, contactez-nous pour une offre adaptée."
+            "text": "Sealfie est disponible via un abonnement annuel, résiliable à tout moment. Pour les grandes entreprises ou processus spécifiques, contactez-nous pour une offre adaptée."
         },
         "onboard": {
             "title": "Mise en place rapide",
