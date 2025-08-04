@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#F8674F;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500" />
+      <stop offset="100%" style="stop-color:#F8674F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2)" rx="12"/>
+  
+  <!-- Central AI Brain -->
+  <circle cx="200" cy="225" r="80" fill="none" stroke="url(#brainGrad)" stroke-width="4"/>
+  <circle cx="170" cy="200" r="8" fill="#FF3500"/>
+  <circle cx="230" cy="200" r="8" fill="#FF3500"/>
+  <circle cx="200" cy="250" r="12" fill="#F8674F"/>
+  
+  <!-- Neural network connections -->
+  <path d="M170 200 L200 250 L230 200" stroke="#FF3500" stroke-width="3" fill="none"/>
+  <path d="M160 180 L240 180 M180 270 L220 270" stroke="#F8674F" stroke-width="2" fill="none"/>
+  
+  <!-- Circuit patterns in brain -->
+  <circle cx="185" cy="215" r="3" fill="#FF3500" opacity="0.7"/>
+  <circle cx="215" cy="215" r="3" fill="#FF3500" opacity="0.7"/>
+  <circle cx="200" cy="190" r="3" fill="#F8674F" opacity="0.7"/>
+  <circle cx="200" cy="235" r="3" fill="#F8674F" opacity="0.7"/>
+  
+  <!-- Multiple Email icons spread across width -->
+  <rect x="350" y="120" width="80" height="55" fill="none" stroke="#FF3500" stroke-width="3" rx="6"/>
+  <path d="M350 120 L390 150 L430 120" stroke="#FF3500" stroke-width="3" fill="none"/>
+  <text x="390" y="195" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Hameçonnage</text>
+  
+  <rect x="350" y="200" width="80" height="55" fill="none" stroke="#F8674F" stroke-width="3" rx="6"/>
+  <path d="M350 200 L390 230 L430 200" stroke="#F8674F" stroke-width="3" fill="none"/>
+  <text x="390" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Usurpation</text>
+  
+  <rect x="350" y="280" width="80" height="55" fill="none" stroke="#FF3500" stroke-width="3" rx="6"/>
+  <path d="M350 280 L390 310 L430 280" stroke="#FF3500" stroke-width="3" fill="none"/>
+  <text x="390" y="355" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">BEC</text>
+  
+  <rect x="500" y="160" width="80" height="55" fill="none" stroke="#F8674F" stroke-width="3" rx="6"/>
+  <path d="M500 160 L540 190 L580 160" stroke="#F8674F" stroke-width="3" fill="none"/>
+  <text x="540" y="235" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Fraude Facture</text>
+  
+  <rect x="500" y="240" width="80" height="55" fill="none" stroke="#FF3500" stroke-width="3" rx="6"/>
+  <path d="M500 240 L540 270 L580 240" stroke="#FF3500" stroke-width="3" fill="none"/>
+  <text x="540" y="315" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12">Deepfake</text>
+  
+  <!-- AI generation arrows -->
+  <path d="M280 225 L345 147" stroke="#FF3500" stroke-width="3" fill="none" stroke-dasharray="8,8" marker-end="url(#arrowhead)"/>
+  <path d="M280 225 L345 227" stroke="#F8674F" stroke-width="3" fill="none" stroke-dasharray="8,8" marker-end="url(#arrowhead2)"/>
+  <path d="M280 225 L345 307" stroke="#FF3500" stroke-width="3" fill="none" stroke-dasharray="8,8" marker-end="url(#arrowhead)"/>
+  <path d="M280 225 L495 187" stroke="#F8674F" stroke-width="3" fill="none" stroke-dasharray="8,8" marker-end="url(#arrowhead2)"/>
+  <path d="M280 225 L495 267" stroke="#FF3500" stroke-width="3" fill="none" stroke-dasharray="8,8" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF3500"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F8674F"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="28" font-weight="bold">40% E-mails Générés par IA</text>
+  <text x="400" y="75" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16">Attaques Hyper-personnalisées | Darktrace Research</text>
+  
+  <!-- Large percentage indicator -->
+  <text x="650" y="150" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="72" font-weight="bold">40%</text>
+  <text x="650" y="180" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18">Générés par IA</text>
+  
+  <!-- AI label -->
+  <text x="200" y="330" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Moteur IA</text>
+</svg>

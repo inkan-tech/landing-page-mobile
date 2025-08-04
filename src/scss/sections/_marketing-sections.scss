@@ -1,0 +1,312 @@
+//
+// Marketing Sections - Zero to First Customer Strategy
+// Founder story, educational resources, and pioneer program
+//
+
+// Founder Section
+.founder-section {
+  padding: 80px 0;
+  
+  .founder-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .founder-story {
+    margin-bottom: 40px;
+    
+    p.lead {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+  }
+  
+  .founder-credentials {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    
+    .credential-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 24px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        border-color: var(--shu-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.15);
+      }
+      
+      i {
+        font-size: 1.25rem;
+      }
+      
+      span {
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Educational Resources Section
+.education-section {
+  padding: 80px 0;
+  background: var(--bg-primary);
+  
+  .resource-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      border-color: var(--shu-primary);
+    }
+    
+    .resource-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--bg-secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border: 1px solid var(--border-color);
+      
+      i {
+        font-size: 1.5rem;
+      }
+    }
+    
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    
+    p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+  }
+}
+
+// Pioneer Program Section
+.pioneer-section {
+  padding: 80px 0;
+  
+  .pioneer-benefits {
+    margin-top: 40px;
+  }
+  
+  .benefit-item {
+    text-align: center;
+    padding: 24px 16px;
+    
+    .benefit-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      transition: all 0.2s ease;
+      
+      i {
+        font-size: 1.25rem;
+      }
+    }
+    
+    &:hover .benefit-icon {
+      background: var(--shu-primary);
+      border-color: var(--shu-primary);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    h5 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    
+    p {
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  }
+  
+  .pioneer-cta {
+    .cta-primary-large {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+// Common section utilities - Japanese Inkan-inspired design
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  position: relative;
+  text-align: center;
+  
+  // Ma (negative space) - generous spacing
+  margin: 48px auto 32px;
+  
+  // Red outline box - just border, no fill
+  span {
+    padding: 16px 32px;
+    position: relative;
+    border: 2px solid var(--shu-primary);
+    border-radius: 8px;
+    background: transparent;
+    display: inline-block;
+    
+    // Japanese gradient border effect
+    background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+                linear-gradient(135deg, var(--shu-primary) 0%, var(--enji-secondary) 50%, var(--sango-accent) 100%) border-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    
+    // Mono no Aware - subtle beauty
+    transition: all 0.3s ease;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .founder-section,
+  .education-section,
+  .pioneer-section {
+    padding: 60px 0;
+  }
+  
+  .founder-credentials {
+    gap: 20px;
+    
+    .credential-item {
+      padding: 12px 16px;
+      flex-direction: column;
+      text-align: center;
+      gap: 8px;
+      min-width: 120px;
+    }
+  }
+  
+  .resource-card {
+    padding: 24px 20px;
+    
+    .resource-icon {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+      
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  
+  .pioneer-benefits {
+    margin-top: 32px;
+    
+    .benefit-item {
+      padding: 20px 12px;
+      
+      .benefit-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .founder-credentials {
+    flex-direction: column;
+    align-items: center;
+    
+    .credential-item {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+}
+
+// Dark theme adjustments
+[data-theme="dark"] {
+  .resource-card,
+  .benefit-item .benefit-icon,
+  .founder-credentials .credential-item {
+    &:hover {
+      box-shadow: 0 12px 32px rgba(255, 53, 0, 0.2);
+    }
+  }
+}
+
+// Print styles
+@media print {
+  .founder-section,
+  .education-section,
+  .pioneer-section {
+    padding: 40px 0;
+    break-inside: avoid;
+  }
+  
+  .resource-card,
+  .benefit-item,
+  .founder-credentials .credential-item {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}

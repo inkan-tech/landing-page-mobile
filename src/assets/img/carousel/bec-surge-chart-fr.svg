@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3500;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#F8674F;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF3500" />
+      <stop offset="100%" style="stop-color:#F8674F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  
+  <!-- Chart bars representing surge - wider spacing -->
+  <rect x="120" y="320" width="70" height="90" fill="url(#chartGrad)" opacity="0.7" rx="4"/>
+  <rect x="220" y="280" width="70" height="130" fill="url(#chartGrad)" opacity="0.8" rx="4"/>
+  <rect x="320" y="210" width="70" height="200" fill="url(#chartGrad)" opacity="0.9" rx="4"/>
+  <rect x="420" y="140" width="70" height="270" fill="url(#chartGrad)" rx="4"/>
+  <rect x="520" y="110" width="70" height="300" fill="#FF3500" rx="4"/>
+  
+  <!-- Grid lines for professional look -->
+  <line x1="100" y1="410" x2="610" y2="410" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="350" x2="610" y2="350" stroke="#E5E7EB" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="290" x2="610" y2="290" stroke="#E5E7EB" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="230" x2="610" y2="230" stroke="#E5E7EB" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="170" x2="610" y2="170" stroke="#E5E7EB" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="110" x2="610" y2="110" stroke="#E5E7EB" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Y-axis labels -->
+  <text x="90" y="415" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">0%</text>
+  <text x="90" y="355" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">10%</text>
+  <text x="90" y="295" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">20%</text>
+  <text x="90" y="235" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">30%</text>
+  <text x="90" y="175" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">40%</text>
+  <text x="90" y="115" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">50%</text>
+  
+  <!-- X-axis labels -->
+  <text x="155" y="435" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Jan</text>
+  <text x="255" y="435" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Fév</text>
+  <text x="355" y="435" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Mar</text>
+  <text x="455" y="435" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Avr</text>
+  <text x="555" y="435" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Mai</text>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="28" font-weight="bold">Attaques BEC en Hausse de 37%</text>
+  <text x="400" y="75" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16">Mai-Juin 2025 | Microsoft Security Intelligence</text>
+  
+  <!-- Large percentage indicator -->
+  <text x="650" y="200" text-anchor="middle" fill="#FF3500" font-family="Arial, sans-serif" font-size="72" font-weight="bold">37%</text>
+  <text x="650" y="230" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="18">Augmentation</text>
+  
+  <!-- Arrow showing increase -->
+  <path d="M620 270 L640 250 L660 270 M640 250 L640 300" stroke="#FF3500" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

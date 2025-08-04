@@ -1,0 +1,114 @@
+doctype html
+html(lang=$localeName)
+
+  head
+    //- Common headers shared across all pages
+    include includes/common-headers.pug
+    
+    //- Page-specific meta tags
+    title #{$i18n.press.title} | #{$i18n.title}
+    meta(name='description', content=$i18n.press.subtitle)
+    
+    //- Page-specific canonical link
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/press.html')
+    link(rel='alternate', hreflang='x-default', href='https://sealf.ie/press.html')
+    link(rel='alternate', hreflang='en', href='https://sealf.ie/en/press.html')
+    link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/press.html')
+
+    include ../pug/includes/skip-nav.pug
+    include ../pug/includes/navbar.pug
+
+  body
+    main#main-content(tabindex='-1')
+
+      // Press Page Hero
+      header.hero-section.bg-light
+        .container.px-5
+          .row.justify-content-center
+            .col-lg-8
+              .text-center
+                h1.display-4.mb-3 #{$i18n.press.title}
+                p.lead.text-muted #{$i18n.press.subtitle}
+
+      // International Speaking Engagements Section
+      section.speaking-section
+        .container.px-5
+          .row.justify-content-center
+            .col-lg-10
+              .text-center.mb-5
+                h2.section-title
+                  span #{$i18n.press.sections.speaking.title}
+              
+              // ITU-T Workshop Feature
+              .featured-presentation.bg-light.rounded.p-5.mb-5
+                .row.align-items-center
+                  .col-lg-8
+                    .presentation-content
+                      h3.h4.text-gradient.mb-3 #{$i18n.press.sections.speaking.ituWorkshop.title}
+                      .presentation-meta.mb-3
+                        .meta-item
+                          i.bi-calendar-event.text-muted.me-2
+                          span.text-muted #{$i18n.press.sections.speaking.ituWorkshop.date}
+                        .meta-item.mt-2
+                          i.bi-building.text-muted.me-2
+                          span.text-muted #{$i18n.press.sections.speaking.ituWorkshop.venue}
+                      h4.h6.text-primary.mb-3 "#{$i18n.press.sections.speaking.ituWorkshop.topic}"
+                      p.text-muted #{$i18n.press.sections.speaking.ituWorkshop.description}
+                  .col-lg-4.text-center
+                    a.cta-primary(href="https://inkan.link/posts/news-itu-t-workshop-securing-ai/" target="_blank" rel="noopener noreferrer")
+                      i.bi-play-circle.me-2
+                      | #{$i18n.press.sections.speaking.ituWorkshop.watchVideo}
+
+      // Media Coverage Section
+      section.media-section.bg-light
+        .container.px-5
+          .row.justify-content-center
+            .col-lg-10
+              .text-center.mb-5
+                h2.section-title
+                  span #{$i18n.press.sections.media.title}
+              
+              .row.g-4
+                .col-md-6
+                  .media-card.bg-white.rounded.p-4.h-100.shadow-sm
+                    .media-icon.mb-3
+                      i.bi-newspaper.text-gradient.fs-3
+                    h4 #{$i18n.press.sections.media.figaro.title}
+                    p.text-muted.mb-3 #{$i18n.press.sections.media.figaro.description}
+                    a.cta-ghost(href="#") #{$i18n.press.sections.media.figaro.readMore}
+                
+                .col-md-6
+                  .media-card.bg-white.rounded.p-4.h-100.shadow-sm
+                    .media-icon.mb-3
+                      i.bi-broadcast.text-gradient.fs-3
+                    h4 Additional Coverage
+                    p.text-muted.mb-3 Expert commentary and thought leadership on AI security trends.
+                    a.cta-ghost(href="mailto:contact@sealf.ie") Contact for Interviews
+
+      // Industry Recognition Section
+      section.recognition-section
+        .container.px-5
+          .row.justify-content-center
+            .col-lg-10
+              .text-center.mb-5
+                h2.section-title
+                  span #{$i18n.press.sections.recognition.title}
+                p.section-subtitle #{$i18n.press.sections.recognition.description}
+              
+              .recognition-placeholder.text-center.p-5.bg-light.rounded
+                i.bi-award.display-4.text-gradient.mb-3
+                h4 Awards & Certifications
+                p.text-muted Coming soon - Industry recognitions and partnerships
+                
+              .text-center.mt-4
+                a.cta-primary(href="mailto:contact@sealf.ie?subject=Press Inquiry")
+                  i.bi-envelope.me-2
+                  | Press Inquiries
+
+    include ../pug/includes/footer.pug
+
+    // Bootstrap core JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js', integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==', crossorigin='anonymous')
+
+    // Core theme JS
+    script(src='/js/scripts.js')

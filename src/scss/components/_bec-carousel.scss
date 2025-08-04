@@ -1,0 +1,598 @@
+//
+// BEC Trends Carousel Component
+// Current threat intelligence in Japanese-inspired design
+//
+
+.bec-trends-section {
+  padding: 80px 0;
+  background: var(--bg-primary);
+  position: relative;
+  
+  // Subtle pattern overlay
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF3500' fill-opacity='0.02'%3E%3Cpath d='M20 20v-2h-2v2h-2v2h2v2h2v-2h2v-2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  position: relative;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-align: center;
+  
+  // Red gradient background with Japanese colors
+  background: linear-gradient(135deg, var(--shu-primary) 0%, var(--enji-secondary) 50%, var(--sango-accent) 100%);
+  
+  // Ma (negative space) - generous spacing
+  margin: 48px auto 32px;
+  max-width: fit-content;
+  
+  // Mono no Aware - subtle beauty with soft shadow
+  box-shadow: 0 8px 24px rgba(255, 53, 0, 0.25);
+  transition: all 0.3s ease;
+  
+  // Kanso - simple border
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(255, 53, 0, 0.35);
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+// Carousel Container
+.bec-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// Carousel track styles moved below for enhanced smoothness
+
+.carousel-slide {
+  width: 100%; // Show 1 card at a time on all screen sizes
+  flex-shrink: 0;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &.active .trend-card {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  // Make all visible cards active for better UX
+  .trend-card {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Enhanced Trend Cards with Images and Links - MUCH LARGER
+.trend-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  max-width: 450px; // SIGNIFICANTLY increased for much larger images
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scale(1);
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  
+  // Responsive card sizing - all much larger
+  @media (min-width: 768px) {
+    max-width: 520px; // Much larger on tablets
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 600px; // HUGE on desktop for maximum SVG impact
+  }
+  
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 64px rgba(255, 53, 0, 0.2);
+    border-color: var(--shu-primary);
+    text-decoration: none;
+    color: inherit;
+    
+    .trend-image img {
+      transform: scale(1.05);
+    }
+    
+    .trend-link-indicator {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  &:focus {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  
+  // Enhanced for link cards
+  &.trend-card-link {
+    cursor: pointer;
+    
+    &:hover, &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+// Image container - 16:9 aspect ratio with full fill
+.trend-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; // Wide format for better visual impact
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #FFFFFF; // Always light background for SVG contrast
+  border-bottom: 2px solid var(--shu-primary); // Japanese red accent border
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; // NO padding - fill completely
+  
+  img {
+    width: 100%; // Fill entire width
+    height: 100%; // Fill entire height
+    object-fit: cover; // Fill space completely without gaps
+    transition: transform 0.4s ease;
+    filter: none; // Ensure SVGs display properly
+  }
+}
+
+// Content container - Better organized layout
+.trend-content {
+  padding: 24px 20px 20px 20px;
+  position: relative;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// Header section with number and label
+.trend-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.trend-number {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--shu-primary);
+  line-height: 0.9;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.trend-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  display: block;
+}
+
+.trend-subtitle {
+  font-size: 0.875rem;
+  color: var(--shu-primary);
+  line-height: 1.3;
+  font-weight: 500;
+  margin: 0;
+  padding: 4px 8px;
+  background: rgba(255, 53, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+// Enhanced description with better spacing
+.trend-description {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  flex: 1;
+}
+
+// Source attribution with better styling
+.trend-source {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+  padding: 8px 0 0 0;
+  border-top: 1px solid var(--border-color);
+  
+  &:before {
+    content: "Source: ";
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+}
+
+// New: Link indicator
+.trend-link-indicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--shu-primary);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 53, 0, 0.2);
+  
+  i {
+    font-size: 0.875rem;
+  }
+  
+  span {
+    white-space: nowrap;
+  }
+}
+
+// Carousel Controls - Card-width navigation with 75% center dots
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Arrows on sides, dots in center
+  max-width: 450px; // Match trend-card max-width (desktop default)
+  margin: 0 auto; // Center the navigation container
+  padding: 16px 0; // Vertical padding only
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  
+  // Responsive card-width matching
+  @media (min-width: 768px) {
+    max-width: 520px; // Match tablet card size
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 600px; // Match desktop card size
+  }
+}
+
+.carousel-prev,
+.carousel-next {
+  background: var(--bg-surface);
+  border: 2px solid var(--shu-primary); // More prominent border with Japanese red
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--shu-primary); // Japanese red color for better visibility
+  flex-shrink: 0; // Prevent arrows from shrinking
+  opacity: 1; // Ensure full opacity (always visible)
+  box-shadow: 0 2px 8px rgba(255, 53, 0, 0.15); // Subtle red shadow for visibility
+  
+  &:hover {
+    background: var(--shu-primary);
+    color: white;
+    border-color: var(--shu-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 53, 0, 0.25);
+  }
+  
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+// Indicators - 75% width in the center
+.carousel-indicators {
+  display: flex;
+  justify-content: space-between; // Spread dots evenly across the 75% width
+  align-items: center;
+  width: 75%; // Take 75% of the container width
+  min-width: 0; // Allow shrinking
+}
+
+.indicator {
+  width: clamp(6px, 1.5vw, 10px); // Responsive size based on viewport
+  height: clamp(6px, 1.5vw, 10px);
+  border-radius: 50%;
+  border: none;
+  background: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0; // Prevent dots from shrinking too much
+  
+  &.active {
+    background: var(--shu-primary);
+    transform: scale(1.25);
+  }
+  
+  &:hover {
+    background: var(--sango-accent);
+  }
+}
+
+// Auto-advance animation
+@keyframes carousel-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(255, 53, 0, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 0 8px rgba(255, 53, 0, 0);
+  }
+}
+
+@keyframes carousel-progress {
+  0% { 
+    transform: scale(1.25) scaleX(1);
+  }
+  100% { 
+    transform: scale(1.25) scaleX(0.5);
+  }
+}
+
+.carousel-auto-advancing .indicator.active {
+  animation: carousel-pulse 4s infinite, carousel-progress 4s linear infinite;
+}
+
+// Enhanced carousel track smoothness
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%; // Container width for proper slide positioning
+  will-change: transform;
+}
+
+// Responsive adjustments for enhanced cards - 16:9 aspect ratio
+@media (max-width: 768px) {
+  .bec-trends-section {
+    padding: 60px 0;
+  }
+  
+  .trend-card {
+    max-width: 500px; // SIGNIFICANTLY increased for larger mobile display
+  }
+  
+  .trend-content {
+    padding: 20px 18px 18px 18px;
+  }
+  
+  .carousel-controls {
+    max-width: 500px; // Match mobile card size
+    padding: 12px 0; // Vertical padding only
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 36px;
+    height: 36px;
+  }
+  
+  // .carousel-indicators uses 75% width, no margin needed
+  
+  .trend-link-indicator {
+    top: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    
+    span {
+      display: none; // Hide text on mobile, show only icon
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-slide {
+    padding: 12px 4px; // Reduced padding to maximize card space
+  }
+  
+  .trend-card {
+    max-width: 480px; // MUCH larger - nearly full screen width on mobile
+  }
+  
+  .trend-content {
+    padding: 18px 16px 16px 16px;
+  }
+  
+  .trend-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .trend-source {
+    font-size: 0.7rem;
+  }
+  
+  .carousel-controls {
+    max-width: 480px; // Match card width on small mobile
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 32px;
+    height: 32px;
+  }
+  
+  // .carousel-indicators uses 75% width, no margin needed
+}
+
+// Additional mobile optimization for extra small screens
+@media (max-width: 480px) {
+  .carousel-slide {
+    padding: 8px 2px; // Minimal padding for maximum space
+  }
+  
+  .trend-card {
+    max-width: 460px; // Nearly full viewport width
+  }
+  
+  .carousel-controls {
+    max-width: 460px; // Match card width
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 30px;
+    height: 30px;
+  }
+  
+  // .carousel-indicators uses 75% width, no margin needed
+}
+
+// For very small screens (older iPhones)
+@media (max-width: 375px) {
+  .carousel-slide {
+    padding: 6px 1px; // Absolute minimal padding
+  }
+  
+  .trend-card {
+    max-width: 350px; // Optimized for iPhone SE and similar
+  }
+  
+  .carousel-controls {
+    max-width: 350px; // Match small card width
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 28px;
+    height: 28px;
+  }
+  
+  // .carousel-indicators uses 75% width, no margin needed
+}
+
+// Dark theme adjustments for enhanced cards
+[data-theme="dark"] {
+  .bec-trends-section:before {
+    opacity: 0.1;
+  }
+  
+  .trend-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    
+    &:hover {
+      box-shadow: 0 16px 64px rgba(255, 53, 0, 0.3);
+    }
+  }
+  
+  // Keep image background light for SVG visibility in dark mode
+  .trend-image {
+    background: #FFFFFF !important; // Force light background for SVG contrast
+    border-bottom-color: var(--shu-primary);
+  }
+  
+  .trend-content {
+    background: var(--bg-secondary);
+  }
+  
+  .trend-subtitle {
+    background: rgba(227, 66, 52, 0.2); // Darker theme red with opacity
+    color: var(--sango-accent);
+  }
+  
+  .trend-link-indicator {
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--sango-accent);
+    border-color: rgba(248, 103, 79, 0.3);
+  }
+  
+  .trend-source {
+    border-top-color: var(--border-color);
+  }
+  
+  // Dark theme arrow styling for better visibility
+  .carousel-prev,
+  .carousel-next {
+    background: var(--bg-secondary);
+    border-color: var(--shu-primary);
+    color: var(--shu-primary);
+    box-shadow: 0 2px 8px rgba(227, 66, 52, 0.2); // Adapted red shadow for dark theme
+    
+    &:hover {
+      background: var(--shu-primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(227, 66, 52, 0.4);
+    }
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+  
+  .trend-card {
+    transition: none;
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .carousel-auto-advancing .indicator.active {
+    animation: none;
+  }
+}
+
+// Focus states
+.carousel-prev:focus-visible,
+.carousel-next:focus-visible,
+.indicator:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}

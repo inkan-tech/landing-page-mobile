@@ -101,27 +101,32 @@ section#features {
     transition: color 0.2s ease;
 }
 
-// Generic styling for device mockups (used across all sections)
+// Unified device mockup styling - single source of truth for all mockups
 .device-mockup {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 1; // Establish stacking context
 
-    // SVG that sits behind the phone mockup with theme support
+    // SVG background circle with subtle theme gradient  
     .circle {
         position: absolute;
-        left: 0;
-        fill: url(#circleGradient);
-        width: 70%;
-        display: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 60%;
+        display: block;
+        z-index: 0; // Behind device but within mockup context
+        pointer-events: none; // Prevent interaction blocking
 
         .gradient-start-color {
-            stop-color: var(--shu-primary);
+            stop-color: var(--shu-primary); // Traditional Vermillion (Shu-iro)
         }
 
         .gradient-end-color {
-            stop-color: var(--sango-accent);
+            stop-color: var(--enji-secondary); // Crimson (Enji-iro)
         }
     }
 
@@ -132,9 +137,10 @@ section#features {
         width: 1.2rem;
         transform: rotate(15deg);
         fill: var(--sango-accent);
-        top: 15%;
-        right: 10%;
+        top: 5%;
+        right: -5%;
         transition: fill 0.2s ease;
+        z-index: 1;
     }
 
     .shape-2 {
@@ -142,16 +148,19 @@ section#features {
         height: 0.8rem;
         width: 0.8rem;
         fill: var(--shu-primary);
-        bottom: 15%;
-        left: 10%;
+        bottom: 5%;
+        left: -5%;
         transition: fill 0.2s ease;
+        z-index: 1;
     }
 
-    // Device wrapper with theme-aware shadow
+    // Device wrapper with consistent sizing and theme-aware shadow
     .device-wrapper {
-        max-width: 10rem;
+        position: relative;
+        max-width: 15rem;
         box-shadow: 0 10px 20px var(--shadow-color);
         transition: box-shadow 0.2s ease;
+        z-index: 1; // Above circle but within mockup context
 
         &:hover {
             box-shadow: 0 15px 30px var(--shadow-color);
@@ -159,89 +168,75 @@ section#features {
     }
 }
 
-// Sizing for the device and SVG background circle (sm screen size breakpoint)
+// All mockups now use centered positioning relative to phone
+
+// Features section specific - smaller circle
+.how-it-works-section .device-mockup .circle {
+    width: 40%;
+    height: 40%;
+}
+
+@include media-breakpoint-up(sm) {
+    .how-it-works-section .device-mockup .circle {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .how-it-works-section .device-mockup .circle {
+        width: 50%;
+        height: 50%;
+        transform: translate(-40%, -50%);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .how-it-works-section .device-mockup .circle {
+        width: 55%;
+        height: 55%;
+        transform: translate(-35%, -50%);
+    }
+}
+
+// Responsive adjustments for device mockups
 @include media-breakpoint-up(sm) {
     .device-mockup {
         .circle {
             width: 70%;
-            display: block;
-            left: auto;
+            height: 70%;
         }
-
+        
         .device-wrapper {
-            max-width: 12.5rem;
+            max-width: 16rem;
         }
     }
 }
 
-// Sizing for the device and SVG background circle (md screen size breakpoint)
 @include media-breakpoint-up(md) {
     .device-mockup {
         .circle {
-            width: 60%;
-            left: auto;
-        }
-
-        .device-wrapper {
-            max-width: 15rem;
-        }
-    }
-}
-
-// Sizing for the device and SVG background circle (lg screen size breakpoint)
-@include media-breakpoint-up(lg) {
-    .device-mockup {
-        .circle {
-            width: 90%;
-            left: -25%;
-        }
-
-        .shape-1 {
-            top: 5%;
-            right: -15%;
-        }
-
-        .shape-2 {
-            bottom: 10%;
-            left: -10%;
-        }
-
-        .device-wrapper {
-            max-width: 15rem;
-            margin-left: auto;
-        }
-    }
-}
-
-// Sizing for the device and SVG background circle (xl screen size breakpoint)
-@include media-breakpoint-up(xl) {
-    .device-mockup {
-        .circle {
-            width: 75%;
-            left: 0;
-        }
-
-        .shape-2 {
-            bottom: 15%;
-            left: 10%;
-        }
-
-        .device-wrapper {
-            max-width: 15rem;
-        }
-    }
-}
-
-// Sizing for the device and SVG background circle (xxl screen size breakpoint)
-@include media-breakpoint-up(xxl) {
-    .device-mockup {
-        .circle {
             width: 80%;
-            left: 0;
+            height: 80%;
+            transform: translate(-40%, -50%); // Offset to the left
         }
 
         .device-wrapper {
             max-width: 17rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .device-mockup {
+        .circle {
+            width: 90%;
+            height: 90%;
+            transform: translate(-35%, -50%); // Slightly less offset
+        }
+        
+        .device-wrapper {
+            max-width: 18rem;
         }
     }
 }

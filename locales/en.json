@@ -1,5 +1,5 @@
 {
-    "title": "Sealfie App",
+    "title": "Sealfie app",
     "meta": {
         "description": "Protect your business from deepfake fraud. Sealfie simplifies cybersecurity – it's the only digital companion that effectively fights fake executive scams.",
         "descriptions": {
@@ -15,8 +15,56 @@
     "banner": {
         "main": "Sealfie",
         "pricing": "Pricing",
-        "docs": "How it Works",
+        "docs": "How it works",
+        "press": "Company news",
         "action": "Newsletter"
+    },
+    "footer": {
+        "navigation": {
+            "product": {
+                "title": "Product",
+                "links": {
+                    "overview": "Overview",
+                    "howItWorks": "How it works",
+                    "pricing": "Pricing",
+                    "challenge": "Security Challenge"
+                }
+            },
+            "company": {
+                "title": "Company",
+                "links": {
+                    "about": "About",
+                    "press": "Company news", 
+                    "blog": "Blog",
+                    "contact": "Contact"
+                }
+            },
+            "support": {
+                "title": "Support",
+                "links": {
+                    "help": "Help Center",
+                    "documentation": "Documentation",
+                    "privacy": "Privacy Policy",
+                    "terms": "Terms of Service"
+                }
+            },
+            "connect": {
+                "title": "Connect",
+                "links": {
+                    "newsletter": "Newsletter",
+                    "linkedin": "LinkedIn",
+                    "email": "Email Us"
+                }
+            }
+        },
+        "download": {
+            "title": "Download Sealfie",
+            "subtitle": "Available on iOS and Android"
+        },
+        "legal": {
+            "copyright": "© 2024 Inkan.link. All Rights Reserved.",
+            "sources": "Research Sources"
+        }
     },
     "otherlang": {
         "long": "Français",
@@ -24,7 +72,7 @@
     },
     "hero": {
         "title": {
-            "line1": "Your Business is a Target",
+            "line1": "Your business is a target",
             "line2": "Protect it with a simple selfie"
         },
         "subtitle": "Business Email Compromise costs enterprises $5 billion annually. No industry is safe from sophisticated deepfake attacks.",
@@ -43,49 +91,49 @@
             }
         },
         "example": {
-            "title": "Real Case:",
+            "title": "Real case:",
             "text": "A Hong Kong firm lost $25M when criminals created 6 deepfakes of colleagues, including their CFO, in a video conference call. Cyber training didn't protect them."
         },
         "cta": {
-            "primary": "Challenge your current process with us",
+            "primary": "Challenge your protection",
             "secondary": "How does it work?"
         }
     },
     "head": {
-        "title": "Stop Losing to Deepfakes!",
+        "title": "Stop losing to deepfakes!",
         "subtitle": "Executive fraud attacks are now undetectable. Sealfie dramatically simplifies the defense – just one photo.",
         "subtitle2": "We handle the complex technical verifications.  Forget endless MFA training and alerts."
     },
     "testimonial": "Sealfie: Unmatched security meets effortless implementation, powered by Inkan.link’s cutting-edge attestation technology.",
-    "centeredmsg": "Protect your organization with the simplest security solution.",
+    "centeredmsg": "The simplicity of a selfie, the power of our expert verifications.",
     "trailer": "Executive email compromise: 5 billion stolen per year!",
     "post_register": {
-        "title": "Post-Registration Confirmation",
+        "title": "Post-registration confirmation",
         "main": "Thank you for your interest.  We’ll be in touch within 24 hours to discuss your specific needs.",
         "custom": "We’re also available to develop customized solutions tailored to your organization’s requirements."
     },
     "features": {
         "person": {
-            "title": "Simple & Effective",
+            "title": "Simple & effective",
             "text": "Just like taking a photo, Sealfie automatically handles all technical verifications for you. No training required."
         },
         "send": {
-            "title": "Unparalleled Security",
+            "title": "Unparalleled security",
             "text": "Each transaction is securely verified instantly. We create a bundle of irrefutable digital evidence – far more reliable than traditional MFA."
         },
         "shield": {
-            "title": "Adaptable & Scalable",
+            "title": "Adaptable & scalable",
             "text": "Sealfie integrates seamlessly with your existing processes.  Contact us to discuss your customized integration and expand verification sources."
         },
         "path": {
-            "title": "Automation & Audit Trail",
+            "title": "Automation & audit trail",
             "text": "Sealfie automates verifications and preserves a complete audit trail for every transaction, ensuring complete traceability and compliance."
         }
     },
     "pricing": {
-        "title": "Pricing Options",
+        "title": "Pricing options",
         "users": {
-            "title": "Streamlined Security",
+            "title": "Streamlined security",
             "text": "Reduce the complexity of security without compromising protection. Starting at $195/person/year."
         },
         "cost": {
@@ -93,24 +141,24 @@
             "text": "Includes standard validation and up to 20 validations per year.  Custom quotes available for tailored integrations, increased validation volumes, and priority support."
         },
         "support": {
-            "title": "Dedicated Support",
+            "title": "Dedicated support",
             "text": "Full support included – no IT integration required.  We adapt to your processes and systems upon request."
         },
         "period": {
-            "title": "Subscription Terms",
+            "title": "Subscription terms",
             "text": "Annual subscription, cancellable at any time. Larger enterprises and bespoke requirements require a consultation."
         },
         "onboard": {
-            "title": "Quick Deployment",
+            "title": "Quick deployment",
             "text": "You’ll be operational within 30 minutes – minimal system integration ensures immediate protection during an attack."
         },
         "techno": {
-            "title": "Advanced Technology",
+            "title": "Advanced technology",
             "text": "We dynamically perform multi-source technical verifications in real-time. Expanding verification sources is simple and seamless."
         }
     },
     "description": {
-        "title": "Revolutionize Your Cybersecurity",
+        "title": "Revolutionize your cybersecurity",
         "text": "Faced with increasingly sophisticated deepfakes and identity theft, traditional cybersecurity is exhausting: endless training, constant alerts, and complex MFA.",
         "text2": "Sealfie radically changes the equation – just one simple process instead of knowing ALL possible attacks. A selfie for you, we handle the technical complexities and produce a list of attestations more reliable than traditional MFA processes.",
         "text3": "We coordinate technical information sources behind the scenes while your teams enjoy an experience as smooth as taking a photo. Thanks to our deeptech technology, we’ll adapt to threats without making usage more complex."
@@ -133,20 +181,230 @@
         "demo2": "Landing-Doc-EN2.webm",
         "hero": "trailer-Business-Email-compromise.webm"
     },
+    "carousel": {
+        "title": "Current threat landscape",
+        "subtitle": "Latest intelligence from August 2025",
+        "source": "Source: Industry reports August 2025",
+        "slides": {
+            "attacks": {
+                "number": "37%",
+                "label": "increase in attacks",
+                "subtitle": "May-June 2025",
+                "description": "BEC attacks surged 37% in the first half of 2025, with financial services most targeted",
+                "image": "/assets/img/carousel/bec-surge-chart.svg",
+                "url": "https://hoxhunt.com/blog/business-email-compromise-statistics",
+                "source": "Hoxhunt BEC Research 2025"
+            },
+            "ai": {
+                "number": "40%",
+                "label": "AI-generated emails",
+                "subtitle": "Hyper-personalized attacks",
+                "description": "AI tools now generate 40% of BEC emails, making them harder to detect with traditional filters",
+                "image": "/assets/img/carousel/ai-generated-emails.svg",
+                "url": "https://blog.talosintelligence.com/ir-trends-q1-2025/",
+                "source": "Cisco Talos Intelligence"
+            },
+            "financial": {
+                "number": "$2.9B",
+                "label": "US losses in 2024",
+                "subtitle": "$137K average per incident",
+                "description": "FBI reports $2.9 billion in US BEC losses for 2024, with average incident cost rising to $137,000",
+                "image": "/assets/img/carousel/fbi-losses-report.svg",
+                "url": "https://www.ic3.gov/Media/PDF/AnnualReports.aspx",
+                "source": "FBI Internet Crime Reports"
+            },
+            "realCase": {
+                "number": "6-Figure",
+                "label": "aviation company loss",
+                "subtitle": "Nigerian SilverTerrier attack",
+                "description": "Major aviation company loses six figures to sophisticated Nigerian SilverTerrier group using deepfake CEO calls",
+                "image": "/assets/img/carousel/aviation-attack-case.svg",
+                "url": "https://www.crowdstrike.com/resources/reports/",
+                "source": "CrowdStrike Threat Reports"
+            },
+            "smallBusiness": {
+                "number": "70%",
+                "label": "weekly attack probability",
+                "subtitle": "Companies <1000 employees",
+                "description": "Small businesses face 70% probability of BEC attack weekly, with limited security resources to defend",
+                "image": "/assets/img/carousel/small-business-targets.svg",
+                "url": "https://www.proofpoint.com/us/resources/threat-reports",
+                "source": "Proofpoint Threat Research"
+            },
+            "multiChannel": {
+                "number": "Multi-Channel",
+                "label": "Email + SMS + Voice",
+                "subtitle": "Coordinated attack vectors",
+                "description": "Criminals now coordinate across email, SMS, and voice calls for sophisticated multi-vector BEC campaigns",
+                "image": "/assets/img/carousel/multi-channel-attacks.svg",
+                "url": "https://www.fortra.com/blog/bec-global-insights-report-january-2025",
+                "source": "Fortra BEC Insights 2025"
+            }
+        },
+        "controls": {
+            "prev": "Previous trend",
+            "next": "Next trend"
+        },
+        "readMore": "Read Full Report"
+    },
+    "founder": {
+        "title": "Why we built Sealfie",
+        "subtitle": "From internationally recognized AI security experts",
+        "story": {
+            "lead": "In February 2024, I warned the UN's International Telecommunication Union about the coming surge in AI-powered fraud. The $25 million Hong Kong deepfake case I presented became reality just months later.",
+            "bio": "Traditional cybersecurity solutions fail because they're reactive. Having predicted this AI fraud wave, we built Sealfie as the proactive defense - simple enough for anyone to use, sophisticated enough to stop million-dollar attacks."
+        },
+        "credentials": {
+            "experience": "15+ years cybersecurity expertise",
+            "enterprise": "ITU-T Workshop Speaker (UN Standards Body)",
+            "achievements": "Predicted AI fraud surge - Feb 2024 presentation"
+        },
+        "seePresentation": "Watch ITU-T Presentation"
+    },
+    "howItWorks": {
+        "title": "How Sealfie works",
+        "subtitle": "Three core capabilities that stop million-dollar fraud"
+    },
+    "howItWorksDetailed": {
+        "title": "the unique anti-deepfake solution",
+        "subtitle": "Three simple steps that eliminate sophisticated fraud risks",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "Take a selfie",
+                "description": "Simple as taking a photo. Our app captures your unique biometric identity."
+            },
+            "step2": {
+                "number": "02", 
+                "title": "Instant verification",
+                "description": "Our cyber experts validate your identity in real-time with tamper-proof evidence."
+            },
+            "step3": {
+                "number": "03",
+                "title": "Guaranteed protection",
+                "description": "Every transaction is automatically secured. 20-minute setup, zero training."
+            }
+        },
+        "traditionalSecurity": {
+            "title": "Why traditional security fails",
+            "description": "Multiple trainings, permanent stress, blame when you fail."
+        },
+        "solution": {
+            "title": "Sealfie's advantage",
+            "description": "One method to remember. Our expertise adapts to threats for you.",
+            "youDo": {
+                "title": "You do",
+                "items": [
+                    "Take a selfie",
+                    "Confirm with your biometrics"
+                ]
+            },
+            "weDo": {
+                "title": "We do",
+                "items": [
+                    "Track new attack techniques",
+                    "Update protection automatically",
+                    "Handle all technical verifications",
+                    "Adapt to your business needs"
+                ]
+            }
+        }
+    },
+    "press": {
+        "title": "Company news",
+        "subtitle": "International recognition for pioneering AI fraud prevention solutions",
+        "sections": {
+            "speaking": {
+                "title": "International speaking engagements",
+                "ituWorkshop": {
+                    "title": "ITU-T workshop on securing AI",
+                    "date": "February 19, 2024",
+                    "venue": "International Telecommunication Union (UN)",
+                    "topic": "AI-Powered Criminals - A New Cybersecurity Frontier",
+                    "description": "Presented groundbreaking research on emerging AI-driven fraud threats and preventive solutions to the UN's telecommunications standards body.",
+                    "watchVideo": "Watch Presentation"
+                }
+            },
+            "media": {
+                "title": "Media coverage & interviews",
+                "figaro": {
+                    "title": "Le Figaro interview",
+                    "description": "Featured expert commentary on cybersecurity trends and executive fraud prevention.",
+                    "readMore": "Read Interview"
+                }
+            },
+            "recognition": {
+                "title": "Industry recognition",
+                "description": "Awards, certifications, and industry partnerships recognizing our cybersecurity expertise."
+            }
+        }
+    },
+    "education": {
+        "title": "Free security resources",
+        "subtitle": "Protect yourself with our expert knowledge",
+        "resources": {
+            "guide": {
+                "title": "BEC threat guide",
+                "description": "PLACEHOLDER: Comprehensive guide to Business Email Compromise attacks",
+                "cta": "Download Free PDF"
+            },
+            "checklist": {
+                "title": "Security checklist", 
+                "description": "PLACEHOLDER: Executive protection checklist for immediate implementation",
+                "cta": "Get Checklist"
+            },
+            "assessment": {
+                "title": "Risk assessment",
+                "description": "PLACEHOLDER: Free online tool to assess your organization's risk level",
+                "cta": "Take Assessment"
+            },
+            "challenge": {
+                "title": "Free security challenge",
+                "description": "Discover if your current protection really stands against new threats",
+                "cta": "Book my Challenge"
+            }
+        }
+    },
+    "pioneer": {
+        "title": "Join our pioneer program",
+        "subtitle": "Be among the first to defend against AI-powered attacks",
+        "benefits": {
+            "earlyAccess": {
+                "title": "Early access",
+                "description": "PLACEHOLDER: Get exclusive access to our security technology before general availability"
+            },
+            "directInput": {
+                "title": "Direct input", 
+                "description": "PLACEHOLDER: Shape the product with direct feedback to our development team"
+            },
+            "pricing": {
+                "title": "Pioneer pricing",
+                "description": "PLACEHOLDER: Lock in special pricing for early adopters and long-term partners"
+            },
+            "support": {
+                "title": "Premium support",
+                "description": "PLACEHOLDER: Direct access to our security experts and priority assistance"
+            }
+        },
+        "cta": {
+            "apply": "Apply for Pioneer Program",
+            "disclaimer": "Limited spots available - serious inquiries only"
+        }
+    },
     "modal": {
-        "title": "Contact Form",
+        "title": "Contact form",
         "mail": {
             "title": "Email",
             "feedback": "An email is required",
             "error": "Please enter a valid email address"
         },
         "phone": {
-            "title": "Phone Number",
+            "title": "Phone number",
             "feedback": "An email is required",
             "error": "Please enter a valid phone number"
         },
         "phonetype": {
-            "title": "Type of Phone Used",
+            "title": "Type of phone used",
             "feedback": "An email is required",
             "error": "Please enter a valid email address"
         },
@@ -180,5 +438,67 @@
     "legal": {
         "terms": "Terms of Service",
         "privacy": "Privacy Policy"
+    },
+    "challenge": {
+        "title": "Free security challenge",
+        "subtitle": "Test the resilience of your current protection",
+        "masthead": {
+            "title": "Is your protection really effective?",
+            "subtitle": "Most companies have a false sense of security. Discover the truth about your protection level in 30 minutes.",
+            "cta": "Book my free challenge"
+        },
+        "problem": {
+            "title": "The false security trap",
+            "subtitle": "Why 85% of companies think they're protected... but aren't",
+            "points": [
+                "You've implemented awareness training",
+                "Your teams know the \"best practices\"",
+                "You use traditional MFA solutions",
+                "You think your employees \"will be careful\"",
+                "You believe criminals won't target you"
+            ],
+            "reality": {
+                "title": "The reality:",
+                "text": "Attackers easily bypass these protections with deepfakes, sophisticated social engineering, and AI techniques. They exploit precisely this overconfidence."
+            }
+        },
+        "solution": {
+            "title": "Our free challenge reveals your vulnerabilities",
+            "subtitle": "In 30 minutes, we identify gaps you don't suspect",
+            "process": {
+                "step1": {
+                    "title": "Analysis of your current process",
+                    "description": "We review your existing validation and approval procedures"
+                },
+                "step2": {
+                    "title": "Realistic attack simulation",
+                    "description": "We show you how an attacker would bypass your current protections"
+                },
+                "step3": {
+                    "title": "Personalized action plan",
+                    "description": "You leave with concrete recommendations tailored to your organization"
+                }
+            }
+        },
+        "benefits": {
+            "title": "What you get",
+            "items": [
+                "Objective assessment of your real security level",
+                "Identification of vulnerabilities specific to your organization",
+                "Concrete demonstration of new attack techniques",
+                "Personalized recommendations to strengthen your protection",
+                "No commercial commitment - just free expertise"
+            ]
+        },
+        "cta": {
+            "title": "Ready to discover the truth?",
+            "subtitle": "Book your free 30-minute challenge",
+            "button": "Book now",
+            "disclaimer": "No sales, no commitment - just security expertise"
+        },
+        "testimonial": {
+            "quote": "I was convinced our procedures were solid. The challenge opened my eyes to gaps I couldn't even imagine.",
+            "author": "Chief Financial Officer, 500-employee company"
+        }
     }
 }

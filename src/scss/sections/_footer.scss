@@ -1,9 +1,151 @@
 //
-// Footer
+// Footer - Expanded Menu Layout
 //
 
-// Styling for links in the footer
-footer {
+// Main footer styling
+footer.footer-expanded {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-black, #000000);
+    
+    // Japanese-inspired geometric pattern overlay
+    .footer-pattern {
+        position: relative;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
+            z-index: 0;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    
+    // Japanese-inspired top border
+    border-top: 2px solid var(--shu-primary, #FF3500);
+    
+    // Footer section titles
+    .footer-section {
+        h5 {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            color: var(--text-white, #ffffff);
+        }
+        
+        h6 {
+            font-weight: 500;
+            font-size: 0.875rem;
+            letter-spacing: 0.25px;
+            color: var(--text-white-75, rgba(255, 255, 255, 0.75));
+        }
+    }
+    
+    // Footer links styling
+    .footer-links {
+        li {
+            margin-bottom: 0.75rem;
+            
+            a {
+                color: var(--text-white-50, rgba(255, 255, 255, 0.65));
+                text-decoration: none;
+                font-size: 0.875rem;
+                transition: all 0.3s ease;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 2px;
+                
+                // Subtle underline effect
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--shu-primary, #FF3500);
+                    transition: all 0.3s ease;
+                }
+                
+                &:hover,
+                &:focus {
+                    color: var(--text-white, #ffffff);
+                    text-decoration: none;
+                    
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    // App download badges
+    .app-downloads {
+        .app-badge-small {
+            transition: all 0.3s ease;
+            opacity: 0.8;
+            
+            &:hover {
+                opacity: 1;
+                transform: translateY(-2px);
+            }
+        }
+    }
+    
+    // Footer bottom section
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        
+        .text-white-50 {
+            font-size: 0.8rem;
+            
+            a {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+    
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        .footer-section {
+            margin-bottom: 2rem;
+            
+            h5 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .footer-bottom {
+            .col-md-4 {
+                margin-top: 1rem;
+                text-align: center !important;
+            }
+        }
+    }
+}
+
+// Legacy footer support (if any pages still use old footer)
+footer:not(.footer-expanded) {
     position: relative;
     overflow: hidden;
 
@@ -26,7 +168,7 @@ footer {
     }
 
     // Japanese-inspired border at the top
-    border-top: 3px solid rgba($primary, 0.8);
+    border-top: 3px solid rgba(var(--shu-primary), 0.8);
 
     a {
         color: fade-out($white, 0.4);
