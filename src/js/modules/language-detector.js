@@ -180,24 +180,40 @@
 
     // Initialize language detection
     function init() {
-
         const currentLang = getCurrentLanguage();
         const browserLang = getBrowserLanguage();
         const savedLang = getSavedLanguagePreference();
         
+        // Debug logging
+        console.log('Language Detection Debug:', {
+            currentLang,
+            browserLang,
+            savedLang,
+            url: window.location.pathname
+        });
+        
         // If user has a saved preference and it's different from current, redirect
         if (savedLang && savedLang !== currentLang && SUPPORTED_LANGUAGES.includes(savedLang)) {
+            console.log('Redirecting due to saved preference:', savedLang);
             redirectToLanguage(savedLang);
             return;
         }
         
-
         // Show popup if browser language differs from current language, unless specifically dismissed for this language combination
         const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
         const wasSpecificCombinationDismissed = localStorage.getItem(dismissalKey) === 'true';
         
+        console.log('Popup conditions:', {
+            browserLang,
+            currentLang,
+            browserDiffersFromCurrent: browserLang !== currentLang,
+            hasSavedLang: !!savedLang,
+            dismissalKey,
+            wasSpecificCombinationDismissed
+        });
+        
         if (browserLang !== currentLang && !savedLang && !wasSpecificCombinationDismissed) {
-
+            console.log('Showing language popup');
             // Wait for page to load before showing popup
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', function() {
@@ -206,6 +222,8 @@
             } else {
                 setTimeout(() => showLanguagePopup(browserLang, currentLang), 1000);
             }
+        } else {
+            console.log('Not showing popup due to conditions not met');
         }
     }
 
