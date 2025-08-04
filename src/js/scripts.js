@@ -54,17 +54,42 @@ window.addEventListener('DOMContentLoaded', event => {
     // Initialize BEC Trends Carousel
     initializeBECCarousel();
 
+    // Debug: Check if Bootstrap is loaded
+    console.log('Bootstrap loaded:', typeof bootstrap !== 'undefined');
+    
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
+    if (mainNav && typeof bootstrap !== 'undefined') {
+        try {
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#mainNav',
+                offset: 74,
+            });
+            console.log('✅ ScrollSpy initialized');
+        } catch (error) {
+            console.warn('ScrollSpy initialization failed:', error);
+        }
+    }
+
+    // Mobile navigation debugging
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const navbarCollapse = document.body.querySelector('#navbarResponsive');
+    
+    console.log('Navbar elements found:', {
+        toggler: !!navbarToggler,
+        collapse: !!navbarCollapse,
+        bootstrap: typeof bootstrap !== 'undefined'
+    });
+
+    // Test click handler for mobile navigation
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function(e) {
+            console.log('Mobile menu button clicked');
+            console.log('Collapse element classes:', navbarCollapse?.className);
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
     );

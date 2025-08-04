@@ -11,6 +11,8 @@ html(lang=$localeName)
     
     //- Page-specific canonical link
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/terms.html')
+
+  body#page-top
     include ../pug/includes/navbar.pug
 
     if $localeName !== 'fr'
@@ -20,7 +22,7 @@ html(lang=$localeName)
         h1 Terms of Service (ToS) – Sealfie
         p
 
-        body
+        main
             p
             h1 Terms of Service (ToS) – Sealfie
             p
@@ -120,11 +122,11 @@ html(lang=$localeName)
     else
 
         p
-        h1 Conditions Générales d’Utilisation (CGU) – Sealfie
+        h1 Conditions Générales d'Utilisation (CGU) – Sealfie
         p
-        body
+        main
             p
-             h1 Conditions Générales d’Utilisation (CGU) – Sealfie
+             h1 Conditions Générales d'Utilisation (CGU) – Sealfie
             p
             | Dernière mise à jour : 5 mai 2025
             p

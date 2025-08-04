@@ -273,14 +273,13 @@ html(lang=$localeName)
       link(href='/css/styles.css', rel='stylesheet')
 
 
+  body#page-top
     include ../pug/includes/skip-nav.pug
     include ../pug/includes/navbar.pug
 
-  body
     main#main-content(tabindex='-1')
-
-  // Japanese Minimalist Hero Section - Following Features Section Pattern
-  header.hero-section
+      // Japanese Minimalist Hero Section - Following Features Section Pattern  
+      header.hero-section
     .container.px-5
       .row.gx-5.align-items-center
         .col-lg-3.order-2.order-lg-1
@@ -587,9 +586,9 @@ html(lang=$localeName)
                       span #{item}
 
 
-    include ../pug/includes/footer.pug
+      include ../pug/includes/footer.pug
 
-  // Common scripts (Bootstrap, Core theme, Language detection)
+    // Common scripts (Bootstrap, Core theme, Language detection)
   include includes/common-scripts.pug
 
   // Phase 3: Lazy loader for modular loading
