@@ -45,10 +45,12 @@
         return localStorage.getItem(POPUP_DISMISSED_KEY) === 'true';
     }
 
+
     // Dismiss popup for specific language combination
     function dismissPopup(browserLang, currentLang) {
         const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
         localStorage.setItem(dismissalKey, 'true');
+
     }
 
     // Save language preference
@@ -148,7 +150,9 @@
                 saveLanguagePreference(suggestedLang);
                 redirectToLanguage(suggestedLang);
             } else if (action === 'no' || target.classList.contains('language-popup-close') || target.closest('.language-popup-close')) {
+
                 dismissPopup(suggestedLang, currentLang);
+
                 saveLanguagePreference(currentLang);
                 closePopup();
             }
@@ -165,7 +169,9 @@
         // Close on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && document.contains(popup)) {
+
                 dismissPopup(suggestedLang, currentLang);
+
                 saveLanguagePreference(currentLang);
                 closePopup();
             }
@@ -174,6 +180,7 @@
 
     // Initialize language detection
     function init() {
+
         const currentLang = getCurrentLanguage();
         const browserLang = getBrowserLanguage();
         const savedLang = getSavedLanguagePreference();
@@ -184,11 +191,13 @@
             return;
         }
         
+
         // Show popup if browser language differs from current language, unless specifically dismissed for this language combination
         const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
         const wasSpecificCombinationDismissed = localStorage.getItem(dismissalKey) === 'true';
         
         if (browserLang !== currentLang && !savedLang && !wasSpecificCombinationDismissed) {
+
             // Wait for page to load before showing popup
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', function() {
