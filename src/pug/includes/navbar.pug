@@ -33,5 +33,15 @@ script.
     if (otherLangLink) {
       const href = '../' + '#{$i18n.otherlang.code}' + '/' + pageName;
       otherLangLink.setAttribute('href', href);
+      
+      // Clear language preference when user manually switches language
+      otherLangLink.addEventListener('click', function(e) {
+        // Clear the saved language preference so user can switch freely
+        localStorage.removeItem('sealfie_language_preference');
+        
+        // Save the new language preference
+        const newLang = '#{$i18n.otherlang.code}';
+        localStorage.setItem('sealfie_language_preference', newLang);
+      });
     }
   });
