@@ -105,7 +105,7 @@
         "subtitle2": "Prenez simplement une photo. Sealfie effectue automatiquement des vérifications multi-sources, au moment critique, pour garantir la sécurité de vos transactions."
     },
     "testimonial": "Retrouvez notre fondateur en interview sur Figaro TV pour comprendre l'impact de Sealfie sur la sécurité de votre entreprise.",
-    "centeredmsg": "Un processus aussi simple qu'un selfie, fiabilisé automatiquement par des experts en cybersécurité.  Nous éliminons le stress lié aux MFA traditionnels.",
+    "centeredmsg": "La simplicité d'un selfie, la puissance de nos vérifications expertes.",
     "trailer": "Fraude au PDG: 5 milliards volés par an !  Ne risquez pas votre entreprise.",
     "post_register": {
         "title": "Inscription simplifiée",
@@ -266,37 +266,48 @@
         "subtitle": "Trois capacités essentielles qui arrêtent la fraude à millions"
     },
     "howItWorksDetailed": {
-        "title": "Protection simple contre attaques sophistiquées",
-        "subtitle": "Un selfie crée un bouclier d'identité numérique incassable",
+        "title": "la solution anti-deepfake unique",
+        "subtitle": "Trois étapes simples qui éliminent les risques de fraude sophistiquée",
         "steps": {
             "step1": {
                 "number": "01",
                 "title": "Prenez un selfie",
-                "description": "Comme toute app photo - un selfie capture votre signature biométrique et crée votre identité numérique unique."
+                "description": "Simple comme une photo. Notre app capture votre identité biométrique unique."
             },
             "step2": {
                 "number": "02",
-                "title": "Vérification instantanée", 
-                "description": "Notre IA vérifie instantanément votre identité et crée un ensemble irréfutable de preuves numériques liées à la blockchain."
+                "title": "Vérifications instantanées", 
+                "description": "Nos experts cyber valident votre identité en temps réel avec des preuves infalsifiables."
             },
             "step3": {
                 "number": "03",
-                "title": "Protection automatique",
-                "description": "Chaque transaction est automatiquement protégée. Aucune formation requise - Sealfie gère toutes les vérifications techniques pour vous."
+                "title": "Protection garantie",
+                "description": "Chaque transaction est automatiquement sécurisée. Installation 20 minutes, zéro formation."
             }
         },
-        "benefits": {
+        "traditionalSecurity": {
             "title": "Pourquoi la sécurité traditionnelle échoue",
-            "items": [
-                "Les mots de passe peuvent être volés",
-                "Les jetons MFA peuvent être contournés",
-                "La formation n'arrête pas les attaques sophistiquées", 
-                "Les solutions actuelles sont réactives, pas proactives"
-            ]
+            "description": "Formations multiples, stress permanent, blâme en cas d'échec."
         },
         "solution": {
-            "title": "L'avantage de Sealfie",
-            "description": "Contrairement à la sécurité traditionnelle qui repose sur ce que vous savez ou avez, Sealfie utilise qui vous êtes - créant un lien incassable entre votre identité et vos transactions."
+            "title": "L'avantage Sealfie",
+            "description": "Une seule méthode à retenir. Notre expertise s'adapte aux menaces pour vous.",
+            "youDo": {
+                "title": "Vous faites",
+                "items": [
+                    "Prenez un selfie",
+                    "Confirmez avec votre biométrie"
+                ]
+            },
+            "weDo": {
+                "title": "Nous faisons",
+                "items": [
+                    "Suivons les nouvelles techniques d'attaque",
+                    "Mettons à jour la protection automatiquement",
+                    "Gérons toutes les vérifications techniques",
+                    "Nous adaptons à votre entreprise"
+                ]
+            }
         }
     },
     "press": {

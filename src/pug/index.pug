@@ -278,7 +278,7 @@ html(lang=$localeName)
 
   body
     main#main-content(tabindex='-1')
- 
+
   // Japanese Minimalist Hero Section - Following Features Section Pattern
   header.hero-section
     .container.px-5
@@ -295,12 +295,12 @@ html(lang=$localeName)
                   // Professional video demo - MANDATORY and PROTECTED
                   .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
                     .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
-                      .demo-text Sealfie Demo
+                      .demo-text Video trailer
                       .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
                         svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
                           circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
                           polygon(points="10,8 16,12 10,16" fill="white")
-        
+
         .col-lg-9.order-1.order-lg-2
           // Hero text and CTAs - 3/4 width
           .mb-5.mb-lg-0.text-center.text-lg-start
@@ -347,7 +347,7 @@ html(lang=$localeName)
             h2.section-title
               span #{$i18n.carousel.title}
             p.section-subtitle #{$i18n.carousel.subtitle}
-          
+
           // Enhanced Carousel Container with Images and Links
           .bec-carousel(data-carousel="trends")
             .carousel-track
@@ -366,7 +366,7 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-              
+
               // Slide 2: AI Revolution - AI Generated Emails
               .carousel-slide
                 a.trend-card.trend-card-link(href=$i18n.carousel.slides.ai.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.ai.description)
@@ -382,7 +382,7 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-              
+
               // Slide 3: Financial Impact - FBI Losses Report
               .carousel-slide
                 a.trend-card.trend-card-link(href=$i18n.carousel.slides.financial.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.financial.description)
@@ -398,7 +398,7 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-              
+
               // Slide 4: Real Case - Aviation Company Attack
               .carousel-slide
                 a.trend-card.trend-card-link(href=$i18n.carousel.slides.realCase.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.realCase.description)
@@ -414,7 +414,7 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-              
+
               // Slide 5: Small Business Risk - SMB Target Analysis
               .carousel-slide
                 a.trend-card.trend-card-link(href=$i18n.carousel.slides.smallBusiness.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.smallBusiness.description)
@@ -430,7 +430,7 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-              
+
               // Slide 6: Multi-Channel - Coordinated Attack Vectors
               .carousel-slide
                 a.trend-card.trend-card-link(href=$i18n.carousel.slides.multiChannel.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.multiChannel.description)
@@ -446,13 +446,13 @@ html(lang=$localeName)
                   .trend-link-indicator
                     i.bi-arrow-up-right
                     span #{$i18n.carousel.readMore}
-            
+
             // Carousel Controls
             .carousel-controls
               button.carousel-prev(aria-label=$i18n.carousel.controls.prev)
                 svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
                   path(d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-              
+
               .carousel-indicators
                 button.indicator.active(data-slide="0")
                 button.indicator(data-slide="1")
@@ -460,45 +460,14 @@ html(lang=$localeName)
                 button.indicator(data-slide="3")
                 button.indicator(data-slide="4")
                 button.indicator(data-slide="5")
-              
+
               button.carousel-next(aria-label=$i18n.carousel.controls.next)
                 svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
                   path(d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-          
+
           .text-center.mt-4
             p.text-muted.small #{$i18n.carousel.source}
 
-  // Founder Story Section - Authority Through Transparency
-  section.founder-section.bg-light
-    .container.px-5
-      .row.gx-5.align-items-center.justify-content-center
-        .col-lg-10
-          .text-center.mb-5
-            h2.section-title
-              span #{$i18n.founder.title}
-            p.section-subtitle #{$i18n.founder.subtitle}
-          
-          .founder-content.text-center
-            .founder-story
-              p.lead #{$i18n.founder.story.lead}
-              
-              p #{$i18n.founder.story.bio}
-              
-              .founder-credentials
-                .credential-item
-                  i.bi-shield-check.text-gradient
-                  span #{$i18n.founder.credentials.experience}
-                .credential-item  
-                  i.bi-building.text-gradient
-                  span #{$i18n.founder.credentials.enterprise}
-                .credential-item
-                  i.bi-award.text-gradient
-                  span #{$i18n.founder.credentials.achievements}
-              
-              .text-center.mt-4
-                a.cta-ghost(href="https://inkan.link/posts/news-itu-t-workshop-securing-ai/" target="_blank" rel="noopener noreferrer" aria-label=$i18n.founder.seePresentation)
-                  i.bi-play-circle.me-2
-                  | #{$i18n.founder.seePresentation}
 
 
   // Visual Break & Brand Statement
@@ -509,43 +478,18 @@ html(lang=$localeName)
           img.mb-4(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan company logo - cybersecurity technology provider', style='height: 4rem;')
           .h3.text-white.mb-0 #{$i18n.centeredmsg}
 
-  // How It Works - Streamlined Features
-  section#features.bg-light
-    .container.px-5
-      .row.justify-content-center
-        .col-lg-10
-          .text-center.mb-5
-            h2.section-title
-              span #{$i18n.howItWorks.title}
-            p.section-subtitle #{$i18n.howItWorks.subtitle}
-          
-          .row.g-4
-            .col-md-4
-              .feature-card.text-center.h-100
-                i.bi-camera.icon-feature.text-gradient.d-block.mb-3
-                h4 #{$i18n.features.person.title}
-                p.text-muted.mb-0 #{$i18n.features.person.text}
-            .col-md-4
-              .feature-card.text-center.h-100
-                i.bi-shield-check.icon-feature.text-gradient.d-block.mb-3
-                h4 #{$i18n.features.send.title}
-                p.text-muted.mb-0 #{$i18n.features.send.text}
-            .col-md-4
-              .feature-card.text-center.h-100
-                i.bi-file-earmark-check.icon-feature.text-gradient.d-block.mb-3
-                h4 #{$i18n.features.path.title}
-                p.text-muted.mb-0 #{$i18n.features.path.text}
-
   // How Sealfie Works - With Device Mockup Demo
   section.how-it-works-section.bg-light
     .container.px-5
       .row.gx-5.align-items-center.justify-content-center
         .col-lg-6.order-2.order-lg-1
           .mb-5.mb-lg-0
-            h2.section-title
+            // Integrated Logo Title
+            h2.section-title.d-flex.align-items-center.justify-content-center.justify-content-lg-start.mb-4
+              img.me-2(src='/assets/favicon.svg', alt='Sealfie', style='height: 5.04rem; margin-top: -0.4rem;')
               span #{$i18n.howItWorksDetailed.title}
             p.section-subtitle.mb-4 #{$i18n.howItWorksDetailed.subtitle}
-            
+
             // Step-by-step process
             .steps-container
               .step-item.mb-4
@@ -553,35 +497,25 @@ html(lang=$localeName)
                   .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step1.number}
                   h4.mb-0 #{$i18n.howItWorksDetailed.steps.step1.title}
                 p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step1.description}
-              
+
               .step-item.mb-4
                 .step-header.d-flex.align-items-center.mb-2
                   .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step2.number}
                   h4.mb-0 #{$i18n.howItWorksDetailed.steps.step2.title}
                 p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step2.description}
-              
+
               .step-item.mb-4
                 .step-header.d-flex.align-items-center.mb-2
                   .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step3.number}
                   h4.mb-0 #{$i18n.howItWorksDetailed.steps.step3.title}
                 p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step3.description}
-            
-            // Benefits vs Traditional Security
-            .benefits-section.mt-5
-              h3.h5.text-gradient.mb-3 #{$i18n.howItWorksDetailed.solution.title}
-              p.text-muted.mb-3 #{$i18n.howItWorksDetailed.solution.description}
-              
-              .solution-highlights
-                .highlight-item.d-flex.align-items-center.mb-2
-                  i.bi-shield-check.text-gradient.me-3
-                  span.small Biometric Identity Verification
-                .highlight-item.d-flex.align-items-center.mb-2
-                  i.bi-link-45deg.text-gradient.me-3
-                  span.small Blockchain-Secured Evidence
-                .highlight-item.d-flex.align-items-center.mb-2
-                  i.bi-lightning.text-gradient.me-3
-                  span.small Zero-Training Required
-        
+
+            // Traditional Security Problems
+            .traditional-security-section.mt-5.p-4.bg-light.rounded.border-start.border-warning.border-3
+              h4.h6.text-warning.mb-2 #{$i18n.howItWorksDetailed.traditionalSecurity.title}
+              p.text-muted.small.mb-0 #{$i18n.howItWorksDetailed.traditionalSecurity.description}
+
+
         .col-lg-6.order-1.order-lg-2
           // Device mockup with step-by-step demo video
           .device-mockup
@@ -600,56 +534,57 @@ html(lang=$localeName)
                           circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
                           polygon(points="10,8 16,12 10,16" fill="white")
 
-  // Pioneer Program Section - First Customer Acquisition
-  section.pioneer-section.bg-light
+
+
+
+
+
+
+
+
+  // Sealfie Advantage Section - Following Page Format
+  section.sealfie-advantage-section.bg-light
     .container.px-5
-      .row.gx-5.justify-content-center
-        .col-lg-8
-          .text-center
+      .row.justify-content-center
+        .col-lg-10
+          .text-center.mb-5
             h2.section-title
-              span #{$i18n.pioneer.title}
-            p.section-subtitle #{$i18n.pioneer.subtitle}
+              span #{$i18n.howItWorksDetailed.solution.title}
+            p.section-subtitle #{$i18n.howItWorksDetailed.solution.description}
+          
+          // You Do vs We Do - Two Column Layout
+          .row.g-5
+            // You Do Column
+            .col-md-6
+              .you-do-column.p-4.bg-white.rounded.shadow-sm.h-100
+                .text-center.mb-4
+                  .user-icon.mb-3
+                    i.bi-person-circle.text-primary(style="font-size: 3rem;")
+                  h4.h5.text-primary.mb-0 #{$i18n.howItWorksDetailed.solution.youDo.title}
+                
+                ul.list-unstyled.mb-0
+                  each item in $i18n.howItWorksDetailed.solution.youDo.items
+                    li.d-flex.align-items-start.mb-3
+                      i.bi-check-circle.text-success.me-3.mt-1(style="font-size: 1.1rem;")
+                      span #{item}
             
-            .pioneer-benefits
-              .row.g-4.mt-4
-                .col-md-6
-                  .benefit-item
-                    .benefit-icon
-                      i.bi-lightning.text-gradient
-                    h5 #{$i18n.pioneer.benefits.earlyAccess.title}
-                    p #{$i18n.pioneer.benefits.earlyAccess.description}
-                
-                .col-md-6
-                  .benefit-item
-                    .benefit-icon
-                      i.bi-people.text-gradient
-                    h5 #{$i18n.pioneer.benefits.directInput.title}
-                    p #{$i18n.pioneer.benefits.directInput.description}
-                
-                .col-md-6
-                  .benefit-item
-                    .benefit-icon
-                      i.bi-percent.text-gradient
-                    h5 #{$i18n.pioneer.benefits.pricing.title}
-                    p #{$i18n.pioneer.benefits.pricing.description}
-                
-                .col-md-6
-                  .benefit-item
-                    .benefit-icon
-                      i.bi-headset.text-gradient
-                    h5 #{$i18n.pioneer.benefits.support.title}
-                    p #{$i18n.pioneer.benefits.support.description}
+            // Visual Separator (hidden on mobile)
+            .col-12.d-md-none
+              hr.my-0
             
-            .pioneer-cta.mt-5
-              a.cta-primary-large(href="mailto:contact@sealf.ie?subject=Pioneer Program Interest")
-                | #{$i18n.pioneer.cta.apply}
-              p.small.text-muted.mt-2 #{$i18n.pioneer.cta.disclaimer}
-
-
-
-
-
-
+            // We Do Column  
+            .col-md-6
+              .we-do-column.p-4.bg-gradient-primary-to-secondary.text-white.rounded.shadow-sm.h-100
+                .text-center.mb-4
+                  .expert-icon.mb-3
+                    i.bi-shield-check.text-white(style="font-size: 3rem;")
+                  h4.h5.text-white.mb-0 #{$i18n.howItWorksDetailed.solution.weDo.title}
+                
+                ul.list-unstyled.mb-0
+                  each item in $i18n.howItWorksDetailed.solution.weDo.items
+                    li.d-flex.align-items-start.mb-3
+                      i.bi-check-circle.text-white.me-3.mt-1(style="font-size: 1.1rem;")  
+                      span #{item}
 
 
     include ../pug/includes/footer.pug

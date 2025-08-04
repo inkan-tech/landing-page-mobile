@@ -105,7 +105,7 @@
         "subtitle2": "We handle the complex technical verifications.  Forget endless MFA training and alerts."
     },
     "testimonial": "Sealfie: Unmatched security meets effortless implementation, powered by Inkan.link’s cutting-edge attestation technology.",
-    "centeredmsg": "Protect your organization with the simplest security solution.",
+    "centeredmsg": "The simplicity of a selfie, the power of our expert verifications.",
     "trailer": "Executive email compromise: 5 billion stolen per year!",
     "post_register": {
         "title": "Post-registration confirmation",
@@ -266,37 +266,48 @@
         "subtitle": "Three core capabilities that stop million-dollar fraud"
     },
     "howItWorksDetailed": {
-        "title": "Simple protection against sophisticated attacks",
-        "subtitle": "One selfie creates an unbreakable digital identity shield",
+        "title": "the unique anti-deepfake solution",
+        "subtitle": "Three simple steps that eliminate sophisticated fraud risks",
         "steps": {
             "step1": {
                 "number": "01",
                 "title": "Take a selfie",
-                "description": "Just like any photo app - one selfie captures your biometric signature and creates your unique digital identity."
+                "description": "Simple as taking a photo. Our app captures your unique biometric identity."
             },
             "step2": {
                 "number": "02", 
                 "title": "Instant verification",
-                "description": "Our AI instantly verifies your identity and creates an irrefutable bundle of digital evidence tied to the blockchain."
+                "description": "Our cyber experts validate your identity in real-time with tamper-proof evidence."
             },
             "step3": {
                 "number": "03",
-                "title": "Automatic protection",
-                "description": "Every transaction is automatically protected. No training required - Sealfie handles all technical verifications for you."
+                "title": "Guaranteed protection",
+                "description": "Every transaction is automatically secured. 20-minute setup, zero training."
             }
         },
-        "benefits": {
+        "traditionalSecurity": {
             "title": "Why traditional security fails",
-            "items": [
-                "Passwords can be stolen",
-                "MFA tokens can be bypassed", 
-                "Training doesn't stop sophisticated attacks",
-                "Current solutions are reactive, not proactive"
-            ]
+            "description": "Multiple trainings, permanent stress, blame when you fail."
         },
         "solution": {
             "title": "Sealfie's advantage",
-            "description": "Unlike traditional security that relies on what you know or have, Sealfie uses who you are - creating an unbreakable link between your identity and your transactions."
+            "description": "One method to remember. Our expertise adapts to threats for you.",
+            "youDo": {
+                "title": "You do",
+                "items": [
+                    "Take a selfie",
+                    "Confirm with your biometrics"
+                ]
+            },
+            "weDo": {
+                "title": "We do",
+                "items": [
+                    "Track new attack techniques",
+                    "Update protection automatically",
+                    "Handle all technical verifications",
+                    "Adapt to your business needs"
+                ]
+            }
         }
     },
     "press": {
