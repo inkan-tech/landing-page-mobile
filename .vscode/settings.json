@@ -6,5 +6,13 @@
     "vcpkg.target.useStaticLib": false,
     "cmake.configureArgs": [
         "-DVCPKG_TARGET_TRIPLET=arm64-osx"
-    ]
+    ],
+    "githubPullRequests.defaultMergeMethod": "merge",
+    "githubPullRequests.createOnPublish": "never",
+    "githubPullRequests.remotes": [
+        "origin"
+    ],
+    "git.defaultCloneDirectory": "./",
+    "git.alwaysSignOff": false,
+    "git.pullBeforePublish": true
 }

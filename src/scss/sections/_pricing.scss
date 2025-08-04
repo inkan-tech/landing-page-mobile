@@ -1,8 +1,336 @@
 //
-// Pricing
+// Pricing Page - Japanese Design System
+// Implements Ma (negative space), Kanso (simplicity), and Mono no Aware (subtle beauty)
 //
 
-// Make pricing section background lighter for better contrast
+// Pricing Overview Section
+.pricing-overview-section {
+  // Ma - generous spacing between sections
+  padding: 80px 0;
+  background: var(--bg-secondary);
+  
+  [data-theme="dark"] & {
+    background: var(--bg-secondary);
+  }
+}
+
+// Pricing Grid
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 48px auto 0;
+  
+  // Mobile: single column
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+// Pricing Card - Main focal point
+.pricing-card {
+  // Kanso - clean, simple design
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  // Ma - generous internal spacing
+  padding: 40px 32px;
+  max-width: 400px;
+  width: 100%;
+  
+  // Mono no Aware - subtle elevation and transition
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  
+  // Featured card with traditional Inkan accent
+  &.pricing-card-featured {
+    border: 2px solid var(--shu-primary);
+    transform: scale(1.02);
+    
+    // Mono no Aware - gentle hover effect
+    &:hover {
+      transform: scale(1.04) translateY(-4px);
+      box-shadow: 0 12px 40px rgba(255, 53, 0, 0.15);
+    }
+  }
+  
+  // Enterprise card styling
+  &.pricing-card-enterprise {
+    border: 2px solid var(--enji-secondary);
+    
+    // Mono no Aware - subtle interaction
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(201, 51, 56, 0.15);
+      border-color: var(--shu-primary);
+    }
+    
+    .pricing-icon {
+      color: var(--enji-secondary);
+    }
+  }
+  
+  [data-theme="dark"] & {
+    background: var(--bg-surface);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    
+    &.pricing-card-featured:hover {
+      box-shadow: 0 12px 40px rgba(227, 66, 52, 0.25);
+    }
+  }
+}
+
+// Pricing Card Header
+.pricing-card-header {
+  text-align: center;
+  // Ma - generous spacing below header
+  margin-bottom: 32px;
+}
+
+.pricing-icon {
+  // Traditional Inkan colors
+  color: var(--shu-primary);
+  font-size: 48px;
+  // Ma - spacing around icon
+  margin-bottom: 16px;
+  
+  i {
+    display: block;
+  }
+}
+
+.pricing-card-title {
+  // Kanso - clean typography
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  // Ma - spacing around title
+  margin-bottom: 12px;
+  
+  [data-theme="dark"] & {
+    color: var(--text-primary);
+  }
+}
+
+.pricing-card-subtitle {
+  // Kanso - supporting text
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  // Ma - spacing below subtitle
+  margin-bottom: 24px;
+  
+  [data-theme="dark"] & {
+    color: var(--text-secondary);
+  }
+}
+
+// Pricing Amount Display
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  // Ma - generous spacing
+  margin-bottom: 32px;
+  
+  .pricing-currency {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-right: 4px;
+  }
+  
+  .pricing-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--shu-primary);
+    line-height: 1;
+  }
+  
+  .pricing-period {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-left: 8px;
+    align-self: flex-end;
+    margin-bottom: 8px;
+  }
+  
+  .pricing-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    
+    [data-theme="dark"] & {
+      color: var(--text-primary);
+    }
+  }
+}
+
+// Features List
+.pricing-card-features {
+  // Ma - spacing around features
+  margin-bottom: 40px;
+}
+
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    display: flex;
+    align-items: flex-start;
+    // Ma - spacing between features
+    margin-bottom: 16px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    i {
+      color: var(--sango-accent);
+      font-size: 1.2rem;
+      // Ma - spacing between icon and text
+      margin-right: 12px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    
+    span {
+      color: var(--text-primary);
+      line-height: 1.5;
+      
+      [data-theme="dark"] & {
+        color: var(--text-primary);
+      }
+    }
+  }
+}
+
+// Pricing Card Footer
+.pricing-card-footer {
+  text-align: center;
+  
+  .cta-primary-large,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+// Features Section
+.pricing-features-section {
+  // Ma - generous section spacing
+  padding: 80px 0;
+  background: var(--bg-primary);
+  
+  [data-theme="dark"] & {
+    background: var(--bg-primary);
+  }
+}
+
+// Feature Cards
+.feature-card {
+  // Kanso - clean, minimal design
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  // Ma - generous internal spacing
+  padding: 32px 24px;
+  text-align: center;
+  height: 100%;
+  
+  // Mono no Aware - subtle interaction
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--shu-primary);
+  }
+  
+  [data-theme="dark"] & {
+    background: var(--bg-surface);
+    
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.feature-icon {
+  // Traditional Inkan accent color
+  color: var(--sango-accent);
+  font-size: 2.5rem;
+  // Ma - spacing below icon
+  margin-bottom: 20px;
+  
+  i {
+    display: block;
+  }
+}
+
+.feature-title {
+  // Kanso - clean typography hierarchy
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  // Ma - spacing around title
+  margin-bottom: 16px;
+  
+  [data-theme="dark"] & {
+    color: var(--text-primary);
+  }
+}
+
+.feature-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+  
+  [data-theme="dark"] & {
+    color: var(--text-secondary);
+  }
+}
+
+// Responsive Design - Mobile First
+@media (max-width: 768px) {
+  .pricing-overview-section,
+  .pricing-features-section {
+    padding: 60px 0;
+  }
+  
+  .pricing-card {
+    // Adjust internal spacing for mobile
+    padding: 32px 24px;
+    
+    &.pricing-card-featured {
+      transform: none;
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+  
+  .pricing-amount {
+    .pricing-value {
+      font-size: 2.8rem;
+    }
+  }
+  
+  .feature-card {
+    // Adjust spacing for mobile
+    padding: 24px 20px;
+    margin-bottom: 24px;
+  }
+}
+
+// Legacy pricing section support (if still used)
 section#pricing {
     background-color: rgba($washi, 0.7);
     position: relative;
