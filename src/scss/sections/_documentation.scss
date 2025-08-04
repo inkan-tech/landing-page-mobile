@@ -1,5 +1,527 @@
+/* ==========================================================================
+   Documentation Page - Japanese Design System Implementation
+   ========================================================================== */
+
+/* ==========================================
+   Hero Section - Ma (Negative Space) Focus
+   ========================================== */
+
+.documentation-hero-section {
+  // Ma - Generous padding for breathing room
+  padding: 120px 0 80px;
+  background: var(--bg-primary);
+  position: relative;
+  
+  // Dark theme support
+  [data-theme="dark"] & {
+    background: var(--bg-primary);
+  }
+  
+  .hero-title {
+    // Kanso - Simple, elegant typography
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    
+    .accent-text {
+      color: var(--shu-primary);
+      position: relative;
+      
+      // Subtle emphasis animation
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--shu-primary), var(--sango-accent));
+        border-radius: 2px;
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================
+   Process Overview - Visual Flow
+   ========================================== */
+
+.process-overview {
+  .process-step {
+    // Ma - Strategic spacing between elements
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    
+    // Connection lines between steps (desktop only)
+    @media (min-width: 768px) {
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--shu-primary), var(--sango-accent));
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+    }
+    
+    .step-number {
+      // Japanese-inspired circular design
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--shu-primary), var(--sango-accent));
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(255, 53, 0, 0.25);
+      
+      // Subtle hover interaction
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.35);
+      }
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    
+    .step-description {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+  }
+}
+
+/* ==========================================
+   Scenario Sections - Treasury & CEO
+   ========================================== */
+
+.treasury-scenario-section,
+.ceo-scenario-section {
+  // Ma - Generous section padding
+  padding: 80px 0;
+  
+  &:nth-child(even) {
+    background: var(--bg-secondary);
+  }
+  
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}
+
+/* ==========================================
+   Scenario Steps - Enhanced Visual Hierarchy
+   ========================================== */
+
+.scenario-steps {
+  .step-item {
+    // Ma - Generous spacing between steps
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border-color);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    .step-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 16px;
+      
+      .step-icon {
+        flex-shrink: 0;
+        
+        .icon-feature {
+          font-size: 2rem;
+          color: var(--shu-primary);
+          
+          // Mono no Aware - Subtle beauty in transitions
+          transition: all 0.3s ease;
+          
+          &:hover {
+            color: var(--sango-accent);
+            transform: scale(1.1);
+          }
+        }
+      }
+      
+      .step-content {
+        flex: 1;
+        
+        .step-title {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: var(--text-primary);
+          margin-bottom: 8px;
+        }
+        
+        .step-description {
+          font-size: 1rem;
+          color: var(--text-secondary);
+          line-height: 1.5;
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .step-benefits {
+      margin-left: 72px; // Align with step content
+      
+      .benefit-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--shu-primary), var(--sango-accent));
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(255, 53, 0, 0.2);
+        
+        // Subtle interaction
+        transition: all 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(255, 53, 0, 0.3);
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Trust Signal Section - Metrics Display
+   ========================================== */
+
+.trust-signal-section {
+  padding: 60px 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  
+  .trust-indicators {
+    .trust-metric {
+      text-align: center;
+      padding: 24px 16px;
+      
+      .metric-number {
+        display: block;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: var(--shu-primary);
+        line-height: 1;
+        margin-bottom: 8px;
+        
+        // Kanso - Simple emphasis
+        background: linear-gradient(135deg, var(--shu-primary), var(--sango-accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .metric-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Social Proof Section - Testimonials
+   ========================================== */
+
+.social-proof-section {
+  padding: 80px 0;
+  
+  .testimonials-grid {
+    .testimonial-card {
+      // Japanese card design principles
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px 32px;
+      height: 100%;
+      
+      // Mono no Aware - Subtle interactions
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(255, 53, 0, 0.15);
+        border-color: var(--shu-primary);
+      }
+      
+      .testimonial-content {
+        margin-bottom: 24px;
+        
+        .testimonial-quote {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: var(--text-primary);
+          font-style: italic;
+          margin-bottom: 0;
+          
+          // Quote styling
+          &::before {
+            content: '"';
+            color: var(--shu-primary);
+            font-size: 1.5em;
+            line-height: 0;
+            vertical-align: -0.2em;
+          }
+          
+          &::after {
+            content: '"';
+            color: var(--shu-primary);
+            font-size: 1.5em;
+            line-height: 0;
+            vertical-align: -0.2em;
+          }
+        }
+      }
+      
+      .testimonial-author {
+        .author-info {
+          .author-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+          }
+          
+          .author-title {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Final CTA Section - Conversion Focus
+   ========================================== */
+
+.documentation-cta-section {
+  padding: 80px 0;
+  background: var(--bg-surface);
+  
+  .cta-buttons {
+    // Ma - Strategic spacing around CTAs
+    .cta-primary-large,
+    .cta-secondary {
+      display: block;
+      text-align: center;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: 100%;
+      
+      // Mobile-desktop equal importance
+      @media (min-width: 768px) {
+        width: auto;
+        min-width: 240px;
+      }
+    }
+    
+    .cta-primary-large {
+      background: linear-gradient(135deg, var(--shu-primary), var(--sango-accent));
+      color: white;
+      box-shadow: 0 4px 16px rgba(255, 53, 0, 0.3);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.4);
+        color: white;
+      }
+    }
+    
+    .cta-secondary {
+      background: transparent;
+      color: var(--shu-primary);
+      border: 2px solid var(--shu-primary);
+      
+      &:hover {
+        background: var(--shu-primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.25);
+      }
+    }
+  }
+  
+  .implementation-guarantee {
+    margin-top: 32px;
+    
+    .guarantee-text {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 0;
+      
+      // Emphasis styling
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      padding: 16px 24px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  }
+}
+
+/* ==========================================
+   Mobile Responsive Adjustments
+   ========================================== */
+
+@media (max-width: 767px) {
+  .documentation-hero-section {
+    padding: 80px 0 60px;
+    
+    .process-overview {
+      .process-step {
+        margin-bottom: 32px;
+        
+        &:not(:last-child)::after {
+          display: none; // Remove connection lines on mobile
+        }
+      }
+    }
+  }
+  
+  .treasury-scenario-section,
+  .ceo-scenario-section {
+    padding: 60px 0;
+    
+    .scenario-steps {
+      .step-item {
+        .step-header {
+          flex-direction: column;
+          text-align: center;
+          gap: 16px;
+        }
+        
+        .step-benefits {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  .trust-signal-section {
+    .trust-metric {
+      margin-bottom: 24px;
+    }
+  }
+  
+  .social-proof-section {
+    padding: 60px 0;
+    
+    .testimonial-card {
+      padding: 32px 24px;
+      margin-bottom: 24px;
+    }
+  }
+  
+  .documentation-cta-section {
+    padding: 60px 0;
+    
+    .cta-buttons {
+      .col-md-6 {
+        margin-bottom: 16px !important;
+      }
+    }
+  }
+}
+
+/* ==========================================
+   Dark Theme Specific Adjustments
+   ========================================== */
+
+[data-theme="dark"] {
+  .treasury-scenario-section,
+  .ceo-scenario-section {
+    &:nth-child(even) {
+      background: var(--bg-secondary);
+    }
+  }
+  
+  .trust-signal-section,
+  .documentation-cta-section {
+    background: var(--bg-surface);
+    border-color: var(--border-color);
+  }
+  
+  .testimonial-card {
+    background: var(--bg-surface);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+      box-shadow: 0 12px 32px rgba(231, 66, 52, 0.25);
+    }
+  }
+  
+  .implementation-guarantee {
+    .guarantee-text {
+      background: var(--bg-secondary);
+      border-color: var(--border-color);
+    }
+  }
+}
+
 //
-// Documentation
+// Legacy Documentation Section (Keep for compatibility)
 //
 
 // Make documentation section background lighter for better contrast

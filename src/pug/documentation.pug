@@ -6,58 +6,104 @@ html(lang=$localeName)
     include includes/common-headers.pug
     
     //- Page-specific meta tags
-    title #{$i18n.docs.title}
-    meta(name='description', content=$i18n.meta.descriptions.documentation)
+    title #{$i18n.banner.docs} | #{$i18n.title}
+    meta(name='description', content=$i18n.documentation.meta.description)
     
     //- Page-specific canonical link
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/documentation.html')
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 
+  body
 
     include ../pug/includes/navbar.pug
 
-    // Doc Title
-    aside.text-center.bg-gradient-primary-to-secondary
+    // Hero Section
+    section.documentation-hero-section
       .container.px-5
-        .row.gx-5.justify-content-center
-          .col-l-8
-            .h3.fs-1.text-white.mb-4 #{$i18n.docs.title}
-            img(src='/assets/favicon.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
-          .col-l-18
-            .h3.fs-2.text-white.mb-4
-          .col-l-18
-            .h3.fs-2.text-white.mb-4 #{$i18n.docs.subtitle}
-    // Mashead header
-    header.masthead
+        .row.justify-content-center
+          .col-lg-10
+            .text-center.mb-5
+              h1.hero-title
+                | #{$i18n.documentation.hero.title.line1}
+                br
+                span.accent-text #{$i18n.documentation.hero.title.line2}
+              p.hero-subtitle #{$i18n.documentation.hero.subtitle}
+              
+              // Process Overview
+              .process-overview.mt-5
+                .row.justify-content-center
+                  .col-md-4.mb-4
+                    .process-step
+                      .step-number 1
+                      .step-title #{$i18n.documentation.process.step1.title}
+                      .step-description #{$i18n.documentation.process.step1.description}
+                  .col-md-4.mb-4
+                    .process-step
+                      .step-number 2
+                      .step-title #{$i18n.documentation.process.step2.title}
+                      .step-description #{$i18n.documentation.process.step2.description}
+                  .col-md-4.mb-4
+                    .process-step
+                      .step-number 3
+                      .step-title #{$i18n.documentation.process.step3.title}
+                      .step-description #{$i18n.documentation.process.step3.description}
+    // Treasury Scenario Section
+    section.treasury-scenario-section
       .container.px-5
+        .row.justify-content-center.mb-5
+          .col-lg-10
+            .text-center
+              h2.section-title
+                span #{$i18n.documentation.treasury.title}
+              p.section-subtitle #{$i18n.documentation.treasury.context}
+        
         .row.gx-5.align-items-center
-          .col-lg-8.mb-5.mb-lg-0
-            .container-fluid.px-5
-              .row.gx-5
-                .col-md-6.mb-5
-                  // Feature item list is at: https://icons.getbootstrap.com/
-                  .text-center
-                    i.bi-1-square.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepstart.one}
-                .col-md-6.mb-5
-                  // Feature item
-                  .text-center
-                    i.bi-2-square.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepstart.two}
-              .row
-                .col-md-6.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-3-square.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepstart.tree}
-                .col-md-6
-                  // Feature item
-                  .text-center
-                    i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepstart.biometric}
-          .col-lg-4
-            // Generic device mockup feature
+          .col-lg-7.mb-5.mb-lg-0
+            // Treasury Steps
+            .scenario-steps
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-1-square.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.treasury.step1.title}
+                    p.step-description #{$i18n.documentation.treasury.step1.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.treasury.step1.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-2-square.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.treasury.step2.title}
+                    p.step-description #{$i18n.documentation.treasury.step2.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.treasury.step2.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-3-square.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.treasury.step3.title}
+                    p.step-description #{$i18n.documentation.treasury.step3.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.treasury.step3.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-fingerprint.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.treasury.step4.title}
+                    p.step-description #{$i18n.documentation.treasury.step4.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.treasury.step4.benefit}
+          
+          .col-lg-5
+            // Treasury Device Mockup
             .device-mockup
               include includes/gradient-circle
               include includes/shape-1
@@ -65,52 +111,47 @@ html(lang=$localeName)
               .device-wrapper
                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                   .screen.bg-device-screen
-
-                    // PUT CONTENTS HERE:
-                    // * * This can be a video, image, or just about anything else.
-                    // * * Set the max width of your media to 100% and the height to
-                    // * * 100% like the demo example below.
                     video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src="/assets/img/"+$i18n.docs.stepstart.video, type='video/webm')
+                      source(src="/assets/img/"+$i18n.documentation.treasury.video, type='video/webm')
 
-    // Doc separation
-    aside.text-center.bg-gradient-primary-to-secondary
+    // Trust Signal Section
+    section.trust-signal-section
       .container.px-5
-        .row.gx-5.justify-content-center
-          .col-l-18
-            .h3.fs-2.text-white.mb-4 #{$i18n.docs.intersteps}
+        .row.justify-content-center
+          .col-lg-10
+            .text-center
+              .trust-indicators
+                .row.justify-content-center.align-items-center
+                  .col-md-3.mb-4
+                    .trust-metric
+                      .metric-number #{$i18n.documentation.trust.setup_time}
+                      .metric-label #{$i18n.documentation.trust.setup_label}
+                  .col-md-3.mb-4
+                    .trust-metric
+                      .metric-number #{$i18n.documentation.trust.success_rate}
+                      .metric-label #{$i18n.documentation.trust.success_label}
+                  .col-md-3.mb-4
+                    .trust-metric
+                      .metric-number #{$i18n.documentation.trust.fraud_prevented}
+                      .metric-label #{$i18n.documentation.trust.fraud_label}
+                  .col-md-3.mb-4
+                    .trust-metric
+                      .metric-number #{$i18n.documentation.trust.compliance}
+                      .metric-label #{$i18n.documentation.trust.compliance_label}
 
-
-    // App features section
-    section#validate
+    // CEO Scenario Section
+    section.ceo-scenario-section
       .container.px-5
+        .row.justify-content-center.mb-5
+          .col-lg-10
+            .text-center
+              h2.section-title
+                span #{$i18n.documentation.ceo.title}
+              p.section-subtitle #{$i18n.documentation.ceo.context}
+        
         .row.gx-5.align-items-center
-          .col-lg-8.order-lg-1.mb-5.mb-lg-0
-            .container-fluid.px-5
-              .row.gx-5
-                .col-md-6.mb-5
-                  // Feature item list is at: https://icons.getbootstrap.com/
-                  .text-center
-                    i.bi-1-circle.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepvalidate.one}
-                .col-md-6.mb-5
-                  // Feature item
-                  .text-center
-                    i.bi-2-circle.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepvalidate.two}
-              .row
-                .col-md-6.mb-5.mb-md-0
-                  // Feature item
-                  .text-center
-                    i.bi-3-circle.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepvalidate.tree}
-                .col-md-6
-                  // Feature item
-                  .text-center
-                    i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
-                    p.text-muted.mb-0 #{$i18n.docs.stepvalidate.biometric}
-          .col-lg-4.order-lg-0
-            // Generic device mockup
+          .col-lg-5.mb-5.mb-lg-0
+            // CEO Device Mockup
             .device-mockup
               include includes/gradient-circle
               include includes/shape-1
@@ -118,29 +159,104 @@ html(lang=$localeName)
               .device-wrapper
                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                   .screen.bg-device-screen
-                    // PUT CONTENTS HERE:
-                    // * * This can be a video, image, or just about anything else.
-                    // * * Set the max width of your media to 100% and the height to
-                    // * * 100% like the demo example below.
                     video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src='/assets/img/'+ $i18n.docs.stepvalidate.video , type='video/webm')
+                      source(src='/assets/img/'+ $i18n.documentation.ceo.video , type='video/webm')
+          
+          .col-lg-7
+            // CEO Steps
+            .scenario-steps
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-1-circle.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.ceo.step1.title}
+                    p.step-description #{$i18n.documentation.ceo.step1.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.ceo.step1.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-2-circle.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.ceo.step2.title}
+                    p.step-description #{$i18n.documentation.ceo.step2.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.ceo.step2.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-3-circle.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.ceo.step3.title}
+                    p.step-description #{$i18n.documentation.ceo.step3.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.ceo.step3.benefit}
+              
+              .step-item
+                .step-header
+                  .step-icon
+                    i.bi-fingerprint.icon-feature.text-gradient
+                  .step-content
+                    h4.step-title #{$i18n.documentation.ceo.step4.title}
+                    p.step-description #{$i18n.documentation.ceo.step4.description}
+                .step-benefits
+                  .benefit-tag #{$i18n.documentation.ceo.step4.benefit}
 
 
-    // Completed
-    section#download.bg-gradient-primary-to-secondary
+    // Social Proof Section
+    section.social-proof-section
       .container.px-5
-        h2.text-center.text-white.font-alt.mb-4 #{$i18n.docs.completed}
+        .row.justify-content-center
+          .col-lg-10
+            .text-center.mb-5
+              h2.section-title
+                span #{$i18n.documentation.social_proof.title}
+              p.section-subtitle #{$i18n.documentation.social_proof.subtitle}
+            
+            .testimonials-grid
+              .row.justify-content-center
+                .col-lg-6.mb-4
+                  .testimonial-card
+                    .testimonial-content
+                      p.testimonial-quote "#{$i18n.documentation.social_proof.testimonial1.quote}"
+                    .testimonial-author
+                      .author-info
+                        .author-name #{$i18n.documentation.social_proof.testimonial1.author}
+                        .author-title #{$i18n.documentation.social_proof.testimonial1.title}
+                
+                .col-lg-6.mb-4
+                  .testimonial-card
+                    .testimonial-content
+                      p.testimonial-quote "#{$i18n.documentation.social_proof.testimonial2.quote}"
+                    .testimonial-author
+                      .author-info
+                        .author-name #{$i18n.documentation.social_proof.testimonial2.author}
+                        .author-title #{$i18n.documentation.social_proof.testimonial2.title}
 
-    // Call to action section
-    section.cta
-      .cta-content
-        .container.px-5
-         h2.text-white.display-1.lh-1.mb-4
-            | #{$i18n.contactus.main}
-            br
-            |#{$i18n.contactus.custom}
-         a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
-
+    // Final CTA Section
+    section.documentation-cta-section
+      .container.px-5
+        .row.justify-content-center
+          .col-lg-10
+            .text-center
+              h2.section-title
+                span #{$i18n.documentation.final_cta.title}
+              p.section-subtitle #{$i18n.documentation.final_cta.subtitle}
+              
+              .cta-buttons.mt-5
+                .row.justify-content-center
+                  .col-md-6.mb-3
+                    a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label="#{$i18n.documentation.final_cta.primary_aria}")
+                      | #{$i18n.documentation.final_cta.primary_text}
+                  .col-md-6.mb-3
+                    a.cta-secondary(href="/#{$localeName}/pricing.html" aria-label="#{$i18n.documentation.final_cta.secondary_aria}")
+                      | #{$i18n.documentation.final_cta.secondary_text}
+              
+              .implementation-guarantee.mt-4
+                p.guarantee-text #{$i18n.documentation.final_cta.guarantee}
 
     include ../pug/includes/footer.pug
 

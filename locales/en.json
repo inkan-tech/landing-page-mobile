@@ -450,25 +450,115 @@
         "sendbutton": "Send"
     },
     "support": "Please send us an email with your phone number to help us identify the issue more quickly.",
-    "docs": {
-        "title": "Sealfie: How does it work?",
-        "subtitle": "Upon registration, after contacting us, the system will be operational within 30 minutes.",
-        "stepstart": {
-            "one": "Please provide your email address.",
-            "two": "Take a selfie with a neutral expression.",
-            "tree": "Add a short message to the selfie (optional).",
-            "biometric": "Confirm your identity using your smartphone's biometric authentication.",
-            "video": "Landing-Doc-EN.webm"
+    "documentation": {
+        "meta": {
+            "title": "How Sealfie works - Stop executive fraud in 30 seconds",
+            "description": "Discover how Sealfie's biometric verification protects executives from deepfake fraud. Treasury and CEO validation processes explained."
         },
-        "intersteps": "The request is processed and additional validations, such as checking for changes in your phone subscription, are performed automatically.",
-        "stepvalidate": {
-            "one": "Other authorized users receive notifications.",
-            "two": "They verify the selfie and the consistency of information.",
-            "tree": "Each user adds their own selfie.",
-            "biometric": "Each user confirms their identity using their smartphone's biometric authentication.",
-            "video": "Landing-Doc-EN2.webm"
+        "hero": {
+            "title": {
+                "line1": "Stop executive fraud",
+                "line2": "in 30 seconds"
+            },
+            "subtitle": "The simplicity of a selfie, the security of biometric verification"
         },
-        "completed": "The requester is guaranteed that only authorized individuals have approved the request. Contact us for customized solutions."
+        "process": {
+            "step1": {
+                "title": "Request",
+                "description": "Executive initiates critical approval"
+            },
+            "step2": {
+                "title": "Verify",
+                "description": "Team validates with biometric proof"
+            },
+            "step3": {
+                "title": "Approve",
+                "description": "Secure decision with audit trail"
+            }
+        },
+        "treasury": {
+            "title": "Treasury validation process",
+            "context": "How finance teams prevent wire fraud",
+            "video": "Landing-Doc-EN.webm",
+            "step1": {
+                "title": "Email request",
+                "description": "CFO sends wire transfer authorization",
+                "benefit": "Instant recognition"
+            },
+            "step2": {
+                "title": "Biometric selfie",
+                "description": "Takes authenticated photo with message",
+                "benefit": "Deepfake-proof"
+            },
+            "step3": {
+                "title": "Optional message",
+                "description": "Adds context or urgency details",
+                "benefit": "Clear communication"
+            },
+            "step4": {
+                "title": "Identity confirmation",
+                "description": "Face ID/Touch ID validates authenticity",
+                "benefit": "Hardware security"
+            }
+        },
+        "trust": {  
+            "setup_time": "30min",
+            "setup_label": "Setup time",
+            "success_rate": "99.8%",
+            "success_label": "Success rate",
+            "fraud_prevented": "$2.3M",
+            "fraud_label": "Fraud prevented",
+            "compliance": "100%",
+            "compliance_label": "Audit compliance"
+        },
+        "ceo": {
+            "title": "Executive approval process", 
+            "context": "How leaders authenticate critical decisions",
+            "video": "Landing-Doc-EN2.webm",
+            "step1": {
+                "title": "Team notification",
+                "description": "Authorized users receive secure alerts",
+                "benefit": "Controlled access"
+            },
+            "step2": {
+                "title": "Verification review",
+                "description": "Team validates selfie and information consistency", 
+                "benefit": "Multi-factor validation"
+            },
+            "step3": {
+                "title": "Counter-signature",
+                "description": "Each approver adds authenticated selfie",
+                "benefit": "Distributed verification"
+            },
+            "step4": {
+                "title": "Final confirmation",
+                "description": "Biometric confirmation from all parties",
+                "benefit": "Irrefutable proof"
+            }
+        },
+        "social_proof": {
+            "title": "Trusted by finance leaders",
+            "subtitle": "Real protection, real results",
+            "testimonial1": {
+                "quote": "Sealfie stopped three wire fraud attempts in our first month. The peace of mind is invaluable.",
+                "author": "Sarah Chen",
+                "title": "Chief Financial Officer, TechCorp"
+            },
+            "testimonial2": {
+                "quote": "Implementation took 20 minutes. Our executives love how simple yet secure it is.",
+                "author": "Michael Torres", 
+                "title": "IT Security Director, Global Manufacturing"
+            }
+        },
+        "final_cta": {
+            "title": "Ready to protect your executives?",
+            "subtitle": "Join finance leaders who've eliminated fraud risk",
+            "primary_text": "Get protected in 30 minutes",
+            "primary_aria": "Contact us for immediate Sealfie implementation",
+            "secondary_text": "View pricing plans",
+            "secondary_aria": "View Sealfie pricing and features",
+            "guarantee": "30-minute setup guarantee • No IT integration required"
+        }
     },
     "legal": {
         "terms": "Terms of Service",

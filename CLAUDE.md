@@ -42,7 +42,40 @@
 
 **Keep capitalized**: Proper nouns (Sealfie, Inkan), acronyms (AI, BEC), first word of sentence
 
-#### **3. i18n (Internationalization) Compliance**
+#### **3. Page Title Consistency Requirements**
+**MUST use consistent title format exactly like existing pages:**
+
+**Homepage (index.pug)**:
+```pug
+title #{$i18n.title}
+```
+
+**All other pages must follow these exact patterns**:
+```pug
+// Pricing page pattern (CORRECT)
+title #{$i18n.banner.pricing} | #{$i18n.title}
+
+// Press page pattern (CORRECT) 
+title #{$i18n.press.title} | #{$i18n.title}
+
+// Documentation page pattern (CORRECT)
+title #{$i18n.banner.docs} | #{$i18n.title}
+
+// Challenge page pattern (CORRECT)
+title #{$i18n.challenge.title} | #{$i18n.title}
+```
+
+**❌ WRONG PATTERNS:**
+- `title #{$i18n.documentation.meta.title}` (missing site branding)
+- `title "Hardcoded Text | #{$i18n.title}"` (hardcoded text)
+- `title #{$i18n.page.title} | #{$i18n.title}` (generic path - use specific path)
+
+**✅ REQUIRED APPROACH:**
+1. Find the specific i18n path for your page (e.g., `$i18n.challenge.title`, `$i18n.press.title`)
+2. Use format: `title #{$i18n.SPECIFIC_PATH.title} | #{$i18n.title}`
+3. If page doesn't have i18n title, use `$i18n.banner.PAGENAME` (e.g., `$i18n.banner.docs`, `$i18n.banner.pricing`)
+
+#### **4. i18n (Internationalization) Compliance**
 **NEVER hardcode text - ALWAYS use i18n variables:**
 
 ```pug
@@ -73,7 +106,24 @@ h2.section-title Current Threat Landscape
 }
 ```
 
-#### **4. Component Structure Requirements**
+#### **5. Section Title Styling Requirements**
+**MUST use `<span>` wrapper for section titles to get Japanese border styling:**
+
+```pug
+// ✅ CORRECT - Creates bordered rectangle with Japanese gradient
+h2.section-title
+  span #{$i18n.section.title}
+
+// ❌ WRONG - No border styling, plain text only
+h2.section-title #{$i18n.section.title}
+```
+
+**The `<span>` wrapper enables**:
+- Japanese gradient border effect around title
+- Proper padding (`16px 32px`) for visual balance
+- Consistent styling with pricing page and other sections
+
+#### **6. Component Structure Requirements**
 **ALWAYS follow this structure for new components:**
 
 ```pug
@@ -83,7 +133,8 @@ section.component-name-section
     .row.justify-content-center
       .col-lg-10
         .text-center.mb-5
-          h2.section-title #{$i18n.section.title}
+          h2.section-title
+            span #{$i18n.section.title}
           p.section-subtitle #{$i18n.section.subtitle}
         
         // Component content with i18n
@@ -91,16 +142,17 @@ section.component-name-section
           // All text via #{$i18n.section.content}
 ```
 
-#### **5. Mandatory Checks Before Implementation**
+#### **7. Mandatory Checks Before Implementation**
 **For EVERY new component or change:**
 
 1. ✅ **Design Check**: Uses Japanese color variables
 2. ✅ **Spacing Check**: Implements Ma (negative space) patterns  
 3. ✅ **Theme Check**: Works in both light and dark modes
 4. ✅ **i18n Check**: No hardcoded text, all content via `#{$i18n.*}`
-5. ✅ **Locale Check**: Content added to both EN and FR locale files
-6. ✅ **Responsive Check**: Mobile-first design with proper breakpoints
-7. ✅ **Accessibility Check**: ARIA labels, keyboard navigation, screen readers
+5. ✅ **Title Check**: Section titles use `<span>` wrapper for Japanese border styling
+6. ✅ **Locale Check**: Content added to both EN and FR locale files
+7. ✅ **Responsive Check**: Mobile-first design with proper breakpoints
+8. ✅ **Accessibility Check**: ARIA labels, keyboard navigation, screen readers
 
 ## Japanese Color System
 

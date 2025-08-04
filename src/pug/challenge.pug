@@ -6,7 +6,7 @@ html(lang=$localeName)
     include includes/common-headers.pug
     
     //- Page-specific meta tags
-    title #{$i18n.challenge.title}
+    title #{$i18n.challenge.title} | #{$i18n.title}
     meta(name='description', content=$i18n.challenge.subtitle)
     
     //- Page-specific canonical link

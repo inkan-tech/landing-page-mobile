@@ -6,7 +6,7 @@ html(lang=en)
     include includes/common-headers.pug
     
     //- Page-specific meta tags
-    title Privacy policy
+    title #{$i18n.legal.privacy} | #{$i18n.title}
     meta(name='description', content=$i18n.meta.descriptions.privacy)
     
     //- Page-specific canonical link

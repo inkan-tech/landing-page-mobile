@@ -6,7 +6,7 @@ html(lang=$localeName)
     include includes/common-headers.pug
     
     //- Page-specific meta tags
-    title Support
+    title #{$i18n.footer.navigation.support.title} | #{$i18n.title}
     meta(name='description', content=$i18n.meta.descriptions.support)
     
     //- Page-specific canonical link

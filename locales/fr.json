@@ -450,25 +450,115 @@
         "sendbutton": "Envoyer"
     },
     "support": "Veuillez nous envoyer un email avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
-    "docs": {
-        "title": "Comment fonctionne Sealfie ?",
-        "subtitle": "Après l'inscription, après avoir été contacté, le système sera opérationnel en 20 minutes.",
-        "stepstart": {
-            "one": "J'ai besoin d'obtenir une approbation.",
-            "two": "Je démarre Sealfie, je prends une photo du sujet de l'approbation.",
-            "tree": "Je prends un selfie et ajoute un message (option).",
-            "biometric": "Je confirme avec la biométrie de mon smartphone.",
-            "video": "Landing-Doc-FR.webm"
+    "documentation": {
+        "meta": {
+            "title": "Comment fonctionne Sealfie - Arrêtez la fraude executive en 30 secondes",
+            "description": "Découvrez comment la vérification biométrique de Sealfie protège les dirigeants contre la fraude deepfake. Processus de validation expliqués."
         },
-        "intersteps": "La demande d'approbation est traitée, nous ajoutons automatiquement d'autres vérifications comme l'absence de changement d'abonnement téléphonique",
-        "stepvalidate": {
-            "one": "Les autres membres du groupe reçoivent des notifications.",
-            "two": "Ils vérifient les photos et la cohérence des informations.",
-            "tree": "Chacun valide et ajoute un selfie.",
-            "biometric": "Chacun confirme avec la biométrie de son smartphone.",
-            "video": "Landing-Doc-FR2.webm"
+        "hero": {
+            "title": {
+                "line1": "Arrêtez la fraude executive",
+                "line2": "en 30 secondes"
+            },
+            "subtitle": "La simplicité d'un selfie, la sécurité de la vérification biométrique"
         },
-        "completed": "Le demandeur a la garantie que seules les personnes enregistrées ont approuvé la demande. Nous avons décrit le processus simple, contactez-nous pour des solutions sur mesure"
+        "process": {
+            "step1": {
+                "title": "Demande",
+                "description": "Le dirigeant initie l'approbation critique"
+            },
+            "step2": {
+                "title": "Vérification",
+                "description": "L'équipe valide avec preuve biométrique"
+            },
+            "step3": {
+                "title": "Approbation",
+                "description": "Décision sécurisée avec piste d'audit"
+            }
+        },
+        "treasury": {
+            "title": "Processus de validation trésorerie",
+            "context": "Comment les équipes financières préviennent la fraude par virement",
+            "video": "Landing-Doc-FR.webm",
+            "step1": {
+                "title": "Demande par email",
+                "description": "Le CFO envoie l'autorisation de virement",
+                "benefit": "Reconnaissance instantanée"
+            },
+            "step2": {
+                "title": "Selfie biométrique",
+                "description": "Prend une photo authentifiée avec message",
+                "benefit": "Résistant aux deepfakes"
+            },
+            "step3": {
+                "title": "Message optionnel",
+                "description": "Ajoute du contexte ou des détails d'urgence",
+                "benefit": "Communication claire"
+            },
+            "step4": {
+                "title": "Confirmation d'identité",
+                "description": "Face ID/Touch ID valide l'authenticité",
+                "benefit": "Sécurité matérielle"
+            }
+        },
+        "trust": {
+            "setup_time": "30min",
+            "setup_label": "Temps d'installation",
+            "success_rate": "99,8%",
+            "success_label": "Taux de réussite",
+            "fraud_prevented": "2,3M€",
+            "fraud_label": "Fraude prévenue",
+            "compliance": "100%",
+            "compliance_label": "Conformité audit"
+        },
+        "ceo": {
+            "title": "Processus d'approbation executive",
+            "context": "Comment les dirigeants authentifient les décisions critiques", 
+            "video": "Landing-Doc-FR2.webm",
+            "step1": {
+                "title": "Notification équipe",
+                "description": "Les utilisateurs autorisés reçoivent des alertes sécurisées",
+                "benefit": "Accès contrôlé"
+            },
+            "step2": {
+                "title": "Revue de vérification",
+                "description": "L'équipe valide le selfie et la cohérence des informations",
+                "benefit": "Validation multi-facteurs"
+            },
+            "step3": {
+                "title": "Contre-signature",
+                "description": "Chaque approbateur ajoute un selfie authentifié",
+                "benefit": "Vérification distribuée"
+            },
+            "step4": {
+                "title": "Confirmation finale",
+                "description": "Confirmation biométrique de toutes les parties",
+                "benefit": "Preuve irréfutable"
+            }
+        },
+        "social_proof": {
+            "title": "Approuvé par les dirigeants financiers",
+            "subtitle": "Protection réelle, résultats réels",
+            "testimonial1": {
+                "quote": "Sealfie a arrêté trois tentatives de fraude par virement dans notre premier mois. La tranquillité d'esprit n'a pas de prix.",
+                "author": "Sarah Chen",
+                "title": "Directrice Financière, TechCorp"
+            },
+            "testimonial2": {
+                "quote": "L'implémentation a pris 20 minutes. Nos dirigeants adorent la simplicité et la sécurité.",
+                "author": "Michael Torres",
+                "title": "Directeur Sécurité IT, Global Manufacturing"
+            }
+        },
+        "final_cta": {
+            "title": "Prêt à protéger vos dirigeants ?",
+            "subtitle": "Rejoignez les dirigeants financiers qui ont éliminé le risque de fraude",
+            "primary_text": "Soyez protégé en 30 minutes",
+            "primary_aria": "Contactez-nous pour une implémentation immédiate de Sealfie",
+            "secondary_text": "Voir les tarifs",
+            "secondary_aria": "Voir les tarifs et fonctionnalités de Sealfie",
+            "guarantee": "Garantie d'installation 30 minutes • Aucune intégration IT requise"
+        }
     },
     "legal": {
         "terms": "Conditions Générales d'Utilisation",
