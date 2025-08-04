@@ -139,6 +139,68 @@ html(lang=$localeName)
                       .metric-number #{$i18n.documentation.trust.compliance}
                       .metric-label #{$i18n.documentation.trust.compliance_label}
 
+    // Technical Verification Section
+    section.technical-verification-section
+      .container.px-5
+        .row.justify-content-center.mb-5
+          .col-lg-10
+            .text-center
+              h2.section-title
+                span #{$i18n.documentation.technical_verification.title}
+              p.section-subtitle #{$i18n.documentation.technical_verification.subtitle}
+              p.section-intro.mt-4 #{$i18n.documentation.technical_verification.intro}
+        
+        .row.g-4.mb-5
+          .col-lg-6.mb-4
+            .verification-card
+              .verification-header
+                .verification-icon
+                  i.bi-shield-check.icon-feature.text-gradient
+                .verification-content
+                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.sim_protection.title}
+                  p.verification-description #{$i18n.documentation.technical_verification.verifications.sim_protection.description}
+              .verification-benefits
+                .benefit-tag #{$i18n.documentation.technical_verification.verifications.sim_protection.benefit}
+          
+          .col-lg-6.mb-4
+            .verification-card
+              .verification-header
+                .verification-icon
+                  i.bi-cpu.icon-feature.text-gradient
+                .verification-content
+                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.device_integrity.title}
+                  p.verification-description #{$i18n.documentation.technical_verification.verifications.device_integrity.description}
+              .verification-benefits
+                .benefit-tag #{$i18n.documentation.technical_verification.verifications.device_integrity.benefit}
+          
+          .col-lg-6.mb-4
+            .verification-card
+              .verification-header
+                .verification-icon
+                  i.bi-graph-up.icon-feature.text-gradient
+                .verification-content
+                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.network_analysis.title}
+                  p.verification-description #{$i18n.documentation.technical_verification.verifications.network_analysis.description}
+              .verification-benefits
+                .benefit-tag #{$i18n.documentation.technical_verification.verifications.network_analysis.benefit}
+          
+          .col-lg-6.mb-4
+            .verification-card
+              .verification-header
+                .verification-icon
+                  i.bi-eye.icon-feature.text-gradient
+                .verification-content
+                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.biometric_liveness.title}
+                  p.verification-description #{$i18n.documentation.technical_verification.verifications.biometric_liveness.description}
+              .verification-benefits
+                .benefit-tag #{$i18n.documentation.technical_verification.verifications.biometric_liveness.benefit}
+        
+        .row.justify-content-center
+          .col-lg-10
+            .text-center
+              .conclusion-statement
+                p.lead #{$i18n.documentation.technical_verification.conclusion}
+
     // CEO Scenario Section
     section.ceo-scenario-section
       .container.px-5

@@ -511,6 +511,34 @@
             "compliance": "100%",
             "compliance_label": "Audit compliance"
         },
+        "technical_verification": {
+            "title": "We handle the technical expertise",
+            "subtitle": "Automatic security verifications you don't need to worry about",
+            "intro": "Unlike other solutions that burden users with complex security decisions, Sealfie automatically performs advanced technical verifications behind the scenes.",
+            "verifications": {
+                "sim_protection": {
+                    "title": "SIM swap protection",
+                    "description": "We interrogate mobile network operators in real-time to detect any subscription changes or SIM card swaps",
+                    "benefit": "Automatic threat detection"
+                },
+                "device_integrity": {
+                    "title": "Device integrity checks",
+                    "description": "Hardware-level verification ensures the device hasn't been compromised or rooted",
+                    "benefit": "Trusted environment validation"
+                },
+                "network_analysis": {
+                    "title": "Network behavior analysis",
+                    "description": "We analyze connection patterns and network metadata to identify suspicious activities",
+                    "benefit": "Invisible security monitoring"
+                },
+                "biometric_liveness": {
+                    "title": "Advanced liveness detection",
+                    "description": "Multi-layer verification confirms the person is physically present, not a photo or video",
+                    "benefit": "Anti-spoofing protection"
+                }
+            },
+            "conclusion": "Your users simply take a selfie. We handle all the complex security intelligence."
+        },
         "ceo": {
             "title": "Executive approval process", 
             "context": "How leaders authenticate critical decisions",

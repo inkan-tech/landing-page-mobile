@@ -511,6 +511,34 @@
             "compliance": "100%",
             "compliance_label": "Conformité audit"
         },
+        "technical_verification": {
+            "title": "Nous gérons l'expertise technique",
+            "subtitle": "Vérifications de sécurité automatiques dont vous n'avez pas à vous soucier",
+            "intro": "Contrairement aux autres solutions qui chargent les utilisateurs de décisions de sécurité complexes, Sealfie effectue automatiquement des vérifications techniques avancées en arrière-plan.",
+            "verifications": {
+                "sim_protection": {
+                    "title": "Protection contre le SIM swapping",
+                    "description": "Nous interrogeons les opérateurs de réseaux mobiles en temps réel pour détecter tout changement d'abonnement ou échange de carte SIM",
+                    "benefit": "Détection automatique des menaces"
+                },
+                "device_integrity": {
+                    "title": "Vérifications d'intégrité de l'appareil",
+                    "description": "La vérification au niveau matériel garantit que l'appareil n'a pas été compromis ou rooté",
+                    "benefit": "Validation d'environnement de confiance"
+                },
+                "network_analysis": {
+                    "title": "Analyse du comportement réseau",
+                    "description": "Nous analysons les modèles de connexion et les métadonnées réseau pour identifier les activités suspectes",
+                    "benefit": "Surveillance de sécurité invisible"
+                },
+                "biometric_liveness": {
+                    "title": "Détection avancée de vivacité",
+                    "description": "Une vérification multi-couches confirme que la personne est physiquement présente, pas une photo ou vidéo",
+                    "benefit": "Protection anti-usurpation"
+                }
+            },
+            "conclusion": "Vos utilisateurs prennent simplement un selfie. Nous gérons toute l'intelligence de sécurité complexe."
+        },
         "ceo": {
             "title": "Processus d'approbation executive",
             "context": "Comment les dirigeants authentifient les décisions critiques", 
