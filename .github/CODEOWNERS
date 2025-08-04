@@ -1,0 +1,16 @@
+# Global code owners
+* @inkan-tech
+
+# Frontend specific
+*.pug @inkan-tech
+*.scss @inkan-tech
+*.js @inkan-tech
+
+# Documentation
+*.md @inkan-tech
+README.md @inkan-tech
+
+# Build and configuration
+Gruntfile.js @inkan-tech
+package.json @inkan-tech
+scripts/ @inkan-tech
