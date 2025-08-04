@@ -589,11 +589,8 @@ html(lang=$localeName)
 
     include ../pug/includes/footer.pug
 
-  // Bootstrap core JS
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js', integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==', crossorigin='anonymous')
-
-  // Core theme JS
-  script(src='/js/scripts.js')
+  // Common scripts (Bootstrap, Core theme, Language detection)
+  include includes/common-scripts.pug
 
   // Phase 3: Lazy loader for modular loading
   script(src='/js/lazy-loader.js')

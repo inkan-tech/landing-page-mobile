@@ -252,7 +252,8 @@ module.exports = grunt => {
             docs: {
                 files: {
                     'docs/js/scripts.js': 'src/js/scripts.js',
-                    'docs/js/lazy-loader.js': 'src/js/lazy-loader.js'
+                    'docs/js/lazy-loader.js': 'src/js/lazy-loader.js',
+                    'docs/js/modules/language-detector.js': 'src/js/modules/language-detector.js'
                 }
             }
         },
@@ -271,13 +272,29 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-pug-i18n');
     grunt.loadNpmTasks('grunt-sitemap');
     grunt.loadNpmTasks('grunt-purgecss');
+    
+    // Register task to set English as default language
+    grunt.registerTask('set-default-language', 'Set English as default language at root', function() {
+        const done = this.async();
+        const exec = require('child_process').exec;
+        exec('node scripts/setup-default-language.js', function(err, stdout, stderr) {
+            if (err) {
+                grunt.log.error('Error setting default language:', err);
+                done(false);
+            } else {
+                grunt.log.writeln(stdout);
+                done();
+            }
+        });
+    });
+    
     //register default task
     if (process.env.NODE_ENV == 'production') {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel'])
-        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'cssmin', 'purgecss', 'babel'])
-        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel'])
+        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
+        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
+        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
     } else {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'browserSync', 'babel', 'watch'])
+        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'browserSync', 'babel', 'set-default-language', 'watch'])
     }
 };
 

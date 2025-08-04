@@ -1,0 +1,207 @@
+// Language Detection Popup Styles
+// Following Japanese design principles: Ma (間), Kanso (簡素), and Mono no Aware
+
+.language-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 24px;
+
+    &.language-popup-show {
+        opacity: 1;
+        visibility: visible;
+
+        .language-popup-content {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.language-popup-content {
+    background: var(--bg-surface);
+    border-radius: 16px;
+    padding: 48px 40px 40px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    // Ma - generous spacing
+    @media (max-width: 576px) {
+        padding: 40px 24px 32px;
+        margin: 0 16px;
+    }
+}
+
+.language-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+
+    &:hover {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.language-popup-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    
+    svg {
+        color: var(--shu-primary);
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.language-popup-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.language-popup-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.language-popup-btn {
+    // Kanso - simple, elegant design
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    &:hover:before {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+.language-popup-btn-primary {
+    background: var(--shu-primary);
+    color: white;
+
+    &:hover {
+        background: var(--enji-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.25);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.language-popup-btn-secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+        background: var(--bg-primary);
+        border-color: var(--shu-primary);
+        color: var(--shu-primary);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+// Dark theme adjustments
+[data-theme="dark"] {
+    .language-popup {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .language-popup-content {
+        background: var(--bg-surface);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .language-popup-btn-secondary {
+        background: var(--bg-surface);
+        border-color: var(--border-color);
+
+        &:hover {
+            background: var(--bg-secondary);
+            border-color: var(--shu-primary);
+        }
+    }
+}
+
+// Accessibility: Reduced motion
+@media (prefers-reduced-motion: reduce) {
+    .language-popup,
+    .language-popup-content,
+    .language-popup-btn {
+        transition-duration: 0.01ms !important;
+    }
+
+    .language-popup-btn:before {
+        display: none;
+    }
+}
