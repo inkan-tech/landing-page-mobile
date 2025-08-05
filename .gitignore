@@ -11,3 +11,42 @@ analysis-reports
 /codeql-database/
 /codeql-results/
 .actrc
+
+# Playwright Test Artifacts
+/test-results/
+/playwright-report/
+/playwright/.cache/
+test-results/
+playwright-report/
+
+# Visual Testing Screenshots & Videos
+test-results/**/*.png
+test-results/**/*.webm
+test-results/**/*.mp4
+**/screenshots/
+**/videos/
+**/test-screenshots/
+**/visual-diffs/
+**/test-failed-*.png
+
+# Visual Regression Test Artifacts (NOT baselines)
+**/*-actual.png
+**/*-expected.png
+**/*-diff.png
+**/test-results/
+**/playwright-report/
+tests/**/*-actual.png
+tests/**/*-expected.png
+tests/**/*-diff.png
+
+# Keep baseline snapshots in git - these are reference images for visual regression testing
+# DO NOT ignore: tests/**/*-snapshots/**/*.png (these are baselines, not artifacts)
+# Only ignore OS-specific variants if cross-platform testing becomes an issue:
+# tests/**/*-snapshots/**/*-win32.png
+# tests/**/*-snapshots/**/*-linux.png
+
+# Test Reports and Traces
+**/trace.zip
+**/error-context.md
+**/results.json
+**/html-report/

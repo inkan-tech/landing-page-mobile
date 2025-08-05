@@ -8,11 +8,25 @@
         "build:pug": "grunt pug",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
-        "start": "grunt  ",
+        "start": "grunt",
         "optimize-images": "node scripts/optimize-images.js",
         "security:scan": "./scripts/run-codeql-local.sh",
         "security:audit": "npm audit --audit-level=moderate",
-        "security:check": "npm run security:audit && npm run security:scan"
+        "security:check": "npm run security:audit && npm run security:scan",
+        "test": "playwright test",
+        "test:headed": "playwright test --headed",
+        "test:ui": "playwright test --ui",
+        "test:mobile": "playwright test --project='Mobile Chrome' --project='Mobile Safari'",
+        "test:visual": "playwright test visual-regression.spec.js",
+        "test:accessibility": "playwright test accessibility.spec.js",
+        "test:performance": "playwright test performance.spec.js",
+        "test:security": "playwright test csp-security.spec.js",
+        "test:report": "playwright show-report",
+        "test:redesign": "playwright test japanese-redesign-verification.spec.js",
+        "test:cultural": "playwright test cultural-authenticity.spec.js", 
+        "test:theme": "playwright test theme-system-compliance.spec.js",
+        "test:redesign-full": "playwright test japanese-redesign-verification.spec.js cultural-authenticity.spec.js theme-system-compliance.spec.js",
+        "test:server-security": "playwright test security-server-verification.spec.js"
     },
     "description": "Landing page for Sealfie",
     "keywords": [
@@ -43,6 +57,7 @@
         "node-sass": "^9.0.0"
     },
     "devDependencies": {
+        "@playwright/test": "^1.54.2",
         "autoprefixer": "10.4.21",
         "browser-sync": "^3.0.4",
         "chokidar": "4.0.3",
