@@ -13,8 +13,8 @@ test.describe('Accessibility Tests', () => {
     const h2Count = await h2Elements.count();
     expect(h2Count).toBeGreaterThan(0);
     
-    // Verify h1 contains the main hero title
-    await expect(h1).toContainText('executives');
+    // Verify h1 contains the main hero title (current content)
+    await expect(h1).toContainText('Your business is a target');
   });
 
   test('navigation has proper ARIA labels', async ({ page }) => {

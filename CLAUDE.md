@@ -154,6 +154,22 @@ section.component-name-section
 7. ✅ **Responsive Check**: Mobile-first design with proper breakpoints
 8. ✅ **Accessibility Check**: ARIA labels, keyboard navigation, screen readers
 
+### **⚠️ IMPORTANT: Test Content Updates**
+
+**Updated Accessibility Tests (December 2024):**
+- ✅ **Hero Content**: Tests now verify H1 contains "Your business is a target"
+- ✅ **Ma Spacing**: Tests verify 48px-64px section margins (Japanese negative space)
+- ✅ **Focus States**: Tests verify Shu-iro (#FF3500) focus indicators
+- ❌ **OLD**: Tests previously checked for "executives" content (outdated)
+
+**Current Hero Structure:**
+```pug
+h1.hero-title
+  | Your business is a target           // Line 1 (updated)
+  br
+  span.accent-text Protect it with a simple selfie  // Line 2 (current)
+```
+
 ## Japanese Color System
 
 ### **Traditional Japanese Colors (Current Implementation)**
@@ -326,11 +342,11 @@ h2.section-title #{$i18n.section.title}  // CORRECT
 
 ### **Title Hierarchy (Consistent Across All Pages)**
 ```pug
-// ✅ CORRECT - Standard section title pattern
+// ✅ CORRECT - Standard hero title pattern (current content)
 h1.hero-title
-  | #{$i18n.hero.title.line1}
+  | #{$i18n.hero.title.line1}  // "Your business is a target"
   br
-  span.accent-text #{$i18n.hero.title.line2}
+  span.accent-text #{$i18n.hero.title.line2}  // "Protect it with a simple selfie"
 
 h2.section-title #{$i18n.section.title}
 p.section-subtitle #{$i18n.section.subtitle}

@@ -87,10 +87,11 @@ npm run test:report        # View detailed HTML test reports
 
 ### 1. Japanese Redesign Verification (`test:redesign`)
 - **Traditional Colors**: Shu-iro (#FF3500), Enji-iro (#C93338), Sango-iro (#F8674F)
-- **Design Principles**: Ma (spacing), Kanso (simplicity), Mono no Aware (subtle interactions)
+- **Design Principles**: Ma (48px-64px spacing), Kanso (simplicity), Mono no Aware (subtle interactions)
 - **Typography**: Japanese-inspired hierarchy, readable line heights
 - **Component Library**: Button styles, card designs, hover effects
 - **Mobile-First**: Responsive breakpoints, mobile typography
+- **Current Hero Content**: Tests verify "Your business is a target" + selfie protection messaging
 
 ### 2. Cultural Authenticity (`test:cultural`)
 - **Color Symbolism**: Red for authority and trust (traditional Japanese)

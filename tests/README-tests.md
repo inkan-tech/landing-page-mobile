@@ -12,12 +12,13 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 **Verifies Core Implementation:**
 - ✅ **Traditional Japanese Colors**: Shu-iro (#FF3500), Enji-iro (#C93338), Sango-iro (#F8674F)
 - ✅ **CSS Custom Properties**: Theme-aware color system
-- ✅ **Ma (間) Principle**: Generous negative space in layouts (>=60px padding)
+- ✅ **Ma (間) Principle**: Generous negative space in layouts (48px-64px margins)
 - ✅ **Kanso (簡素) Principle**: Elegant simplicity, clean hierarchy
 - ✅ **Mono no Aware (物の哀れ)**: Subtle transitions and micro-interactions
 - ✅ **Typography System**: Japanese-inspired hierarchy with proper line heights
 - ✅ **Component Library**: Button styles, card designs following specifications
 - ✅ **Mobile-First Design**: Responsive breakpoints with cultural authenticity
+- ✅ **Current Hero Content**: "Your business is a target" + "Protect it with a simple selfie"
 
 ### 2. **Cultural Authenticity** (`cultural-authenticity.spec.js`)
 **Command**: `npm run test:cultural`

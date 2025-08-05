@@ -55,6 +55,13 @@ npm run test:security
 - ✅ **Menu Visibility**: Validates menu show/hide states
 - ✅ **Navigation Links**: Checks mobile menu link accessibility
 
+### 1.1. Accessibility Tests (`accessibility.spec.js`)
+- ✅ **Heading Hierarchy**: Validates proper H1-H6 structure with current hero content
+- ✅ **Current Hero**: Tests H1 contains "Your business is a target" (updated content)
+- ✅ **ARIA Labels**: Navigation accessibility compliance
+- ✅ **Alt Text**: Image accessibility verification
+- ✅ **Keyboard Navigation**: Carousel and form accessibility
+
 ### 2. Visual Regression Tests (`visual-regression.spec.js`)
 - 📸 **Hero Section Screenshots**: Cross-browser visual comparison
 - 📸 **Mobile Menu Screenshots**: Mobile navigation UI validation
