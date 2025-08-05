@@ -92,12 +92,85 @@ html {
     }
 }
 
-// Padding for sections
+// Ma (間) - Japanese Negative Space Principles
+// Generous spacing following traditional Japanese design
 
 aside,
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    // Ma spacing using Japanese theme variables
+    padding-top: var(--ma-hero, 5rem);
+    padding-bottom: var(--ma-hero, 5rem);
+    
+    // Generous margins between sections for Ma principle
+    margin-bottom: var(--ma-large, 48px);
+    
+    // Ensure first and last sections have proper spacing
+    &:first-of-type {
+        margin-top: var(--ma-medium, 32px);
+    }
+    
+    &:last-of-type {
+        margin-bottom: var(--ma-large, 48px);
+    }
+}
+
+// Hero sections get extra generous spacing (Ma principle)
+section.masthead,
+section.hero-section {
+    padding-top: var(--ma-hero, 80px);
+    padding-bottom: var(--ma-hero, 80px);
+    margin-bottom: var(--ma-xlarge, 64px);
+}
+
+// Content sections maintain consistent Ma spacing
+section:not(.masthead):not(.hero-section) {
+    margin-bottom: var(--ma-large, 48px);
+}
+
+// Japanese Focus States - Mono no Aware (subtle beauty)
+// Gentle, refined focus indicators following Japanese aesthetic
+
+*:focus-visible {
+    outline: 2px solid var(--shu-primary);
+    outline-offset: 2px;
+    border-radius: var(--kanso-border-radius, 4px);
+    transition: var(--mono-transition-normal, 0.3s ease);
+    
+    // Subtle glow effect for Japanese aesthetic
+    box-shadow: 0 0 0 4px var(--focus-ring, rgba(255, 53, 0, 0.15));
+}
+
+// Button focus states with Japanese aesthetic
+button:focus-visible,
+.btn:focus-visible,
+a.cta-primary-large:focus-visible,
+a.cta-secondary:focus-visible,
+a.cta-compact:focus-visible {
+    outline: 2px solid var(--shu-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--focus-ring, rgba(255, 53, 0, 0.15));
+    transform: var(--mono-hover-lift, translateY(-1px));
+    transition: var(--mono-transition-normal, 0.3s ease);
+}
+
+// Input focus states
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    border-color: var(--shu-primary);
+    box-shadow: 0 0 0 3px var(--focus-ring, rgba(255, 53, 0, 0.15));
+    outline: none;
+    transition: var(--mono-transition-normal, 0.3s ease);
+}
+
+// Navigation focus states
+nav a:focus-visible,
+.navbar-nav .nav-link:focus-visible {
+    outline: 2px solid var(--shu-primary);
+    outline-offset: 2px;
+    border-radius: var(--kanso-border-radius, 4px);
+    background-color: var(--hover-overlay, rgba(255, 53, 0, 0.05));
+    transition: var(--mono-transition-normal, 0.3s ease);
 }
 
 // Set fixed height for app badges

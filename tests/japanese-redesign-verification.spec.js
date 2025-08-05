@@ -409,11 +409,21 @@ test.describe('Japanese Inkan-Inspired Redesign Verification', () => {
         await focusableElements.focus();
         
         const focusStyles = await focusableElements.evaluate(el => {
-          return getComputedStyle(el, ':focus-visible').outline;
+          const styles = getComputedStyle(el);
+          return {
+            outline: styles.outline,
+            outlineColor: styles.outlineColor,
+            outlineWidth: styles.outlineWidth,
+            boxShadow: styles.boxShadow
+          };
         });
 
-        // Should have visible focus outline
-        expect(focusStyles).toBeTruthy();
+        // Should have visible focus outline or box-shadow (Japanese aesthetic)
+        const hasFocusStyles = focusStyles.outline !== 'none' || 
+                              focusStyles.outlineWidth !== '0px' ||
+                              focusStyles.boxShadow !== 'none';
+        
+        expect(hasFocusStyles).toBe(true);
       }
     });
 
