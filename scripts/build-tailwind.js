@@ -14,8 +14,8 @@ if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// Use the Tailwind CLI directly
-const command = `npx tailwindcss -i ${inputPath} -o ${outputPath} --minify`;
+// Use PostCSS for GitHub Actions compatibility (avoids @parcel/watcher issues)
+const command = `npx postcss ${inputPath} -o ${outputPath} --env production`;
 
 console.log('Building Tailwind CSS...');
 

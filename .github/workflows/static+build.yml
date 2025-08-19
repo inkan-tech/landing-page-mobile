@@ -44,7 +44,7 @@ jobs:
           fi
       - name: Install and Build 🔧
         run: |
-          npm install --no-optional
+          npm install
           npm run build
       - name: Verify build output
         run: |
