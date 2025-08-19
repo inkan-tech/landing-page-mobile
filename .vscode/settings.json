@@ -14,5 +14,8 @@
     ],
     "git.defaultCloneDirectory": "./",
     "git.alwaysSignOff": false,
-    "git.pullBeforePublish": true
+    "git.pullBeforePublish": true,
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/static+build.yml"
+    ]
 }
