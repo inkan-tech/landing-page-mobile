@@ -3,7 +3,9 @@ nav#mainNav(class='fixed top-0 left-0 right-0 z-50 bg-white shadow-sm')
   div(class='container mx-auto px-5')
     div(class='flex items-center justify-between h-16')
       //- Logo/Brand
-      a(class='font-bold text-xl text-gray-900 hover:text-shu-primary transition-colors' href='/'+$localeName) #{$i18n.banner.main}
+      a(class='flex items-center gap-3 text-gray-900 hover:text-shu-primary transition-colors' href='/'+$localeName)
+        img(class='h-8 w-8' src='/assets/favicon.svg' alt='Sealfie Logo')
+        span(class='font-bold text-xl') Sealfie
       
       //- Mobile menu button
       button#navbarToggler(

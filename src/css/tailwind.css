@@ -2,15 +2,15 @@
 
 /* Custom Tailwind CSS-first configuration for v4 */
 @theme {
-  /* Japanese color system */
-  --color-shu-primary: #FF3500;
-  --color-enji-secondary: #C93338;
-  --color-sango-accent: #F8674F;
+  /* Japanese color system - Darker traditional Inkan reds */
+  --color-shu-primary: #CC1100;
+  --color-enji-secondary: #A01B1B;
+  --color-sango-accent: #D73527;
   
-  /* Dark theme variants */
-  --color-shu-muted: #E34234;
-  --color-enji-deep: #B91C1C;
-  --color-sango-light: #F87171;
+  /* Dark theme variants - Adjusted for darker reds */
+  --color-shu-muted: #DD2211;
+  --color-enji-deep: #8B1A1A;
+  --color-sango-light: #E74C3C;
   
   /* Background colors */
   --color-dark-primary: #0F0F23;
@@ -26,10 +26,10 @@
   --spacing-ma-3xl: 80px;
   --spacing-ma-hero: 120px;
   
-  /* Japanese shadow system */
-  --shadow-japanese: 0 4px 16px rgba(255, 53, 0, 0.1);
-  --shadow-japanese-hover: 0 8px 24px rgba(255, 53, 0, 0.15);
-  --shadow-japanese-active: 0 2px 8px rgba(255, 53, 0, 0.2);
+  /* Japanese shadow system - Updated for darker red */
+  --shadow-japanese: 0 4px 16px rgba(204, 17, 0, 0.1);
+  --shadow-japanese-hover: 0 8px 24px rgba(204, 17, 0, 0.15);
+  --shadow-japanese-active: 0 2px 8px rgba(204, 17, 0, 0.2);
   
   /* Border radius */
   --radius-japanese: 8px;
@@ -341,5 +341,157 @@ li svg {
   /* CTA section layout */
   .cta-section {
     @apply flex flex-col sm:flex-row items-center gap-4 mt-8;
+  }
+  
+  /* Language popup styling - Japanese design principles */
+  .language-popup {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    background: rgba(15, 15, 35, 0.8);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .language-popup-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .language-popup-content {
+    @apply relative bg-white dark:bg-dark-surface rounded-japanese shadow-japanese-hover;
+    @apply max-w-md w-full mx-4 p-8;
+    /* Ma (negative space) - generous padding */
+    padding: 48px 40px;
+    /* Subtle animation with Japanese easing */
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .language-popup-show .language-popup-content {
+    transform: translateY(0) scale(1);
+  }
+  
+  .language-popup-close {
+    @apply absolute top-4 right-4 w-8 h-8 flex items-center justify-center;
+    @apply text-gray-400 hover:text-shu-primary transition-colors duration-200;
+    @apply rounded-full hover:bg-gray-100 dark:hover:bg-dark-secondary;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .language-popup-close:hover {
+    color: var(--color-shu-primary);
+  }
+  
+  .language-popup-icon {
+    @apply w-12 h-12 mx-auto mb-6 text-shu-primary;
+    /* Subtle pulse animation for attention */
+    animation: pulse-japanese 2s infinite;
+  }
+  
+  @keyframes pulse-japanese {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  .language-popup-title {
+    @apply text-xl font-semibold text-center mb-8 leading-relaxed;
+    @apply text-gray-900 dark:text-white;
+    /* Japanese typography - slightly wider letter spacing */
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+  
+  .language-popup-buttons {
+    @apply flex flex-col gap-3;
+  }
+  
+  .language-popup-btn {
+    @apply px-6 py-3 rounded-japanese font-medium text-center transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    border: none;
+    cursor: pointer;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .language-popup-btn-primary {
+    @apply bg-shu-primary text-white shadow-japanese;
+    @apply hover:shadow-japanese-hover hover:-translate-y-0.5;
+    @apply focus:ring-shu-primary;
+    background-color: var(--color-shu-primary) !important;
+    color: white !important;
+  }
+  
+  .language-popup-btn-primary:hover {
+    background-color: var(--color-enji-secondary) !important;
+    box-shadow: var(--shadow-japanese-hover);
+    transform: translateY(-2px);
+  }
+  
+  .language-popup-btn-secondary {
+    @apply border-2 border-gray-300 text-gray-700 dark:text-gray-300;
+    @apply hover:border-shu-primary hover:text-shu-primary;
+    @apply dark:border-gray-600 dark:hover:border-shu-primary;
+    @apply focus:ring-shu-primary;
+    background-color: transparent;
+  }
+  
+  .language-popup-btn-secondary:hover {
+    border-color: var(--color-shu-primary);
+    color: var(--color-shu-primary);
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 480px) {
+    .language-popup-content {
+      margin: 16px;
+      padding: 32px 24px;
+    }
+    
+    .language-popup-title {
+      @apply text-lg mb-6;
+    }
+    
+    .language-popup-buttons {
+      @apply gap-2;
+    }
+    
+    .language-popup-btn {
+      @apply py-3 text-sm;
+      min-height: 44px;
+    }
+  }
+  
+  /* Dark theme specific adjustments */
+  [data-theme="dark"] .language-popup {
+    background: rgba(15, 15, 35, 0.9);
+  }
+  
+  [data-theme="dark"] .language-popup-close:hover {
+    background-color: var(--color-dark-secondary);
+  }
+  
+  /* High contrast and accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .language-popup,
+    .language-popup-content,
+    .language-popup-btn {
+      transition: none;
+    }
+    
+    .language-popup-icon {
+      animation: none;
+    }
+  }
+  
+  /* Focus visible for better keyboard navigation */
+  .language-popup-btn:focus-visible {
+    outline: 2px solid var(--color-shu-primary);
+    outline-offset: 2px;
   }
 }

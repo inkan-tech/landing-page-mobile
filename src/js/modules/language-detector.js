@@ -40,17 +40,39 @@
         return SUPPORTED_LANGUAGES.includes(primaryLang) ? primaryLang : DEFAULT_LANGUAGE;
     }
 
-    // Check if popup was previously dismissed
-    function wasPopupDismissed() {
-        return localStorage.getItem(POPUP_DISMISSED_KEY) === 'true';
+    // Check if popup was previously dismissed for specific language combination
+    function wasPopupDismissedForLanguages(browserLang, currentLang) {
+        const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
+        return localStorage.getItem(dismissalKey) === 'true';
     }
-
 
     // Dismiss popup for specific language combination
     function dismissPopup(browserLang, currentLang) {
         const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
         localStorage.setItem(dismissalKey, 'true');
+    }
 
+    // Check if user came from our site (to avoid showing popup when switching back)
+    function cameFromOurSite() {
+        const referrer = document.referrer;
+        const currentDomain = window.location.hostname;
+        
+        // Check if referrer is from the same domain (our site)
+        if (referrer && referrer.includes(currentDomain)) {
+            return true;
+        }
+        
+        // Also check if user has recently interacted with our site
+        const lastVisit = localStorage.getItem('sealfie_last_visit');
+        const now = Date.now();
+        const fiveMinutesAgo = now - (5 * 60 * 1000); // 5 minutes
+        
+        return lastVisit && parseInt(lastVisit) > fiveMinutesAgo;
+    }
+
+    // Track user visit to prevent popup on returns
+    function trackVisit() {
+        localStorage.setItem('sealfie_last_visit', Date.now().toString());
     }
 
     // Save language preference
@@ -185,10 +207,11 @@
         const savedLang = getSavedLanguagePreference();
         
         // Debug logging
-        console.log('Language Detection Debug:', {
+        console.log('🌐 Language Detection Debug:', {
             currentLang,
             browserLang,
             savedLang,
+            referrer: document.referrer,
             url: window.location.pathname
         });
         
@@ -199,21 +222,24 @@
             return;
         }
         
-        // Show popup if browser language differs from current language, unless specifically dismissed for this language combination
-        const dismissalKey = `${POPUP_DISMISSED_KEY}_${browserLang}_${currentLang}`;
-        const wasSpecificCombinationDismissed = localStorage.getItem(dismissalKey) === 'true';
+        // Track this visit
+        trackVisit();
         
-        console.log('Popup conditions:', {
+        // Show popup if browser language differs from current language, unless specifically dismissed or user came from our site
+        const wasSpecificCombinationDismissed = wasPopupDismissedForLanguages(browserLang, currentLang);
+        const userCameFromOurSite = cameFromOurSite();
+        
+        console.log('🔍 Popup conditions:', {
             browserLang,
             currentLang,
             browserDiffersFromCurrent: browserLang !== currentLang,
             hasSavedLang: !!savedLang,
-            dismissalKey,
-            wasSpecificCombinationDismissed
+            wasSpecificCombinationDismissed,
+            userCameFromOurSite
         });
         
-        if (browserLang !== currentLang && !savedLang && !wasSpecificCombinationDismissed) {
-            console.log('Showing language popup');
+        if (browserLang !== currentLang && !savedLang && !wasSpecificCombinationDismissed && !userCameFromOurSite) {
+            console.log('🎌 Showing language popup');
             // Wait for page to load before showing popup
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', function() {
@@ -223,9 +249,32 @@
                 setTimeout(() => showLanguagePopup(browserLang, currentLang), 1000);
             }
         } else {
-            console.log('Not showing popup due to conditions not met');
+            console.log('❌ Not showing popup - conditions not met');
         }
     }
+
+    // Test function to force show popup (for debugging)
+    function testPopup() {
+        console.log('🧪 Testing language popup...');
+        showLanguagePopup('fr', 'en');
+    }
+
+    // Function to clear all language preferences (for testing)
+    function clearLanguageData() {
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem('sealfie_last_visit');
+        // Clear all dismissal keys
+        Object.keys(localStorage).forEach(key => {
+            if (key.startsWith(POPUP_DISMISSED_KEY)) {
+                localStorage.removeItem(key);
+            }
+        });
+        console.log('🧹 Cleared all language data');
+    }
+
+    // Make test functions globally available for debugging
+    window.testLanguagePopup = testPopup;
+    window.clearLanguageData = clearLanguageData;
 
     // Start detection
     init();
