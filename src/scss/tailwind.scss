@@ -1,0 +1,76 @@
+/* Tailwind CSS v4 - Using @import directive */
+@import "tailwindcss";
+
+/* Custom Tailwind CSS-first configuration for v4 */
+@theme {
+  /* Japanese color system */
+  --color-shu-primary: #FF3500;
+  --color-enji-secondary: #C93338;
+  --color-sango-accent: #F8674F;
+  
+  /* Dark theme variants */
+  --color-shu-muted: #E34234;
+  --color-enji-deep: #B91C1C;
+  --color-sango-light: #F87171;
+  
+  /* Background colors */
+  --color-dark-primary: #0F0F23;
+  --color-dark-secondary: #1E1E2E;
+  --color-dark-surface: #313244;
+  
+  /* Japanese spacing system (Ma) */
+  --spacing-ma-sm: 16px;
+  --spacing-ma-md: 24px;
+  --spacing-ma-lg: 32px;
+  --spacing-ma-xl: 48px;
+  --spacing-ma-2xl: 64px;
+  --spacing-ma-3xl: 80px;
+  --spacing-ma-hero: 120px;
+  
+  /* Japanese shadow system */
+  --shadow-japanese: 0 4px 16px rgba(255, 53, 0, 0.1);
+  --shadow-japanese-hover: 0 8px 24px rgba(255, 53, 0, 0.15);
+  --shadow-japanese-active: 0 2px 8px rgba(255, 53, 0, 0.2);
+  
+  /* Main shadow color variable for device mockups */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Border radius */
+  --radius-japanese: 8px;
+}
+
+/* Ensure shadow-color is available globally */
+:root {
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Custom component styles using Tailwind utilities */
+@layer components {
+  /* Japanese button system */
+  .btn-japanese-primary {
+    @apply px-6 py-3 bg-shu-primary text-white rounded-japanese 
+           shadow-japanese hover:shadow-japanese-hover 
+           hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-japanese-secondary {
+    @apply px-6 py-3 border-2 border-shu-primary text-shu-primary 
+           rounded-japanese hover:bg-shu-primary hover:text-white 
+           transition-all duration-300;
+  }
+  
+  /* Japanese card system */
+  .card-japanese {
+    @apply bg-white dark:bg-dark-surface rounded-japanese 
+           shadow-japanese p-ma-lg transition-all duration-300;
+  }
+  
+  /* Section spacing using Ma principles */
+  .section-ma {
+    @apply py-ma-xl md:py-ma-2xl lg:py-ma-3xl;
+  }
+  
+  .section-ma-hero {
+    @apply py-ma-2xl md:py-ma-3xl lg:py-ma-hero;
+  }
+}

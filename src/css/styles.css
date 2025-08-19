@@ -1,0 +1,280 @@
+/*
+ * Styles - Post Tailwind Migration (Minimal Legacy CSS)
+ * Pure CSS - No Sass dependencies
+ */
+
+/* Root variables for compatibility with main branch */
+:root {
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Specific Positioning - Tailwind 4 Compatible */
+.hero-section {
+    padding: 3rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Tailwind 4 grid adjustments for better spacing */
+.hero-section .grid {
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Device sizing adjustments */
+@media (min-width: 1024px) {
+    .hero-section .grid {
+        gap: 3rem;
+    }
+}
+
+/* Device Mockup CSS - iPhone X (Working version from master) */
+.device-wrapper {
+    max-width: 300px;
+    width: 100%;
+}
+
+.device {
+    position: relative;
+    background-size: cover;
+}
+
+.device::after {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.device .screen {
+    position: absolute;
+    background-size: cover;
+    pointer-events: auto;
+}
+
+.device .button {
+    position: absolute;
+    cursor: pointer;
+}
+
+.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] {
+    padding-bottom: 198.898071625%;
+}
+
+.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .screen {
+    top: 3.1855955679%;
+    left: 6.8870523416%;
+    width: 86.2258953168%;
+    height: 93.6288088643%;
+    z-index: 2;
+}
+
+/* CRITICAL: iPhone frame image - this creates the actual visible device frame */
+.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"]::after {
+    content: '';
+    background-image: url('../assets/img/optimized/portrait_black.png');
+    z-index: 1;
+}
+
+/* Device frame and screen styling */
+.bg-device-screen {
+    background-color: #000000;
+}
+
+.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .button {
+    display: none;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Unified device mockup styling - single source of truth for all mockups */
+.device-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* Establish stacking context */
+}
+
+/* SVG background circle with subtle theme gradient */  
+.device-mockup .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    display: block;
+    z-index: 0; /* Behind device but within mockup context */
+    pointer-events: none; /* Prevent interaction blocking */
+}
+
+.device-mockup .circle .gradient-start-color {
+    stop-color: var(--color-shu-primary, #FF3500); /* Traditional Vermillion (Shu-iro) */
+}
+
+.device-mockup .circle .gradient-end-color {
+    stop-color: var(--color-enji-secondary, #C93338); /* Crimson (Enji-iro) */
+}
+
+/* Japanese-inspired decorative shapes with theme colors */
+.device-mockup .shape-1 {
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    transform: rotate(15deg);
+    fill: var(--color-sango-accent, #F8674F);
+    top: 5%;
+    right: -5%;
+    transition: fill 0.2s ease;
+    z-index: 1;
+}
+
+.device-mockup .shape-2 {
+    position: absolute;
+    height: 0.8rem;
+    width: 0.8rem;
+    fill: var(--color-shu-primary, #FF3500);
+    bottom: 5%;
+    left: -5%;
+    transition: fill 0.2s ease;
+    z-index: 1;
+}
+
+/* Device wrapper with consistent sizing and theme-aware shadow */
+.device-mockup .device-wrapper {
+    position: relative;
+    max-width: 15rem;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: box-shadow 0.2s ease;
+    z-index: 1; /* Above circle but within mockup context */
+}
+
+.device-mockup .device-wrapper:hover {
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* Features section specific - smaller circle */
+.how-it-works-section .device-mockup .circle {
+    width: 40%;
+    height: 40%;
+}
+
+/* Responsive adjustments for device mockups - matching main branch exactly */
+@media (min-width: 576px) {
+    .device-mockup .circle {
+        width: 70%;
+        height: 70%;
+    }
+    
+    .device-mockup .device-wrapper {
+        max-width: 16rem;
+    }
+    
+    .how-it-works-section .device-mockup .circle {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+@media (min-width: 768px) {
+    .device-mockup .circle {
+        width: 80%;
+        height: 80%;
+        transform: translate(-40%, -50%); /* Offset to the left */
+    }
+
+    .device-mockup .device-wrapper {
+        max-width: 17rem;
+    }
+    
+    .how-it-works-section .device-mockup .circle {
+        width: 50%;
+        height: 50%;
+        transform: translate(-40%, -50%);
+    }
+}
+
+@media (min-width: 992px) {
+    .device-mockup .circle {
+        width: 90%;
+        height: 90%;
+        transform: translate(-35%, -50%); /* Slightly less offset */
+    }
+    
+    .device-mockup .device-wrapper {
+        max-width: 18rem;
+    }
+    
+    .how-it-works-section .device-mockup .circle {
+        width: 55%;
+        height: 55%;
+        transform: translate(-35%, -50%);
+    }
+}
+
+/* Hero section specific device positioning */
+.hero-section .device-mockup {
+    padding: 2rem 0;
+    justify-content: flex-start;
+}
+
+.hero-section .device-mockup .device-wrapper {
+    margin: 0 auto;
+}
+
+/* Essential accessibility improvements */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Lazy loading placeholder */
+.lazy-loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-loading.loaded {
+    opacity: 1;
+}
+
+/* Ensure proper visual-hidden class for accessibility */
+.visually-hidden-focusable {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.visually-hidden-focusable:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: inherit !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: inherit !important;
+}

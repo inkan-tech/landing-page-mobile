@@ -7,6 +7,7 @@
         "build:assets": "grunt copy",
         "build:pug": "grunt pug",
         "build:scss": "node scripts/build-scss.js",
+        "build:tailwind": "node scripts/build-tailwind.js",
         "clean": "node scripts/clean.js",
         "start": "grunt",
         "optimize-images": "node scripts/optimize-images.js",
@@ -23,7 +24,7 @@
         "test:security": "playwright test csp-security.spec.js",
         "test:report": "playwright show-report",
         "test:redesign": "playwright test japanese-redesign-verification.spec.js",
-        "test:cultural": "playwright test cultural-authenticity.spec.js", 
+        "test:cultural": "playwright test cultural-authenticity.spec.js",
         "test:theme": "playwright test theme-system-compliance.spec.js",
         "test:redesign-full": "playwright test japanese-redesign-verification.spec.js cultural-authenticity.spec.js theme-system-compliance.spec.js",
         "test:server-security": "playwright test security-server-verification.spec.js"
@@ -58,6 +59,7 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.54.2",
+        "@tailwindcss/postcss": "^4.0.0",
         "autoprefixer": "10.4.21",
         "browser-sync": "^3.0.4",
         "chokidar": "4.0.3",
@@ -80,12 +82,13 @@
         "grunt-run": "0.8.1",
         "grunt-sass": "4.0.0",
         "grunt-sitemap": "2.0.1",
-        "postcss": "8.5.6",
+        "postcss": "^8.5.6",
         "prettier": "3.6.2",
         "pug": "3.0.3",
         "sass": "1.89.2",
         "sharp": "^0.34.3",
         "shelljs": "0.10.0",
+        "tailwindcss": "^4.0.0",
         "upath": "2.0.1"
     },
     "overrides": {

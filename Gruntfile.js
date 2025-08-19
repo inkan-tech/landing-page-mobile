@@ -34,18 +34,23 @@ module.exports = grunt => {
 
         //    //sass task
         run: {
-            run: {
+            css: {
                 options: {
                     failOnError: true,
                     itterable: true
-                    // Task-specific options go here.
                 },
-                //            cmd: 'node',
                 args: [
-                    'scripts/build-scss.js'
+                    'scripts/build-css.js'
+                ]
+            },
+            tailwind: {
+                options: {
+                    failOnError: true
+                },
+                args: [
+                    'scripts/build-tailwind.js'
                 ]
             }
-
         },
 
         // copy task (copy src/libraries to docs/libraries)
@@ -205,11 +210,15 @@ module.exports = grunt => {
             },
             pug18n: {
                 files: [ 'locales/*.json'],
-                tasks: ['babel', 'copy', 'run', 'pug']
+                tasks: ['babel', 'copy', 'run:css', 'run:tailwind', 'pug']
             },
-            run: {
-                files: ['src/scss/**/*.scss'],
-                tasks: ['run']
+            css: {
+                files: ['src/css/**/*.css'],
+                tasks: ['run:css']
+            },
+            tailwind: {
+                files: ['src/css/**/*.css', 'tailwind.config.js'],
+                tasks: ['run:tailwind']
             },
             js: {
                 files: ['src/js/**/*.js'],
@@ -290,11 +299,11 @@ module.exports = grunt => {
     
     //register default task
     if (process.env.NODE_ENV == 'production') {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
-        grunt.registerTask('build:optimized', ['pug', 'run', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
-        grunt.registerTask('build:serviceworker', ['pug', 'run', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
+        grunt.registerTask('default', ['pug', 'run:css', 'run:tailwind', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
+        grunt.registerTask('build:optimized', ['pug', 'run:css', 'run:tailwind', 'copy:library', 'copy:optimized', 'copy:serviceworker', 'copy:robots', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
+        grunt.registerTask('build:serviceworker', ['pug', 'run:css', 'run:tailwind', 'copy', 'sitemap', 'cssmin', 'purgecss', 'babel', 'set-default-language'])
     } else {
-        grunt.registerTask('default', ['pug', 'run', 'copy', 'sitemap', 'browserSync', 'babel', 'set-default-language', 'watch'])
+        grunt.registerTask('default', ['pug', 'run:css', 'run:tailwind', 'copy', 'sitemap', 'browserSync', 'babel', 'set-default-language', 'watch'])
     }
 };
 

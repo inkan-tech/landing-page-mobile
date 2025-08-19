@@ -1,88 +1,86 @@
-// Expanded Footer with Black Pattern Background
-footer.footer-expanded.bg-black
-  .footer-pattern
-    .container.px-5.py-5
-      .row.g-5
-        
-        // Product Links
-        .col-md-6.col-lg-3
-          .footer-section
-            h5.text-white.mb-4 #{$i18n.footer.navigation.product.title}
-            ul.footer-links.list-unstyled
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/`) #{$i18n.footer.navigation.product.links.overview}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/documentation.html`) #{$i18n.footer.navigation.product.links.howItWorks}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/pricing.html`) #{$i18n.footer.navigation.product.links.pricing}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/challenge.html`) #{$i18n.footer.navigation.product.links.challenge}
-        
-        // Company Links
-        .col-md-6.col-lg-3
-          .footer-section
-            h5.text-white.mb-4 #{$i18n.footer.navigation.company.title}
-            ul.footer-links.list-unstyled
-              li.mb-2
-                a.text-white-50(href="https://inkan.link") #{$i18n.footer.navigation.company.links.about}
-              li.mb-2
-                a.text-white-50(href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/`, target='_blank', rel='noopener') #{$i18n.footer.navigation.company.links.press}
-              li.mb-2
-                if $localeName == "fr"
-                  a.text-white-50(href="https://inkan.link/posts/blog-fraude-au-pdg-5milliards-an/") #{$i18n.footer.navigation.company.links.blog}
-                else
-                  a.text-white-50(href="https://inkan.link/en/posts/blog-bec-5billions-annum-scam/") #{$i18n.footer.navigation.company.links.blog}
-              li.mb-2
-                a.text-white-50(href="mailto:contact@sealf.ie") #{$i18n.footer.navigation.company.links.contact}
-        
-        // Support Links
-        .col-md-6.col-lg-3
-          .footer-section
-            h5.text-white.mb-4 #{$i18n.footer.navigation.support.title}
-            ul.footer-links.list-unstyled
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/support.html`) #{$i18n.footer.navigation.support.links.help}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/documentation.html`) #{$i18n.footer.navigation.support.links.documentation}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/privacy-ios.html`) #{$i18n.footer.navigation.support.links.privacy}
-              li.mb-2
-                a.text-white-50(href=`/${$localeName}/terms.html`) #{$i18n.footer.navigation.support.links.terms}
-        
-        // Connect & Download
-        .col-md-6.col-lg-3
-          .footer-section
-            h5.text-white.mb-4 #{$i18n.footer.download.title}
-            p.text-white-50.small.mb-3 #{$i18n.footer.download.subtitle}
-            
-            // App Download Links
-            .app-downloads.mb-4
-              a.d-inline-block.me-2.mb-2(href='https://apps.apple.com/app/id1635309517' target="_blank" rel="noopener noreferrer")
-                img.app-badge-small(src='/assets/img/app-store-badge.svg' alt='Download on App Store' style="height: 32px;")
-              a.d-inline-block.mb-2(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie' target="_blank" rel="noopener noreferrer")
-                img.app-badge-small(src='/assets/img/google-play-badge.svg' alt='Get it on Google Play' style="height: 32px;")
-            
-            // Connect Links
-            h6.text-white.small.mb-3 #{$i18n.footer.navigation.connect.title}
-            ul.footer-links.list-unstyled
-              li.mb-2
-                a.text-white-50(href="http://eepurl.com/ix1tjg" target="_blank" rel="noopener noreferrer") #{$i18n.footer.navigation.connect.links.newsletter}
-              li.mb-2
-                a.text-white-50(href="https://www.linkedin.com/company/inkan-link" target="_blank" rel="noopener noreferrer") #{$i18n.footer.navigation.connect.links.linkedin}
+// Footer - Tailwind CSS v4 Version
+footer(class='bg-black relative')
+  //- Pattern overlay
+  div(class='absolute inset-0 opacity-5')
+    div(class='absolute inset-0' style='background-image: url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); background-size: 60px 60px;')
+  
+  div(class='relative container mx-auto px-5 py-ma-xl')
+    div(class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8')
       
-      // Footer Bottom
-      .footer-bottom.border-top.border-secondary.pt-4.mt-5
-        .row.align-items-center
-          .col-md-8
-            .text-white-50.small
-              | #{$i18n.footer.legal.copyright}
-              span.mx-2 &middot;
-              a.text-white-50(href=`/${$localeName}/privacy-ios.html`) Privacy
-              span.mx-2 &middot;
-              a.text-white-50(href=`/${$localeName}/terms.html`) Terms
-          .col-md-4.text-md-end
-            .text-white-50.small
-              if $localeName == "fr"
-                a(href='https://inkan.link/posts/blog-fraude-au-pdg-5milliards-an/') #{$i18n.footer.legal.sources}
-              else
-                a(href='https://inkan.link/en/posts/blog-bec-5billions-annum-scam/') #{$i18n.footer.legal.sources}
+      //- Product Links
+      div(class='space-y-4')
+        h5(class='text-white font-semibold mb-4') #{$i18n.footer.navigation.product.title}
+        ul(class='space-y-2')
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/`) #{$i18n.footer.navigation.product.links.overview}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/documentation.html`) #{$i18n.footer.navigation.product.links.howItWorks}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/pricing.html`) #{$i18n.footer.navigation.product.links.pricing}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/challenge.html`) #{$i18n.footer.navigation.product.links.challenge}
+      
+      //- Company Links
+      div(class='space-y-4')
+        h5(class='text-white font-semibold mb-4') #{$i18n.footer.navigation.company.title}
+        ul(class='space-y-2')
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href="https://inkan.link") #{$i18n.footer.navigation.company.links.about}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/` target='_blank' rel='noopener') #{$i18n.footer.navigation.company.links.press}
+          li
+            if $localeName == "fr"
+              a(class='text-gray-400 hover:text-white transition-colors' href="https://inkan.link/posts/blog-fraude-au-pdg-5milliards-an/") #{$i18n.footer.navigation.company.links.blog}
+            else
+              a(class='text-gray-400 hover:text-white transition-colors' href="https://inkan.link/en/posts/blog-bec-5billions-annum-scam/") #{$i18n.footer.navigation.company.links.blog}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href="mailto:contact@sealf.ie") #{$i18n.footer.navigation.company.links.contact}
+      
+      //- Support Links
+      div(class='space-y-4')
+        h5(class='text-white font-semibold mb-4') #{$i18n.footer.navigation.support.title}
+        ul(class='space-y-2')
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/support.html`) #{$i18n.footer.navigation.support.links.help}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/documentation.html`) #{$i18n.footer.navigation.support.links.documentation}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/privacy-ios.html`) #{$i18n.footer.navigation.support.links.privacy}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/terms.html`) #{$i18n.footer.navigation.support.links.terms}
+      
+      //- Connect & Download
+      div(class='space-y-4')
+        h5(class='text-white font-semibold mb-4') #{$i18n.footer.download.title}
+        p(class='text-gray-400 text-sm mb-3') #{$i18n.footer.download.subtitle}
+        
+        //- App Download Links
+        div(class='flex gap-2 mb-4')
+          a(class='inline-block hover:opacity-80 transition-opacity' href='https://apps.apple.com/app/id1635309517' target="_blank" rel="noopener noreferrer")
+            img(class='h-8' src='/assets/img/app-store-badge.svg' alt='Download on App Store')
+          a(class='inline-block hover:opacity-80 transition-opacity' href='https://play.google.com/store/apps/details?id=link.inkan.sealfie' target="_blank" rel="noopener noreferrer")
+            img(class='h-8' src='/assets/img/google-play-badge.svg' alt='Get it on Google Play')
+        
+        //- Connect Links
+        h6(class='text-white text-sm font-semibold mb-3') #{$i18n.footer.navigation.connect.title}
+        ul(class='space-y-2')
+          li
+            a(class='text-gray-400 hover:text-white transition-colors text-sm' href="http://eepurl.com/ix1tjg" target="_blank" rel="noopener noreferrer") #{$i18n.footer.navigation.connect.links.newsletter}
+          li
+            a(class='text-gray-400 hover:text-white transition-colors text-sm' href="https://www.linkedin.com/company/inkan-link" target="_blank" rel="noopener noreferrer") #{$i18n.footer.navigation.connect.links.linkedin}
+    
+    //- Footer Bottom
+    div(class='border-t border-gray-800 pt-8 mt-12')
+      div(class='flex flex-col md:flex-row justify-between items-center gap-4')
+        div(class='text-gray-400 text-sm text-center md:text-left')
+          | #{$i18n.footer.legal.copyright}
+          span(class='mx-2') &middot;
+          a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/privacy-ios.html`) Privacy
+          span(class='mx-2') &middot;
+          a(class='text-gray-400 hover:text-white transition-colors' href=`/${$localeName}/terms.html`) Terms
+        
+        div(class='text-gray-400 text-sm text-center md:text-right')
+          if $localeName == "fr"
+            a(class='text-gray-400 hover:text-white transition-colors' href='https://inkan.link/posts/blog-fraude-au-pdg-5milliards-an/') #{$i18n.footer.legal.sources}
+          else
+            a(class='text-gray-400 hover:text-white transition-colors' href='https://inkan.link/en/posts/blog-bec-5billions-annum-scam/') #{$i18n.footer.legal.sources}

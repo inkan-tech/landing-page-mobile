@@ -17,121 +17,117 @@ html(lang=$localeName)
   body#page-top
     include includes/navbar.pug
 
-    // Masthead section
-    header.masthead
-      .container.px-5
-        .row.gx-5.align-items-center
-          .col-lg-8
+    // Masthead section - Tailwind 4
+    header(class="masthead section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center")
+          div(class="lg:col-span-8")
             // Masthead text and app badges
-            .mb-5.mb-lg-0.text-center.text-lg-start
-              h1.display-1.lh-1.mb-3 #{$i18n.challenge.masthead.title}
-              p.lead.fw-normal.text-muted.mb-5 #{$i18n.challenge.masthead.subtitle}
-              .d-flex.flex-column.flex-lg-row.align-items-center
-                a.cta-primary-large(href="mailto:contact@sealf.ie?subject=Challenge%20Gratuit%20de%20Sécurité") #{$i18n.challenge.masthead.cta}
+            div(class="mb-5 lg:mb-0 text-center lg:text-left")
+              h1(class="text-4xl lg:text-5xl font-bold leading-tight mb-6") #{$i18n.challenge.masthead.title}
+              p(class="text-xl text-gray-600 mb-8") #{$i18n.challenge.masthead.subtitle}
+              div(class="flex flex-col lg:flex-row items-center")
+                a(class="cta-primary-large inline-block" href="mailto:contact@sealf.ie?subject=Challenge%20Gratuit%20de%20Sécurité") #{$i18n.challenge.masthead.cta}
           
-          .col-lg-4
+          div(class="lg:col-span-4")
             // Masthead illustration
-            .text-center
-              img.img-fluid.rounded.shadow-lg(src="/assets/img/Cyborg_CEO_DAALE.webp" alt="Cyborg CEO Deepfake Threat")
+            div(class="text-center")
+              img(class="w-full rounded-lg shadow-lg" src="/assets/img/Cyborg_CEO_DAALE.webp" alt="Cyborg CEO Deepfake Threat")
 
-    // Problem section - False security
-    section.py-6
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.challenge.problem.title}
-              p.section-subtitle #{$i18n.challenge.problem.subtitle}
+    // Problem section - False security - Tailwind 4
+    section(class="py-16 section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="section-title mb-6")
+              span #{$i18n.challenge.problem.title}
+            p(class="section-subtitle") #{$i18n.challenge.problem.subtitle}
+          
+          div(class="max-w-3xl mx-auto")
+            div(class="bg-white border border-gray-200 rounded-lg shadow-lg mb-8")
+              div(class="p-8")
+                h4(class="text-center mb-6 text-gray-600") Vous pensez probablement que :
+                ul(class="space-y-4 mb-6")
+                  each point in $i18n.challenge.problem.points
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span= point
+                
+                div(class="bg-red-50 border border-red-200 rounded-lg p-4")
+                  h5(class="font-semibold text-red-800 mb-2") #{$i18n.challenge.problem.reality.title}
+                  p(class="text-red-700 mb-0") #{$i18n.challenge.problem.reality.text}
+
+    // Solution section - Tailwind 4
+    section(class="py-16 section-ma bg-gray-50")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="section-title mb-6")
+              span #{$i18n.challenge.solution.title}
+            p(class="section-subtitle") #{$i18n.challenge.solution.subtitle}
+          
+          div(class="grid grid-cols-1 md:grid-cols-3 gap-8")
+            div(class="bg-white rounded-lg border border-gray-100 shadow-sm h-full")
+              div(class="text-center p-6")
+                div(class="mb-6")
+                  svg(class="w-12 h-12 text-shu-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z")
+                h4(class="text-xl font-semibold mb-4") #{$i18n.challenge.solution.process.step1.title}
+                p(class="text-gray-600") #{$i18n.challenge.solution.process.step1.description}
             
-            .row.justify-content-center
-              .col-lg-8
-                .card.border-0.shadow-lg.mb-5
-                  .card-body.p-4
-                    h4.text-center.mb-4.text-muted Vous pensez probablement que :
-                    ul.list-unstyled.mb-4
-                      each point in $i18n.challenge.problem.points
-                        li.mb-3
-                          i.bi-check-circle.text-gradient.me-2
-                          = point
-                    
-                    .alert.alert-danger.border-0
-                      h5.alert-heading #{$i18n.challenge.problem.reality.title}
-                      p.mb-0 #{$i18n.challenge.problem.reality.text}
-
-    // Solution section
-    section.bg-light.py-6
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.challenge.solution.title}
-              p.section-subtitle #{$i18n.challenge.solution.subtitle}
+            div(class="bg-white rounded-lg border border-gray-100 shadow-sm h-full")
+              div(class="text-center p-6")
+                div(class="mb-6")
+                  svg(class="w-12 h-12 text-shu-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.072 16.5c-.77.833.192 2.5 1.732 2.5z")
+                h4(class="text-xl font-semibold mb-4") #{$i18n.challenge.solution.process.step2.title}
+                p(class="text-gray-600") #{$i18n.challenge.solution.process.step2.description}
             
-            .row.g-4
-              .col-md-4
-                .card.h-100.border-0.shadow-sm
-                  .card-body.text-center.p-4
-                    .mb-3
-                      i.bi-search.icon-feature.text-gradient.d-block
-                    h4 #{$i18n.challenge.solution.process.step1.title}
-                    p.text-muted #{$i18n.challenge.solution.process.step1.description}
-              
-              .col-md-4
-                .card.h-100.border-0.shadow-sm
-                  .card-body.text-center.p-4
-                    .mb-3
-                      i.bi-shield-exclamation.icon-feature.text-gradient.d-block
-                    h4 #{$i18n.challenge.solution.process.step2.title}
-                    p.text-muted #{$i18n.challenge.solution.process.step2.description}
-              
-              .col-md-4
-                .card.h-100.border-0.shadow-sm
-                  .card-body.text-center.p-4
-                    .mb-3
-                      i.bi-clipboard-check.icon-feature.text-gradient.d-block
-                    h4 #{$i18n.challenge.solution.process.step3.title}
-                    p.text-muted #{$i18n.challenge.solution.process.step3.description}
+            div(class="bg-white rounded-lg border border-gray-100 shadow-sm h-full")
+              div(class="text-center p-6")
+                div(class="mb-6")
+                  svg(class="w-12 h-12 text-shu-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z")
+                h4(class="text-xl font-semibold mb-4") #{$i18n.challenge.solution.process.step3.title}
+                p(class="text-gray-600") #{$i18n.challenge.solution.process.step3.description}
 
-    // Benefits section
-    section.py-6
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-8
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.challenge.benefits.title}
-            
-            .card.border-0.shadow-lg
-              .card-body.p-5
-                ul.list-unstyled.mb-0
-                  each benefit in $i18n.challenge.benefits.items
-                    li.mb-3.d-flex.align-items-start
-                      i.bi-star-fill.text-warning.me-3.mt-1
-                      span.fw-medium= benefit
+    // Benefits section - Tailwind 4
+    section(class="py-16 section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="max-w-4xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="section-title mb-6")
+              span #{$i18n.challenge.benefits.title}
+          
+          div(class="bg-white border border-gray-200 rounded-lg shadow-lg")
+            div(class="p-8")
+              ul(class="space-y-4")
+                each benefit in $i18n.challenge.benefits.items
+                  li(class="flex items-start")
+                    svg(class="w-5 h-5 text-yellow-400 mr-4 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                      path(d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.563.563 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z")
+                    span(class="font-medium text-gray-700")= benefit
 
-    // Testimonial section
-    section.bg-light.py-6
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-8
-            .text-center
-              blockquote.blockquote.mb-4
-                p.lead.fst-italic "#{$i18n.challenge.testimonial.quote}"
-              figcaption.blockquote-footer
-                | #{$i18n.challenge.testimonial.author}
+    // Testimonial section - Tailwind 4
+    section(class="py-16 section-ma bg-gray-50")
+      div(class="container mx-auto px-5")
+        div(class="max-w-4xl mx-auto")
+          div(class="text-center")
+            blockquote(class="mb-6")
+              p(class="text-xl italic text-gray-700") "#{$i18n.challenge.testimonial.quote}"
+            figcaption(class="text-gray-600")
+              | #{$i18n.challenge.testimonial.author}
 
-    // Final CTA section
-    section.cta
-      .cta-content
-        .container.px-5
-          .text-center
-            h2.text-white.display-4.lh-1.mb-3 #{$i18n.challenge.cta.title}
-            p.lead.text-white.mb-4 #{$i18n.challenge.cta.subtitle}
-            a.cta-primary-large(href="mailto:contact@sealf.ie?subject=Challenge%20Gratuit%20de%20Sécurité", style="background: white; color: var(--shu-primary); border: 2px solid white;") #{$i18n.challenge.cta.button}
-            br
-            small.text-white-50 #{$i18n.challenge.cta.disclaimer}
+    // Final CTA section - Tailwind 4
+    section(class="py-16 bg-gradient-to-br from-gray-900 to-gray-800")
+      div(class="container mx-auto px-5")
+        div(class="text-center max-w-3xl mx-auto")
+          h2(class="text-white text-4xl lg:text-5xl font-bold leading-tight mb-4") #{$i18n.challenge.cta.title}
+          p(class="text-xl text-white mb-8") #{$i18n.challenge.cta.subtitle}
+          a(class="cta-primary-large inline-block" href="mailto:contact@sealf.ie?subject=Challenge%20Gratuit%20de%20Sécurité" style="background: white; color: var(--shu-primary); border: 2px solid white;") #{$i18n.challenge.cta.button}
+          br
+          small(class="text-gray-300 mt-4 block") #{$i18n.challenge.cta.disclaimer}
 
     include includes/footer.pug
 

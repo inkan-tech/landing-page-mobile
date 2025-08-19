@@ -21,89 +21,83 @@ html(lang=$localeName)
 
     main#main-content(tabindex='-1')
 
-      // Press Page Hero
-      header.hero-section.bg-light
-        .container.px-5
-          .row.justify-content-center
-            .col-lg-8
-              .text-center
-                h1.display-4.mb-3 #{$i18n.press.title}
-                p.lead.text-muted #{$i18n.press.subtitle}
+      // Press Page Hero - Tailwind 4
+      header(class="hero-section py-16 bg-gray-50")
+        div(class="container mx-auto px-5")
+          div(class="max-w-4xl mx-auto")
+            div(class="text-center")
+              h1(class="text-4xl lg:text-5xl font-bold mb-6") #{$i18n.press.title}
+              p(class="text-xl text-gray-600") #{$i18n.press.subtitle}
 
-      // International Speaking Engagements Section
-      section.speaking-section
-        .container.px-5
-          .row.justify-content-center
-            .col-lg-10
-              .text-center.mb-5
-                h2.section-title
-                  span #{$i18n.press.sections.speaking.title}
-              
-              // ITU-T Workshop Feature
-              .featured-presentation.bg-light.rounded.p-5.mb-5
-                .row.align-items-center
-                  .col-lg-8
-                    .presentation-content
-                      h3.h4.text-gradient.mb-3 #{$i18n.press.sections.speaking.ituWorkshop.title}
-                      .presentation-meta.mb-3
-                        .meta-item
-                          i.bi-calendar-event.text-muted.me-2
-                          span.text-muted #{$i18n.press.sections.speaking.ituWorkshop.date}
-                        .meta-item.mt-2
-                          i.bi-building.text-muted.me-2
-                          span.text-muted #{$i18n.press.sections.speaking.ituWorkshop.venue}
-                      h4.h6.text-primary.mb-3 "#{$i18n.press.sections.speaking.ituWorkshop.topic}"
-                      p.text-muted #{$i18n.press.sections.speaking.ituWorkshop.description}
-                  .col-lg-4.text-center
-                    a.cta-primary(href="https://inkan.link/posts/news-itu-t-workshop-securing-ai/" target="_blank" rel="noopener noreferrer")
-                      i.bi-play-circle.me-2
-                      | #{$i18n.press.sections.speaking.ituWorkshop.watchVideo}
+      // International Speaking Engagements Section - Tailwind 4
+      section(class="speaking-section py-16 section-ma bg-white")
+        div(class="container mx-auto px-5")
+          div(class="max-w-5xl mx-auto")
+            div(class="text-center mb-12")
+              h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+                span #{$i18n.press.sections.speaking.title}
+            
+            // ITU-T Workshop Feature
+            div(class="featured-presentation bg-gray-50 rounded-lg p-8 mb-8")
+              div(class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center")
+                div(class="lg:col-span-8")
+                  div(class="presentation-content")
+                    h3(class="text-2xl font-semibold text-shu-primary mb-4") #{$i18n.press.sections.speaking.ituWorkshop.title}
+                    div(class="presentation-meta mb-4 space-y-2")
+                      div(class="meta-item flex items-center")
+                        i(class="bi-calendar-event text-gray-500 mr-3")
+                        span(class="text-gray-600") #{$i18n.press.sections.speaking.ituWorkshop.date}
+                      div(class="meta-item flex items-center")
+                        i(class="bi-building text-gray-500 mr-3")
+                        span(class="text-gray-600") #{$i18n.press.sections.speaking.ituWorkshop.venue}
+                    h4(class="text-lg font-medium text-shu-primary mb-4") "#{$i18n.press.sections.speaking.ituWorkshop.topic}"
+                    p(class="text-gray-600") #{$i18n.press.sections.speaking.ituWorkshop.description}
+                div(class="lg:col-span-4 text-center")
+                  a(class="cta-primary-large inline-block" href="https://inkan.link/posts/news-itu-t-workshop-securing-ai/" target="_blank" rel="noopener noreferrer")
+                    i(class="bi-play-circle mr-2")
+                    | #{$i18n.press.sections.speaking.ituWorkshop.watchVideo}
 
-      // Media Coverage Section
-      section.media-section.bg-light
-        .container.px-5
-          .row.justify-content-center
-            .col-lg-10
-              .text-center.mb-5
-                h2.section-title
-                  span #{$i18n.press.sections.media.title}
+      // Media Coverage Section - Tailwind 4
+      section(class="media-section py-16 section-ma bg-gray-50")
+        div(class="container mx-auto px-5")
+          div(class="max-w-5xl mx-auto")
+            div(class="text-center mb-12")
+              h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+                span #{$i18n.press.sections.media.title}
+            
+            div(class="grid grid-cols-1 md:grid-cols-2 gap-8")
+              div(class="media-card bg-white rounded-lg p-6 h-full shadow-sm border border-gray-200")
+                div(class="media-icon mb-4")
+                  i(class="bi-newspaper text-shu-primary text-3xl")
+                h4(class="text-xl font-semibold mb-3") #{$i18n.press.sections.media.figaro.title}
+                p(class="text-gray-600 mb-4") #{$i18n.press.sections.media.figaro.description}
+                a(class="cta-secondary inline-block" href="#") #{$i18n.press.sections.media.figaro.readMore}
               
-              .row.g-4
-                .col-md-6
-                  .media-card.bg-white.rounded.p-4.h-100.shadow-sm
-                    .media-icon.mb-3
-                      i.bi-newspaper.text-gradient.fs-3
-                    h4 #{$i18n.press.sections.media.figaro.title}
-                    p.text-muted.mb-3 #{$i18n.press.sections.media.figaro.description}
-                    a.cta-ghost(href="#") #{$i18n.press.sections.media.figaro.readMore}
-                
-                .col-md-6
-                  .media-card.bg-white.rounded.p-4.h-100.shadow-sm
-                    .media-icon.mb-3
-                      i.bi-broadcast.text-gradient.fs-3
-                    h4 Additional Coverage
-                    p.text-muted.mb-3 Expert commentary and thought leadership on AI security trends.
-                    a.cta-ghost(href="mailto:contact@sealf.ie") Contact for Interviews
+              div(class="media-card bg-white rounded-lg p-6 h-full shadow-sm border border-gray-200")
+                div(class="media-icon mb-4")
+                  i(class="bi-broadcast text-shu-primary text-3xl")
+                h4(class="text-xl font-semibold mb-3") Additional Coverage
+                p(class="text-gray-600 mb-4") Expert commentary and thought leadership on AI security trends.
+                a(class="cta-secondary inline-block" href="mailto:contact@sealf.ie") Contact for Interviews
 
-      // Industry Recognition Section
-      section.recognition-section
-        .container.px-5
-          .row.justify-content-center
-            .col-lg-10
-              .text-center.mb-5
-                h2.section-title
-                  span #{$i18n.press.sections.recognition.title}
-                p.section-subtitle #{$i18n.press.sections.recognition.description}
+      // Industry Recognition Section - Tailwind 4
+      section(class="recognition-section py-16 section-ma bg-white")
+        div(class="container mx-auto px-5")
+          div(class="max-w-5xl mx-auto")
+            div(class="text-center mb-12")
+              h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+                span #{$i18n.press.sections.recognition.title}
+              p(class="section-subtitle") #{$i18n.press.sections.recognition.description}
+            
+            div(class="recognition-placeholder text-center p-8 bg-gray-50 rounded-lg")
+              i(class="bi-award text-5xl text-shu-primary mb-4 block")
+              h4(class="text-2xl font-semibold mb-3") Awards & Certifications
+              p(class="text-gray-600 mb-6") Coming soon - Industry recognitions and partnerships
               
-              .recognition-placeholder.text-center.p-5.bg-light.rounded
-                i.bi-award.display-4.text-gradient.mb-3
-                h4 Awards & Certifications
-                p.text-muted Coming soon - Industry recognitions and partnerships
-                
-              .text-center.mt-4
-                a.cta-primary(href="mailto:contact@sealf.ie?subject=Press Inquiry")
-                  i.bi-envelope.me-2
-                  | Press Inquiries
+            div(class="text-center mt-8")
+              a(class="cta-primary-large inline-block" href="mailto:contact@sealf.ie?subject=Press Inquiry")
+                i(class="bi-envelope mr-2")
+                | Press Inquiries
 
     include ../pug/includes/footer.pug
 

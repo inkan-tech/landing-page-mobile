@@ -1,44 +1,98 @@
-// Navigation
-nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
-      .container.px-5
-        a.navbar-brand.fw-bold(href='/'+$localeName) #{$i18n.banner.main}
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          | Menu
-          i.bi-list
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
-            li.nav-item
-              a.nav-link.me-lg-3(href='pricing.html') #{$i18n.banner.pricing}
-            li.nav-item
-              a.nav-link.me-lg-3(href='documentation.html') #{$i18n.banner.docs}
-            li.nav-item
-              a.nav-link.me-lg-3(href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/`, target='_blank', rel='noopener') #{$i18n.banner.press}
-            li.nav-item
-              a.nav-link.me-lg-3(href='#')#otherLangLink #{$i18n.otherlang.long}
-          a.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0.button(href="http://eepurl.com/ix1tjg")
-            span.d-flex.align-items-center
-              i.bi-envelope.me-2
-              span.small #{$i18n.banner.action}
+// Navigation - Tailwind CSS v4 Version
+nav#mainNav(class='fixed top-0 left-0 right-0 z-50 bg-white shadow-sm')
+  div(class='container mx-auto px-5')
+    div(class='flex items-center justify-between h-16')
+      //- Logo/Brand
+      a(class='font-bold text-xl text-gray-900 hover:text-shu-primary transition-colors' href='/'+$localeName) #{$i18n.banner.main}
+      
+      //- Mobile menu button
+      button#navbarToggler(
+        type='button'
+        class='lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-shu-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-shu-primary'
+        aria-controls='navbarResponsive'
+        aria-expanded='false'
+        aria-label='Toggle navigation'
+      )
+        span.sr-only Menu
+        //- Hamburger icon
+        svg(class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+          path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
+      
+      //- Desktop navigation
+      div(class='hidden lg:flex lg:items-center lg:gap-8')
+        //- Navigation links
+        div(class='flex items-center gap-6')
+          a(class='text-gray-700 hover:text-shu-primary transition-colors font-medium' href='pricing.html') #{$i18n.banner.pricing}
+          a(class='text-gray-700 hover:text-shu-primary transition-colors font-medium' href='documentation.html') #{$i18n.banner.docs}
+          a(class='text-gray-700 hover:text-shu-primary transition-colors font-medium' href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/` target='_blank' rel='noopener') #{$i18n.banner.press}
+          a#otherLangLink(class='text-gray-700 hover:text-shu-primary transition-colors font-medium' href='#') #{$i18n.otherlang.long}
+        
+        //- CTA Button
+        a(class='btn-japanese-primary inline-flex items-center gap-2' href="http://eepurl.com/ix1tjg")
+          svg(class='w-4 h-4' fill='currentColor' viewBox='0 0 16 16')
+            path(d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z')
+          span.text-sm.font-medium #{$i18n.banner.action}
+    
+    //- Mobile navigation menu
+    div#navbarResponsive(class='lg:hidden hidden')
+      div(class='px-2 pt-2 pb-3 space-y-1')
+        a(class='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-shu-primary hover:bg-gray-50 transition' href='pricing.html') #{$i18n.banner.pricing}
+        a(class='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-shu-primary hover:bg-gray-50 transition' href='documentation.html') #{$i18n.banner.docs}
+        a(class='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-shu-primary hover:bg-gray-50 transition' href=`https://inkan.link/${$localeName == 'en' ? 'en/' : ''}categories/news/` target='_blank' rel='noopener') #{$i18n.banner.press}
+        a#otherLangLinkMobile(class='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-shu-primary hover:bg-gray-50 transition' href='#') #{$i18n.otherlang.long}
+        
+        //- Mobile CTA button
+        div(class='pt-4')
+          a(class='btn-japanese-primary w-full inline-flex items-center justify-center gap-2' href="http://eepurl.com/ix1tjg")
+            svg(class='w-4 h-4' fill='currentColor' viewBox='0 0 16 16')
+              path(d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z')
+            span.text-sm.font-medium #{$i18n.banner.action}
 
+//- Add padding to body to account for fixed navbar
+style.
+  body {
+    padding-top: 64px;
+  }
 
 script.
   document.addEventListener('DOMContentLoaded', function() {
-    // Get current page name from URL
+    // Mobile menu toggle
+    const toggler = document.getElementById('navbarToggler');
+    const menu = document.getElementById('navbarResponsive');
+    
+    if (toggler && menu) {
+      toggler.addEventListener('click', function() {
+        const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
+        toggler.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+      });
+    }
+    
+    // Language switcher logic
     const path = window.location.pathname;
     const pageName = path.substring(path.lastIndexOf('/') + 1);
-
-    // Update the link
+    
+    // Update desktop link
     const otherLangLink = document.getElementById('otherLangLink');
     if (otherLangLink) {
       const href = '../' + '#{$i18n.otherlang.code}' + '/' + pageName;
       otherLangLink.setAttribute('href', href);
       
-      // Clear language preference when user manually switches language
       otherLangLink.addEventListener('click', function(e) {
-        // Clear the saved language preference so user can switch freely
         localStorage.removeItem('sealfie_language_preference');
-        
-        // Save the new language preference
+        const newLang = '#{$i18n.otherlang.code}';
+        localStorage.setItem('sealfie_language_preference', newLang);
+      });
+    }
+    
+    // Update mobile link
+    const otherLangLinkMobile = document.getElementById('otherLangLinkMobile');
+    if (otherLangLinkMobile) {
+      const href = '../' + '#{$i18n.otherlang.code}' + '/' + pageName;
+      otherLangLinkMobile.setAttribute('href', href);
+      
+      otherLangLinkMobile.addEventListener('click', function(e) {
+        localStorage.removeItem('sealfie_language_preference');
         const newLang = '#{$i18n.otherlang.code}';
         localStorage.setItem('sealfie_language_preference', newLang);
       });

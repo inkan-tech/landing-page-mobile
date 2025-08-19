@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+/* Custom Tailwind CSS-first configuration for v4 */
+@theme {
+  /* Japanese color system */
+  --color-shu-primary: #FF3500;
+  --color-enji-secondary: #C93338;
+  --color-sango-accent: #F8674F;
+  
+  /* Dark theme variants */
+  --color-shu-muted: #E34234;
+  --color-enji-deep: #B91C1C;
+  --color-sango-light: #F87171;
+  
+  /* Background colors */
+  --color-dark-primary: #0F0F23;
+  --color-dark-secondary: #1E1E2E;
+  --color-dark-surface: #313244;
+  
+  /* Japanese spacing system (Ma) */
+  --spacing-ma-sm: 16px;
+  --spacing-ma-md: 24px;
+  --spacing-ma-lg: 32px;
+  --spacing-ma-xl: 48px;
+  --spacing-ma-2xl: 64px;
+  --spacing-ma-3xl: 80px;
+  --spacing-ma-hero: 120px;
+  
+  /* Japanese shadow system */
+  --shadow-japanese: 0 4px 16px rgba(255, 53, 0, 0.1);
+  --shadow-japanese-hover: 0 8px 24px rgba(255, 53, 0, 0.15);
+  --shadow-japanese-active: 0 2px 8px rgba(255, 53, 0, 0.2);
+  
+  /* Border radius */
+  --radius-japanese: 8px;
+}
+
+/* Device mockup video styling */
+.device .screen {
+  overflow: hidden;
+}
+
+.device .screen video,
+.device .screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.video-timer-container,
+.video-poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heroicons styling for consistency */
+li svg {
+  flex-shrink: 0;
+}
+
+/* Enhanced carousel styling for clean alignment */
+.carousel-slide {
+  min-height: 650px;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.carousel-slide a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-slide .p-8 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.carousel-slide img {
+  object-fit: cover !important;
+  object-position: center;
+  height: 384px !important; /* lg:h-96 equivalent */
+}
+
+/* Ensure consistent card heights and content alignment */
+.carousel-slide .group {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.carousel-slide .relative {
+  flex-shrink: 0;
+}
+
+/* Content area spacing improvements */
+.carousel-slide .flex.items-center.gap-4 {
+  min-height: 60px;
+  align-items: flex-start;
+}
+
+.carousel-slide h3 {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-slide p.flex-grow {
+  min-height: 72px;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 1023px) {
+  .carousel-slide {
+    min-height: 580px;
+  }
+  
+  .carousel-slide img {
+    height: 320px !important; /* h-80 equivalent */
+  }
+  
+  .carousel-slide .p-8 {
+    min-height: 260px;
+  }
+}
+
+/* Custom component styles using Tailwind utilities */
+@layer components {
+  /* Japanese button system */
+  .btn-japanese-primary {
+    @apply px-6 py-3 bg-shu-primary text-white rounded-japanese 
+           shadow-japanese hover:shadow-japanese-hover 
+           hover:-translate-y-0.5 transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+    color: white !important;
+    background-color: var(--color-shu-primary) !important;
+  }
+  
+  .btn-japanese-secondary {
+    @apply px-6 py-3 border-2 border-shu-primary text-shu-primary 
+           rounded-japanese hover:bg-shu-primary hover:text-white 
+           transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+  }
+  
+  .btn-japanese-secondary:hover {
+    color: white !important;
+    background-color: var(--color-shu-primary) !important;
+  }
+  
+  .btn-japanese-ghost {
+    @apply px-6 py-3 text-shu-primary hover:bg-shu-primary/10
+           rounded-japanese transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+  }
+  
+  /* Japanese card system */
+  .card-japanese {
+    @apply bg-white dark:bg-dark-surface rounded-japanese 
+           shadow-japanese p-ma-lg transition-all duration-300;
+  }
+  
+  .card-japanese-hover {
+    @apply bg-white dark:bg-dark-surface rounded-japanese 
+           shadow-japanese p-ma-lg transition-all duration-300
+           hover:shadow-japanese-hover hover:-translate-y-1;
+  }
+  
+  /* Section spacing using Ma principles */
+  .section-ma {
+    @apply py-ma-xl md:py-ma-2xl lg:py-ma-3xl;
+  }
+  
+  .section-ma-hero {
+    @apply py-ma-2xl md:py-ma-3xl lg:py-ma-hero;
+  }
+  
+  .section-ma-sm {
+    @apply py-ma-lg md:py-ma-xl lg:py-ma-2xl;
+  }
+  
+  /* Typography classes */
+  .hero-title {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600;
+  }
+  
+  /* Form elements */
+  .input-japanese {
+    @apply px-4 py-2 border border-gray-300 rounded-japanese
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:border-transparent
+           transition-all duration-200;
+  }
+  
+  /* Badge system */
+  .badge-primary {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium
+           bg-shu-primary/10 text-shu-primary;
+  }
+  
+  
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-shu-primary to-sango-accent bg-clip-text text-transparent;
+  }
+  
+  /* CTA Button system - matching template classes */
+  .cta-primary-large {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-shu-primary text-white 
+           rounded-japanese shadow-japanese hover:shadow-japanese-hover 
+           hover:-translate-y-1 transition-all duration-300 font-semibold text-lg
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+    color: white !important;
+    background-color: var(--color-shu-primary) !important;
+    text-decoration: none;
+  }
+  
+  .cta-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-shu-primary 
+           text-shu-primary rounded-japanese hover:bg-shu-primary hover:text-white 
+           transition-all duration-300 font-semibold
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+    text-decoration: none;
+  }
+  
+  .cta-secondary:hover {
+    color: white !important;
+    background-color: var(--color-shu-primary) !important;
+  }
+  
+  .cta-compact {
+    @apply inline-flex items-center justify-center px-4 py-2 bg-shu-primary text-white 
+           rounded-japanese shadow-japanese hover:shadow-japanese-hover 
+           hover:-translate-y-0.5 transition-all duration-300 font-medium
+           focus:outline-none focus:ring-2 focus:ring-shu-primary focus:ring-offset-2;
+    color: white !important;
+    background-color: var(--color-shu-primary) !important;
+    text-decoration: none;
+  }
+  
+  /* Trust statistics styling */
+  .trust-stats {
+    @apply flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 py-6 my-8;
+  }
+  
+  .stats-card {
+    @apply text-center;
+  }
+  
+  .stats-number {
+    @apply block text-2xl sm:text-3xl font-bold text-shu-primary mb-1;
+  }
+  
+  .stats-label {
+    @apply block text-sm text-gray-600 font-medium;
+  }
+  
+  .stats-divider {
+    @apply hidden sm:block w-px h-16 bg-gray-300;
+  }
+  
+  /* Example box styling */
+  .example-box {
+    @apply bg-gray-50 border-l-4 border-shu-primary p-4 my-6 rounded-r-lg;
+  }
+  
+  .example-title {
+    @apply font-semibold text-gray-900 mb-2;
+  }
+  
+  .example-text {
+    @apply text-gray-700 text-sm leading-relaxed;
+  }
+  
+  /* Step process styling */
+  .step-process {
+    @apply space-y-6;
+  }
+  
+  .step-process .text-gradient {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm;
+    background: linear-gradient(135deg, var(--color-shu-primary) 0%, var(--color-sango-accent) 100%);
+    color: white;
+  }
+  
+  /* Hero section enhancements */
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg sm:text-xl text-gray-600 leading-relaxed mb-8;
+  }
+  
+  .accent-text {
+    @apply text-shu-primary;
+  }
+  
+  /* CTA section layout */
+  .cta-section {
+    @apply flex flex-col sm:flex-row items-center gap-4 mt-8;
+  }
+}
