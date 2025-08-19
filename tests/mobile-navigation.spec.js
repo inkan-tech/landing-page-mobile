@@ -13,11 +13,11 @@ test.describe('Mobile Navigation Tests', () => {
     // Wait for page to load completely
     await page.waitForLoadState('networkidle');
     
-    // Check that Bootstrap is loaded
-    const bootstrapLoaded = await page.evaluate(() => {
-      return typeof bootstrap !== 'undefined';
+    // Check that Tailwind framework is properly loaded (Bootstrap-free)
+    const tailwindLoaded = await page.evaluate(() => {
+      return window.sealfieTheme && window.sealfieTheme.getCurrentTheme() === 'light';
     });
-    expect(bootstrapLoaded).toBe(true);
+    expect(tailwindLoaded).toBe(true);
     
     // Find mobile menu elements
     const menuButton = page.locator('.navbar-toggler');

@@ -77,25 +77,42 @@ test.describe('Cultural Authenticity & Japanese Design Implementation', () => {
   });
 
   test.describe('Ma (間) - Negative Space Implementation', () => {
-    test('generous white space follows Ma principles', async ({ page }) => {
-      // Test section padding is generous (Ma principle)
+    test('enhanced Ma spacing system with nano/kilo/mega scales', async ({ page }) => {
+      // Test enhanced Ma spacing system with full scale
+      const maVariables = await page.evaluate(() => {
+        const styles = getComputedStyle(document.documentElement);
+        return {
+          nano: styles.getPropertyValue('--spacing-ma-nano').trim(),
+          micro: styles.getPropertyValue('--spacing-ma-micro').trim(),
+          sm: styles.getPropertyValue('--spacing-ma-sm').trim(),
+          md: styles.getPropertyValue('--spacing-ma-md').trim(),
+          lg: styles.getPropertyValue('--spacing-ma-lg').trim(),
+          xl: styles.getPropertyValue('--spacing-ma-xl').trim(),
+          xxl: styles.getPropertyValue('--spacing-ma-2xl').trim(),
+          xxxl: styles.getPropertyValue('--spacing-ma-3xl').trim(),
+          kilo: styles.getPropertyValue('--spacing-ma-kilo').trim(),
+          mega: styles.getPropertyValue('--spacing-ma-mega').trim(),
+          giga: styles.getPropertyValue('--spacing-ma-giga').trim()
+        };
+      });
+
+      // Verify enhanced Ma spacing variables are defined
+      expect(maVariables.nano).toBe('4px');
+      expect(maVariables.micro).toBe('8px');
+      expect(maVariables.sm).toBe('16px');
+      expect(maVariables.md).toBe('24px');
+      expect(maVariables.lg).toBe('32px');
+      expect(maVariables.xl).toBe('48px');
+      expect(maVariables.xxl).toBe('64px');
+      expect(maVariables.kilo).toBe('120px');
+      expect(maVariables.mega).toBe('160px');
+      expect(maVariables.giga).toBe('240px');
+
+      // Test that sections use Ma spacing principles
       const sections = page.locator('section');
       const sectionCount = await sections.count();
 
       if (sectionCount > 0) {
-        // Check padding on section containers (Bootstrap .container .px-5)
-        const containerPadding = await page.locator('section .container').first().evaluate(el => {
-          const styles = getComputedStyle(el);
-          return {
-            paddingTop: parseInt(styles.paddingTop) || 0,
-            paddingBottom: parseInt(styles.paddingBottom) || 0,
-            paddingLeft: parseInt(styles.paddingLeft) || 0,
-            paddingRight: parseInt(styles.paddingRight) || 0,
-            marginBottom: parseInt(styles.marginBottom) || 0
-          };
-        });
-
-        // Check section-level padding/margins
         const sectionSpacing = await sections.first().evaluate(el => {
           const styles = getComputedStyle(el);
           return {
@@ -105,20 +122,16 @@ test.describe('Cultural Authenticity & Japanese Design Implementation', () => {
           };
         });
 
-        // Ma requires generous vertical spacing - check section OR container
+        // Ma requires generous vertical spacing (48px-64px range for standard sections)
         const totalVerticalSpacing = Math.max(
-          containerPadding.paddingTop + containerPadding.paddingBottom,
-          sectionSpacing.paddingTop + sectionSpacing.paddingBottom + sectionSpacing.marginBottom
+          sectionSpacing.paddingTop + sectionSpacing.paddingBottom,
+          sectionSpacing.marginBottom
         );
-        expect(totalVerticalSpacing).toBeGreaterThanOrEqual(40);
+        expect(totalVerticalSpacing).toBeGreaterThanOrEqual(48);
 
-        // Ma requires adequate horizontal breathing room - Bootstrap .px-5 provides this
-        const horizontalPadding = containerPadding.paddingLeft + containerPadding.paddingRight;
-        expect(horizontalPadding).toBeGreaterThanOrEqual(20);
-        
-        console.log('Ma spacing verified:', {
-          vertical: totalVerticalSpacing,
-          horizontal: horizontalPadding
+        console.log('Enhanced Ma spacing verified:', {
+          sectionSpacing: totalVerticalSpacing,
+          variables: maVariables
         });
       }
     });

@@ -19,9 +19,9 @@ test.describe('Performance Tests', () => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
     
-    // Check that Bootstrap Icons CSS loads
-    const bootstrapIcons = page.locator('link[href*="bootstrap-icons"]');
-    await expect(bootstrapIcons).toHaveCount(1);
+    // Check that Tailwind CSS loads (Bootstrap-free architecture)
+    const tailwindCSS = page.locator('link[href="/css/tailwind.css"]');
+    await expect(tailwindCSS).toHaveCount(1);
     
     // Check that Google Fonts load (count unique fonts, not preload duplicates)
     const uniqueFonts = new Set();
