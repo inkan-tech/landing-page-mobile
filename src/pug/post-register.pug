@@ -14,47 +14,30 @@ html(lang=$localeName)
 
 
   body#page-top
-    // Navigation
-    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
-      .container.px-5
-        a.navbar-brand.fw-bold(href='#page-top') Sealfie #{$i18n.banner.main}
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          | Menu
-          i.bi-list
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
-            li.nav-item
-              a.nav-link.me-lg-3(href='pricing.html') #{$i18n.banner.pricing}
-            li.nav-item
-              a.nav-link.me-lg-3(href='documentation.html') #{$i18n.banner.docs}
-          a.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0.button(href="http://eepurl.com/ix1tjg")
-            span.d-flex.align-items-center
-              i.bi-envelope.me-2
-              span.small #{$i18n.banner.action}
+    // Navigation - Tailwind + Japanese Design System
+    include includes/navbar.pug
 
+    // Quote/testimonial aside - Japanese styling
+    aside.text-center.section-ma(style="background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%);")
+      div(class="container mx-auto px-5")
+        div(class="grid justify-center")
+          div(class="lg:col-span-8")
+            h2(class="text-4xl font-bold text-white mb-6") #{$i18n.post_register.main}
+            img(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan Logo', class='h-24 mx-auto', href='https://inkan.link')
 
-    // Quote/testimonial aside
-    aside.text-center.bg-gradient-primary-to-secondary
-      .container.px-5
-        .row.gx-5.justify-content-center
-          .col-l-8
-            .h2.fs-1.text-white.mb-4 #{$i18n.post_register.main}
-            img(src='/assets/img/InkanLogo-32x32.svg', alt='...', style='height: 6rem;', href='https://inkan.link')
-
-    // App badge section
-    section#download.bg-gradient-primary-to-secondary
-      .container.px-5
-        h2.text-center.text-white.font-alt.mb-4 #{$i18n.appstore.download}
-        .d-flex.flex-column.flex-lg-row.align-items-center.justify-content-center
-          a.me-lg-3.mb-4.mb-lg-0(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie')
-            img.app-badge(src='/assets/img/google-play-badge.svg', alt='...')
-          a(href='https://apps.apple.com/app/id1635309517')
-            img.app-badge(src='/assets/img/app-store-badge.svg', alt='...')
+    // App badge section - Japanese styling
+    section#download.section-ma(style="background: linear-gradient(135deg, var(--enji-secondary) 0%, var(--shu-primary) 100%);")
+      div(class="container mx-auto px-5")
+        h2(class="text-center text-white text-3xl font-bold mb-8") #{$i18n.appstore.download}
+        div(class="flex flex-col lg:flex-row items-center justify-center gap-6")
+          a(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie', class='hover:-translate-y-1 transition-transform duration-300')
+            img.app-badge(src='/assets/img/google-play-badge.svg', alt='Get it on Google Play', class='h-16')
+          a(href='https://apps.apple.com/app/id1635309517', class='hover:-translate-y-1 transition-transform duration-300')
+            img.app-badge(src='/assets/img/app-store-badge.svg', alt='Download on the App Store', class='h-16')
 
     include ../pug/includes/footer.pug
 
-    // Bootstrap core JS
-    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js')
+    // Japanese Design System - No Bootstrap dependency
 
     // Core theme JS
     script(src='/js/scripts.js')

@@ -52,7 +52,6 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age.git"
     },
     "dependencies": {
-        "bootstrap": "5.3.7",
         "i18n": "0.15.1"
     },
     "devDependencies": {

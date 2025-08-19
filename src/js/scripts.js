@@ -54,38 +54,31 @@ window.addEventListener('DOMContentLoaded', event => {
     // Initialize BEC Trends Carousel
     initializeBECCarousel();
 
-    // Debug: Check if Bootstrap is loaded
-    console.log('Bootstrap loaded:', typeof bootstrap !== 'undefined');
-    
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav && typeof bootstrap !== 'undefined') {
-        try {
-            new bootstrap.ScrollSpy(document.body, {
-                target: '#mainNav',
-                offset: 74,
-            });
-            console.log('✅ ScrollSpy initialized');
-        } catch (error) {
-            console.warn('ScrollSpy initialization failed:', error);
-        }
-    }
-
-    // Mobile navigation debugging
+    // Mobile navigation setup (Tailwind-based)
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const navbarCollapse = document.body.querySelector('#navbarResponsive');
     
-    console.log('Navbar elements found:', {
+    console.log('✅ Navbar elements found (Bootstrap-free):', {
         toggler: !!navbarToggler,
         collapse: !!navbarCollapse,
-        bootstrap: typeof bootstrap !== 'undefined'
+        framework: 'Tailwind v4'
     });
 
-    // Test click handler for mobile navigation
-    if (navbarToggler) {
+    // Mobile navigation toggle handler (replacing Bootstrap collapse)
+    if (navbarToggler && navbarCollapse) {
         navbarToggler.addEventListener('click', function(e) {
             console.log('Mobile menu button clicked');
-            console.log('Collapse element classes:', navbarCollapse?.className);
+            const isOpen = navbarCollapse.classList.contains('show');
+            
+            if (isOpen) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+            } else {
+                navbarCollapse.classList.add('show');
+                navbarToggler.setAttribute('aria-expanded', 'true');
+            }
+            
+            console.log('Mobile menu toggled:', !isOpen ? 'opened' : 'closed');
         });
     }
 

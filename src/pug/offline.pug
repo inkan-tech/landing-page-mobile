@@ -6,9 +6,10 @@ html(lang='en')
     title Offline | Sealfie app
     link(rel='icon', type='image/x-icon', href='/assets/favicon.svg')
     style.
+      /* Japanese-inspired offline page with traditional colors */
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #FF3500 0%, #F8674F 100%); /* Shu to Sango gradient */
         color: white;
         display: flex;
         align-items: center;
@@ -16,42 +17,54 @@ html(lang='en')
         min-height: 100vh;
         margin: 0;
         text-align: center;
-        padding: 20px;
+        padding: 32px; /* Ma spacing */
       }
-      .offline-container {
+      .offline-japanese {
         max-width: 500px;
+        padding: 48px; /* Ma-lg spacing */
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px; /* Japanese border radius */
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
       h1 {
         font-size: 3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 24px; /* Ma-md spacing */
+        font-weight: 600;
+        letter-spacing: -0.02em; /* Japanese typography */
       }
       p {
         font-size: 1.25rem;
-        margin-bottom: 2rem;
+        margin-bottom: 48px; /* Ma-xl spacing */
         opacity: 0.9;
+        line-height: 1.6; /* Better for readability */
       }
-      .btn {
+      .btn-japanese-offline {
         display: inline-block;
-        padding: 12px 32px;
+        padding: 16px 32px; /* Ma spacing */
         background: white;
-        color: #667eea;
+        color: #FF3500; /* Shu primary */
         text-decoration: none;
-        border-radius: 50px;
+        border-radius: 8px; /* Japanese border radius */
         font-weight: 600;
-        transition: transform 0.2s;
+        transition: all 0.3s ease; /* Japanese smooth transitions */
+        box-shadow: 0 4px 16px rgba(255, 53, 0, 0.3); /* Japanese shadow */
       }
-      .btn:hover {
-        transform: scale(1.05);
+      .btn-japanese-offline:hover {
+        transform: translateY(-2px); /* Japanese hover effect */
+        box-shadow: 0 8px 24px rgba(255, 53, 0, 0.4);
+        background: #f8f9fa;
       }
-      .icon {
+      .icon-japanese {
         font-size: 5rem;
-        margin-bottom: 1rem;
-        opacity: 0.8;
+        margin-bottom: 24px; /* Ma-md spacing */
+        opacity: 0.9;
+        display: block;
       }
 
   body
-    .offline-container
-      .icon 📵
+    .offline-japanese
+      .icon-japanese 📵
       h1 You're Offline
       p It looks like you've lost your internet connection. Some features may not be available until you're back online.
-      a.btn(href='javascript:location.reload()') Try Again
+      a.btn-japanese-offline(href='javascript:location.reload()') Try Again

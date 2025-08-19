@@ -18,14 +18,19 @@
   --color-dark-secondary: #1E1E2E;
   --color-dark-surface: #313244;
   
-  /* Japanese spacing system (Ma) */
-  --spacing-ma-sm: 16px;
-  --spacing-ma-md: 24px;
-  --spacing-ma-lg: 32px;
-  --spacing-ma-xl: 48px;
-  --spacing-ma-2xl: 64px;
-  --spacing-ma-3xl: 80px;
-  --spacing-ma-hero: 120px;
+  /* Enhanced Japanese spacing system (Ma) with full scale */
+  --spacing-ma-nano: 4px;    /* Micro adjustments */
+  --spacing-ma-micro: 8px;   /* Fine details */
+  --spacing-ma-xs: 12px;     /* Extra small spacing */
+  --spacing-ma-sm: 16px;     /* Small spacing */
+  --spacing-ma-md: 24px;     /* Medium spacing */
+  --spacing-ma-lg: 32px;     /* Large spacing */
+  --spacing-ma-xl: 48px;     /* Extra large spacing */
+  --spacing-ma-2xl: 64px;    /* Section spacing */
+  --spacing-ma-3xl: 80px;    /* Large section spacing */
+  --spacing-ma-kilo: 120px;  /* Major section breaks */
+  --spacing-ma-mega: 160px;  /* Page-level spacing */
+  --spacing-ma-giga: 240px;  /* Hero/landing spacing */
   
   /* Japanese shadow system */
   --shadow-japanese: 0 4px 16px rgba(255, 53, 0, 0.1);
@@ -37,6 +42,17 @@
   
   /* Border radius */
   --radius-japanese: 8px;
+  
+  /* Japanese typography system */
+  --font-japanese-primary: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-japanese-heading: 'Newsreader', serif;
+  --font-japanese-accent: 'Kanit', sans-serif;
+  
+  /* Japanese text spacing and rhythm */
+  --letter-spacing-japanese: -0.02em;
+  --line-height-japanese: 1.7;
+  --line-height-japanese-compact: 1.5;
+  --line-height-japanese-relaxed: 1.8;
 }
 
 /* Ensure shadow-color is available globally */
@@ -65,12 +81,88 @@
            shadow-japanese p-ma-lg transition-all duration-300;
   }
   
-  /* Section spacing using Ma principles */
+  /* Enhanced section spacing using Ma principles */
   .section-ma {
     @apply py-ma-xl md:py-ma-2xl lg:py-ma-3xl;
   }
   
   .section-ma-hero {
-    @apply py-ma-2xl md:py-ma-3xl lg:py-ma-hero;
+    @apply py-ma-kilo md:py-ma-mega lg:py-ma-giga;
+  }
+  
+  .section-ma-compact {
+    @apply py-ma-md md:py-ma-lg lg:py-ma-xl;
+  }
+  
+  .section-ma-minimal {
+    @apply py-ma-sm md:py-ma-md lg:py-ma-lg;
+  }
+  
+  /* Element-level Ma spacing */
+  /* Element-level Ma spacing */
+  .ma-nano { margin: var(--spacing-ma-nano); }
+  .ma-micro { margin: var(--spacing-ma-micro); }
+  .ma-xs { margin: var(--spacing-ma-xs); }
+  .ma-sm { margin: var(--spacing-ma-sm); }
+  .ma-md { margin: var(--spacing-ma-md); }
+  .ma-lg { margin: var(--spacing-ma-lg); }
+  .ma-xl { margin: var(--spacing-ma-xl); }
+  .ma-2xl { margin: var(--spacing-ma-2xl); }
+  .ma-3xl { margin: var(--spacing-ma-3xl); }
+  .ma-kilo { margin: var(--spacing-ma-kilo); }
+  .ma-mega { margin: var(--spacing-ma-mega); }
+  .ma-giga { margin: var(--spacing-ma-giga); }
+  
+  /* Japanese typography components */
+  .text-japanese-primary {
+    font-family: var(--font-japanese-primary);
+    letter-spacing: var(--letter-spacing-japanese);
+    line-height: var(--line-height-japanese);
+  }
+  
+  .text-japanese-heading {
+    font-family: var(--font-japanese-heading);
+    letter-spacing: var(--letter-spacing-japanese);
+    line-height: var(--line-height-japanese-compact);
+    font-weight: 600;
+  }
+  
+  .text-japanese-accent {
+    font-family: var(--font-japanese-accent);
+    letter-spacing: 0.05em; /* Wider spacing for accent text */
+    line-height: var(--line-height-japanese-compact);
+  }
+  
+  .text-japanese-relaxed {
+    line-height: var(--line-height-japanese-relaxed);
+    letter-spacing: 0.01em;
+  }
+  
+  /* Japanese text sizes with proper scaling */
+  .text-japanese-hero {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: var(--font-japanese-heading);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  
+  .text-japanese-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-family: var(--font-japanese-heading);
+    letter-spacing: var(--letter-spacing-japanese);
+    line-height: var(--line-height-japanese-compact);
+  }
+  
+  .text-japanese-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-family: var(--font-japanese-primary);
+    line-height: var(--line-height-japanese-relaxed);
+    color: rgba(55, 65, 81, 0.8); /* text-gray-700 with opacity */
+  }
+  
+  /* Dark mode typography adjustments */
+  [data-theme="dark"] .text-japanese-subtitle {
+    color: rgba(229, 231, 235, 0.8); /* text-gray-200 with opacity */
   }
 }

@@ -1,12 +1,15 @@
-// Feedback Modal
+// Japanese Feedback Modal
 
-#feedbackModal.modal.fade(tabindex='-1', aria-labelledby='feedbackModalLabel', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered
-        .modal-content
-            .modal-header.bg-gradient-primary-to-secondary.p-4
-                h5#feedbackModalLabel.modal-title.font-alt.text-white Send feedback
-                button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
-            .modal-body.border-0.p-4
+#feedbackModal.modal-japanese.fixed.inset-0.bg-black.bg-opacity-50.flex.items-center.justify-center.z-50.hidden(tabindex='-1', aria-labelledby='feedbackModalLabel', aria-hidden='true')
+    div(class='modal-dialog-japanese bg-white rounded-japanese shadow-japanese-hover max-w-lg w-full mx-4')
+        div(class='modal-content-japanese')
+            div(class='modal-header-japanese p-6 rounded-t-japanese', style='background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%);')
+                h3#feedbackModalLabel(class='text-white text-xl font-semibold') Send feedback
+                button.modal-close-japanese.text-white.hover:text-gray-200.transition-colors.absolute.top-4.right-4(type='button', onclick="document.getElementById('feedbackModal').classList.add('hidden')", aria-label='Close')
+                  // Close icon SVG
+                  svg(class='w-6 h-6', fill='none', stroke='currentColor', viewBox='0 0 24 24')
+                    path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M6 18L18 6M6 6l12 12')
+            div(class='modal-body-japanese p-6')
 
                 // * * * * * * * * * * * * * * *
                 // * * SB Forms Contact Form * *
@@ -84,6 +87,6 @@
                     #submitErrorMessage.d-none
                         .text-center.text-danger.mb-3 Error sending message!
 
-                    // Submit Button
-                    .d-grid
-                        button#submitButton.btn.btn-primary.rounded-pill.btn-lg.disabled(type='submit') Submit
+                    // Submit Button - Japanese Design
+                    div(class='flex justify-center pt-4')
+                        button#submitButton.btn-japanese-primary.w-full.disabled:opacity-50.disabled:cursor-not-allowed(type='submit', disabled) Submit
