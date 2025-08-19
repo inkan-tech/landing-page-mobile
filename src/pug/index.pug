@@ -278,244 +278,296 @@ html(lang=$localeName)
     include ../pug/includes/navbar.pug
 
     main#main-content(tabindex='-1')
-      // Japanese Minimalist Hero Section - Following Features Section Pattern  
+      // Hero Section - Tailwind 4 Structure (production matching)
       header.hero-section
-    .container.px-5
-      .row.gx-5.align-items-center
-        .col-lg-3.order-2.order-lg-1
-          // Hero device mockup - moved to left, 1/4 width
-          .device-mockup
-            include includes/gradient-circle
-            include includes/shape-1
-            include includes/shape-2
-            .device-wrapper
-              .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                .screen.bg-device-screen
-                  // Professional video demo - MANDATORY and PROTECTED
-                  .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
-                    .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
-                      .demo-text Video trailer
-                      .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
-                        svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
-                          circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
-                          polygon(points="10,8 16,12 10,16" fill="white")
+        .container.mx-auto.px-5
+          div(class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center")
+            div(class="lg:col-span-4 order-2 lg:order-1")
+              // Hero device mockup - left side, 1/3 width
+              .device-mockup
+                include includes/gradient-circle
+                include includes/shape-1
+                include includes/shape-2
+                .device-wrapper
+                  .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
+                    .screen.bg-device-screen
+                      // Professional video demo - MANDATORY and PROTECTED
+                      .video-timer-container(data-video="/assets/img/"+$i18n.videos.hero data-load-delay="5000" data-fallback="/assets/img/optimized/BlockChainPhone.webp")
+                        .video-poster-placeholder(style="max-width: 100%; height: 100%; background: linear-gradient(135deg, var(--shu-primary) 0%, var(--sango-accent) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-align: center; position: relative;")
+                          .demo-text Video trailer
+                          .video-hover-indicator(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease;")
+                            svg(width="40" height="40" viewBox="0 0 24 24" fill="none")
+                              circle(cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="rgba(255,255,255,0.2)")
+                              polygon(points="10,8 16,12 10,16" fill="white")
 
-        .col-lg-9.order-1.order-lg-2
-          // Hero text and CTAs - 3/4 width
-          .mb-5.mb-lg-0.text-center.text-lg-start
-            h1.hero-title
-              | #{$i18n.hero.title.line1}
-              br
-              span.accent-text #{$i18n.hero.title.line2}
+            div(class="lg:col-span-8 order-1 lg:order-2")
+              // Hero text and CTAs - 2/3 width
+              div(class="mb-5 lg:mb-0 text-center lg:text-left")
+                h1.hero-title
+                  | #{$i18n.hero.title.line1}
+                  br
+                  span.accent-text #{$i18n.hero.title.line2}
 
-            p.hero-subtitle
-              | #{$i18n.hero.subtitle}
+                p.hero-subtitle
+                  | #{$i18n.hero.subtitle}
 
-            // Trust Statistics
-            .trust-stats
-              .stats-card
-                span.stats-number #{$i18n.hero.stats.stat1.number}
-                span.stats-label #{$i18n.hero.stats.stat1.label}
-              .stats-divider
-              .stats-card
-                span.stats-number #{$i18n.hero.stats.stat2.number}
-                span.stats-label #{$i18n.hero.stats.stat2.label}
-              .stats-divider
-              .stats-card
-                span.stats-number #{$i18n.hero.stats.stat3.number}
-                span.stats-label #{$i18n.hero.stats.stat3.label}
+                // Trust Statistics
+                .trust-stats
+                  .stats-card
+                    span.stats-number #{$i18n.hero.stats.stat1.number}
+                    span.stats-label #{$i18n.hero.stats.stat1.label}
+                  .stats-divider
+                  .stats-card
+                    span.stats-number #{$i18n.hero.stats.stat2.number}
+                    span.stats-label #{$i18n.hero.stats.stat2.label}
+                  .stats-divider
+                  .stats-card
+                    span.stats-number #{$i18n.hero.stats.stat3.number}
+                    span.stats-label #{$i18n.hero.stats.stat3.label}
 
-            // Real Case Example
-            .example-box
-              .example-title #{$i18n.hero.example.title}
-              .example-text #{$i18n.hero.example.text}
+                // Real Case Example
+                .example-box
+                  .example-title #{$i18n.hero.example.title}
+                  .example-text #{$i18n.hero.example.text}
 
-            // Primary CTA Section
-            .cta-section
-              a.cta-primary-large(href=`/${$localeName}/challenge.html` aria-label=$i18n.hero.cta.primary)
-                | #{$i18n.hero.cta.primary}
-              a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
-                | #{$i18n.hero.cta.secondary}
+                // Primary CTA Section
+                .cta-section
+                  a.cta-primary-large(href=`/${$localeName}/challenge.html` aria-label=$i18n.hero.cta.primary)
+                    | #{$i18n.hero.cta.primary}
+                  a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
+                    | #{$i18n.hero.cta.secondary}
 
   // BEC Trends Carousel - Authority Through Current Data
-  section.bec-trends-section
-    .container.px-5
-      .row.justify-content-center
-        .col-lg-10
-          .text-center.mb-5
-            h2.section-title
-              span #{$i18n.carousel.title}
-            p.section-subtitle #{$i18n.carousel.subtitle}
+  section(class='section-ma bg-gray-50')
+    div(class='container mx-auto px-5')
+      div(class='max-w-4xl mx-auto')
+        div(class='text-center mb-ma-xl')
+          h2(class='text-3xl lg:text-4xl font-bold text-gray-900 mb-4') #{$i18n.carousel.title}
+          p(class='text-xl text-gray-600 mb-8') #{$i18n.carousel.subtitle}
 
-          // Enhanced Carousel Container with Images and Links
-          .bec-carousel(data-carousel="trends")
-            .carousel-track
+          // Enhanced Carousel Container with Images and Links - Tailwind Version
+          div(class='relative max-w-5xl mx-auto overflow-hidden' data-carousel="trends")
+            div(class='flex transition-transform duration-300 ease-in-out carousel-track')
               // Slide 1: Current Surge - BEC Attacks Increase
-              .carousel-slide.active
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.attacks.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.attacks.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.attacks.image alt="BEC attack surge chart" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.attacks.number}
-                      .trend-label #{$i18n.carousel.slides.attacks.label}
-                    .trend-subtitle #{$i18n.carousel.slides.attacks.subtitle}
-                    .trend-description #{$i18n.carousel.slides.attacks.description}
-                    .trend-source #{$i18n.carousel.slides.attacks.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0 active')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.attacks.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.attacks.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.attacks.image 
+                        alt="BEC attack surge chart" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.attacks.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.attacks.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.attacks.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.attacks.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.attacks.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
               // Slide 2: AI Revolution - AI Generated Emails
-              .carousel-slide
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.ai.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.ai.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.ai.image alt="AI-generated emails visualization" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.ai.number}
-                      .trend-label #{$i18n.carousel.slides.ai.label}
-                    .trend-subtitle #{$i18n.carousel.slides.ai.subtitle}
-                    .trend-description #{$i18n.carousel.slides.ai.description}
-                    .trend-source #{$i18n.carousel.slides.ai.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.ai.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.ai.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.ai.image 
+                        alt="AI-generated emails visualization" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.ai.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.ai.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.ai.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.ai.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.ai.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
               // Slide 3: Financial Impact - FBI Losses Report
-              .carousel-slide
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.financial.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.financial.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.financial.image alt="FBI losses report visualization" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.financial.number}
-                      .trend-label #{$i18n.carousel.slides.financial.label}
-                    .trend-subtitle #{$i18n.carousel.slides.financial.subtitle}
-                    .trend-description #{$i18n.carousel.slides.financial.description}
-                    .trend-source #{$i18n.carousel.slides.financial.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.financial.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.financial.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.financial.image 
+                        alt="FBI losses report visualization" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.financial.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.financial.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.financial.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.financial.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.financial.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
               // Slide 4: Real Case - Aviation Company Attack
-              .carousel-slide
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.realCase.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.realCase.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.realCase.image alt="Aviation company attack case study" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.realCase.number}
-                      .trend-label #{$i18n.carousel.slides.realCase.label}
-                    .trend-subtitle #{$i18n.carousel.slides.realCase.subtitle}
-                    .trend-description #{$i18n.carousel.slides.realCase.description}
-                    .trend-source #{$i18n.carousel.slides.realCase.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.realCase.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.realCase.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.realCase.image 
+                        alt="Aviation company attack case study" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.realCase.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.realCase.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.realCase.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.realCase.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.realCase.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
               // Slide 5: Small Business Risk - SMB Target Analysis
-              .carousel-slide
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.smallBusiness.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.smallBusiness.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.smallBusiness.image alt="Small business targeting statistics" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.smallBusiness.number}
-                      .trend-label #{$i18n.carousel.slides.smallBusiness.label}
-                    .trend-subtitle #{$i18n.carousel.slides.smallBusiness.subtitle}
-                    .trend-description #{$i18n.carousel.slides.smallBusiness.description}
-                    .trend-source #{$i18n.carousel.slides.smallBusiness.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.smallBusiness.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.smallBusiness.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.smallBusiness.image 
+                        alt="Small business targeting statistics" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.smallBusiness.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.smallBusiness.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.smallBusiness.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.smallBusiness.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.smallBusiness.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
               // Slide 6: Multi-Channel - Coordinated Attack Vectors
-              .carousel-slide
-                a.trend-card.trend-card-link(href=$i18n.carousel.slides.multiChannel.url target="_blank" rel="noopener noreferrer" aria-label=$i18n.carousel.slides.multiChannel.description)
-                  .trend-image
-                    img(src=$i18n.carousel.slides.multiChannel.image alt="Multi-channel attack coordination" loading="lazy")
-                  .trend-content
-                    .trend-header
-                      .trend-number #{$i18n.carousel.slides.multiChannel.number}
-                      .trend-label #{$i18n.carousel.slides.multiChannel.label}
-                    .trend-subtitle #{$i18n.carousel.slides.multiChannel.subtitle}
-                    .trend-description #{$i18n.carousel.slides.multiChannel.description}
-                    .trend-source #{$i18n.carousel.slides.multiChannel.source}
-                  .trend-link-indicator
-                    i.bi-arrow-up-right
-                    span #{$i18n.carousel.readMore}
+              div(class='carousel-slide w-full flex-shrink-0')
+                a(class='group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden'
+                  href=$i18n.carousel.slides.multiChannel.url 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label=$i18n.carousel.slides.multiChannel.description)
+                  div(class='relative')
+                    img(class='w-full h-80 lg:h-96 object-cover bg-gray-50' 
+                        src=$i18n.carousel.slides.multiChannel.image 
+                        alt="Multi-channel attack coordination" 
+                        loading="lazy")
+                  div(class='p-8 flex flex-col')
+                    div(class='flex items-center gap-4 mb-3')
+                      div(class='text-4xl lg:text-5xl font-bold text-shu-primary') #{$i18n.carousel.slides.multiChannel.number}
+                      div(class='text-sm font-semibold text-gray-600 uppercase tracking-wide') #{$i18n.carousel.slides.multiChannel.label}
+                    h3(class='text-xl font-semibold text-gray-900 mb-3') #{$i18n.carousel.slides.multiChannel.subtitle}
+                    p(class='text-gray-600 text-base leading-relaxed mb-4 flex-grow') #{$i18n.carousel.slides.multiChannel.description}
+                    p(class='text-xs text-gray-500') #{$i18n.carousel.slides.multiChannel.source}
+                  div(class='absolute top-4 right-4 bg-white/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity')
+                    svg(class='w-4 h-4 text-shu-primary' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14')
 
-            // Carousel Controls
-            .carousel-controls
-              button.carousel-prev(aria-label=$i18n.carousel.controls.prev)
-                svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
-                  path(d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+            // Carousel Controls - Tailwind Version
+            div(class='flex items-center justify-center gap-4 mt-8')
+              button(class='carousel-prev p-3 rounded-full bg-white shadow-md hover:shadow-lg text-gray-600 hover:text-shu-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
+                     aria-label=$i18n.carousel.controls.prev)
+                svg(class='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                  path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7')
 
-              .carousel-indicators
-                button.indicator.active(data-slide="0")
-                button.indicator(data-slide="1")
-                button.indicator(data-slide="2")
-                button.indicator(data-slide="3")
-                button.indicator(data-slide="4")
-                button.indicator(data-slide="5")
+              div(class='flex gap-2 carousel-indicators')
+                button(class='w-2 h-2 rounded-full bg-shu-primary indicator active' data-slide="0")
+                button(class='w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 indicator' data-slide="1")
+                button(class='w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 indicator' data-slide="2")
+                button(class='w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 indicator' data-slide="3")
+                button(class='w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 indicator' data-slide="4")
+                button(class='w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 indicator' data-slide="5")
 
-              button.carousel-next(aria-label=$i18n.carousel.controls.next)
-                svg(width="16" height="16" viewBox="0 0 24 24" fill="none")
-                  path(d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+              button(class='carousel-next p-3 rounded-full bg-white shadow-md hover:shadow-lg text-gray-600 hover:text-shu-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
+                     aria-label=$i18n.carousel.controls.next)
+                svg(class='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                  path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7')
 
-          .text-center.mt-4
-            p.text-muted.small #{$i18n.carousel.source}
+          div(class='text-center mt-6')
+            p(class='text-gray-500 text-sm') #{$i18n.carousel.source}
 
 
 
-  // Visual Break & Brand Statement
-  aside.text-center.bg-gradient-primary-to-secondary.py-5
-    .container.px-5
-      .row.justify-content-center
-        .col-lg-8
-          img.mb-4(src='/assets/img/InkanLogo-32x32.svg', alt='Inkan company logo - cybersecurity technology provider', style='height: 4rem;')
-          .h3.text-white.mb-0 #{$i18n.centeredmsg}
+  // Visual Break & Brand Statement - Full Width
+  aside(class='text-center bg-gradient-to-r from-shu-primary to-sango-accent py-12')
+    div(class='w-full px-5')
+      div(class='max-w-4xl mx-auto')
+        img(class='mb-4 h-16 mx-auto' src='/assets/img/InkanLogo-32x32.svg' alt='Inkan company logo - cybersecurity technology provider')
+        h3(class='text-3xl font-bold text-white mb-0') #{$i18n.centeredmsg}
 
-  // How Sealfie Works - With Device Mockup Demo
-  section.how-it-works-section.bg-light
-    .container.px-5
-      .row.gx-5.align-items-center.justify-content-center
-        .col-lg-6.order-2.order-lg-1
-          .mb-5.mb-lg-0
+  // How Sealfie Works - Tailwind 4 Layout
+  section(class="how-it-works-section bg-gray-50 pt-16")
+    div(class="container mx-auto px-5")
+      div(class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center")
+        div(class="order-2 lg:order-1")
+          div(class="mb-5 lg:mb-0 text-center lg:text-left")
             // Integrated Logo Title
-            h2.section-title.d-flex.align-items-center.justify-content-center.justify-content-lg-start.mb-4
-              img.me-2(src='/assets/favicon.svg', alt='Sealfie', style='height: 5.04rem; margin-top: -0.4rem;')
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 flex items-center justify-center lg:justify-start mb-4")
+              img(class="mr-3" src='/assets/favicon.svg' alt='Sealfie' style='height: 3rem; margin-top: -0.4rem;')
               span #{$i18n.howItWorksDetailed.title}
-            p.section-subtitle.mb-4 #{$i18n.howItWorksDetailed.subtitle}
+            p(class="section-subtitle mb-4") #{$i18n.howItWorksDetailed.subtitle}
 
-            // Step-by-step process
-            .steps-container
-              .step-item.mb-4
-                .step-header.d-flex.align-items-center.mb-2
-                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step1.number}
-                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step1.title}
-                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step1.description}
+            // Step-by-step process with styled boxes
+            div(class="space-y-4")
+              // Step 1
+              div(class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md border border-gray-200")
+                div(class="flex-shrink-0")
+                  div(class="w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold") 
+                    | 1
+                div(class="flex-1")
+                  h4(class="text-lg font-semibold mb-2") #{$i18n.howItWorksDetailed.steps.step1.title}
+                  p(class="text-gray-600 mb-3") #{$i18n.howItWorksDetailed.steps.step1.description}
+                  div(class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.howItWorksDetailed.steps.step1.benefit}
 
-              .step-item.mb-4
-                .step-header.d-flex.align-items-center.mb-2
-                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step2.number}
-                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step2.title}
-                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step2.description}
+              // Step 2
+              div(class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md border border-gray-200")
+                div(class="flex-shrink-0")
+                  div(class="w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold") 
+                    | 2
+                div(class="flex-1")
+                  h4(class="text-lg font-semibold mb-2") #{$i18n.howItWorksDetailed.steps.step2.title}
+                  p(class="text-gray-600 mb-3") #{$i18n.howItWorksDetailed.steps.step2.description}
+                  div(class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.howItWorksDetailed.steps.step2.benefit}
 
-              .step-item.mb-4
-                .step-header.d-flex.align-items-center.mb-2
-                  .step-number.text-gradient.me-3 #{$i18n.howItWorksDetailed.steps.step3.number}
-                  h4.mb-0 #{$i18n.howItWorksDetailed.steps.step3.title}
-                p.text-muted.ms-5 #{$i18n.howItWorksDetailed.steps.step3.description}
+              // Step 3
+              div(class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md border border-gray-200")
+                div(class="flex-shrink-0")
+                  div(class="w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold") 
+                    | 3
+                div(class="flex-1")
+                  h4(class="text-lg font-semibold mb-2") #{$i18n.howItWorksDetailed.steps.step3.title}
+                  p(class="text-gray-600 mb-3") #{$i18n.howItWorksDetailed.steps.step3.description}
+                  div(class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.howItWorksDetailed.steps.step3.benefit}
 
             // Traditional Security Problems
-            .traditional-security-section.mt-5.p-4.bg-light.rounded.border-start.border-warning.border-3
-              h4.h6.text-warning.mb-2 #{$i18n.howItWorksDetailed.traditionalSecurity.title}
-              p.text-muted.small.mb-0 #{$i18n.howItWorksDetailed.traditionalSecurity.description}
+            div(class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4")
+              h4(class="text-lg font-semibold text-yellow-800 mb-2") #{$i18n.howItWorksDetailed.traditionalSecurity.title}
+              p(class="text-yellow-700 text-sm mb-0") #{$i18n.howItWorksDetailed.traditionalSecurity.description}
 
-
-        .col-lg-6.order-1.order-lg-2
+        div(class="order-1 lg:order-2")
           // Device mockup with step-by-step demo video
           .device-mockup
             include includes/gradient-circle
@@ -541,49 +593,47 @@ html(lang=$localeName)
 
 
 
-  // Sealfie Advantage Section - Following Page Format
-  section.sealfie-advantage-section.bg-light
-    .container.px-5
-      .row.justify-content-center
-        .col-lg-10
-          .text-center.mb-5
-            h2.section-title
-              span #{$i18n.howItWorksDetailed.solution.title}
-            p.section-subtitle #{$i18n.howItWorksDetailed.solution.description}
+  // Sealfie Advantage Section - Full Width
+  section(class='section-ma bg-gray-50')
+    div(class='w-full px-5')
+      div(class='max-w-6xl mx-auto')
+        div(class='text-center mb-12')
+          h2(class='text-3xl lg:text-4xl font-bold text-gray-900 mb-6') #{$i18n.howItWorksDetailed.solution.title}
+          p(class='section-subtitle') #{$i18n.howItWorksDetailed.solution.description}
+        
+        // You Do vs We Do - Two Column Layout
+        div(class='grid grid-cols-1 md:grid-cols-2 gap-8')
+          // You Do Column
+          div
+            div(class='card-japanese-hover h-full')
+              div(class='text-center mb-6')
+                div(class='user-icon mb-4')
+                  svg(class="w-16 h-16 text-shu-primary mx-auto" fill="currentColor" viewBox="0 0 24 24")
+                    path(fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd")
+                h4(class='text-xl font-semibold text-shu-primary mb-0') #{$i18n.howItWorksDetailed.solution.youDo.title}
+              
+              ul(class='list-none space-y-4 mb-0')
+                each item in $i18n.howItWorksDetailed.solution.youDo.items
+                  li(class='flex items-start')
+                    svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                      path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                    span #{item}
           
-          // You Do vs We Do - Two Column Layout
-          .row.g-5
-            // You Do Column
-            .col-md-6
-              .you-do-column.p-4.bg-white.rounded.shadow-sm.h-100
-                .text-center.mb-4
-                  .user-icon.mb-3
-                    i.bi-person-circle.text-primary(style="font-size: 3rem;")
-                  h4.h5.text-primary.mb-0 #{$i18n.howItWorksDetailed.solution.youDo.title}
-                
-                ul.list-unstyled.mb-0
-                  each item in $i18n.howItWorksDetailed.solution.youDo.items
-                    li.d-flex.align-items-start.mb-3
-                      i.bi-check-circle.text-success.me-3.mt-1(style="font-size: 1.1rem;")
-                      span #{item}
-            
-            // Visual Separator (hidden on mobile)
-            .col-12.d-md-none
-              hr.my-0
-            
-            // We Do Column  
-            .col-md-6
-              .we-do-column.p-4.bg-gradient-primary-to-secondary.text-white.rounded.shadow-sm.h-100
-                .text-center.mb-4
-                  .expert-icon.mb-3
-                    i.bi-shield-check.text-white(style="font-size: 3rem;")
-                  h4.h5.text-white.mb-0 #{$i18n.howItWorksDetailed.solution.weDo.title}
-                
-                ul.list-unstyled.mb-0
-                  each item in $i18n.howItWorksDetailed.solution.weDo.items
-                    li.d-flex.align-items-start.mb-3
-                      i.bi-check-circle.text-white.me-3.mt-1(style="font-size: 1.1rem;")  
-                      span #{item}
+          // We Do Column  
+          div
+            div(class='p-8 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg shadow-lg h-full')
+              div(class='text-center mb-6')
+                div(class='expert-icon mb-4')
+                  svg(class="w-16 h-16 text-white mx-auto" fill="currentColor" viewBox="0 0 24 24")
+                    path(fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.814 3.720 10.764 9.096 12.598a.75.75 0 00.308 0C17.981 20.514 21.75 15.564 21.75 9.75a12.74 12.74 0 00-.635-4.235.75.75 0 00-.722-.516 11.209 11.209 0 01-7.877-3.08zM15.75 9.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd")
+                h4(class='text-xl font-semibold text-white mb-0') #{$i18n.howItWorksDetailed.solution.weDo.title}
+              
+              ul(class='list-none space-y-4 mb-0')
+                each item in $i18n.howItWorksDetailed.solution.weDo.items
+                  li(class='flex items-start')
+                    svg(class="w-5 h-5 text-white mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                      path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                    span #{item}
 
 
       include ../pug/includes/footer.pug

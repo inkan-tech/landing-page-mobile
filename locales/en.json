@@ -140,6 +140,8 @@
         "simple": {
             "title": "Simplified protection",
             "subtitle": "Based on our distilled simplest possible process",
+            "currency_symbol": "$",
+            "price": "195",
             "period": "per person/year",
             "features": {
                 "process": "Distilled simplest possible validation process",
@@ -307,17 +309,20 @@
             "step1": {
                 "number": "01",
                 "title": "Take a selfie",
-                "description": "Simple as taking a photo. Our app captures your unique biometric identity."
+                "description": "Simple as taking a photo. Our app captures your unique biometric identity.",
+                "benefit": "Simple as a photo"
             },
             "step2": {
                 "number": "02", 
                 "title": "Instant verification",
-                "description": "Our cyber experts validate your identity in real-time with tamper-proof evidence."
+                "description": "Our cyber experts validate your identity in real-time with tamper-proof evidence.",
+                "benefit": "Real-time validation"
             },
             "step3": {
                 "number": "03",
                 "title": "Guaranteed protection",
-                "description": "Every transaction is automatically secured. 20-minute setup, zero training."
+                "description": "Every transaction is automatically secured. 20-minute setup, zero training.",
+                "benefit": "Zero training required"
             }
         },
         "traditionalSecurity": {

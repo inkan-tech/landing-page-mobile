@@ -140,6 +140,8 @@
         "simple": {
             "title": "Protection simplifiée",
             "subtitle": "Basée sur notre processus simplifié le plus distillé",
+            "currency_symbol": "€",
+            "price": "195",
             "period": "par personne/an",
             "features": {
                 "process": "Processus de validation le plus simple possible",
@@ -307,17 +309,20 @@
             "step1": {
                 "number": "01",
                 "title": "Prenez un selfie",
-                "description": "Simple comme une photo. Notre app capture votre identité biométrique unique."
+                "description": "Simple comme une photo. Notre app capture votre identité biométrique unique.",
+                "benefit": "Simple comme une photo"
             },
             "step2": {
                 "number": "02",
-                "title": "Vérifications instantanées", 
-                "description": "Nos experts cyber valident votre identité en temps réel avec des preuves infalsifiables."
+                "title": "Vérifications instantanées",
+                "description": "Nos experts cyber valident votre identité en temps réel avec des preuves infalsifiables.",
+                "benefit": "Validation temps réel"
             },
             "step3": {
                 "number": "03",
                 "title": "Protection garantie",
-                "description": "Chaque transaction est automatiquement sécurisée. Installation 20 minutes, zéro formation."
+                "description": "Chaque transaction est automatiquement sécurisée. Installation 20 minutes, zéro formation.",
+                "benefit": "Zéro formation requise"
             }
         },
         "traditionalSecurity": {
@@ -452,12 +457,12 @@
     "support": "Veuillez nous envoyer un email avec le numéro de téléphone utilisé dans Sealfie pour nous permettre d'identifier plus rapidement le problème.",
     "documentation": {
         "meta": {
-            "title": "Comment fonctionne Sealfie - Arrêtez la fraude executive en 30 secondes",
+            "title": "Comment fonctionne Sealfie - Arrêtez la fraude au PDG en 30 secondes",
             "description": "Découvrez comment la vérification biométrique de Sealfie protège les dirigeants contre la fraude deepfake. Processus de validation expliqués."
         },
         "hero": {
             "title": {
-                "line1": "Arrêtez la fraude executive",
+                "line1": "Arrêtez la fraude au PDG",
                 "line2": "en 30 secondes"
             },
             "subtitle": "La simplicité d'un selfie, la sécurité de la vérification biométrique"
@@ -541,7 +546,7 @@
         },
         "ceo": {
             "title": "Processus d'approbation executive",
-            "context": "Comment les dirigeants authentifient les décisions critiques", 
+            "context": "Comment les dirigeants authentifient les décisions critiques",
             "video": "Landing-Doc-FR2.webm",
             "step1": {
                 "title": "Notification équipe",
@@ -637,7 +642,7 @@
             "title": "Ce que vous obtenez",
             "items": [
                 "Évaluation objective de votre niveau de sécurité réel",
-                "Identification des vulnérabilités spécifiques à votre organisation", 
+                "Identification des vulnérabilités spécifiques à votre organisation",
                 "Démonstration concrète des nouvelles techniques d'attaque",
                 "Recommandations personnalisées pour renforcer votre protection",
                 "Aucun engagement commercial - juste de l'expertise gratuite"

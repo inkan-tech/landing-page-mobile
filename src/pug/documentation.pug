@@ -18,278 +18,273 @@ html(lang=$localeName)
 
     include ../pug/includes/navbar.pug
 
-    // Hero Section
-    section.documentation-hero-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h1.hero-title
-                | #{$i18n.documentation.hero.title.line1}
-                br
-                span.accent-text #{$i18n.documentation.hero.title.line2}
-              p.hero-subtitle #{$i18n.documentation.hero.subtitle}
+    // Hero Section - Full Width Tailwind
+    section(class='section-ma-hero bg-white')
+      div(class='w-full px-5')
+        div(class='max-w-6xl mx-auto')
+          div(class='text-center mb-12')
+            h1(class='hero-title mb-6')
+              | #{$i18n.documentation.hero.title.line1}
+              br
+              span(class='text-shu-primary') #{$i18n.documentation.hero.title.line2}
+            p(class='text-xl text-gray-600 mb-12 max-w-3xl mx-auto') #{$i18n.documentation.hero.subtitle}
 
-              // Process Overview
-              .process-overview.mt-5
-                .row.justify-content-center
-                  .col-md-4.mb-4
-                    .process-step
-                      .step-number 1
-                      .step-title #{$i18n.documentation.process.step1.title}
-                      .step-description #{$i18n.documentation.process.step1.description}
-                  .col-md-4.mb-4
-                    .process-step
-                      .step-number 2
-                      .step-title #{$i18n.documentation.process.step2.title}
-                      .step-description #{$i18n.documentation.process.step2.description}
-                  .col-md-4.mb-4
-                    .process-step
-                      .step-number 3
-                      .step-title #{$i18n.documentation.process.step3.title}
-                      .step-description #{$i18n.documentation.process.step3.description}
-    // Treasury Scenario Section
-    section.treasury-scenario-section
-      .container.px-5
-        .row.justify-content-center.mb-5
-          .col-lg-10
-            .text-center
-              h2.section-title
-                span #{$i18n.documentation.treasury.title}
-              p.section-subtitle #{$i18n.documentation.treasury.context}
+            // Process Overview
+            div(class='mt-12')
+              div(class='grid grid-cols-1 md:grid-cols-3 gap-8')
+                div(class='mb-8 md:mb-0')
+                  div(class='process-step text-center')
+                    div(class='step-number w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4') 1
+                    div(class='step-title text-lg font-semibold mb-2') #{$i18n.documentation.process.step1.title}
+                    div(class='step-description text-gray-600') #{$i18n.documentation.process.step1.description}
+                div(class='mb-8 md:mb-0')
+                  div(class='process-step text-center')
+                    div(class='step-number w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4') 2
+                    div(class='step-title text-lg font-semibold mb-2') #{$i18n.documentation.process.step2.title}
+                    div(class='step-description text-gray-600') #{$i18n.documentation.process.step2.description}
+                div(class='mb-8 md:mb-0')
+                  div(class='process-step text-center')
+                    div(class='step-number w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4') 3
+                    div(class='step-title text-lg font-semibold mb-2') #{$i18n.documentation.process.step3.title}
+                    div(class='step-description text-gray-600') #{$i18n.documentation.process.step3.description}
+    // Treasury Scenario Section - Full Width Tailwind
+    section(class='section-ma bg-gray-50')
+      div(class='w-full px-5')
+        div(class='max-w-6xl mx-auto')
+          div(class='text-center mb-12')
+            h2(class='text-3xl lg:text-4xl font-bold text-gray-900 mb-6')
+              span #{$i18n.documentation.treasury.title}
+            p(class='section-subtitle') #{$i18n.documentation.treasury.context}
 
-        .row.gx-5.align-items-center
-          .col-lg-7.mb-5.mb-lg-0
-            // Treasury Steps
-            .scenario-steps
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-1-square.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.treasury.step1.title}
-                    p.step-description #{$i18n.documentation.treasury.step1.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.treasury.step1.benefit}
+          div(class='grid grid-cols-1 lg:grid-cols-12 gap-8 items-center')
+            div(class='lg:col-span-7')
+              // Treasury Steps
+              div(class='space-y-8')
+                div(class='flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md')
+                  div(class='flex-shrink-0')
+                    div(class='w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold') 1
+                  div(class='flex-1')
+                    h4(class='text-lg font-semibold mb-2') #{$i18n.documentation.treasury.step1.title}
+                    p(class='text-gray-600 mb-3') #{$i18n.documentation.treasury.step1.description}
+                    div(class='inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium') #{$i18n.documentation.treasury.step1.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-2-square.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.treasury.step2.title}
-                    p.step-description #{$i18n.documentation.treasury.step2.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.treasury.step2.benefit}
+                div(class='flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md')
+                  div(class='flex-shrink-0')
+                    div(class='w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold') 2
+                  div(class='flex-1')
+                    h4(class='text-lg font-semibold mb-2') #{$i18n.documentation.treasury.step2.title}
+                    p(class='text-gray-600 mb-3') #{$i18n.documentation.treasury.step2.description}
+                    div(class='inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium') #{$i18n.documentation.treasury.step2.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-3-square.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.treasury.step3.title}
-                    p.step-description #{$i18n.documentation.treasury.step3.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.treasury.step3.benefit}
+                div(class='flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md')
+                  div(class='flex-shrink-0')
+                    div(class='w-12 h-12 bg-gradient-to-r from-shu-primary to-sango-accent text-white rounded-lg flex items-center justify-center text-xl font-bold') 3
+                  div(class='flex-1')
+                    h4(class='text-lg font-semibold mb-2') #{$i18n.documentation.treasury.step3.title}
+                    p(class='text-gray-600 mb-3') #{$i18n.documentation.treasury.step3.description}
+                    div(class='inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium') #{$i18n.documentation.treasury.step3.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-fingerprint.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.treasury.step4.title}
-                    p.step-description #{$i18n.documentation.treasury.step4.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.treasury.step4.benefit}
+                div(class='flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md')
+                  div(class='flex-shrink-0')
+                    svg(class="w-12 h-12 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                      path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4.")
+                  div(class='flex-1')
+                    h4(class='text-lg font-semibold mb-2') #{$i18n.documentation.treasury.step4.title}
+                    p(class='text-gray-600 mb-3') #{$i18n.documentation.treasury.step4.description}
+                    div(class='inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium') #{$i18n.documentation.treasury.step4.benefit}
 
-          .col-lg-5
-            // Treasury Device Mockup
-            .device-mockup
-              include includes/gradient-circle
-              include includes/shape-1
-              include includes/shape-2
-              .device-wrapper
-                .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                  .screen.bg-device-screen
-                    video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src="/assets/img/"+$i18n.documentation.treasury.video, type='video/webm')
+            div(class='lg:col-span-5')
+              // Treasury Device Mockup
+              div(class='device-mockup')
+                include includes/gradient-circle
+                include includes/shape-1
+                include includes/shape-2
+                div(class='device-wrapper')
+                  div(class='device' data-device='iPhoneX' data-orientation='portrait' data-color='black')
+                    div(class='screen bg-device-screen')
+                      video(muted='muted' autoplay='' loop='' style='max-width: 100%; height: 100%;')
+                        source(src="/assets/img/"+$i18n.documentation.treasury.video type='video/webm')
 
-    // Trust Signal Section
-    section.trust-signal-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center
-              .trust-indicators
-                .row.justify-content-center.align-items-center
-                  .col-md-3.mb-4
-                    .trust-metric
-                      .metric-number #{$i18n.documentation.trust.setup_time}
-                      .metric-label #{$i18n.documentation.trust.setup_label}
-                  .col-md-3.mb-4
-                    .trust-metric
-                      .metric-number #{$i18n.documentation.trust.success_rate}
-                      .metric-label #{$i18n.documentation.trust.success_label}
-                  .col-md-3.mb-4
-                    .trust-metric
-                      .metric-number #{$i18n.documentation.trust.fraud_prevented}
-                      .metric-label #{$i18n.documentation.trust.fraud_label}
-                  .col-md-3.mb-4
-                    .trust-metric
-                      .metric-number #{$i18n.documentation.trust.compliance}
-                      .metric-label #{$i18n.documentation.trust.compliance_label}
+    // Trust Signal Section - Tailwind 4
+    section(class="trust-signal-section py-16 section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center")
+            div(class="trust-indicators")
+              div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-center")
+                div(class="mb-6 md:mb-0")
+                  div(class="trust-metric text-center")
+                    div(class="metric-number text-3xl font-bold text-shu-primary mb-2") #{$i18n.documentation.trust.setup_time}
+                    div(class="metric-label text-gray-600") #{$i18n.documentation.trust.setup_label}
+                div(class="mb-6 md:mb-0")
+                  div(class="trust-metric text-center")
+                    div(class="metric-number text-3xl font-bold text-shu-primary mb-2") #{$i18n.documentation.trust.success_rate}
+                    div(class="metric-label text-gray-600") #{$i18n.documentation.trust.success_label}
+                div(class="mb-6 md:mb-0")
+                  div(class="trust-metric text-center")
+                    div(class="metric-number text-3xl font-bold text-shu-primary mb-2") #{$i18n.documentation.trust.fraud_prevented}
+                    div(class="metric-label text-gray-600") #{$i18n.documentation.trust.fraud_label}
+                div(class="mb-6 md:mb-0")
+                  div(class="trust-metric text-center")
+                    div(class="metric-number text-3xl font-bold text-shu-primary mb-2") #{$i18n.documentation.trust.compliance}
+                    div(class="metric-label text-gray-600") #{$i18n.documentation.trust.compliance_label}
 
-    // Technical Verification Section
-    section.technical-verification-section
-      .container.px-5
-        .row.justify-content-center.mb-5
-          .col-lg-10
-            .text-center
-              h2.section-title
-                span #{$i18n.documentation.technical_verification.title}
-              p.section-subtitle #{$i18n.documentation.technical_verification.subtitle}
-              p.section-intro.mt-4 #{$i18n.documentation.technical_verification.intro}
+    // Technical Verification Section - Tailwind 4
+    section(class="technical-verification-section py-16 section-ma bg-gray-50")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto mb-12")
+          div(class="text-center")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+              span #{$i18n.documentation.technical_verification.title}
+            p(class="section-subtitle mb-4") #{$i18n.documentation.technical_verification.subtitle}
+            p(class="section-intro text-lg text-gray-600") #{$i18n.documentation.technical_verification.intro}
 
-        .row.g-4.mb-5
-          .col-lg-6.mb-4
-            .verification-card
-              .verification-header
-                .verification-icon
-                  i.bi-shield-check.icon-feature.text-gradient
-                .verification-content
-                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.sim_protection.title}
-                  p.verification-description #{$i18n.documentation.technical_verification.verifications.sim_protection.description}
-              .verification-benefits
-                .benefit-tag #{$i18n.documentation.technical_verification.verifications.sim_protection.benefit}
+        div(class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12")
+          div(class="mb-6")
+            div(class="verification-card bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full")
+              div(class="verification-header flex items-start space-x-4 mb-4")
+                div(class="verification-icon flex-shrink-0")
+                  svg(class="w-8 h-8 text-shu-primary" fill="currentColor" viewBox="0 0 24 24")
+                    path(fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.814 3.720 10.764 9.096 12.598a.75.75 0 00.308 0C17.981 20.514 21.75 15.564 21.75 9.75a12.74 12.74 0 00-.635-4.235.75.75 0 00-.722-.516 11.209 11.209 0 01-7.877-3.08zM15.75 9.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd")
+                div(class="verification-content flex-1")
+                  h4(class="verification-title text-xl font-semibold mb-2") #{$i18n.documentation.technical_verification.verifications.sim_protection.title}
+                  p(class="verification-description text-gray-600") #{$i18n.documentation.technical_verification.verifications.sim_protection.description}
+              div(class="verification-benefits")
+                div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.technical_verification.verifications.sim_protection.benefit}
 
-          .col-lg-6.mb-4
-            .verification-card
-              .verification-header
-                .verification-icon
-                  i.bi-cpu.icon-feature.text-gradient
-                .verification-content
-                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.device_integrity.title}
-                  p.verification-description #{$i18n.documentation.technical_verification.verifications.device_integrity.description}
-              .verification-benefits
-                .benefit-tag #{$i18n.documentation.technical_verification.verifications.device_integrity.benefit}
+          div(class="mb-6")
+            div(class="verification-card bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full")
+              div(class="verification-header flex items-start space-x-4 mb-4")
+                div(class="verification-icon flex-shrink-0")
+                  svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2m-7-4h8a2 2 0 002-2V8a2 2 0 00-2-2H8a2 2 0 00-2 2v8a2 2 0 002 2zm0 0V9a2 2 0 012-2h4a2 2 0 012 2v8a2 2 0 01-2 2H10a2 2 0 01-2-2z")
+                div(class="verification-content flex-1")
+                  h4(class="verification-title text-xl font-semibold mb-2") #{$i18n.documentation.technical_verification.verifications.device_integrity.title}
+                  p(class="verification-description text-gray-600") #{$i18n.documentation.technical_verification.verifications.device_integrity.description}
+              div(class="verification-benefits")
+                div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.technical_verification.verifications.device_integrity.benefit}
 
-          .col-lg-6.mb-4
-            .verification-card
-              .verification-header
-                .verification-icon
-                  i.bi-graph-up.icon-feature.text-gradient
-                .verification-content
-                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.network_analysis.title}
-                  p.verification-description #{$i18n.documentation.technical_verification.verifications.network_analysis.description}
-              .verification-benefits
-                .benefit-tag #{$i18n.documentation.technical_verification.verifications.network_analysis.benefit}
+          div(class="mb-6")
+            div(class="verification-card bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full")
+              div(class="verification-header flex items-start space-x-4 mb-4")
+                div(class="verification-icon flex-shrink-0")
+                  svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6")
+                div(class="verification-content flex-1")
+                  h4(class="verification-title text-xl font-semibold mb-2") #{$i18n.documentation.technical_verification.verifications.network_analysis.title}
+                  p(class="verification-description text-gray-600") #{$i18n.documentation.technical_verification.verifications.network_analysis.description}
+              div(class="verification-benefits")
+                div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.technical_verification.verifications.network_analysis.benefit}
 
-          .col-lg-6.mb-4
-            .verification-card
-              .verification-header
-                .verification-icon
-                  i.bi-eye.icon-feature.text-gradient
-                .verification-content
-                  h4.verification-title #{$i18n.documentation.technical_verification.verifications.biometric_liveness.title}
-                  p.verification-description #{$i18n.documentation.technical_verification.verifications.biometric_liveness.description}
-              .verification-benefits
-                .benefit-tag #{$i18n.documentation.technical_verification.verifications.biometric_liveness.benefit}
+          div(class="mb-6")
+            div(class="verification-card bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full")
+              div(class="verification-header flex items-start space-x-4 mb-4")
+                div(class="verification-icon flex-shrink-0")
+                  svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z")
+                div(class="verification-content flex-1")
+                  h4(class="verification-title text-xl font-semibold mb-2") #{$i18n.documentation.technical_verification.verifications.biometric_liveness.title}
+                  p(class="verification-description text-gray-600") #{$i18n.documentation.technical_verification.verifications.biometric_liveness.description}
+              div(class="verification-benefits")
+                div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.technical_verification.verifications.biometric_liveness.benefit}
 
-        .row.justify-content-center
-          .col-lg-10
-            .text-center
-              .conclusion-statement
-                p.lead #{$i18n.documentation.technical_verification.conclusion}
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center")
+            div(class="conclusion-statement")
+              p(class="text-xl text-gray-700 font-medium") #{$i18n.documentation.technical_verification.conclusion}
 
-    // CEO Scenario Section
-    section.ceo-scenario-section
-      .container.px-5
-        .row.justify-content-center.mb-5
-          .col-lg-10
-            .text-center
-              h2.section-title
-                span #{$i18n.documentation.ceo.title}
-              p.section-subtitle #{$i18n.documentation.ceo.context}
+    // CEO Scenario Section - Tailwind 4
+    section(class="ceo-scenario-section py-16 section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto mb-12")
+          div(class="text-center")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+              span #{$i18n.documentation.ceo.title}
+            p(class="section-subtitle") #{$i18n.documentation.ceo.context}
 
-        .row.gx-5.align-items-center
-          .col-lg-5.mb-5.mb-lg-0
+        div(class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center")
+          div(class="lg:col-span-5 mb-8 lg:mb-0")
             // CEO Device Mockup
-            .device-mockup
+            div(class="device-mockup")
               include includes/gradient-circle
               include includes/shape-1
               include includes/shape-2
-              .device-wrapper
-                .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                  .screen.bg-device-screen
-                    video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                      source(src='/assets/img/'+ $i18n.documentation.ceo.video , type='video/webm')
+              div(class="device-wrapper")
+                div(class="device" data-device='iPhoneX' data-orientation='portrait' data-color='black')
+                  div(class="screen bg-device-screen")
+                    video(muted='muted' autoplay='' loop='' style='max-width: 100%; height: 100%;')
+                      source(src='/assets/img/'+ $i18n.documentation.ceo.video type='video/webm')
 
-          .col-lg-7
+          div(class="lg:col-span-7")
             // CEO Steps
-            .scenario-steps
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-1-circle.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.ceo.step1.title}
-                    p.step-description #{$i18n.documentation.ceo.step1.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.ceo.step1.benefit}
+            div(class="scenario-steps space-y-8")
+              div(class="step-item bg-gray-50 rounded-lg p-6")
+                div(class="step-header flex items-start space-x-4 mb-4")
+                  div(class="step-icon flex-shrink-0")
+                    div(class="w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center font-bold text-xl")
+                      | 1
+                  div(class="step-content flex-1")
+                    h4(class="step-title text-xl font-semibold mb-2") #{$i18n.documentation.ceo.step1.title}
+                    p(class="step-description text-gray-600") #{$i18n.documentation.ceo.step1.description}
+                div(class="step-benefits")
+                  div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.ceo.step1.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-2-circle.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.ceo.step2.title}
-                    p.step-description #{$i18n.documentation.ceo.step2.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.ceo.step2.benefit}
+              div(class="step-item bg-gray-50 rounded-lg p-6")
+                div(class="step-header flex items-start space-x-4 mb-4")
+                  div(class="step-icon flex-shrink-0")
+                    div(class="w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center font-bold text-xl")
+                      | 2
+                  div(class="step-content flex-1")
+                    h4(class="step-title text-xl font-semibold mb-2") #{$i18n.documentation.ceo.step2.title}
+                    p(class="step-description text-gray-600") #{$i18n.documentation.ceo.step2.description}
+                div(class="step-benefits")
+                  div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.ceo.step2.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-3-circle.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.ceo.step3.title}
-                    p.step-description #{$i18n.documentation.ceo.step3.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.ceo.step3.benefit}
+              div(class="step-item bg-gray-50 rounded-lg p-6")
+                div(class="step-header flex items-start space-x-4 mb-4")
+                  div(class="step-icon flex-shrink-0")
+                    div(class="w-12 h-12 bg-shu-primary text-white rounded-full flex items-center justify-center font-bold text-xl")
+                      | 3
+                  div(class="step-content flex-1")
+                    h4(class="step-title text-xl font-semibold mb-2") #{$i18n.documentation.ceo.step3.title}
+                    p(class="step-description text-gray-600") #{$i18n.documentation.ceo.step3.description}
+                div(class="step-benefits")
+                  div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.ceo.step3.benefit}
 
-              .step-item
-                .step-header
-                  .step-icon
-                    i.bi-fingerprint.icon-feature.text-gradient
-                  .step-content
-                    h4.step-title #{$i18n.documentation.ceo.step4.title}
-                    p.step-description #{$i18n.documentation.ceo.step4.description}
-                .step-benefits
-                  .benefit-tag #{$i18n.documentation.ceo.step4.benefit}
+              div(class="step-item bg-gray-50 rounded-lg p-6")
+                div(class="step-header flex items-start space-x-4 mb-4")
+                  div(class="step-icon flex-shrink-0")
+                    svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                      path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4.")
+                  div(class="step-content flex-1")
+                    h4(class="step-title text-xl font-semibold mb-2") #{$i18n.documentation.ceo.step4.title}
+                    p(class="step-description text-gray-600") #{$i18n.documentation.ceo.step4.description}
+                div(class="step-benefits")
+                  div(class="benefit-tag inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium") #{$i18n.documentation.ceo.step4.benefit}
 
 
     
-    // Final CTA Section
-    section.documentation-cta-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center
-              h2.section-title
-                span #{$i18n.documentation.final_cta.title}
-              p.section-subtitle #{$i18n.documentation.final_cta.subtitle}
+    // Final CTA Section - Tailwind 4
+    section(class="documentation-cta-section py-16 section-ma bg-gray-50")
+      div(class="container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6")
+              span #{$i18n.documentation.final_cta.title}
+            p(class="section-subtitle mb-8") #{$i18n.documentation.final_cta.subtitle}
 
-              .cta-buttons.mt-5
-                .row.justify-content-center
-                  .col-md-6.mb-3
-                    a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label="#{$i18n.documentation.final_cta.primary_aria}")
-                      | #{$i18n.documentation.final_cta.primary_text}
-                  .col-md-6.mb-3
-                    a.cta-secondary(href="/#{$localeName}/pricing.html" aria-label="#{$i18n.documentation.final_cta.secondary_aria}")
-                      | #{$i18n.documentation.final_cta.secondary_text}
+            div(class="cta-buttons")
+              div(class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto")
+                div(class="mb-4 md:mb-0")
+                  a(class="cta-primary-large inline-block w-full" href="mailto:contact@sealf.ie" aria-label="#{$i18n.documentation.final_cta.primary_aria}")
+                    | #{$i18n.documentation.final_cta.primary_text}
+                div(class="mb-4 md:mb-0")
+                  a(class="cta-secondary inline-block w-full" href="/#{$localeName}/pricing.html" aria-label="#{$i18n.documentation.final_cta.secondary_aria}")
+                    | #{$i18n.documentation.final_cta.secondary_text}
 
-              .implementation-guarantee.mt-4
-                p.guarantee-text #{$i18n.documentation.final_cta.guarantee}
+            div(class="implementation-guarantee mt-8")
+              p(class="guarantee-text text-gray-600") #{$i18n.documentation.final_cta.guarantee}
 
     include ../pug/includes/footer.pug
 
