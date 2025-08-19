@@ -19,32 +19,32 @@ test.describe('Mobile Navigation Tests', () => {
     });
     expect(tailwindLoaded).toBe(true);
     
-    // Find mobile menu elements
-    const menuButton = page.locator('.navbar-toggler');
+    // Find mobile menu elements (updated for Tailwind implementation)
+    const menuButton = page.locator('#navbarToggler');
     const mobileMenu = page.locator('#navbarResponsive');
     
     // Verify elements exist
     await expect(menuButton).toBeVisible();
     await expect(mobileMenu).toBeAttached();
     
-    // Menu should be collapsed initially
-    await expect(mobileMenu).not.toHaveClass(/show/);
+    // Menu should be hidden initially (Tailwind implementation)
+    await expect(mobileMenu).not.toBeVisible();
     
     // Click menu button to expand
     await menuButton.click();
     
     // Wait for animation and verify menu is shown
     await page.waitForTimeout(500);
-    await expect(mobileMenu).toHaveClass(/show/);
+    await expect(mobileMenu).toBeVisible();
     
     // Verify menu items are visible
-    const menuItems = mobileMenu.locator('.nav-link');
+    const menuItems = mobileMenu.locator('a');  // Updated selector for Tailwind links
     await expect(menuItems.first()).toBeVisible();
     
     // Click again to collapse
     await menuButton.click();
     await page.waitForTimeout(500);
-    await expect(mobileMenu).not.toHaveClass(/show/);
+    await expect(mobileMenu).not.toBeVisible();
   });
 
   test('mobile navigation links are accessible', async ({ page, isMobile }) => {
@@ -56,8 +56,8 @@ test.describe('Mobile Navigation Tests', () => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
     
-    // Open mobile menu
-    await page.locator('.navbar-toggler').click();
+    // Open mobile menu (updated selector)
+    await page.locator('#navbarToggler').click();
     await page.waitForTimeout(500);
     
     // Test each navigation link
@@ -67,7 +67,7 @@ test.describe('Mobile Navigation Tests', () => {
     ];
     
     for (const link of links) {
-      const navLink = page.locator(`.nav-link:has-text("${link.text}")`);
+      const navLink = page.locator(`#navbarResponsive a:has-text("${link.text}")`);  // Updated selector for Tailwind
       await expect(navLink).toBeVisible();
       await expect(navLink).toHaveAttribute('href', link.href);
     }

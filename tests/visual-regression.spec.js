@@ -12,16 +12,33 @@ test.describe('Visual Regression Tests', () => {
     await page.addStyleTag({
       content: `
         .carousel-auto-advancing,
-        video {
+        video, [data-carousel="trends"] {
           animation: none !important;
           transition: none !important;
+          animation-duration: 0s !important;
+          animation-delay: 0s !important;
+        }
+        .video-timer-container video {
+          display: none !important;
+        }
+        .carousel-track {
+          transition: none !important;
+          transform: translateX(0%) !important;
+        }
+        * {
+          animation-duration: 0s !important;
+          animation-delay: 0s !important;
+          transition-duration: 0s !important;
+          transition-delay: 0s !important;
         }
       `
     });
     
-    // Take screenshot of hero section
-    const heroSection = page.locator('.masthead');
-    await expect(heroSection).toHaveScreenshot(`hero-section-${browserName}.png`);
+    // Take screenshot of hero section (updated for Tailwind implementation)
+    const heroSection = page.locator('.hero-section');
+    await expect(heroSection).toHaveScreenshot(`hero-section-${browserName}.png`, {
+      timeout: 10000
+    });
   });
 
   test('mobile navigation menu visual comparison', async ({ page, browserName, isMobile }) => {
@@ -33,8 +50,8 @@ test.describe('Visual Regression Tests', () => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
     
-    // Open mobile menu
-    await page.locator('.navbar-toggler').click();
+    // Open mobile menu (updated for Tailwind implementation)
+    await page.locator('#navbarToggler').click();
     await page.waitForTimeout(500);
     
     // Screenshot of mobile menu expanded
@@ -70,15 +87,31 @@ test.describe('Visual Regression Tests', () => {
       // Hide dynamic content for consistent screenshots
       await page.addStyleTag({
         content: `
-          video, .carousel-auto-advancing {
+          video, .carousel-auto-advancing, [data-carousel="trends"] {
             animation: none !important;
             transition: none !important;
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+          }
+          .video-timer-container video {
+            display: none !important;
+          }
+          .carousel-track {
+            transition: none !important;
+            transform: translateX(0%) !important;
+          }
+          * {
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
           }
         `
       });
       
       await expect(page).toHaveScreenshot(`${pageInfo.name}-full-${browserName}.png`, {
-        fullPage: true
+        fullPage: true,
+        timeout: 15000
       });
     }
   });

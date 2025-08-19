@@ -341,7 +341,7 @@ test.describe('Japanese Inkan-Inspired Redesign Verification', () => {
     });
 
     test('traditional red color creates visual impact', async ({ page }) => {
-      // Test that red color is prominently featured
+      // Test that red color is prominently featured (updated for Tailwind implementation)
       const redElements = await page.evaluate(() => {
         const elements = document.querySelectorAll('*');
         let redCount = 0;
@@ -352,9 +352,13 @@ test.describe('Japanese Inkan-Inspired Redesign Verification', () => {
           const color = styles.color;
           const border = styles.borderColor;
           
+          // Check for multiple red variants: original FF3500 and Tailwind #c10
           if (bg.includes('255, 53, 0') || bg.includes('#FF3500') ||
+              bg.includes('204, 17, 0') || bg.includes('#c10') ||
               color.includes('255, 53, 0') || color.includes('#FF3500') ||
-              border.includes('255, 53, 0') || border.includes('#FF3500')) {
+              color.includes('204, 17, 0') || color.includes('#c10') ||
+              border.includes('255, 53, 0') || border.includes('#FF3500') ||
+              border.includes('204, 17, 0') || border.includes('#c10')) {
             redCount++;
           }
         });

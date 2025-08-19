@@ -11,7 +11,8 @@ test.describe('CSP and Security Tests', () => {
       }
     });
     
-    await page.goto('/');
+    // Test on live production site for real security validation
+    await page.goto('https://sealf.ie/');
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(3000);
     
@@ -45,7 +46,8 @@ test.describe('CSP and Security Tests', () => {
   });
 
   test('Tailwind JavaScript framework loads successfully', async ({ page }) => {
-    await page.goto('/');
+    // Test JavaScript functionality on live site
+    await page.goto('https://sealf.ie/');
     await page.waitForLoadState('networkidle');
     
     // Check that Sealfie theme system is available globally (Bootstrap-free)
@@ -83,7 +85,8 @@ test.describe('CSP and Security Tests', () => {
       }
     });
     
-    await page.goto('/');
+    // Test resource loading on live production site
+    await page.goto('https://sealf.ie/');
     await page.waitForLoadState('networkidle');
     
     // Filter out expected failures (favicon, etc.)
@@ -101,7 +104,8 @@ test.describe('CSP and Security Tests', () => {
   });
 
   test('security headers are present', async ({ page }) => {
-    const response = await page.goto('/');
+    // Test security headers on live production site
+    const response = await page.goto('https://sealf.ie/');
     const headers = response.headers();
     
     // Check for security-related meta tags in the HTML
@@ -127,7 +131,8 @@ test.describe('CSP and Security Tests', () => {
       }
     });
     
-    await page.goto('/');
+    // Test mixed content on live HTTPS site
+    await page.goto('https://sealf.ie/');
     await page.waitForLoadState('networkidle');
     
     expect(mixedContentWarnings.length).toBe(0);

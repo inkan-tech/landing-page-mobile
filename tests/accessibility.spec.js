@@ -21,8 +21,8 @@ test.describe('Accessibility Tests', () => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
     
-    // Check mobile menu button has proper ARIA attributes
-    const menuButton = page.locator('.navbar-toggler');
+    // Check mobile menu button has proper ARIA attributes (updated for Tailwind implementation)
+    const menuButton = page.locator('#navbarToggler');
     await expect(menuButton).toHaveAttribute('aria-controls', 'navbarResponsive');
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuButton).toHaveAttribute('aria-label', 'Toggle navigation');
