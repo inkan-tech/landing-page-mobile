@@ -17,139 +17,162 @@ html(lang=$localeName)
   body#page-top
     include ../pug/includes/navbar.pug
 
-    // Pricing overview section
-    section.pricing-overview-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.pricing.overview.title}
-              p.section-subtitle #{$i18n.pricing.overview.subtitle}
+    // Pricing overview section - Tailwind 4 with subtle pattern
+    section(class="pricing-overview-section section-ma bg-white relative")
+      //- Subtle pattern overlay
+      div(class='absolute inset-0 opacity-3')
+        div(class='absolute inset-0' style='background-image: url("data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23FF3500\" fill-opacity=\"0.08\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); background-size: 60px 60px;')
+      
+      div(class="relative container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6") #{$i18n.pricing.overview.title}
+            p(class="text-xl text-gray-600 mb-8") #{$i18n.pricing.overview.subtitle}
             
-            .pricing-grid
+            div(class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto")
               // Simplified process pricing card
-              .pricing-card.pricing-card-featured
-                .pricing-card-header
-                  .pricing-icon
-                    i.bi-lightning-charge
-                  h3.pricing-card-title #{$i18n.pricing.simple.title}
-                  p.pricing-card-subtitle #{$i18n.pricing.simple.subtitle}
-                  .pricing-amount
-                    span.pricing-currency $
-                    span.pricing-value 195
-                    span.pricing-period #{$i18n.pricing.simple.period}
+              div(class="pricing-card bg-white border-2 border-shu-primary/20 rounded-xl p-8 shadow-lg relative transform hover:scale-105 transition-transform duration-200")
+                div(class="text-center mb-8")
+                  div(class="pricing-icon w-16 h-16 bg-gradient-to-br from-shu-primary/10 to-sango-accent/10 text-shu-primary rounded-full flex items-center justify-center mx-auto mb-4 border border-shu-primary/20")
+                    svg(class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24")
+                      path(fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71L10.018 14.25H2.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd")
+                  h3(class="text-2xl font-bold text-gray-900 mb-2") #{$i18n.pricing.simple.title}
+                  p(class="text-gray-600 mb-6") #{$i18n.pricing.simple.subtitle}
+                  div(class="pricing-amount flex items-baseline justify-center")
+                    span(class="text-2xl font-semibold text-gray-900") #{$i18n.pricing.simple.currency_symbol}
+                    span(class="text-5xl font-bold text-shu-primary") #{$i18n.pricing.simple.price}
+                    span(class="text-lg text-gray-600 ml-2") #{$i18n.pricing.simple.period}
                 
-                .pricing-card-features
-                  ul.pricing-features-list
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.simple.features.process}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.simple.features.phone_validation}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.simple.features.validations}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.simple.features.support}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.simple.features.deployment}
+                div(class="mb-8")
+                  ul(class="space-y-4")
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span(class="text-gray-700") #{$i18n.pricing.simple.features.process}
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span(class="text-gray-700") #{$i18n.pricing.simple.features.phone_validation}
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span(class="text-gray-700") #{$i18n.pricing.simple.features.validations}
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span(class="text-gray-700") #{$i18n.pricing.simple.features.support}
+                    li(class="flex items-start")
+                      svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                        path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                      span(class="text-gray-700") #{$i18n.pricing.simple.features.deployment}
                 
-                .pricing-card-footer
-                  a.cta-primary-large(href="mailto:contact@sealf.ie" aria-label=$i18n.pricing.simple.cta)
+                div(class="text-center")
+                  a(class="cta-primary-large inline-block" href="mailto:contact@sealf.ie" aria-label=`${$i18n.pricing.simple.cta}`)
                     | #{$i18n.pricing.simple.cta}
               
               // Enterprise/tailored pricing card
-              .pricing-card.pricing-card-enterprise
-                .pricing-card-header
-                  .pricing-icon
-                    i.bi-gear-wide-connected
-                  h3.pricing-card-title #{$i18n.pricing.enterprise.title}
-                  p.pricing-card-subtitle #{$i18n.pricing.enterprise.subtitle}
-                  .pricing-amount
-                    span.pricing-text #{$i18n.pricing.enterprise.price_text}
-                
-                .pricing-card-features
-                  ul.pricing-features-list
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.enterprise.features.tailored_process}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.enterprise.features.multiple_validators}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.enterprise.features.it_integration}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.enterprise.features.seamless_expansion}
-                    li
-                      i.bi-check-circle-fill
-                      span #{$i18n.pricing.enterprise.features.priority_support}
-                
-                .pricing-card-footer
-                  a.cta-secondary(href="mailto:contact@sealf.ie" aria-label=$i18n.pricing.enterprise.cta)
-                    | #{$i18n.pricing.enterprise.cta}
+              div(class='bg-white rounded-xl shadow-lg border-2 border-enji-secondary/20 transform hover:scale-105 transition-transform duration-200')
+                div(class='p-8')
+                  div(class='text-center mb-6')
+                    div(class='pricing-icon w-16 h-16 bg-gradient-to-br from-enji-secondary/10 to-sango-accent/10 text-enji-secondary rounded-full flex items-center justify-center mx-auto mb-4 border border-enji-secondary/20')
+                      svg(class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                        path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z")
+                        path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z")
+                    h3(class='text-2xl font-bold mb-2') #{$i18n.pricing.enterprise.title}
+                    p(class='text-gray-600 mb-6') #{$i18n.pricing.enterprise.subtitle}
+                    div(class='pricing-amount text-center')
+                      span(class='text-2xl font-bold text-gray-700') #{$i18n.pricing.enterprise.price_text}
+                  
+                  div(class='mb-8')
+                    ul(class='space-y-4')
+                      li(class='flex items-start')
+                        svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                          path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                        span(class='text-gray-700') #{$i18n.pricing.enterprise.features.tailored_process}
+                      li(class='flex items-start')
+                        svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                          path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                        span(class='text-gray-700') #{$i18n.pricing.enterprise.features.multiple_validators}
+                      li(class='flex items-start')
+                        svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                          path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                        span(class='text-gray-700') #{$i18n.pricing.enterprise.features.it_integration}
+                      li(class='flex items-start')
+                        svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                          path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                        span(class='text-gray-700') #{$i18n.pricing.enterprise.features.seamless_expansion}
+                      li(class='flex items-start')
+                        svg(class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24")
+                          path(fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd")
+                        span(class='text-gray-700') #{$i18n.pricing.enterprise.features.priority_support}
+                  
+                  div(class='text-center')
+                    a(class='cta-secondary w-full inline-flex items-center justify-center' href='mailto:contact@sealf.ie' aria-label=$i18n.pricing.enterprise.cta)
+                      | #{$i18n.pricing.enterprise.cta}
 
-    // Additional features section
-    section.pricing-features-section
-      .container.px-5
-        .row.justify-content-center
-          .col-lg-10
-            .text-center.mb-5
-              h2.section-title
-                span #{$i18n.pricing.features.title}
-              p.section-subtitle #{$i18n.pricing.features.subtitle}
+    // Additional features section - Tailwind 4 with pattern
+    section(class="pricing-features-section py-16 section-ma bg-gray-50 relative")
+      //- Subtle pattern overlay 
+      div(class='absolute inset-0 opacity-2')
+        div(class='absolute inset-0' style='background-image: url("data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23C93338\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); background-size: 60px 60px;')
+      
+      div(class="relative container mx-auto px-5")
+        div(class="max-w-5xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6") #{$i18n.pricing.features.title}
+            p(class="text-xl text-gray-600 mb-8") #{$i18n.pricing.features.subtitle}
+          
+          div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8")
+            div(class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200")
+              div(class="feature-icon mb-4")
+                svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                  path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z")
+              h4(class="feature-title text-xl font-semibold mb-3") #{$i18n.pricing.period.title}
+              p(class="feature-description text-gray-600") #{$i18n.pricing.period.text}
             
-            .row.g-4
-              .col-md-6.col-lg-4
-                .feature-card
-                  .feature-icon
-                    i.bi-calendar4-range
-                  h4.feature-title #{$i18n.pricing.period.title}
-                  p.feature-description #{$i18n.pricing.period.text}
-              
-              .col-md-6.col-lg-4
-                .feature-card
-                  .feature-icon
-                    i.bi-headset
-                  h4.feature-title #{$i18n.pricing.support.title}
-                  p.feature-description #{$i18n.pricing.support.text}
-              
-              .col-md-6.col-lg-4
-                .feature-card
-                  .feature-icon
-                    i.bi-diagram-3
-                  h4.feature-title #{$i18n.pricing.onboard.title}
-                  p.feature-description #{$i18n.pricing.onboard.text}
+            div(class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200")
+              div(class="feature-icon mb-4")
+                svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                  path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z")
+              h4(class="feature-title text-xl font-semibold mb-3") #{$i18n.pricing.support.title}
+              p(class="feature-description text-gray-600") #{$i18n.pricing.support.text}
+            
+            div(class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200")
+              div(class="feature-icon mb-4")
+                svg(class="w-8 h-8 text-shu-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24")
+                  path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z")
+                  path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z")
+              h4(class="feature-title text-xl font-semibold mb-3") #{$i18n.pricing.onboard.title}
+              p(class="feature-description text-gray-600") #{$i18n.pricing.onboard.text}
 
 
 
 
 
-    // Call to action section
-    section.cta
-      .cta-content
-        .container.px-5
-         h2.text-white.display-1.lh-1.mb-4
+    // Call to action section - Tailwind 4
+    section(class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 relative")
+      //- Subtle pattern overlay
+      div(class='absolute inset-0 opacity-2')
+        div(class='absolute inset-0' style='background-image: url(\"data:image/svg+xml,%3Csvg width=\\\"60\\\" height=\\\"60\\\" viewBox=\\\"0 0 60 60\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"%3E%3Cg fill=\\\"none\\\" fill-rule=\\\"evenodd\\\"%3E%3Cg fill=\\\"%23ffffff\\\" fill-opacity=\\\"0.05\\\"%3E%3Cpath d=\\\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\"); background-size: 60px 60px;')
+      
+      div(class="relative container mx-auto px-5")
+        div(class="text-center max-w-3xl mx-auto")
+          h2(class="text-white text-4xl lg:text-5xl font-bold leading-tight mb-6")
             | #{$i18n.contactus.main}
             br
             |#{$i18n.contactus.custom}
-         a.btn.btn-outline-light.button.py-3.px-4.rounded-pill(href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
+          a(class="cta-secondary inline-block" href="mailto:contact@sealf.ie") #{$i18n.action.linktext}
 
 
-    // App badge section
-    section#download.bg-gradient-primary-to-secondary
-      .container.px-5
-        h2.text-center.text-white.font-alt.mb-4 #{$i18n.appstore.download}
-        .d-flex.flex-column.flex-lg-row.align-items-center.justify-content-center
-          a.me-lg-3.mb-4.mb-lg-0(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie')
-            img.app-badge(src='/assets/img/google-play-badge.svg', alt='...')
-          a(href='https://apps.apple.com/app/id1635309517')
-            img.app-badge(src='/assets/img/app-store-badge.svg', alt='...')
+    // App badge section - Tailwind 4
+    section(id="download" class="py-16 bg-gradient-to-br from-shu-primary to-enji-secondary")
+      div(class="container mx-auto px-5")
+        h2(class="text-center text-white text-2xl font-bold mb-8") #{$i18n.appstore.download}
+        div(class="flex flex-col lg:flex-row items-center justify-center gap-6")
+          a(href='https://play.google.com/store/apps/details?id=link.inkan.sealfie' class="block")
+            img(class="app-badge h-16 w-auto" src='/assets/img/google-play-badge.svg', alt='Google Play Badge')
+          a(href='https://apps.apple.com/app/id1635309517' class="block")
+            img(class="app-badge h-16 w-auto" src='/assets/img/app-store-badge.svg', alt='App Store Badge')
 
     include ../pug/includes/footer.pug
 
