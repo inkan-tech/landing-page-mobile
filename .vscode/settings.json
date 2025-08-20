@@ -1,4 +1,9 @@
 {
+    "playwright.envFile": ".env.test",
+    "playwright.showTrace": false,
+    "playwright.reuseBrowser": false,
+    "playwright.testDir": "./tests",
+    "playwright.configFile": "playwright.config.js",
     "CodeGPT.apiKey": "Claude Code",
     "codeQL.createQuery.qlPackLocation": "/Users/nicolasthomas/inkan/landing-page-mobile",
     "vcpkg.target.defaultTriplet": "arm64-osx",
