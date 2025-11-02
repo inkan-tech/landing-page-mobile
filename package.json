@@ -26,7 +26,13 @@
         "test:cultural": "playwright test cultural-authenticity.spec.js",
         "test:theme": "playwright test theme-system-compliance.spec.js",
         "test:redesign-full": "playwright test japanese-redesign-verification.spec.js cultural-authenticity.spec.js theme-system-compliance.spec.js",
-        "test:server-security": "playwright test security-server-verification.spec.js"
+        "test:server-security": "playwright test security-server-verification.spec.js",
+        "test:seo": "playwright test tests/seo/",
+        "seo:audit": "node scripts/seo/run-lighthouse-audit.js",
+        "seo:audit:local": "node scripts/seo/run-lighthouse-audit.js --local",
+        "seo:triage": "node scripts/seo/triage-and-fix.js",
+        "seo:triage:tests": "node scripts/seo/triage-and-fix.js --generate-tests",
+        "seo:full": "npm run seo:audit && npm run seo:triage:tests && npm run test:seo"
     },
     "description": "Landing page for Sealfie",
     "keywords": [
@@ -56,10 +62,12 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.54.2",
+        "@tailwindcss/cli": "^4.1.12",
         "@tailwindcss/postcss": "^4.1.12",
         "autoprefixer": "10.4.21",
         "browser-sync": "^3.0.4",
         "chokidar": "4.0.3",
+        "chrome-launcher": "^1.2.1",
         "coffeescript": "2.7.0",
         "concurrently": "9.2.0",
         "grunt": "1.6.1",
@@ -78,9 +86,9 @@
         "grunt-purgecss": "^7.0.2",
         "grunt-run": "0.8.1",
         "grunt-sitemap": "2.0.1",
+        "lighthouse": "^13.0.1",
         "postcss": "^8.5.6",
         "postcss-cli": "^11.0.1",
-        "@tailwindcss/cli": "^4.1.12",
         "prettier": "3.6.2",
         "pug": "3.0.3",
         "sharp": "^0.34.3",

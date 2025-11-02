@@ -170,6 +170,200 @@ h1.hero-title
   span.accent-text Protect it with a simple selfie  // Line 2 (current)
 ```
 
+## Website & SEO Optimization
+
+### **Production Website**
+- 🌐 **Live URL**: https://sealf.ie/
+- 📊 **SEO Tools**: Google Lighthouse (local), Playwright tests
+- 🎯 **Primary Goal**: Cybersecurity awareness and lead generation
+
+### **Local SEO Audit System (Lighthouse + Playwright)**
+
+**We use open-source tools for continuous SEO monitoring:**
+
+#### **1. Google Lighthouse - Automated SEO Auditing**
+```bash
+# Run full SEO audit on production
+npm run seo:audit
+
+# Run audit on local development server
+npm run seo:audit:local
+
+# Run audit on custom URL
+node scripts/seo/run-lighthouse-audit.js --url=https://sealf.ie/en/pricing.html
+```
+
+**What Lighthouse Audits:**
+- ✅ Meta tags (title, description, Open Graph, Twitter Cards)
+- ✅ Structured data (Schema.org JSON-LD)
+- ✅ Mobile-friendliness and viewport configuration
+- ✅ Image optimization (alt text, lazy loading)
+- ✅ Performance metrics (LCP, CLS, FID)
+- ✅ Accessibility compliance
+- ✅ Best practices (HTTPS, canonical URLs, hreflang)
+
+**Audit Output:**
+- `reports/seo/[page]-desktop.json` - Detailed JSON results
+- `reports/seo/[page]-desktop.html` - Visual HTML report
+- `reports/seo/summary.json` - Aggregated summary across all pages
+
+#### **2. SEO Issue Triage System**
+```bash
+# Analyze audit results and generate fix recommendations
+npm run seo:triage
+
+# Generate Playwright test stubs for found issues
+npm run seo:triage:tests
+```
+
+**Triage Output:**
+- **P0 (Critical)**: Issues requiring immediate fix (missing title, no meta description)
+- **P1 (High)**: Important issues affecting rankings (broken links, missing alt text)
+- **P2 (Medium)**: Optimization opportunities (structured data, Open Graph tags)
+- **P3 (Low)**: Nice-to-have improvements (preload hints, HTTP/2 optimization)
+
+**For each issue, the triage system provides:**
+- ✅ Priority level and impact assessment
+- ✅ Step-by-step fix instructions with code examples
+- ✅ Auto-generated Playwright test to validate fix
+- ✅ Links to relevant documentation
+
+#### **3. SEO Validation Tests (Playwright)**
+```bash
+# Run existing comprehensive SEO test suite
+npm run test:seo
+
+# Run generated fix validation tests
+npx playwright test tests/seo/*-seo-fixes.spec.js
+```
+
+**Existing Test Coverage (`tests/seo-optimization.spec.js`):**
+- ✅ Meta tags (title, description, canonical, robots)
+- ✅ Open Graph and Twitter Card tags
+- ✅ Structured data (Organization, WebSite, MobileApplication, BreadcrumbList)
+- ✅ Hreflang and internationalization
+- ✅ Image optimization (alt text, lazy loading, preload)
+- ✅ Internal linking structure
+- ✅ Mobile-friendliness (viewport, tap targets, readable text)
+- ✅ Performance indicators (preload, DNS prefetch, lazy loading)
+- ✅ Content quality (word count, H1 uniqueness, heading hierarchy, keywords)
+- ✅ Robots and crawlability (sitemap.xml, robots.txt, no broken links)
+
+#### **4. Complete SEO Workflow**
+```bash
+# Full automated workflow:
+# 1. Run Lighthouse audit
+# 2. Triage issues and generate tests
+# 3. Run all SEO validation tests
+npm run seo:full
+```
+
+### **SEO Expert Agent**
+
+**Agent Location:** `.claude/agents/seo-expert.md`
+
+**Agent Capabilities:**
+1. 🔍 **Audit**: Run Lighthouse on all pages (desktop + mobile)
+2. 📋 **Triage**: Categorize issues by priority (P0-P3)
+3. 🔧 **Fix**: Apply SEO best practices to fix identified issues
+4. 🧪 **Test**: Generate Playwright tests to prevent regressions
+5. 📊 **Report**: Provide detailed before/after comparisons
+
+**Activating the Agent:**
+```bash
+# Use the Task tool to launch the SEO expert agent
+Task(
+  subagent_type="general-purpose",
+  description="SEO audit and optimization",
+  prompt="Act as the SEO expert agent. Run a full Lighthouse audit on https://sealf.ie/,
+          triage all issues, fix critical (P0) and high (P1) priority issues,
+          and create Playwright tests for each fix."
+)
+```
+
+### **Required SEO Optimization Workflow**
+
+#### **Before Making Content Changes:**
+1. ✅ **Baseline Audit**: Run `npm run seo:audit` to capture current state
+2. ✅ **Review Issues**: Check `reports/seo/summary.json` for existing problems
+3. ✅ **Plan Fixes**: Use `npm run seo:triage` for prioritized fix recommendations
+
+#### **When Implementing Fixes:**
+1. ✅ **Follow Triage**: Use step-by-step instructions from triage report
+2. ✅ **Test Locally**: Run `npm run seo:audit:local` during development
+3. ✅ **Generate Tests**: Run `npm run seo:triage:tests` to create validation tests
+4. ✅ **Validate**: Run `npm run test:seo` to ensure fixes work
+
+#### **After Deploying Changes:**
+1. ✅ **Re-Audit**: Run `npm run seo:audit` on production
+2. ✅ **Compare Scores**: Check improvement in Lighthouse scores
+3. ✅ **Verify Tests**: Ensure all SEO tests pass
+4. ✅ **Monitor**: Schedule weekly audits to catch regressions
+
+### **Priority SEO Fixes**
+
+**Technical:**
+- Fix broken links and 404 errors
+- Ensure all pages have valid canonical URLs
+- Implement proper hreflang for EN/FR versions
+- Optimize Core Web Vitals (LCP < 2.5s, CLS < 0.1, FID < 100ms)
+
+**Content:**
+- Every page must have unique title (30-60 chars)
+- Every page must have meta description (120-160 chars)
+- Use sentence case for titles ("How it works" not "How It Works")
+- Maintain proper heading hierarchy (H1 > H2 > H3)
+
+**Authority:**
+- Implement complete Schema.org structured data
+- Add Open Graph and Twitter Card tags
+- Ensure internal linking structure is logical
+
+**UX:**
+- All images must have descriptive alt text
+- Mobile viewport must be configured correctly
+- Tap targets must be >= 48x48px on mobile
+- Text must be readable (>= 14px font size)
+
+### **Common SEO Issues and Fixes**
+
+#### **Missing Meta Description**
+```pug
+// src/pug/index.pug
+head
+  meta(name='description', content=`#{$i18n.meta.description}`)
+
+// locales/en.json
+{
+  "meta": {
+    "description": "Protect your business from deepfake fraud with Sealfie. Biometric authentication for executives."
+  }
+}
+```
+
+#### **Missing Canonical URL**
+```pug
+// src/pug/includes/head.pug
+link(rel="canonical" href=`https://sealf.ie/${locale}/`)
+```
+
+#### **Missing Alt Text**
+```pug
+// ✅ CORRECT
+img(src="/assets/img/mockup.png"
+    alt="Sealfie mobile app showing biometric authentication interface")
+
+// ❌ WRONG
+img(src="/assets/img/mockup.png")
+```
+
+### **SEO Monitoring Schedule**
+
+- **Weekly**: Run `npm run seo:audit` on production
+- **Before Deploy**: Run `npm run seo:audit:local` on staging
+- **After Content Changes**: Run `npm run seo:full` to validate
+- **Monthly**: Review trend in Lighthouse scores and fix regressions
+
 ## Japanese Color System
 
 ### **Traditional Japanese Colors (Current Implementation)**
