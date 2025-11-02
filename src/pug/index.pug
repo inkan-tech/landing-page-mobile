@@ -10,7 +10,13 @@ html(lang=$localeName)
     meta(name='description', content=$i18n.meta.descriptions.homepage)
 
     //- Page-specific canonical and alternate links
-    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
+    //- For English (default locale): canonical always points to root domain
+    //- This prevents duplicate content issues between / and /en/
+    //- For other locales: canonical points to localized path
+    if $localeName === 'en'
+      link(rel='canonical', href='https://sealf.ie/')
+    else
+      link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
     link(rel='alternate', hreflang='x-default', href='https://sealf.ie/')
     link(rel='alternate', hreflang='en', href='https://sealf.ie/en/')
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/')
