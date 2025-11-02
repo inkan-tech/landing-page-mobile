@@ -39,7 +39,6 @@ const PAGES = [
   { path: '/fr/', name: 'homepage-fr' },
   { path: '/en/documentation.html', name: 'documentation' },
   { path: '/en/pricing.html', name: 'pricing' },
-  { path: '/en/press.html', name: 'press' },
   { path: '/en/challenge.html', name: 'challenge' }
 ];
 
