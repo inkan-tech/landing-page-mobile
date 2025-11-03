@@ -28,6 +28,57 @@ html(lang=$localeName)
     meta(name='twitter:description', content=$i18n.challenge.subtitle)
     meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
 
+    //- Structured Data (Schema.org JSON-LD)
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://sealf.ie/#{$localeName}/challenge.html#webpage",
+            "url": "https://sealf.ie/#{$localeName}/challenge.html",
+            "name": "#{$i18n.challenge.title} | #{$i18n.title}",
+            "description": "#{$i18n.challenge.subtitle}",
+            "inLanguage": "#{$localeName}",
+            "isPartOf": {
+              "@id": "https://sealf.ie/#website"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://sealf.ie/#security-challenge",
+            "serviceType": "Security Assessment",
+            "name": "Free Security Challenge",
+            "description": "#{$i18n.challenge.subtitle}",
+            "provider": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "areaServed": "Worldwide",
+            "availableLanguage": ["English", "French"],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://sealf.ie/#{$localeName}/challenge.html"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Security Challenge Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "30-Minute Fraud Protection Assessment"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 

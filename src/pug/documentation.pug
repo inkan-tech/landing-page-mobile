@@ -28,6 +28,53 @@ html(lang=$localeName)
     meta(name='twitter:description', content=$i18n.documentation.meta.description)
     meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
 
+    //- Structured Data (Schema.org JSON-LD)
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://sealf.ie/#{$localeName}/documentation.html#webpage",
+            "url": "https://sealf.ie/#{$localeName}/documentation.html",
+            "name": "#{$i18n.banner.docs} | #{$i18n.title}",
+            "description": "#{$i18n.documentation.meta.description}",
+            "inLanguage": "#{$localeName}",
+            "isPartOf": {
+              "@id": "https://sealf.ie/#website"
+            }
+          },
+          {
+            "@type": "HowTo",
+            "@id": "https://sealf.ie/#{$localeName}/documentation.html#howto",
+            "name": "How to protect your business from executive fraud with Sealfie",
+            "description": "#{$i18n.documentation.meta.description}",
+            "image": "https://sealf.ie/assets/img/sealfie-og-image.jpg",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "name": "Download Sealfie",
+                "text": "Install Sealfie app from App Store or Google Play",
+                "url": "https://sealf.ie/#{$localeName}/documentation.html#download"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Create your secure profile",
+                "text": "Set up biometric verification with a simple selfie",
+                "url": "https://sealf.ie/#{$localeName}/documentation.html#setup"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Start protecting critical communications",
+                "text": "Use Sealfie to verify executive identities and prevent fraud",
+                "url": "https://sealf.ie/#{$localeName}/documentation.html#protect"
+              }
+            ],
+            "totalTime": "PT5M"
+          }
+        ]
+      }
+
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 

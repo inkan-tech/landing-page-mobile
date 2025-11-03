@@ -193,6 +193,22 @@
         "techno": {
             "title": "Technologie deeptech",
             "text": "Nous effectuons automatiquement des vérifications techniques multi-sources pour chaque transaction, au moment critique. Nous étudions et ajoutons des sources de vérification sur simple demande."
+        },
+        "faq": {
+            "title": "Questions fréquentes",
+            "subtitle": "Questions courantes sur les tarifs et le déploiement de Sealfie",
+            "q1": {
+                "question": "En combien de temps pouvons-nous déployer Sealfie?",
+                "answer": "La plupart des organisations sont pleinement opérationnelles en 30 minutes. Notre processus simplifié nécessite une intégration IT minimale, vous pouvez donc commencer à protéger vos dirigeants immédiatement sans périodes de configuration longues ou complexes."
+            },
+            "q2": {
+                "question": "Que se passe-t-il si nous avons besoin de plus de 20 validations par an?",
+                "answer": "Notre forfait standard inclut 20 validations annuelles, couvrant les besoins typiques de communication des dirigeants. Pour des volumes plus élevés, nous proposons une tarification personnalisée flexible adaptée à vos besoins. Contactez-nous pour un devis personnalisé basé sur votre fréquence de validation."
+            },
+            "q3": {
+                "question": "Pouvons-nous passer du plan Simple à Entreprise plus tard?",
+                "answer": "Absolument. Notre plateforme est conçue pour une expansion transparente. Commencez avec une protection simplifiée et passez à l'offre supérieure à tout moment. Les fonctionnalités Entreprise incluent processus sur mesure, sources de validation multiples, intégration IT complète et support prioritaire avec gestion de compte dédiée."
+            }
         }
     },
     "description": {
@@ -600,7 +616,7 @@
     },
     "challenge": {
         "title": "Challenge gratuit de sécurité",
-        "subtitle": "Testez la résilience de votre protection actuelle",
+        "subtitle": "Mettez votre protection anti-fraude à l'épreuve. Challenge gratuit de 30 min révèle les failles de vos défenses. Êtes-vous vraiment protégé?",
         "masthead": {
             "title": "Votre protection est-elle vraiment efficace ?",
             "subtitle": "La majorité des entreprises ont une fausse impression de sécurité. Découvrez la vérité sur votre niveau de protection en 30 minutes.",

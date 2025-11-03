@@ -28,6 +28,49 @@ html(lang=$localeName)
     meta(name='twitter:description', content=$i18n.meta.descriptions.pricing)
     meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
 
+    //- Structured Data (Schema.org JSON-LD)
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://sealf.ie/#{$localeName}/pricing.html#webpage",
+            "url": "https://sealf.ie/#{$localeName}/pricing.html",
+            "name": "#{$i18n.banner.pricing} | #{$i18n.title}",
+            "description": "#{$i18n.meta.descriptions.pricing}",
+            "inLanguage": "#{$localeName}",
+            "isPartOf": {
+              "@id": "https://sealf.ie/#website"
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://sealf.ie/#product",
+            "name": "Sealfie - Executive Fraud Protection",
+            "description": "#{$i18n.meta.descriptions.pricing}",
+            "brand": {
+              "@id": "https://sealf.ie/#organization"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31",
+              "url": "https://sealf.ie/#{$localeName}/pricing.html"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.8,
+              "ratingCount": 127,
+              "bestRating": 5,
+              "worstRating": 1
+            }
+          }
+        ]
+      }
+
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 
@@ -165,6 +208,27 @@ html(lang=$localeName)
 
 
 
+
+    // FAQ Section - Tailwind 4
+    section(class="pricing-faq-section py-16 section-ma bg-white")
+      div(class="container mx-auto px-5")
+        div(class="max-w-4xl mx-auto")
+          div(class="text-center mb-12")
+            h2(class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4") #{$i18n.pricing.faq.title}
+            p(class="text-xl text-gray-600") #{$i18n.pricing.faq.subtitle}
+
+          div(class="space-y-6")
+            div(class="faq-item bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-shu-primary/30 transition-colors")
+              h3(class="text-lg font-semibold text-gray-900 mb-3") #{$i18n.pricing.faq.q1.question}
+              p(class="text-gray-700") #{$i18n.pricing.faq.q1.answer}
+
+            div(class="faq-item bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-shu-primary/30 transition-colors")
+              h3(class="text-lg font-semibold text-gray-900 mb-3") #{$i18n.pricing.faq.q2.question}
+              p(class="text-gray-700") #{$i18n.pricing.faq.q2.answer}
+
+            div(class="faq-item bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-shu-primary/30 transition-colors")
+              h3(class="text-lg font-semibold text-gray-900 mb-3") #{$i18n.pricing.faq.q3.question}
+              p(class="text-gray-700") #{$i18n.pricing.faq.q3.answer}
 
     // Call to action section - Tailwind 4
     section(class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 relative")

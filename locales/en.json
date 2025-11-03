@@ -193,6 +193,22 @@
         "techno": {
             "title": "Advanced technology",
             "text": "We dynamically perform multi-source technical verifications in real-time. Expanding verification sources is simple and seamless."
+        },
+        "faq": {
+            "title": "Frequently asked questions",
+            "subtitle": "Common questions about Sealfie pricing and deployment",
+            "q1": {
+                "question": "How quickly can we deploy Sealfie?",
+                "answer": "Most organizations are fully operational within 30 minutes. Our simplified process requires minimal IT integration, so you can start protecting executives immediately without lengthy setup periods or complex configurations."
+            },
+            "q2": {
+                "question": "What happens if we need more than 20 validations per year?",
+                "answer": "Our standard plan includes 20 validations annually, which covers typical executive communication needs. For higher volumes, we offer flexible custom pricing that scales with your requirements. Contact us for a personalized quote based on your validation frequency."
+            },
+            "q3": {
+                "question": "Can we upgrade from Simple to Enterprise later?",
+                "answer": "Absolutely. Our platform is designed for seamless expansion. Start with simplified protection and upgrade anytime as your needs grow. Enterprise features include tailored processes, multiple validation sources, full IT integration, and priority support with dedicated account management."
+            }
         }
     },
     "description": {
@@ -600,7 +616,7 @@
     },
     "challenge": {
         "title": "Free security challenge",
-        "subtitle": "Test the resilience of your current protection",
+        "subtitle": "Put your fraud protection to the test. Free 30-minute security challenge reveals gaps in your business defenses. Discover if you're really protected.",
         "masthead": {
             "title": "Is your protection really effective?",
             "subtitle": "Most companies have a false sense of security. Discover the truth about your protection level in 30 minutes.",

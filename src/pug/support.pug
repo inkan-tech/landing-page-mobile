@@ -28,6 +28,34 @@ html(lang=$localeName)
     meta(name='twitter:description', content=$i18n.meta.descriptions.support)
     meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
 
+    //- Structured Data (Schema.org JSON-LD)
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://sealf.ie/#{$localeName}/support.html#webpage",
+            "url": "https://sealf.ie/#{$localeName}/support.html",
+            "name": "#{$i18n.footer.navigation.support.title} | #{$i18n.title}",
+            "description": "#{$i18n.meta.descriptions.support}",
+            "inLanguage": "#{$localeName}",
+            "isPartOf": {
+              "@id": "https://sealf.ie/#website"
+            }
+          },
+          {
+            "@type": "ContactPage",
+            "@id": "https://sealf.ie/#{$localeName}/support.html#contact",
+            "name": "Sealfie Support Center",
+            "description": "#{$i18n.meta.descriptions.support}",
+            "provider": {
+              "@id": "https://sealf.ie/#organization"
+            }
+          }
+        ]
+      }
+
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 
