@@ -59,3 +59,23 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # IndexNow notification job - Notify search engines of content updates
+  indexnow:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Notify Bing via IndexNow
+        run: |
+          curl -X GET "https://www.bing.com/indexnow?url=https://sealf.ie/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}"
+          echo "✅ Bing notified via IndexNow"
+
+      - name: Notify Yandex via IndexNow
+        run: |
+          curl -X GET "https://yandex.com/indexnow?url=https://sealf.ie/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}"
+          echo "✅ Yandex notified via IndexNow"
+
+      - name: Notify IndexNow.org
+        run: |
+          curl -X GET "https://api.indexnow.org/indexnow?url=https://sealf.ie/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}"
+          echo "✅ IndexNow.org notified"
