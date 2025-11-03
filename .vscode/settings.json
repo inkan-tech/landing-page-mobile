@@ -4,7 +4,7 @@
     "playwright.reuseBrowser": false,
     "playwright.testDir": "./tests",
     "playwright.configFile": "playwright.config.js",
-    "CodeGPT.apiKey": "Claude Code",
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "codeQL.createQuery.qlPackLocation": "/Users/nicolasthomas/inkan/landing-page-mobile",
     "vcpkg.target.defaultTriplet": "arm64-osx",
     "vcpkg.target.hostTriplet": "-osx",

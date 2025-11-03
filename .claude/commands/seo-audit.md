@@ -13,10 +13,15 @@
     </automated-auditing>
 
     <ahrefs-browsermcp>
-      <description>Use Playwright browser automation to navigate Ahrefs and extract comprehensive SEO issues</description>
+      <description>⚠️ ALWAYS use BrowserMCP to navigate Ahrefs and extract comprehensive SEO issues. BrowserMCP controls your actual Chrome browser with the Ahrefs session already logged in.</description>
+      <setup>
+        <requirement>BrowserMCP package: @browsermcp/mcp@latest</requirement>
+        <requirement>Chrome extension installed from https://docs.browsermcp.io/setup-server</requirement>
+        <requirement>VS Code MCP server must be running (restart with: MCP: Restart All Servers)</requirement>
+      </setup>
       <workflow>
-        <step>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</step>
-        <step>mcp__playwright__browser_snapshot()</step>
+        <step>mcp__browsermcp__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</step>
+        <step>mcp__browsermcp__browser_snapshot()</step>
         <step>Navigate to specific issue category</step>
       </workflow>
       <categories>
@@ -43,12 +48,13 @@
         <command>Read reports/seo/summary.json</command>
       </option>
       <option name="ahrefs" type="browsermcp">
+        <note>⚠️ Use BrowserMCP (not Playwright MCP) - it controls your actual Chrome browser where you're already logged into Ahrefs</note>
         <actions>
-          <action>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</action>
-          <action>mcp__playwright__browser_snapshot()</action>
-          <action>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index/indexability" })</action>
-          <action>mcp__playwright__browser_click({ element: "issue name", ref: "[from snapshot]" })</action>
-          <action>mcp__playwright__browser_snapshot()</action>
+          <action>mcp__browsermcp__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</action>
+          <action>mcp__browsermcp__browser_snapshot()</action>
+          <action>mcp__browsermcp__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index/indexability" })</action>
+          <action>mcp__browsermcp__browser_click({ element: "issue name", ref: "[from snapshot]" })</action>
+          <action>mcp__browsermcp__browser_snapshot()</action>
         </actions>
       </option>
     </step>

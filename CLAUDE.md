@@ -297,6 +297,48 @@ Task(
 #### **After Deploying Changes:**
 1. ✅ **Re-Audit**: Run `npm run seo:audit` on production
 2. ✅ **Compare Scores**: Check improvement in Lighthouse scores
+3. ✅ **Check Ahrefs**: Use BrowserMCP to access Ahrefs Site Audit dashboard
+
+### **Accessing Ahrefs Site Audit with BrowserMCP**
+
+**⚠️ IMPORTANT:** Always use BrowserMCP to access and review Ahrefs Site Audit data.
+
+**Ahrefs Project URL:** https://app.ahrefs.com/site-audit/22469918/index
+
+**Required MCP Setup:**
+1. Ensure BrowserMCP is configured in VS Code MCP settings
+2. BrowserMCP package: `@browsermcp/mcp@latest`
+3. Chrome extension must be installed from https://docs.browsermcp.io/setup-server
+
+**Usage in SEO Audits:**
+```javascript
+// Navigate to Ahrefs dashboard
+mcp__browsermcp__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// Take snapshot of dashboard
+mcp__browsermcp__browser_snapshot()
+
+// Navigate to specific issue category
+mcp__browsermcp__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index/indexability"
+})
+
+// Click on specific issue
+mcp__browsermcp__browser_click({
+  element: "issue name",
+  ref: "[from snapshot]"
+})
+```
+
+**Common Ahrefs Issue Categories:**
+- `/index/indexability` - Indexability issues (canonical, duplicates, crawl errors)
+- `/index/content-quality` - Content quality issues (thin content, duplicate content)
+- `/index/structured-data` - Structured data issues (Schema.org errors)
+- `/index/localization` - Localization issues (hreflang, language tags)
+- `/index/performance` - Performance issues (page speed, Core Web Vitals)
+- `/index/links` - Link issues (broken links, redirect chains)
 3. ✅ **Verify Tests**: Ensure all SEO tests pass
 4. ✅ **Monitor**: Schedule weekly audits to catch regressions
 
