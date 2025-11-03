@@ -11,9 +11,9 @@ html(lang=$localeName)
 
     //- Page-specific canonical and alternate links
     //- Each locale points to its own canonical URL to avoid hreflang conflicts
-    //- Root domain (/) serves as x-default and redirects to /en/
+    //- x-default points to English (primary language) canonical URL
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/')
-    link(rel='alternate', hreflang='x-default', href='https://sealf.ie/')
+    link(rel='alternate', hreflang='x-default', href='https://sealf.ie/en/')
     link(rel='alternate', hreflang='en', href='https://sealf.ie/en/')
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/')
 
