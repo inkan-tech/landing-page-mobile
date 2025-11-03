@@ -43,6 +43,7 @@
                 "title": "Support",
                 "links": {
                     "help": "Centre d'Aide",
+                    "gettingStarted": "Premiers pas",
                     "documentation": "Documentation",
                     "privacy": "Politique de Confidentialité",
                     "terms": "Conditions d'Utilisation"
@@ -247,7 +248,7 @@
                 "subtitle": "137K€ moyenne par incident",
                 "description": "Le FBI rapporte 2,9 milliards € de pertes BEC aux États-Unis en 2024, avec un coût moyen par incident de 137 000€",
                 "image": "/assets/img/carousel/fbi-losses-report-fr.svg",
-                "url": "https://www.ic3.gov/Media/PDF/AnnualReports.aspx",
+                "url": "https://www.ic3.gov/AnnualReport/Reports",
                 "source": "FBI Internet Crime Reports"
             },
             "realCase": {
@@ -256,7 +257,7 @@
                 "subtitle": "Attaque SilverTerrier nigériane",
                 "description": "Une grande compagnie aérienne perd six chiffres suite à une attaque sophistiquée du groupe nigérian SilverTerrier utilisant des deepfakes de PDG",
                 "image": "/assets/img/carousel/aviation-attack-case-fr.svg",
-                "url": "https://www.crowdstrike.com/resources/reports/",
+                "url": "https://www.crowdstrike.com/en-us/resources/reports/",
                 "source": "CrowdStrike Threat Reports"
             },
             "smallBusiness": {
@@ -265,7 +266,7 @@
                 "subtitle": "Entreprises <1000 employés",
                 "description": "Les PME font face à 70% de probabilité d'attaque BEC chaque semaine, avec des ressources sécurité limitées pour se défendre",
                 "image": "/assets/img/carousel/small-business-targets-fr.svg",
-                "url": "https://www.proofpoint.com/us/resources/threat-reports",
+                "url": "https://www.proofpoint.com/us/resources/proofpoint-research",
                 "source": "Proofpoint Threat Research"
             },
             "multiChannel": {

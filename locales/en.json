@@ -43,6 +43,7 @@
                 "title": "Support",
                 "links": {
                     "help": "Help Center",
+                    "gettingStarted": "Getting started",
                     "documentation": "Documentation",
                     "privacy": "Privacy Policy",
                     "terms": "Terms of Service"
@@ -247,7 +248,7 @@
                 "subtitle": "$137K average per incident",
                 "description": "FBI reports $2.9 billion in US BEC losses for 2024, with average incident cost rising to $137,000",
                 "image": "/assets/img/carousel/fbi-losses-report.svg",
-                "url": "https://www.ic3.gov/Media/PDF/AnnualReports.aspx",
+                "url": "https://www.ic3.gov/AnnualReport/Reports",
                 "source": "FBI Internet Crime Reports"
             },
             "realCase": {
@@ -256,7 +257,7 @@
                 "subtitle": "Nigerian SilverTerrier attack",
                 "description": "Major aviation company loses six figures to sophisticated Nigerian SilverTerrier group using deepfake CEO calls",
                 "image": "/assets/img/carousel/aviation-attack-case.svg",
-                "url": "https://www.crowdstrike.com/resources/reports/",
+                "url": "https://www.crowdstrike.com/en-us/resources/reports/",
                 "source": "CrowdStrike Threat Reports"
             },
             "smallBusiness": {
@@ -265,7 +266,7 @@
                 "subtitle": "Companies <1000 employees",
                 "description": "Small businesses face 70% probability of BEC attack weekly, with limited security resources to defend",
                 "image": "/assets/img/carousel/small-business-targets.svg",
-                "url": "https://www.proofpoint.com/us/resources/threat-reports",
+                "url": "https://www.proofpoint.com/us/resources/proofpoint-research",
                 "source": "Proofpoint Threat Research"
             },
             "multiChannel": {

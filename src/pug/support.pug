@@ -11,6 +11,23 @@ html(lang=$localeName)
     
     //- Page-specific canonical link
     link(rel='canonical', href='https://sealf.ie/'+$localeName+'/support.html')
+
+    //- Open Graph meta tags for social sharing
+    meta(property='og:title', content=$i18n.footer.navigation.support.title + ' | ' + $i18n.title)
+    meta(property='og:description', content=$i18n.meta.descriptions.support)
+    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:url', content='https://sealf.ie/'+$localeName+'/support.html')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content='Sealfie')
+    meta(property='og:locale', content=$localeName == 'en' ? 'en_US' : 'fr_FR')
+
+    //- Twitter Card meta tags
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@sealfieapp')
+    meta(name='twitter:title', content=$i18n.footer.navigation.support.title + ' | ' + $i18n.title)
+    meta(name='twitter:description', content=$i18n.meta.descriptions.support)
+    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
+
     script(id="mcjs")
         include ../js/mailchimp-popup.js
 
