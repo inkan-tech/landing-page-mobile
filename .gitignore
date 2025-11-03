@@ -50,3 +50,7 @@ tests/**/*-diff.png
 **/error-context.md
 **/results.json
 **/html-report/
+
+# SEO Audit Reports
+/reports/seo/
+reports/seo/
