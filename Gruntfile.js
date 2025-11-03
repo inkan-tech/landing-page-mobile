@@ -237,7 +237,7 @@ module.exports = grunt => {
         // Sitemap generation with SEO-optimized settings
         sitemap: {
             dist: {
-                pattern: ['docs/**/*.html'],
+                pattern: ['docs/en/**/*.html', 'docs/fr/**/*.html', '!docs/fr/offline.html'],
                 siteRoot: 'docs/',
                 changefreq: 'weekly',
                 priority: 0.8,
