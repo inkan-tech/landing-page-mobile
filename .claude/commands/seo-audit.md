@@ -1,112 +1,88 @@
-# SEO Audit and Optimization Command
+<command name="seo-audit">
+  <role>SEO expert specializing in technical SEO audits and optimization for the Sealfie landing page</role>
+  <mission>Run comprehensive SEO audits using Lighthouse, triage issues by priority, implement fixes following Japanese design principles, and create Playwright tests to prevent regressions</mission>
 
-You are an SEO expert specializing in technical SEO audits and optimization for the Sealfie landing page.
+  <tools>
+    <automated-auditing>
+      <tool name="lighthouse-audit" command="npm run seo:audit">Run full production audit</tool>
+      <tool name="local-audit" command="npm run seo:audit:local">Audit development build</tool>
+      <tool name="issue-triage" command="npm run seo:triage">Categorize and prioritize issues</tool>
+      <tool name="test-generation" command="npm run seo:triage:tests">Generate Playwright tests</tool>
+      <tool name="seo-test-suite" command="npm run test:seo">Validate all SEO requirements</tool>
+      <tool name="full-workflow" command="npm run seo:full">Complete audit → triage → test cycle</tool>
+    </automated-auditing>
 
-## Your Mission
+    <ahrefs-browsermcp>
+      <description>Use Playwright browser automation to navigate Ahrefs and extract comprehensive SEO issues</description>
+      <workflow>
+        <step>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</step>
+        <step>mcp__playwright__browser_snapshot()</step>
+        <step>Navigate to specific issue category</step>
+      </workflow>
+      <categories>
+        <category path="/index/indexability">Indexability issues</category>
+        <category path="/index/content-quality">Content Quality issues</category>
+        <category path="/index/structured-data">Structured Data issues</category>
+        <category path="/index/localization">Localization issues</category>
+      </categories>
+      <use-cases>
+        <use-case>Comprehensive site crawl data</use-case>
+        <use-case>Duplicate content detection</use-case>
+        <use-case>Redirect chain analysis</use-case>
+        <use-case>Orphan page identification</use-case>
+        <use-case>Backlink analysis</use-case>
+        <use-case>Competitor insights</use-case>
+      </use-cases>
+    </ahrefs-browsermcp>
+  </tools>
 
-Run comprehensive SEO audits using Lighthouse, triage issues by priority, implement fixes following Japanese design principles, and create Playwright tests to prevent regressions.
+  <workflow>
+    <step name="initial-audit" order="1">
+      <option name="lighthouse" type="automated">
+        <command>npm run seo:audit</command>
+        <command>Read reports/seo/summary.json</command>
+      </option>
+      <option name="ahrefs" type="browsermcp">
+        <actions>
+          <action>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index" })</action>
+          <action>mcp__playwright__browser_snapshot()</action>
+          <action>mcp__playwright__browser_navigate({ url: "https://app.ahrefs.com/site-audit/22469918/index/indexability" })</action>
+          <action>mcp__playwright__browser_click({ element: "issue name", ref: "[from snapshot]" })</action>
+          <action>mcp__playwright__browser_snapshot()</action>
+        </actions>
+      </option>
+    </step>
 
-## Available Tools
+    <step name="triage-issues" order="2">
+      <lighthouse-triage>
+        <command>npm run seo:triage</command>
+        <command>Read reports/seo/triage-report.json</command>
+      </lighthouse-triage>
+      <ahrefs-triage>
+        <task>Review snapshot data to identify affected pages</task>
+        <task>Categorize by priority based on issue severity</task>
+        <task>Document issue details and page URLs</task>
+      </ahrefs-triage>
+    </step>
 
-### Automated Auditing
-1. **Lighthouse Audit**: `npm run seo:audit` - Run full production audit
-2. **Local Audit**: `npm run seo:audit:local` - Audit development build
-3. **Issue Triage**: `npm run seo:triage` - Categorize and prioritize issues
-4. **Test Generation**: `npm run seo:triage:tests` - Generate Playwright tests
-5. **SEO Test Suite**: `npm run test:seo` - Validate all SEO requirements
-6. **Full Workflow**: `npm run seo:full` - Complete audit → triage → test cycle
+    <step name="fix-issues" order="3">
+      <priorities>
+        <priority level="P0" severity="critical">Fix immediately (missing titles, meta descriptions)</priority>
+        <priority level="P1" severity="high">Fix soon (broken links, missing alt text, structured data)</priority>
+        <priority level="P2" severity="medium">Optimize (Open Graph, Twitter Cards, preloads)</priority>
+        <priority level="P3" severity="low">Nice-to-have (HTTP/2, additional optimizations)</priority>
+      </priorities>
+    </step>
 
-### Ahrefs Site Audit (via BrowserMCP)
-Use Playwright browser automation to navigate Ahrefs and extract comprehensive SEO issues:
-
-```javascript
-// Navigate to Ahrefs Site Audit
-mcp__playwright__browser_navigate({
-  url: "https://app.ahrefs.com/site-audit/22469918/index"
-})
-
-// Take snapshot to see issues overview
-mcp__playwright__browser_snapshot()
-
-// Navigate to specific issue category
-// - Indexability: /index/indexability
-// - Content Quality: /index/content-quality
-// - Structured Data: /index/structured-data
-// - Localization: /index/localization
-```
-
-**Use Ahrefs for:**
-- Comprehensive site crawl data
-- Duplicate content detection
-- Redirect chain analysis
-- Orphan page identification
-- Backlink analysis
-- Competitor insights
-
-## Workflow Steps
-
-### 1. Initial Audit
-
-#### Option A: Lighthouse (Automated)
-```bash
-# Run Lighthouse on production
-npm run seo:audit
-
-# Check summary report
-Read reports/seo/summary.json
-```
-
-#### Option B: Ahrefs (Comprehensive via BrowserMCP)
-```javascript
-// 1. Navigate to Ahrefs dashboard
-mcp__playwright__browser_navigate({
-  url: "https://app.ahrefs.com/site-audit/22469918/index"
-})
-
-// 2. Take snapshot of issues overview
-mcp__playwright__browser_snapshot()
-
-// 3. Navigate to priority issues (e.g., Indexability)
-mcp__playwright__browser_navigate({
-  url: "https://app.ahrefs.com/site-audit/22469918/index/indexability"
-})
-
-// 4. Click on specific issue to see affected pages
-mcp__playwright__browser_click({
-  element: "issue name",
-  ref: "[from snapshot]"
-})
-
-// 5. Extract affected URLs
-mcp__playwright__browser_snapshot()
-```
-
-### 2. Triage Issues
-
-#### From Lighthouse
-```bash
-# Analyze and prioritize
-npm run seo:triage
-
-# Review prioritized issues
-Read reports/seo/triage-report.json
-```
-
-#### From Ahrefs
-- Review snapshot data to identify affected pages
-- Categorize by priority based on issue severity
-- Document issue details and page URLs
-
-### 3. Fix Issues (Priority Order)
-- **P0 (Critical)**: Fix immediately (missing titles, meta descriptions)
-- **P1 (High)**: Fix soon (broken links, missing alt text, structured data)
-- **P2 (Medium)**: Optimize (Open Graph, Twitter Cards, preloads)
-- **P3 (Low)**: Nice-to-have (HTTP/2, additional optimizations)
-
-### 4. Implementation Requirements
-
-#### MUST Follow Japanese Design System
-```pug
+    <step name="implementation-requirements" order="4">
+      <design-system>
+        <requirement type="i18n">No hardcoded text - use #{$i18n.*} variables</requirement>
+        <requirement type="title-case">Sentence case: "How it works" NOT "How It Works"</requirement>
+        <requirement type="section-titles">Use &lt;span&gt; wrapper for Japanese border styling</requirement>
+        <requirement type="colors">Use var(--shu-primary), var(--enji-secondary), etc.</requirement>
+      </design-system>
+      <example language="pug">
+        <![CDATA[
 // ✅ CORRECT - i18n compliant with Japanese theme
 head
   title #{$i18n.page.title} | #{$i18n.title}
@@ -114,36 +90,26 @@ head
   link(rel='canonical', href=`https://sealf.ie/${locale}/page.html`)
 
 // Update locales/en.json and locales/fr.json
-```
+        ]]>
+      </example>
+    </step>
 
-#### Content Requirements
-- **Sentence case titles**: "How it works" NOT "How It Works"
-- **i18n compliance**: No hardcoded text - use `#{$i18n.*}` variables
-- **Section titles**: Use `<span>` wrapper for Japanese border styling
-- **Japanese colors**: Use `var(--shu-primary)`, `var(--enji-secondary)`, etc.
+    <step name="generate-tests" order="5">
+      <command>npm run seo:triage:tests</command>
+      <command>npm run test:seo</command>
+    </step>
 
-### 5. Generate Tests
-```bash
-# Create Playwright tests for fixes
-npm run seo:triage:tests
+    <step name="validate-fixes" order="6">
+      <command>npm run seo:audit:local</command>
+      <task>Compare scores</task>
+      <task>Check reports/seo/summary.json for improvements</task>
+    </step>
+  </workflow>
 
-# Run SEO test suite
-npm run test:seo
-```
-
-### 6. Validate Fixes
-```bash
-# Re-audit after fixes
-npm run seo:audit:local
-
-# Compare scores
-# Check reports/seo/summary.json for improvements
-```
-
-## Common SEO Issues and Fixes
-
-### Missing Meta Description
-```pug
+  <common-issues>
+    <issue name="missing-meta-description">
+      <fix language="pug">
+        <![CDATA[
 // src/pug/page.pug
 head
   meta(name='description', content=`#{$i18n.page.meta.description}`)
@@ -156,26 +122,35 @@ head
     }
   }
 }
-```
+        ]]>
+      </fix>
+    </issue>
 
-### Missing Canonical URL
-```pug
+    <issue name="missing-canonical-url">
+      <fix language="pug">
+        <![CDATA[
 // src/pug/includes/head.pug
 link(rel="canonical" href=`https://sealf.ie/${locale}/page.html`)
-```
+        ]]>
+      </fix>
+    </issue>
 
-### Missing Alt Text
-```pug
+    <issue name="missing-alt-text">
+      <fix language="pug">
+        <![CDATA[
 // ✅ CORRECT
 img(src="/assets/img/feature.png"
     alt="Descriptive alt text explaining the image content")
 
 // ❌ WRONG
 img(src="/assets/img/feature.png")
-```
+        ]]>
+      </fix>
+    </issue>
 
-### Missing Structured Data
-```pug
+    <issue name="missing-structured-data">
+      <fix language="pug">
+        <![CDATA[
 // Add Schema.org JSON-LD
 script(type='application/ld+json').
   {
@@ -185,35 +160,34 @@ script(type='application/ld+json').
     "description": "#{$i18n.page.meta.description}",
     "url": "https://sealf.ie/en/page.html"
   }
-```
+        ]]>
+      </fix>
+    </issue>
+  </common-issues>
 
-## Success Criteria
+  <success-criteria>
+    <lighthouse-scores>
+      <score metric="performance" target="≥ 90" />
+      <score metric="accessibility" target="≥ 95" />
+      <score metric="best-practices" target="≥ 95" />
+      <score metric="seo" target="100" />
+    </lighthouse-scores>
 
-### Lighthouse Score Targets
-- **Performance**: ≥ 90
-- **Accessibility**: ≥ 95
-- **Best Practices**: ≥ 95
-- **SEO**: 100
+    <requirements>
+      <requirement>Meta tags present on all pages</requirement>
+      <requirement>Structured data valid and complete</requirement>
+      <requirement>All images have alt text</requirement>
+      <requirement>Mobile-friendly (viewport configured)</requirement>
+      <requirement>No broken links or 404 errors</requirement>
+      <requirement>Proper heading hierarchy (H1 > H2 > H3)</requirement>
+    </requirements>
+  </success-criteria>
 
-### Must Pass All Tests
-- Meta tags present on all pages
-- Structured data valid and complete
-- All images have alt text
-- Mobile-friendly (viewport configured)
-- No broken links or 404 errors
-- Proper heading hierarchy (H1 > H2 > H3)
-
-## Report Format
-
-After completing the audit and fixes, provide:
-
-1. **Issues Found**: Summary by priority (P0-P3)
-2. **Fixes Applied**: What was changed and why
-3. **Score Improvements**: Before/after Lighthouse scores
-4. **Tests Created**: New Playwright tests generated
-5. **Remaining Issues**: Any unresolved problems with recommendations
-
-## Example Usage
-
-```
-User: /seo-audit
+  <report-format>
+    <section name="issues-found">Summary by priority (P0-P3)</section>
+    <section name="fixes-applied">What was changed and why</section>
+    <section name="score-improvements">Before/after Lighthouse scores</section>
+    <section name="tests-created">New Playwright tests generated</section>
+    <section name="remaining-issues">Any unresolved problems with recommendations</section>
+  </report-format>
+</command>
