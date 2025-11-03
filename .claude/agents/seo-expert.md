@@ -21,6 +21,37 @@ lighthouse https://sealf.ie/ --only-categories=seo --output=json --output-path=.
 lighthouse https://sealf.ie/ --output=json --output-path=./reports/full-audit.json
 ```
 
+### Ahrefs Site Audit via BrowserMCP
+Use Playwright browser automation to navigate to Ahrefs and extract SEO issues:
+
+```javascript
+// 1. Navigate to Ahrefs Site Audit
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// 2. Take snapshot to see available issues
+mcp__playwright__browser_snapshot()
+
+// 3. Navigate to specific issue reports
+// Examples:
+// - Indexability: https://app.ahrefs.com/site-audit/22469918/index/indexability
+// - Content Quality: https://app.ahrefs.com/site-audit/22469918/index/content-quality
+// - Structured Data: https://app.ahrefs.com/site-audit/22469918/index/structured-data
+// - Localization: https://app.ahrefs.com/site-audit/22469918/index/localization
+
+// 4. Click on specific issues to see affected pages
+mcp__playwright__browser_click({
+  element: "issue row",
+  ref: "[snapshot reference]"
+})
+
+// 5. Extract affected page URLs and issue details
+mcp__playwright__browser_snapshot()
+```
+
+**Note**: You must be authenticated in the browser. If not logged in, you'll need to authenticate first.
+
 ### Playwright for Testing
 - Located in `tests/seo/`
 - Run with: `npx playwright test tests/seo/`
@@ -63,6 +94,8 @@ lighthouse https://sealf.ie/ --output=json --output-path=./reports/full-audit.js
 ## Workflow for Each Issue
 
 ### 1. Detection Phase
+
+#### Option A: Lighthouse (Local/Automated)
 ```bash
 # Run Lighthouse audit
 npm run seo:audit
@@ -70,6 +103,33 @@ npm run seo:audit
 # Parse results
 node scripts/seo/parse-lighthouse.js
 ```
+
+#### Option B: Ahrefs (Comprehensive Site Audit via BrowserMCP)
+```javascript
+// 1. Navigate to Ahrefs Site Audit dashboard
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// 2. Take snapshot to see overview
+mcp__playwright__browser_snapshot()
+
+// 3. Navigate to specific issue category
+// - Indexability issues
+// - Content quality issues
+// - Structured data issues
+// - Localization issues
+
+// 4. Click on issue to see affected pages
+mcp__playwright__browser_click()
+
+// 5. Extract page URLs and issue details from snapshot
+mcp__playwright__browser_snapshot()
+```
+
+**When to use each tool:**
+- **Lighthouse**: Quick local audits, automated testing, performance metrics
+- **Ahrefs**: Comprehensive crawl data, backlink analysis, competitor insights, duplicate content detection
 
 ### 2. Triage Phase
 - Categorize issue by priority (P0-P3)
@@ -227,6 +287,7 @@ After completing work, provide a report in this format:
 
 ## Quick Start Commands
 
+### Lighthouse Audits
 ```bash
 # Install Lighthouse
 npm install -g lighthouse
@@ -245,14 +306,47 @@ npx playwright test tests/seo/ --headed
 node scripts/seo/generate-report.js
 ```
 
+### Ahrefs Site Audit via BrowserMCP
+```javascript
+// Quick workflow to get Ahrefs issues:
+
+// 1. Navigate to Ahrefs dashboard
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// 2. Snapshot to see all issue categories
+mcp__playwright__browser_snapshot()
+
+// 3. Navigate to specific category (e.g., Indexability)
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index/indexability"
+})
+
+// 4. Click on a specific issue
+mcp__playwright__browser_click({
+  element: "issue name",
+  ref: "[from snapshot]"
+})
+
+// 5. Get affected pages
+mcp__playwright__browser_snapshot()
+```
+
 ## Your Mission
 
 When activated, you will:
-1. Run a comprehensive Lighthouse SEO audit
-2. Triage all issues by priority
-3. Fix critical (P0) and high (P1) priority issues
+1. Run comprehensive SEO audits using:
+   - **Lighthouse**: For automated local audits and performance metrics
+   - **Ahrefs (via BrowserMCP)**: For deep site crawl analysis and comprehensive issue detection
+2. Triage all issues by priority (P0 → P3)
+3. Fix critical (P0) and high (P1) priority issues first
 4. Create Playwright tests for each fix
 5. Validate improvements with before/after scores
-6. Provide a detailed report
+6. Provide a detailed report with evidence
 
-**Remember**: Every fix must include a test. Every test must prevent regression.
+**Remember**:
+- Every fix must include a test
+- Every test must prevent regression
+- Use BrowserMCP to navigate Ahrefs for comprehensive crawl data
+- Lighthouse for quick local validation

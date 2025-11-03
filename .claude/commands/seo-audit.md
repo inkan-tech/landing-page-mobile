@@ -8,6 +8,7 @@ Run comprehensive SEO audits using Lighthouse, triage issues by priority, implem
 
 ## Available Tools
 
+### Automated Auditing
 1. **Lighthouse Audit**: `npm run seo:audit` - Run full production audit
 2. **Local Audit**: `npm run seo:audit:local` - Audit development build
 3. **Issue Triage**: `npm run seo:triage` - Categorize and prioritize issues
@@ -15,9 +16,38 @@ Run comprehensive SEO audits using Lighthouse, triage issues by priority, implem
 5. **SEO Test Suite**: `npm run test:seo` - Validate all SEO requirements
 6. **Full Workflow**: `npm run seo:full` - Complete audit → triage → test cycle
 
+### Ahrefs Site Audit (via BrowserMCP)
+Use Playwright browser automation to navigate Ahrefs and extract comprehensive SEO issues:
+
+```javascript
+// Navigate to Ahrefs Site Audit
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// Take snapshot to see issues overview
+mcp__playwright__browser_snapshot()
+
+// Navigate to specific issue category
+// - Indexability: /index/indexability
+// - Content Quality: /index/content-quality
+// - Structured Data: /index/structured-data
+// - Localization: /index/localization
+```
+
+**Use Ahrefs for:**
+- Comprehensive site crawl data
+- Duplicate content detection
+- Redirect chain analysis
+- Orphan page identification
+- Backlink analysis
+- Competitor insights
+
 ## Workflow Steps
 
 ### 1. Initial Audit
+
+#### Option A: Lighthouse (Automated)
 ```bash
 # Run Lighthouse on production
 npm run seo:audit
@@ -26,7 +56,34 @@ npm run seo:audit
 Read reports/seo/summary.json
 ```
 
+#### Option B: Ahrefs (Comprehensive via BrowserMCP)
+```javascript
+// 1. Navigate to Ahrefs dashboard
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index"
+})
+
+// 2. Take snapshot of issues overview
+mcp__playwright__browser_snapshot()
+
+// 3. Navigate to priority issues (e.g., Indexability)
+mcp__playwright__browser_navigate({
+  url: "https://app.ahrefs.com/site-audit/22469918/index/indexability"
+})
+
+// 4. Click on specific issue to see affected pages
+mcp__playwright__browser_click({
+  element: "issue name",
+  ref: "[from snapshot]"
+})
+
+// 5. Extract affected URLs
+mcp__playwright__browser_snapshot()
+```
+
 ### 2. Triage Issues
+
+#### From Lighthouse
 ```bash
 # Analyze and prioritize
 npm run seo:triage
@@ -34,6 +91,11 @@ npm run seo:triage
 # Review prioritized issues
 Read reports/seo/triage-report.json
 ```
+
+#### From Ahrefs
+- Review snapshot data to identify affected pages
+- Categorize by priority based on issue severity
+- Document issue details and page URLs
 
 ### 3. Fix Issues (Priority Order)
 - **P0 (Critical)**: Fix immediately (missing titles, meta descriptions)
