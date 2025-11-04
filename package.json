@@ -58,18 +58,17 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age.git"
     },
     "dependencies": {
-        "i18n": "0.15.1"
+        "i18n": "0.15.3"
     },
     "devDependencies": {
         "@playwright/test": "^1.54.2",
         "@tailwindcss/cli": "^4.1.12",
         "@tailwindcss/postcss": "^4.1.12",
         "autoprefixer": "10.4.21",
-        "browser-sync": "^3.0.4",
         "chokidar": "4.0.3",
         "chrome-launcher": "^1.2.1",
         "coffeescript": "2.7.0",
-        "concurrently": "9.2.0",
+        "concurrently": "9.2.1",
         "grunt": "1.6.1",
         "grunt-babel": "8.0.0",
         "grunt-browser-sync": "^2.2.0",
@@ -100,10 +99,7 @@
         "axios": "^1.11.0",
         "braces": "^3.0.3",
         "cross-spawn": "^7.0.6",
-        "nth-check": "^2.1.1",
-        "got": "^11.8.6",
-        "http-cache-semantics": "^4.1.1",
-        "semver-regex": "^4.0.5",
-        "serve-static": "^2.2.0"
+        "serve-static": "^1.16.2",
+        "send": "^0.19.1"
     }
 }
