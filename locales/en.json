@@ -209,6 +209,40 @@
                 "question": "Can we upgrade from Simple to Enterprise later?",
                 "answer": "Absolutely. Our platform is designed for seamless expansion. Start with simplified protection and upgrade anytime as your needs grow. Enterprise features include tailored processes, multiple validation sources, full IT integration, and priority support with dedicated account management."
             }
+        },
+        "faqSchema": {
+            "q1": {
+                "question": "What is Sealfie?",
+                "answer": "Sealfie is a biometric authentication platform that prevents executive impersonation fraud. It verifies identities through selfies combined with advanced liveness detection, making it impossible for criminals to use deepfakes or stolen credentials to impersonate executives."
+            },
+            "q2": {
+                "question": "How does Sealfie prevent deepfake fraud?",
+                "answer": "Sealfie uses advanced liveness detection that analyzes biometric markers invisible to deepfake AI. It detects 3D facial geometry, micro-movements, and other biological factors that current deepfake technology cannot replicate. Each verification is recorded on blockchain for immutable proof."
+            },
+            "q3": {
+                "question": "What is Business Email Compromise (BEC)?",
+                "answer": "Business Email Compromise (BEC) is a cyberattack where criminals impersonate executives to authorize fraudulent wire transfers or credential changes. The FBI reports $5 billion in annual losses globally. Deepfake technology makes these attacks increasingly sophisticated and harder to detect with traditional training."
+            },
+            "q4": {
+                "question": "How long does Sealfie setup take?",
+                "answer": "Complete setup takes 30 minutes. Download the app, register executives, configure authentication policies. No technical integration required - Sealfie works with existing email and messaging platforms like Gmail, Outlook, Slack, Teams, and WhatsApp."
+            },
+            "q5": {
+                "question": "Is biometric data stored securely?",
+                "answer": "Yes. Biometric templates are encrypted end-to-end and stored using zero-knowledge architecture. Only mathematical representations (not photos) are stored. We cannot access your biometric data. Sealfie is SOC 2 Type II certified and GDPR compliant."
+            },
+            "q6": {
+                "question": "How much does Sealfie cost?",
+                "answer": "Plans start at $195 per person per year for executive fraud protection. Enterprise pricing available for teams of 10+ users. Free security challenge demo lets you test deepfake protection before purchase."
+            },
+            "q7": {
+                "question": "What platforms does Sealfie support?",
+                "answer": "Sealfie works across email (Gmail, Outlook), messaging (Slack, Teams, WhatsApp), and any communication platform. Recipients verify authenticity through a web link - no app installation required. Available on iOS and Android app stores."
+            },
+            "q8": {
+                "question": "How is Sealfie different from 2FA?",
+                "answer": "Traditional 2FA (SMS codes, authenticator apps) can be bypassed through social engineering and SIM swaps. Sealfie uses biometric verification tied to the actual person, creating physical proof that cannot be stolen or faked. It also provides blockchain-based audit trails for compliance."
+            }
         }
     },
     "description": {

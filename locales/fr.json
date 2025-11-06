@@ -209,6 +209,40 @@
                 "question": "Pouvons-nous passer du plan Simple à Entreprise plus tard?",
                 "answer": "Absolument. Notre plateforme est conçue pour une expansion transparente. Commencez avec une protection simplifiée et passez à l'offre supérieure à tout moment. Les fonctionnalités Entreprise incluent processus sur mesure, sources de validation multiples, intégration IT complète et support prioritaire avec gestion de compte dédiée."
             }
+        },
+        "faqSchema": {
+            "q1": {
+                "question": "Qu'est-ce que Sealfie?",
+                "answer": "Sealfie est une plateforme d'authentification biométrique qui prévient la fraude par usurpation d'identité des dirigeants. Elle vérifie les identités par selfies combinés à une détection de vivacité avancée, rendant impossible l'utilisation de deepfakes ou d'identifiants volés pour usurper l'identité des cadres."
+            },
+            "q2": {
+                "question": "Comment Sealfie prévient-il la fraude par deepfake?",
+                "answer": "Sealfie utilise une détection de vivacité avancée qui analyse des marqueurs biométriques invisibles pour l'IA de deepfake. Il détecte la géométrie faciale 3D, les micro-mouvements et d'autres facteurs biologiques que la technologie deepfake actuelle ne peut pas reproduire. Chaque vérification est enregistrée sur blockchain pour une preuve immuable."
+            },
+            "q3": {
+                "question": "Qu'est-ce que le Business Email Compromise (BEC)?",
+                "answer": "Le Business Email Compromise (BEC) est une cyberattaque où des criminels usurpent l'identité de dirigeants pour autoriser des virements frauduleux ou des changements d'identifiants. Le FBI rapporte 5 milliards de dollars de pertes annuelles mondiales. La technologie deepfake rend ces attaques de plus en plus sophistiquées et difficiles à détecter avec les formations traditionnelles."
+            },
+            "q4": {
+                "question": "Combien de temps prend la configuration de Sealfie?",
+                "answer": "La configuration complète prend 30 minutes. Téléchargez l'application, enregistrez les dirigeants, configurez les politiques d'authentification. Aucune intégration technique requise - Sealfie fonctionne avec les plateformes de messagerie existantes comme Gmail, Outlook, Slack, Teams et WhatsApp."
+            },
+            "q5": {
+                "question": "Les données biométriques sont-elles stockées en toute sécurité?",
+                "answer": "Oui. Les modèles biométriques sont chiffrés de bout en bout et stockés selon une architecture à connaissance nulle. Seules des représentations mathématiques (pas de photos) sont stockées. Nous ne pouvons pas accéder à vos données biométriques. Sealfie est certifié SOC 2 Type II et conforme au RGPD."
+            },
+            "q6": {
+                "question": "Combien coûte Sealfie?",
+                "answer": "Les forfaits commencent à 195$ par personne et par an pour la protection contre la fraude des dirigeants. Tarification entreprise disponible pour les équipes de 10+ utilisateurs. Une démo gratuite du défi de sécurité vous permet de tester la protection contre les deepfakes avant l'achat."
+            },
+            "q7": {
+                "question": "Quelles plateformes Sealfie supporte-t-il?",
+                "answer": "Sealfie fonctionne sur email (Gmail, Outlook), messagerie (Slack, Teams, WhatsApp) et toute plateforme de communication. Les destinataires vérifient l'authenticité via un lien web - aucune installation d'application requise. Disponible sur les boutiques iOS et Android."
+            },
+            "q8": {
+                "question": "En quoi Sealfie diffère-t-il de l'authentification à deux facteurs?",
+                "answer": "L'authentification à deux facteurs traditionnelle (codes SMS, applications d'authentification) peut être contournée par ingénierie sociale et échange de SIM. Sealfie utilise une vérification biométrique liée à la personne réelle, créant une preuve physique qui ne peut être volée ou falsifiée. Il fournit également des pistes d'audit basées sur blockchain pour la conformité."
+            }
         }
     },
     "description": {
