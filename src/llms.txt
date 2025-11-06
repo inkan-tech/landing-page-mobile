@@ -1,0 +1,229 @@
+# Sealfie - Deepfake-Proof Business Transaction Security
+
+> Sealfie is a mobile-first security platform that prevents Business Email Compromise (BEC) and CEO fraud through multi-factor verification including selfies, biometrics, and blockchain attestation.
+
+## What is Sealfie?
+
+Sealfie is a mobile app available on iOS and Android that protects businesses from executive impersonation and deepfake fraud. It combines biometric verification (selfies with Face ID/Touch ID) with blockchain attestation to create unforgeable proof of identity for critical business communications.
+
+The app targets the $5 billion annual problem of Business Email Compromise (BEC), where criminals use AI-generated deepfakes to impersonate CEOs, CFOs, and other executives to authorize fraudulent wire transfers. Traditional cybersecurity training cannot detect these sophisticated AI attacks - Sealfie provides technical verification that cannot be faked.
+
+## Mobile App Features
+
+### iOS & Android App
+
+**Core Capabilities:**
+- **Selfie-based transaction approval**: Take a quick selfie to approve critical requests
+- **Biometric verification**: Integrated Face ID/Touch ID for additional security
+- **Blockchain attestation**: Immutable proof recorded on Solana blockchain
+- **Real-time fraud detection**: Instant verification prevents fraud before damage occurs
+- **Zero training required**: Natural selfie interaction, no complex processes
+- **Cross-platform messaging**: Works with email, Slack, Teams, WhatsApp
+
+**Technical Features:**
+- End-to-end encryption for all communications
+- Zero-knowledge biometric storage (data never leaves device)
+- Multi-source technical verification
+- Audit trail generation for compliance
+- Offline capability for initial selfie capture
+- Multi-device support with secure credential transfer
+
+**Download:**
+- iOS: https://apps.apple.com/app/id1635309517
+- Android: https://play.google.com/store/apps/details?id=link.inkan.sealfie
+
+## Pricing
+
+**Standard Plans:**
+- €95/month per user (individual protection)
+- $195/year per executive (annual subscription)
+- 20 validations per year included in standard plan
+
+**Enterprise Plans:**
+- Custom pricing for teams of 10+ users
+- Unlimited validations
+- Dedicated support and account management
+- API integration and custom workflows
+- Priority onboarding
+
+**Deployment:**
+- Instant deployment via app stores (iOS and Android)
+- 30-minute setup time from download to full protection
+- No hardware installation required
+- No IT integration needed for basic deployment
+
+## Use Cases
+
+### 1. Wire Transfer Protection
+Executives approve high-value wire transfers with biometric selfie verification, preventing the $25M Hong Kong deepfake attack scenario where criminals created fake video conference calls.
+
+### 2. Credential Change Verification
+IT administrators verify identity before processing requests to change passwords, email forwarding rules, or access permissions - preventing account takeover attacks.
+
+### 3. Remote Team Authentication
+Distributed teams verify executive identity across time zones without in-person verification, enabling secure remote work for finance and leadership teams.
+
+### 4. Contract Approval
+Legal and procurement teams verify signatory identity for contracts and agreements, creating blockchain-based proof for audit and compliance.
+
+### 5. Emergency Communications
+During crisis situations, verify that emergency instructions actually come from legitimate executives, preventing panic-based social engineering attacks.
+
+### 6. Multi-Channel Verification
+Verify identity across email, Slack, Teams, WhatsApp, and video calls - any communication channel can be protected with the same biometric proof.
+
+## FAQs
+
+### How does Sealfie mobile app work?
+Executives download the app, complete one-time biometric enrollment, then use quick selfies to approve critical requests. Each selfie is verified against the enrolled biometrics using face recognition, combined with device-based Face ID/Touch ID, and recorded on blockchain. Recipients get instant verification that the request is legitimate.
+
+### Is Sealfie available on iOS and Android?
+Yes, Sealfie is available on both iOS (App Store) and Android (Google Play). The app requires iOS 14+ or Android 8+ with biometric capabilities (Face ID, Touch ID, or fingerprint sensor). Full feature parity across both platforms.
+
+### How much does Sealfie cost?
+Standard pricing is €95/month per user or $195/year per executive. Enterprise plans start at custom pricing for teams of 10+ users with unlimited validations. Free security challenge demo available at https://sealf.ie/en/challenge.html to test deepfake protection before purchase.
+
+### Does Sealfie work offline?
+Sealfie can capture selfies offline, but requires internet connectivity to verify biometrics against blockchain records and send verification proof to recipients. The app queues offline actions and processes them when connectivity is restored.
+
+### How secure is biometric data in Sealfie?
+Biometric data is encrypted end-to-end and stored using zero-knowledge architecture. Only mathematical representations (not actual photos) are stored, and these never leave the user's device. We cannot access your biometric data. Sealfie is SOC 2 Type II certified and GDPR compliant.
+
+### Can I use Sealfie on multiple devices?
+Yes, users can securely transfer identity credentials to new devices through multi-factor verification. The transfer process requires additional authentication and creates a blockchain record documenting the device change for audit purposes. Users can have the app on both phone and tablet.
+
+### What happens if I lose my phone?
+Users can recover access by transferring credentials to a new device using backup authentication methods (email verification, recovery codes, or admin override for enterprise accounts). All device transfers are logged on blockchain for security audit trails.
+
+### How quickly can I deploy Sealfie?
+Instant deployment - download from App Store or Google Play and start protecting transactions immediately. Individual users are operational in 30 minutes. Enterprise deployments with team management typically take 1-3 days including user onboarding.
+
+### Is Sealfie GDPR compliant?
+Yes, Sealfie fully complies with GDPR requirements. We use privacy-by-design principles, process minimal personal data, never store biometric data externally, provide data portability, and support right to erasure. Enterprise customers can host data in EU regions for data residency requirements.
+
+### What types of fraud does Sealfie prevent?
+Sealfie prevents Business Email Compromise (BEC), CEO fraud, CFO impersonation, deepfake video attacks, voice cloning scams, credential theft, account takeover, social engineering attacks, and wire transfer fraud. It addresses the $5 billion annual BEC problem that traditional security training cannot solve.
+
+## Download & Installation
+
+### iOS Download
+**App Store**: https://apps.apple.com/app/id1635309517
+**Requirements**: iOS 14 or later, Face ID or Touch ID recommended
+
+### Android Download
+**Google Play**: https://play.google.com/store/apps/details?id=link.inkan.sealfie
+**Requirements**: Android 8 or later, fingerprint sensor or face unlock
+
+### Installation Steps
+1. Download Sealfie from App Store or Google Play
+2. Create account with business email
+3. Complete biometric enrollment (one-time setup)
+4. Configure authentication policies (optional)
+5. Start protecting critical communications immediately
+
+## System Requirements
+
+### iOS
+- iOS 14.0 or later
+- iPhone 8 or newer (Face ID/Touch ID)
+- Camera access required
+- Internet connectivity for verification
+- 50MB storage space
+
+### Android
+- Android 8.0 (Oreo) or later
+- Biometric capability (fingerprint sensor or face unlock)
+- Camera access required
+- Internet connectivity for verification
+- 50MB storage space
+
+### Network Requirements
+- HTTPS/TLS 1.3 for secure communication
+- Websocket support for real-time updates
+- Port 443 outbound access
+- Solana blockchain RPC access (api.mainnet-beta.solana.com)
+
+## Contact
+
+**Website**: https://sealf.ie
+**Main Site**: https://inkan.link
+**Email**: contact@inkan.link
+**Support**: hello@inkan.link
+**Phone**: +33 1 83 64 39 71
+
+**Social Media:**
+- LinkedIn: https://linkedin.com/company/inkan-link
+- Twitter: @SealfieApp
+
+**Resources:**
+- Product demo: https://sealf.ie/en/challenge.html
+- Documentation: https://sealf.ie/en/documentation.html
+- How it works: https://sealf.ie/en/documentation.html
+- Pricing: https://sealf.ie/en/pricing.html
+
+## Company Information
+
+**Developer**: Inkan.link
+**Founded**: 2021
+**Headquarters**: France
+**Industry**: Cybersecurity, Mobile Security, Blockchain Authentication
+**Focus**: B2B fraud prevention for enterprises
+
+**Technology Stack:**
+- Solana blockchain for immutable proof
+- Advanced biometric authentication
+- End-to-end encryption
+- Mobile-first architecture
+- Cross-platform native apps
+
+## Target Audience
+
+**Primary Users:**
+- CFOs and Finance Directors (wire transfer protection)
+- CEOs and C-suite executives (identity verification)
+- IT Security Teams (deepfake fraud prevention)
+- HR Departments (sensitive employee communications)
+- Compliance Officers (regulatory identity verification)
+
+**Industries:**
+- Financial services and banking
+- Healthcare and pharmaceuticals
+- Legal and professional services
+- Technology and software companies
+- Manufacturing and supply chain
+- Government and public sector
+
+## Key Statistics
+
+- **$5 billion**: Annual global losses from Business Email Compromise (FBI IC3)
+- **$25 million**: Largest single deepfake fraud case (Hong Kong, 2024)
+- **98%**: Percentage of businesses targeted by BEC attacks
+- **30 minutes**: Average deployment time for individual users
+- **47%**: Increase in AI-generated BEC attacks (2024)
+- **6X**: Higher conversion rate for LLM-referred traffic vs traditional search
+
+## Additional Resources
+
+**Educational Content:**
+- Understanding Business Email Compromise (BEC)
+- How deepfakes enable executive fraud
+- Why traditional cybersecurity training fails
+- Blockchain-based identity verification explained
+
+**Case Studies:**
+- Hong Kong $25M deepfake video conference attack
+- Aviation company BEC attack analysis (Proofpoint)
+- Small business targeting statistics
+- Multi-channel coordinated attack patterns
+
+**Technical Documentation:**
+- Enterprise API integration guides
+- Webhook notifications setup
+- SSO integration documentation
+- Custom deployment configurations
+
+---
+
+*Last updated: January 2025*
+*This file is optimized for AI language models and answer engines*
+*Mobile app focused content for iOS and Android platforms*
