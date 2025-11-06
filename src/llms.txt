@@ -221,9 +221,3 @@ Sealfie prevents Business Email Compromise (BEC), CEO fraud, CFO impersonation, 
 - Webhook notifications setup
 - SSO integration documentation
 - Custom deployment configurations
-
----
-
-*Last updated: January 2025*
-*This file is optimized for AI language models and answer engines*
-*Mobile app focused content for iOS and Android platforms*
