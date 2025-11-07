@@ -47,6 +47,17 @@ Clone the source files of the theme and navigate into the theme's root directory
 
 You must have npm installed in order to use this build environment.
 
+#### npm Audit Warnings
+
+When running `npm audit`, you may see 4 moderate severity vulnerabilities in Pug dependencies. These are **build-time only** vulnerabilities with **low risk** for this project:
+
+- **Status**: Known and accepted
+- **Risk**: Low (static site generator - no runtime Pug execution)
+- **Fix**: No fix currently available in upstream packages
+- **Details**: See [SECURITY.md](./SECURITY.md) for full analysis
+
+The deployed static HTML/CSS/JS is not affected by these build tool vulnerabilities.
+
 ## Bugs and Issues
 
 Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-new-age/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/theme/new-age/).
