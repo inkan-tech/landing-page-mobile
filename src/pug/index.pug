@@ -403,10 +403,76 @@ html(lang=$localeName)
 
                 // Primary CTA Section
                 .cta-section
-                  a.cta-primary-large(href=`/${$localeName}/challenge.html` aria-label=$i18n.hero.cta.primary)
+                  a.cta-primary-large(href='#challenge-form' aria-label=$i18n.hero.cta.primary)
                     | #{$i18n.hero.cta.primary}
                   a.cta-secondary(href=`/${$localeName}/documentation.html` aria-label=$i18n.hero.cta.secondary)
                     | #{$i18n.hero.cta.secondary}
+
+  // Free Security Challenge Form - Lead Capture
+  section#challenge-form-section(class='section-ma bg-gradient-to-br from-gray-50 to-white')
+    div(class='container mx-auto px-5')
+      div(class='max-w-3xl mx-auto')
+        div(class='bg-white rounded-2xl shadow-xl p-8 lg:p-12 border-2 border-shu-primary/10')
+          // Headline
+          div(class='text-center mb-8')
+            h2(class='text-3xl lg:text-4xl font-bold text-gray-900 mb-3') #{$i18n.challengeForm.headline}
+            p(class='text-xl text-gray-600') #{$i18n.challengeForm.subheadline}
+
+          // Form
+          form#challenge-form(
+            action='https://eepurl.com/ix1tjg'
+            method='POST'
+            target='_blank'
+            class='space-y-6'
+          )
+            // Email field
+            div
+              label(for='challenge-email' class='sr-only') #{$i18n.challengeForm.emailPlaceholder}
+              input(
+                type='email'
+                id='challenge-email'
+                name='EMAIL'
+                required
+                placeholder=$i18n.challengeForm.emailPlaceholder
+                class='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-shu-primary focus:outline-none focus:ring-2 focus:ring-shu-primary/20 transition-all'
+              )
+
+            // Company name field
+            div
+              label(for='challenge-company' class='sr-only') #{$i18n.challengeForm.companyPlaceholder}
+              input(
+                type='text'
+                id='challenge-company'
+                name='COMPANY'
+                required
+                placeholder=$i18n.challengeForm.companyPlaceholder
+                class='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-shu-primary focus:outline-none focus:ring-2 focus:ring-shu-primary/20 transition-all'
+              )
+
+            // Role selector
+            div
+              label(for='challenge-role' class='sr-only') #{$i18n.challengeForm.rolePlaceholder}
+              select(
+                id='challenge-role'
+                name='ROLE'
+                required
+                class='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-shu-primary focus:outline-none focus:ring-2 focus:ring-shu-primary/20 transition-all bg-white'
+              )
+                option(value='' disabled selected) #{$i18n.challengeForm.roleOptions.default}
+                option(value='cfo') #{$i18n.challengeForm.roleOptions.cfo}
+                option(value='ceo') #{$i18n.challengeForm.roleOptions.ceo}
+                option(value='ciso') #{$i18n.challengeForm.roleOptions.ciso}
+                option(value='other') #{$i18n.challengeForm.roleOptions.other}
+
+            // Submit button
+            button(
+              type='submit'
+              class='w-full bg-shu-primary hover:bg-enji-secondary text-white font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 hover:shadow-lg'
+            )
+              | #{$i18n.challengeForm.submitButton}
+
+            // Trust signals
+            p(class='text-center text-sm text-gray-600 mt-4') #{$i18n.challengeForm.trustSignals}
 
   // BEC Trends Carousel - Authority Through Current Data
   section(class='section-ma bg-gray-50')

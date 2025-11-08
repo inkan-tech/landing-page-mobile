@@ -99,9 +99,25 @@
         },
         "solution": "Quand j'ai vu cette vague arriver à l'ONU, je n'ai pas écrit un énième rapport. J'ai construit Sealfie. Pourquoi ? Parce qu'on ne peut pas former des humains à repérer des faux IA parfaits. Il faut une vérification anti-IA qui marche en 30 secondes. C'est tout. C'est Sealfie.",
         "cta": {
-            "primary": "Prouvez que votre protection échoue",
-            "secondary": "Voyez comment on arrête ce que la formation ne peut pas"
+            "primary": "Réservez Challenge Gratuit 30 Min →",
+            "secondary": "Voyez Comment On Arrête Ce Que La Formation Ne Peut Pas"
         }
+    },
+    "challengeForm": {
+        "headline": "Challenge Sécurité Gratuit 30 Minutes",
+        "subheadline": "Votre DAF validerait ce faux virement. Prouvez-moi le contraire.",
+        "emailPlaceholder": "Votre email professionnel",
+        "companyPlaceholder": "Nom de l'entreprise",
+        "rolePlaceholder": "Votre fonction",
+        "roleOptions": {
+            "default": "Sélectionnez votre fonction",
+            "cfo": "DAF/Directeur Financier",
+            "ceo": "PDG/Fondateur",
+            "ciso": "RSSI/Directeur Sécurité",
+            "other": "Autre Dirigeant"
+        },
+        "submitButton": "Réserver Mon Challenge Gratuit →",
+        "trustSignals": "✓ Pas de pitch commercial • Vérité brutale uniquement • 5 places/semaine"
     },
     "head": {
         "title": "Éliminez le stress des attaques au faux PDG",
@@ -154,7 +170,7 @@
                 "support": "On configure. Vous utilisez juste.",
                 "deployment": "Opérationnel en 30 minutes. Pas 30 jours."
             },
-            "cta": "Nous contacter"
+            "cta": "Réserver Challenge Gratuit →"
         },
         "enterprise": {
             "title": "Protection custom pour opérations complexes",
@@ -167,7 +183,7 @@
                 "expansion": "Ajoutez des features quand vous en avez besoin. Pas tout d'un coup parce qu'un consultant a dit.",
                 "priority_support": "Accès direct à moi et mon équipe. Pas un système de tickets."
             },
-            "cta": "Contactez-nous"
+            "cta": "Obtenez Votre Évaluation →"
         },
         "features": {
             "title": "Ce qui est inclus",

@@ -99,9 +99,25 @@
         },
         "solution": "When I saw this wave coming at the UN, I didn't write another report. I built Sealfie. Why? Because you can't train humans to spot perfect AI fakes. You need AI-proof verification that works in 30 seconds. That's it. That's Sealfie.",
         "cta": {
-            "primary": "Prove your current protection fails",
-            "secondary": "See how we stop what training can't"
+            "primary": "Book Free 30-Min Challenge →",
+            "secondary": "See How We Stop What Training Can't"
         }
+    },
+    "challengeForm": {
+        "headline": "Free 30-Minute Security Challenge",
+        "subheadline": "Your CFO would approve that fake transfer. Prove me wrong.",
+        "emailPlaceholder": "Your work email",
+        "companyPlaceholder": "Company name",
+        "rolePlaceholder": "Your role",
+        "roleOptions": {
+            "default": "Select your role",
+            "cfo": "CFO/Finance Director",
+            "ceo": "CEO/Founder",
+            "ciso": "CISO/Security Director",
+            "other": "Other Executive"
+        },
+        "submitButton": "Book My Free Challenge →",
+        "trustSignals": "✓ No sales pitch • Brutal honesty only • 5 spots/week"
     },
     "head": {
         "title": "Stop losing to deepfakes!",
@@ -154,7 +170,7 @@
                 "support": "We set it up. You just use it.",
                 "deployment": "Operational in 30 minutes. Not 30 days."
             },
-            "cta": "Get in touch"
+            "cta": "Book Free Challenge →"
         },
         "enterprise": {
             "title": "Custom protection for complex operations",
@@ -167,7 +183,7 @@
                 "expansion": "Add features as you need them. Not all at once because a consultant said so.",
                 "priority_support": "Direct access to me and my team. Not a ticket system."
             },
-            "cta": "Talk to us"
+            "cta": "Get Your Assessment →"
         },
         "features": {
             "title": "What's included",
