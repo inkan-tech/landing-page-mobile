@@ -29,6 +29,7 @@ module.exports = grunt => {
                     "docs/faq.html": ["src/pug/faq.pug"],
                     "docs/terms.html": ["src/pug/terms.pug"],
                     "docs/offline.html": ["src/pug/offline.pug"],
+                    "docs/press.html": ["src/pug/press.pug"],
                 }
             }
         },

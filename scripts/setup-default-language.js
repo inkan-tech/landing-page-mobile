@@ -17,7 +17,8 @@ const filesToCopy = [
     'privacy-ios.html',
     'terms.html',
     'post-register.html',
-    'offline.html'
+    'offline.html',
+    'press.html'
 ];
 
 // Source and destination directories
