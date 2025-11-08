@@ -784,6 +784,66 @@
                         "ariaLabel": "Contact Sealfie team"
                     }
                 ]
+            },
+            {
+                "question": "Can Sealfie stop AI-generated deepfakes?",
+                "shortAnswer": "Yes. Sealfie's advanced liveness detection technology identifies AI-generated deepfakes in real-time. Unlike traditional security training that relies on humans spotting fakes, Sealfie uses biometric verification that deepfakes cannot replicate.",
+                "expandedContent": "<p><strong>Why deepfakes are dangerous:</strong></p><ul><li>AI can clone voices with 3 seconds of audio</li><li>Video deepfakes look identical to real video calls</li><li>Employees cannot reliably detect sophisticated fakes</li><li>Criminals use deepfakes to bypass traditional verification</li></ul><p><strong>How Sealfie detects deepfakes:</strong></p><ul><li>Multi-factor liveness detection (blink patterns, micro-movements, depth analysis)</li><li>Biometric matching against registered template</li><li>Device fingerprinting and location verification</li><li>Real-time analysis - no pre-recorded videos accepted</li></ul><p><strong>Real-world protection:</strong> Even if criminals have your executive's voice, face, and email access, they cannot pass Sealfie verification without physical access to the registered device and biometric data.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Test your vulnerability",
+                        "url": "/en/challenge.html",
+                        "ariaLabel": "Try the deepfake security challenge"
+                    }
+                ]
+            },
+            {
+                "question": "What happens if my phone is lost or stolen?",
+                "shortAnswer": "Your biometric data remains secure. Since it never leaves your device, thieves cannot access it. You can remotely deactivate your account, transfer to a new device, and re-register biometrics in minutes.",
+                "expandedContent": "<p><strong>Immediate protection:</strong></p><ol><li>Contact Sealfie support or use web portal to suspend account</li><li>Your biometric data is locked to the stolen device (useless to thieves)</li><li>All pending verifications are automatically rejected</li><li>Audit log shows no unauthorized access attempts</li></ol><p><strong>Recovery process:</strong></p><ol><li>Install Sealfie on new device</li><li>Verify identity through secondary authentication (email + admin approval)</li><li>Re-register biometrics on new device</li><li>Resume normal operations in under 30 minutes</li></ol><p><strong>Why you're protected:</strong></p><ul><li>Biometric templates are device-specific and encrypted</li><li>No cloud storage of facial scans or fingerprints</li><li>Device binding prevents unauthorized transfers</li><li>Multi-factor account recovery with admin oversight</li></ul>",
+                "ctaLinks": [
+                    {
+                        "text": "Security architecture",
+                        "url": "/en/privacy-ios.html",
+                        "ariaLabel": "Learn about Sealfie security"
+                    }
+                ]
+            },
+            {
+                "question": "Does everyone in my company need the app?",
+                "shortAnswer": "No. Only executives and high-risk employees who authorize payments or sensitive actions need Sealfie installed. Recipients who verify identities just click a web link - no app required.",
+                "expandedContent": "<p><strong>Who needs the Sealfie app installed:</strong></p><ul><li>C-suite executives (CEO, CFO, COO)</li><li>Finance team members who approve payments</li><li>IT administrators with privileged access</li><li>Anyone who can authorize wire transfers or credential changes</li></ul><p><strong>Who doesn't need the app:</strong></p><ul><li>Employees who receive verification requests (web link only)</li><li>Accounting staff who check executive approvals</li><li>External vendors and partners</li><li>Board members (optional - can use web verification)</li></ul><p><strong>Typical company setup:</strong></p><ul><li>5-10 person company: 2-3 executives with app</li><li>50-100 person company: 5-8 key decision makers</li><li>500+ person company: 15-25 executives and finance managers</li></ul><p>This focused approach keeps costs low while protecting your most vulnerable attack surface.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "See pricing",
+                        "url": "/en/pricing.html",
+                        "ariaLabel": "View pricing plans"
+                    }
+                ]
+            },
+            {
+                "question": "How quickly can I verify someone's identity?",
+                "shortAnswer": "Verification takes 30 seconds end-to-end. When you receive a suspicious request, you click 'Verify with Sealfie', the executive receives a push notification, takes a selfie, and you get instant confirmation.",
+                "expandedContent": "<p><strong>Real-time verification flow:</strong></p><ol><li>You receive suspicious email/message (0 seconds)</li><li>Click 'Verify with Sealfie' button or link (5 seconds)</li><li>Executive receives push notification (instant)</li><li>Executive opens app and takes selfie (15 seconds)</li><li>Biometric verification completes (5 seconds)</li><li>You receive confirmation with audit trail (instant)</li></ol><p><strong>What slows down traditional verification:</strong></p><ul><li>Phone calls: 2-5 minutes (if executive answers)</li><li>Video calls: 3-10 minutes (scheduling, connection issues)</li><li>Security questions: 1-3 minutes (can be researched by criminals)</li><li>Email confirmation: 10-60 minutes (email can be compromised)</li></ul><p><strong>Why speed matters:</strong> Criminals create urgency to bypass security. Sealfie is faster than phone calls, so there's no excuse to skip verification even in 'emergency' situations.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Watch demo",
+                        "url": "/en/documentation.html",
+                        "ariaLabel": "See Sealfie in action"
+                    }
+                ]
+            },
+            {
+                "question": "What if I don't have technical IT staff?",
+                "shortAnswer": "Sealfie is designed for non-technical teams. Setup takes 30 minutes with zero IT knowledge required. No server configuration, no software installation, no integration complexity. Just download the app and start protecting your business.",
+                "expandedContent": "<p><strong>Why Sealfie works for small businesses:</strong></p><ul><li>No IT department required</li><li>No technical integration with existing systems</li><li>No server setup or maintenance</li><li>No special hardware beyond smartphones</li><li>No coding or configuration files</li></ul><p><strong>Simple setup process:</strong></p><ol><li>Download Sealfie from App Store/Google Play</li><li>Register company admin account</li><li>Add executives by email</li><li>They install app and register biometrics</li><li>Start verifying - it's that simple</li></ol><p><strong>Support included:</strong></p><ul><li>Email and chat support for all questions</li><li>Video walkthrough of setup process</li><li>Pre-configured templates for common workflows</li><li>30-day onboarding assistance</li></ul><p><strong>For enterprises with IT teams:</strong> Optional API integration, SSO, and custom workflows available.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Get started",
+                        "url": "https://eepurl.com/ix1tjg",
+                        "ariaLabel": "Sign up for Sealfie"
+                    }
+                ]
             }
         ]
     }
