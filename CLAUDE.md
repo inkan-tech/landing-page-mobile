@@ -465,6 +465,43 @@ src/
 - 🎌 **Japanese theme colors** - BRAND IDENTITY CORE
 - 📐 **Ma (negative space) patterns** - CULTURAL AUTHENTICITY
 
+### **🚨 CRITICAL CSS FILES - NEVER MODIFY WITHOUT BACKUP**
+
+**⚠️ WARNING: These CSS files contain critical styling that MUST NOT be lost:**
+
+#### **src/css/styles.css** (280 lines)
+- **Hero section positioning** - Controls landing page layout
+- **Device mockup CSS** - iPhone X frame rendering (`.device-wrapper`, `.device::after`)
+- **Grid adjustments** - Responsive layout system
+- **Responsive breakpoints** - Mobile/tablet/desktop layouts
+- **Device screen styling** - Video demo background
+
+**NEVER:**
+- ❌ Reduce this file to minimal/empty content
+- ❌ Strip out device mockup styles
+- ❌ Remove responsive breakpoints
+- ❌ Delete hero section positioning
+
+**BEFORE any CSS changes:**
+1. ✅ Check `git diff src/css/styles.css` to see what's changing
+2. ✅ Verify the file is still ~280 lines (not 2 lines!)
+3. ✅ Ensure device mockup styles are intact
+4. ✅ Test homepage displays correctly after rebuild
+
+**Recovery command if CSS is corrupted:**
+```bash
+# Restore CSS files to last working state
+git restore src/css/styles.css src/css/tailwind.css
+
+# Rebuild site
+NODE_ENV=production npm run build
+```
+
+**Known issue (November 2024):**
+- Tailwind rebuild can accidentally strip `styles.css` from 280 lines → 2 lines
+- This breaks hero section, device mockups, and responsive layouts
+- Always verify line count: `wc -l src/css/styles.css` should show ~280 lines
+
 ## Current Implementation Status
 
 ### **Completed Features**

@@ -26,6 +26,7 @@ module.exports = grunt => {
                     "docs/documentation.html": ["src/pug/documentation.pug"],
                     "docs/pricing.html": ["src/pug/pricing.pug"],
                     "docs/challenge.html": ["src/pug/challenge.pug"],
+                    "docs/faq.html": ["src/pug/faq.pug"],
                     "docs/terms.html": ["src/pug/terms.pug"],
                     "docs/offline.html": ["src/pug/offline.pug"],
                 }
@@ -128,7 +129,9 @@ module.exports = grunt => {
                             /^timer-loading/,
                             /^video/,
                             // Icons
-                            /^bi-/
+                            /^bi-/,
+                            // FAQ accordion components
+                            /^faq/
                         ],
                         deep: [
                             /^device/,

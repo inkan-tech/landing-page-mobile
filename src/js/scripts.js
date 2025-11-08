@@ -367,3 +367,61 @@ _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 g.async=true; g.src='https://cdn.matomo.cloud/sealfie.matomo.cloud/container_5gw1cTb8.js'; s.parentNode.insertBefore(g,s);
 
+//
+// FAQ Matomo Tracking Functions
+//
+
+/**
+ * Track when user clicks on FAQ question to reveal answer
+ * @param {string} context - FAQ context (e.g., 'faq-page', 'faq-homepage')
+ * @param {string} question - The FAQ question text
+ * @param {number} index - Question index in the list
+ */
+window.trackFAQClick = function(context, question, index) {
+  if (typeof _paq !== 'undefined') {
+    _paq.push([
+      'trackEvent',
+      'FAQ',
+      'Question Click',
+      `${context} | Q${index + 1}: ${question.substring(0, 50)}${question.length > 50 ? '...' : ''}`,
+      index + 1
+    ]);
+  }
+};
+
+/**
+ * Track when user clicks "Learn more" to see expanded content
+ * @param {string} context - FAQ context (e.g., 'faq-page', 'faq-homepage')
+ * @param {string} question - The FAQ question text
+ * @param {number} index - Question index in the list
+ */
+window.trackFAQExpand = function(context, question, index) {
+  if (typeof _paq !== 'undefined') {
+    _paq.push([
+      'trackEvent',
+      'FAQ',
+      'Expand Content',
+      `${context} | Q${index + 1}: ${question.substring(0, 50)}${question.length > 50 ? '...' : ''}`,
+      index + 1
+    ]);
+  }
+};
+
+/**
+ * Track when user clicks a CTA link within FAQ expanded content
+ * @param {string} context - FAQ context (e.g., 'faq-page', 'faq-homepage')
+ * @param {string} ctaText - The CTA link text
+ * @param {string} ctaUrl - The CTA link URL
+ */
+window.trackFAQCTA = function(context, ctaText, ctaUrl) {
+  if (typeof _paq !== 'undefined') {
+    _paq.push([
+      'trackEvent',
+      'FAQ',
+      'CTA Click',
+      `${context} | ${ctaText} → ${ctaUrl}`,
+      1
+    ]);
+  }
+};
+

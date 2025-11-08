@@ -12,6 +12,7 @@ const filesToCopy = [
     'documentation.html',
     'pricing.html',
     'challenge.html',
+    'faq.html',
     'support.html',
     'privacy-ios.html',
     'terms.html',
