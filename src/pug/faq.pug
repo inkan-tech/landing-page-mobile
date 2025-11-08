@@ -1,0 +1,72 @@
+doctype html
+html(lang=$localeName)
+
+  head
+    //- Common headers shared across all pages
+    include includes/common-headers.pug
+
+    //- Page-specific meta tags
+    title #{$i18n.faq.title} | #{$i18n.title}
+    meta(name='description', content=$i18n.faq.meta.description)
+
+    //- Page-specific canonical link
+    link(rel='canonical', href='https://sealf.ie/'+$localeName+'/faq.html')
+
+    //- Open Graph meta tags for social sharing
+    meta(property='og:title', content=$i18n.faq.title + ' | ' + $i18n.title)
+    meta(property='og:description', content=$i18n.faq.meta.description)
+    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:url', content='https://sealf.ie/'+$localeName+'/faq.html')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content='Sealfie')
+    meta(property='og:locale', content=$localeName == 'en' ? 'en_US' : 'fr_FR')
+
+    //- Twitter Card meta tags
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@sealfieapp')
+    meta(name='twitter:title', content=$i18n.faq.title + ' | ' + $i18n.title)
+    meta(name='twitter:description', content=$i18n.faq.meta.description)
+    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
+
+    //- FAQPage Structured Data (Schema.org JSON-LD) - Generated from i18n data
+    script.
+      (function() {
+        const faqData = !{JSON.stringify($i18n.faq.questions)};
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqData.map(function(faq) {
+            return {
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.shortAnswer
+              }
+            };
+          })
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(schema);
+        document.head.appendChild(script);
+      })();
+
+    script(id="mcjs")
+        include ../js/mailchimp-popup.js
+
+  body#page-top
+
+    include ../pug/includes/navbar.pug
+
+    // FAQ Section
+    include includes/faq
+    +faq-section($i18n.faq, 'faq-page')
+
+    include ../pug/includes/footer.pug
+
+    // Core theme JS
+    script(src='/js/scripts.js')
+
+    // Language detection
+    script(src='/js/modules/language-detector.js')

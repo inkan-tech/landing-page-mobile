@@ -34,7 +34,7 @@
                 "title": "Company",
                 "links": {
                     "about": "About",
-                    "press": "Company news", 
+                    "press": "Company news",
                     "blog": "Blog",
                     "contact": "Contact"
                 }
@@ -46,7 +46,8 @@
                     "gettingStarted": "Getting started",
                     "documentation": "Documentation",
                     "privacy": "Privacy Policy",
-                    "terms": "Terms of Service"
+                    "terms": "Terms of Service",
+                    "faq": "FAQ"
                 }
             },
             "connect": {
@@ -229,7 +230,7 @@
             },
             "q5": {
                 "question": "Is biometric data stored securely?",
-                "answer": "Yes. Biometric templates are encrypted end-to-end and stored using zero-knowledge architecture. Only mathematical representations (not photos) are stored. We cannot access your biometric data. Sealfie is SOC 2 Type II certified and GDPR compliant."
+                "answer": "Yes. Biometric templates are encrypted end-to-end and stored using zero-knowledge architecture. Only mathematical representations (not photos) are stored. We cannot access your biometric data. Sealfie is GDPR compliant."
             },
             "q6": {
                 "question": "How much does Sealfie cost?",
@@ -364,7 +365,7 @@
                 "benefit": "Simple as a photo"
             },
             "step2": {
-                "number": "02", 
+                "number": "02",
                 "title": "Instant verification",
                 "description": "Our cyber experts validate your identity in real-time with tamper-proof evidence.",
                 "benefit": "Real-time validation"
@@ -440,7 +441,7 @@
                 "cta": "Download Free PDF"
             },
             "checklist": {
-                "title": "Security checklist", 
+                "title": "Security checklist",
                 "description": "PLACEHOLDER: Executive protection checklist for immediate implementation",
                 "cta": "Get Checklist"
             },
@@ -465,7 +466,7 @@
                 "description": "PLACEHOLDER: Get exclusive access to our security technology before general availability"
             },
             "directInput": {
-                "title": "Direct input", 
+                "title": "Direct input",
                 "description": "PLACEHOLDER: Shape the product with direct feedback to our development team"
             },
             "pricing": {
@@ -557,7 +558,7 @@
                 "benefit": "Hardware security"
             }
         },
-        "trust": {  
+        "trust": {
             "setup_time": "30min",
             "setup_label": "Setup time",
             "success_rate": "99.8%",
@@ -596,7 +597,7 @@
             "conclusion": "Your users simply take a selfie. We handle all the complex security intelligence."
         },
         "ceo": {
-            "title": "Executive approval process", 
+            "title": "Executive approval process",
             "context": "How leaders authenticate critical decisions",
             "video": "Landing-Doc-EN2.webm",
             "step1": {
@@ -606,7 +607,7 @@
             },
             "step2": {
                 "title": "Verification review",
-                "description": "Team validates selfie and information consistency", 
+                "description": "Team validates selfie and information consistency",
                 "benefit": "Multi-factor validation"
             },
             "step3": {
@@ -630,7 +631,7 @@
             },
             "testimonial2": {
                 "quote": "Implementation took 20 minutes. Our executives love how simple yet secure it is.",
-                "author": "Michael Torres", 
+                "author": "Michael Torres",
                 "title": "IT Security Director, Global Manufacturing"
             }
         },
@@ -709,5 +710,81 @@
             "quote": "I was convinced our procedures were solid. The challenge opened my eyes to gaps I couldn't even imagine.",
             "author": "Chief Financial Officer, 500-employee company"
         }
+    },
+    "faq": {
+        "title": "Frequently asked questions",
+        "subtitle": "Everything you need to know about Sealfie",
+        "learnMore": "Learn more",
+        "hideDetails": "Hide details",
+        "meta": {
+            "description": "Common questions about Sealfie: how it works, security, privacy, pricing, and getting started with biometric fraud protection."
+        },
+        "questions": [
+            {
+                "question": "What is Sealfie?",
+                "shortAnswer": "Sealfie stops deepfake fraud and executive impersonation by verifying identities with a simple selfie. When someone requests payment or sensitive actions, Sealfie instantly confirms it's really them - not a criminal using AI-generated deepfakes or stolen credentials.",
+                "expandedContent": "<p>Business Email Compromise (BEC) costs companies $5 billion annually. Criminals use AI to create convincing deepfake videos and voices, impersonate executives, and trick employees into sending money to fraudulent accounts.</p><p><strong>How Sealfie protects you:</strong></p><ul><li>Simple selfie verification - no complex security training needed</li><li>Instant identity confirmation in 30 seconds</li><li>Stops deepfakes, fake vendors, and compromised accounts</li><li>Complete audit trail for compliance</li></ul><p><strong>Real example:</strong> A Hong Kong company lost $25M when criminals used deepfakes of 6 executives in a video call. Sealfie would have stopped this attack instantly.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "How it works",
+                        "url": "/en/documentation.html",
+                        "ariaLabel": "Learn how Sealfie works"
+                    }
+                ]
+            },
+            {
+                "question": "How does it work?",
+                "shortAnswer": "When you receive a suspicious request (payment, credential change, sensitive action), you simply ask the person to verify with Sealfie. They take a quick selfie, and Sealfie instantly confirms their identity. It's as simple as taking a photo, but stops even the most sophisticated deepfakes.",
+                "expandedContent": "<p><strong>For the person verifying their identity:</strong></p><ol><li>Open Sealfie app on your phone</li><li>Take a quick selfie</li><li>Done - verification sent in 30 seconds</li></ol><p><strong>For the person checking identity:</strong></p><ol><li>Receive suspicious email/request</li><li>Click \"Verify with Sealfie\"</li><li>Get instant confirmation it's really them</li></ol><p><strong>What makes it secure:</strong></p><ul><li>Advanced liveness detection stops photo/video deepfakes</li><li>Biometric verification tied to the real person</li><li>Multi-source checks (phone, email, biometrics)</li><li>Every verification is recorded for audit trail</li></ul>",
+                "ctaLinks": [
+                    {
+                        "text": "See demo",
+                        "url": "/en/documentation.html",
+                        "ariaLabel": "Watch Sealfie demo"
+                    }
+                ]
+            },
+            {
+                "question": "Is my data secure?",
+                "shortAnswer": "Yes. Your biometric data never leaves your device and we can't access it. Sealfie uses zero-knowledge architecture - only encrypted mathematical models are transmitted, never your actual photos. We're GDPR compliant with regular security audits.",
+                "expandedContent": "<p><strong>How we protect your privacy:</strong></p><ul><li>Biometric data stays on your device only</li><li>No photos or facial scans are ever stored</li><li>Only encrypted mathematical models transmitted</li><li>Zero-knowledge proof - we verify without seeing your data</li><li>Complete data deletion anytime you want</li></ul><p><strong>Security standards:</strong></p><ul><li>Regular independent security audits</li><li>Annual penetration testing</li><li>End-to-end encryption for all data</li><li>EU data centers for European customers</li><li>Full GDPR compliance</li></ul>",
+                "ctaLinks": [
+                    {
+                        "text": "Privacy policy",
+                        "url": "/en/privacy-ios.html",
+                        "ariaLabel": "Read our privacy policy"
+                    }
+                ]
+            },
+            {
+                "question": "How much does it cost?",
+                "shortAnswer": "Sealfie starts at $195 per person per year for executive protection. This includes up to 20 verifications annually and full support. Custom enterprise pricing is available for larger teams or higher volumes.",
+                "expandedContent": "<p><strong>What's included:</strong></p><ul><li>Unlimited app access for protected executives</li><li>Up to 20 identity verifications per year</li><li>Full customer support</li><li>Complete audit trail and compliance reporting</li><li>30-minute setup - no IT integration required</li></ul><p><strong>Enterprise options:</strong></p><ul><li>Custom verification volumes</li><li>IT system integration</li><li>Multiple verification sources</li><li>Priority support and account management</li><li>Tailored workflows for your organization</li></ul><p>One prevented fraud attack (average cost: $125K) pays for Sealfie for years.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "View pricing",
+                        "url": "/en/pricing.html",
+                        "ariaLabel": "View detailed pricing plans"
+                    }
+                ]
+            },
+            {
+                "question": "How do I get started?",
+                "shortAnswer": "Getting started is simple: download the Sealfie app, register your executives, and you're protected in 30 minutes. No technical integration required. For enterprise needs, contact us for a demo and we'll tailor Sealfie to your organization.",
+                "expandedContent": "<p><strong>For small teams (< 10 people):</strong></p><ol><li>Download Sealfie from App Store or Google Play</li><li>Register executives who need protection</li><li>Configure authentication policies</li><li>Start verifying identities immediately</li></ol><p><strong>For enterprises:</strong></p><ol><li>Contact us for a personalized demo</li><li>We'll analyze your payment workflows</li><li>Custom integration with your systems (if needed)</li><li>Training and deployment support</li></ol><p><strong>What you need:</strong></p><ul><li>Smartphone (iOS or Android)</li><li>Email and messaging platforms (Gmail, Outlook, Slack, Teams, WhatsApp)</li><li>For enterprise: existing ERP/accounting system (optional integration)</li></ul><p>Try our free security challenge to see how vulnerable your current processes are to deepfake attacks.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Free security challenge",
+                        "url": "/en/challenge.html",
+                        "ariaLabel": "Try free security challenge"
+                    },
+                    {
+                        "text": "Contact us",
+                        "url": "https://eepurl.com/ix1tjg",
+                        "ariaLabel": "Contact Sealfie team"
+                    }
+                ]
+            }
+        ]
     }
 }

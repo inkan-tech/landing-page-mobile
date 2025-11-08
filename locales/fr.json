@@ -46,7 +46,8 @@
                     "gettingStarted": "Premiers pas",
                     "documentation": "Documentation",
                     "privacy": "Politique de Confidentialité",
-                    "terms": "Conditions d'Utilisation"
+                    "terms": "Conditions d'Utilisation",
+                    "faq": "FAQ"
                 }
             },
             "connect": {
@@ -229,7 +230,7 @@
             },
             "q5": {
                 "question": "Les données biométriques sont-elles stockées en toute sécurité?",
-                "answer": "Oui. Les modèles biométriques sont chiffrés de bout en bout et stockés selon une architecture à connaissance nulle. Seules des représentations mathématiques (pas de photos) sont stockées. Nous ne pouvons pas accéder à vos données biométriques. Sealfie est certifié SOC 2 Type II et conforme au RGPD."
+                "answer": "Oui. Les modèles biométriques sont chiffrés de bout en bout et stockés selon une architecture à connaissance nulle. Seules des représentations mathématiques (pas de photos) sont stockées. Nous ne pouvons pas accéder à vos données biométriques. Sealfie est conforme au RGPD."
             },
             "q6": {
                 "question": "Combien coûte Sealfie?",
@@ -709,5 +710,81 @@
             "quote": "J'étais convaincu que nos procédures étaient solides. Le challenge m'a ouvert les yeux sur des failles que je n'imaginais même pas.",
             "author": "Directeur Financier, Entreprise de 500 employés"
         }
+    },
+    "faq": {
+        "title": "Questions fréquentes",
+        "subtitle": "Tout ce que vous devez savoir sur Sealfie",
+        "learnMore": "En savoir plus",
+        "hideDetails": "Masquer les détails",
+        "meta": {
+            "description": "Questions courantes sur Sealfie : fonctionnement, sécurité, confidentialité, tarifs et démarrage avec la protection biométrique contre la fraude."
+        },
+        "questions": [
+            {
+                "question": "Qu'est-ce que Sealfie ?",
+                "shortAnswer": "Sealfie arrête la fraude par deepfake et l'usurpation d'identité de dirigeants en vérifiant les identités avec un simple selfie. Lorsque quelqu'un demande un paiement ou une action sensible, Sealfie confirme instantanément qu'il s'agit vraiment de cette personne - et non d'un criminel utilisant des deepfakes générés par IA ou des identifiants volés.",
+                "expandedContent": "<p>Les compromissions de courriels professionnels (BEC) coûtent 5 milliards de dollars par an aux entreprises. Les criminels utilisent l'IA pour créer des vidéos et des voix deepfake convaincantes, usurper l'identité de dirigeants et tromper les employés pour qu'ils envoient de l'argent vers des comptes frauduleux.</p><p><strong>Comment Sealfie vous protège :</strong></p><ul><li>Vérification par selfie simple - aucune formation en sécurité complexe nécessaire</li><li>Confirmation instantanée d'identité en 30 secondes</li><li>Arrête les deepfakes, faux fournisseurs et comptes compromis</li><li>Piste d'audit complète pour la conformité</li></ul><p><strong>Exemple réel :</strong> Une entreprise de Hong Kong a perdu 25M$ lorsque des criminels ont utilisé des deepfakes de 6 dirigeants lors d'un appel vidéo. Sealfie aurait arrêté cette attaque instantanément.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Comment ça fonctionne",
+                        "url": "/fr/documentation.html",
+                        "ariaLabel": "Découvrir comment Sealfie fonctionne"
+                    }
+                ]
+            },
+            {
+                "question": "Comment ça fonctionne ?",
+                "shortAnswer": "Lorsque vous recevez une demande suspecte (paiement, changement d'identifiant, action sensible), vous demandez simplement à la personne de se vérifier avec Sealfie. Elle prend un selfie rapide, et Sealfie confirme instantanément son identité. C'est aussi simple que de prendre une photo, mais cela arrête même les deepfakes les plus sophistiqués.",
+                "expandedContent": "<p><strong>Pour la personne qui vérifie son identité :</strong></p><ol><li>Ouvrir l'application Sealfie sur votre téléphone</li><li>Prendre un selfie rapide</li><li>Terminé - vérification envoyée en 30 secondes</li></ol><p><strong>Pour la personne qui vérifie l'identité :</strong></p><ol><li>Recevoir un email/demande suspect(e)</li><li>Cliquer sur \"Vérifier avec Sealfie\"</li><li>Recevoir une confirmation instantanée qu'il s'agit vraiment de cette personne</li></ol><p><strong>Ce qui le rend sécurisé :</strong></p><ul><li>Détection de vivacité avancée arrête les deepfakes photo/vidéo</li><li>Vérification biométrique liée à la personne réelle</li><li>Vérifications multi-sources (téléphone, email, biométrie)</li><li>Chaque vérification est enregistrée pour la piste d'audit</li></ul>",
+                "ctaLinks": [
+                    {
+                        "text": "Voir la démo",
+                        "url": "/fr/documentation.html",
+                        "ariaLabel": "Regarder la démo Sealfie"
+                    }
+                ]
+            },
+            {
+                "question": "Mes données sont-elles sécurisées ?",
+                "shortAnswer": "Oui. Vos données biométriques ne quittent jamais votre appareil et nous ne pouvons pas y accéder. Sealfie utilise une architecture à connaissance zéro - seuls des modèles mathématiques chiffrés sont transmis, jamais vos vraies photos. Nous sommes conformes au RGPD avec des audits de sécurité réguliers.",
+                "expandedContent": "<p><strong>Comment nous protégeons votre vie privée :</strong></p><ul><li>Les données biométriques restent sur votre appareil uniquement</li><li>Aucune photo ou scan facial n'est jamais stocké</li><li>Seuls des modèles mathématiques chiffrés transmis</li><li>Preuve à connaissance zéro - nous vérifions sans voir vos données</li><li>Suppression complète des données à tout moment</li></ul><p><strong>Normes de sécurité :</strong></p><ul><li>Audits de sécurité indépendants réguliers</li><li>Tests de pénétration annuels</li><li>Chiffrement de bout en bout pour toutes les données</li><li>Centres de données UE pour les clients européens</li><li>Pleine conformité RGPD</li></ul>",
+                "ctaLinks": [
+                    {
+                        "text": "Politique de confidentialité",
+                        "url": "/fr/privacy-ios.html",
+                        "ariaLabel": "Lire notre politique de confidentialité"
+                    }
+                ]
+            },
+            {
+                "question": "Combien ça coûte ?",
+                "shortAnswer": "Sealfie commence à 195$ par personne par an pour la protection des dirigeants. Cela inclut jusqu'à 20 vérifications par an et un support complet. Des tarifs entreprise personnalisés sont disponibles pour les grandes équipes ou volumes plus élevés.",
+                "expandedContent": "<p><strong>Ce qui est inclus :</strong></p><ul><li>Accès illimité à l'application pour les dirigeants protégés</li><li>Jusqu'à 20 vérifications d'identité par an</li><li>Support client complet</li><li>Piste d'audit complète et rapports de conformité</li><li>Configuration en 30 minutes - aucune intégration IT requise</li></ul><p><strong>Options entreprise :</strong></p><ul><li>Volumes de vérification personnalisés</li><li>Intégration avec les systèmes IT</li><li>Sources de vérification multiples</li><li>Support prioritaire et gestion de compte</li><li>Workflows adaptés à votre organisation</li></ul><p>Une seule attaque de fraude évitée (coût moyen : 125K$) paie Sealfie pendant des années.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Voir les tarifs",
+                        "url": "/fr/pricing.html",
+                        "ariaLabel": "Voir les plans tarifaires détaillés"
+                    }
+                ]
+            },
+            {
+                "question": "Comment démarrer ?",
+                "shortAnswer": "Démarrer est simple : téléchargez l'application Sealfie, enregistrez vos dirigeants, et vous êtes protégé en 30 minutes. Aucune intégration technique requise. Pour les besoins d'entreprise, contactez-nous pour une démo et nous adapterons Sealfie à votre organisation.",
+                "expandedContent": "<p><strong>Pour les petites équipes (< 10 personnes) :</strong></p><ol><li>Télécharger Sealfie depuis App Store ou Google Play</li><li>Enregistrer les dirigeants qui ont besoin de protection</li><li>Configurer les politiques d'authentification</li><li>Commencer à vérifier les identités immédiatement</li></ol><p><strong>Pour les entreprises :</strong></p><ol><li>Nous contacter pour une démo personnalisée</li><li>Nous analyserons vos workflows de paiement</li><li>Intégration personnalisée avec vos systèmes (si nécessaire)</li><li>Support de formation et déploiement</li></ol><p><strong>Ce dont vous avez besoin :</strong></p><ul><li>Smartphone (iOS ou Android)</li><li>Plateformes email et messagerie (Gmail, Outlook, Slack, Teams, WhatsApp)</li><li>Pour l'entreprise : système ERP/comptable existant (intégration optionnelle)</li></ul><p>Essayez notre défi sécurité gratuit pour voir à quel point vos processus actuels sont vulnérables aux attaques deepfake.</p>",
+                "ctaLinks": [
+                    {
+                        "text": "Défi sécurité gratuit",
+                        "url": "/fr/challenge.html",
+                        "ariaLabel": "Essayer le défi sécurité gratuit"
+                    },
+                    {
+                        "text": "Nous contacter",
+                        "url": "https://eepurl.com/ix1tjg",
+                        "ariaLabel": "Contacter l'équipe Sealfie"
+                    }
+                ]
+            }
+        ]
     }
 }
