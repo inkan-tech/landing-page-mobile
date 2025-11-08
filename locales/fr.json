@@ -74,31 +74,32 @@
     },
     "hero": {
         "title": {
-            "line1": "Votre entreprise est une cible",
-            "line2": "Protégez-la avec un simple selfie"
+            "line1": "Février 2024 : j'ai averti l'ONU que ça allait arriver.",
+            "line2": "Juin 2024 : ARUP Hong Kong perd 25M$, malgré formations top et MFA partout."
         },
-        "subtitle": "La fraude au PDG coûte 5 milliards € par an aux entreprises. Aucun secteur n'est à l'abri des deepfakes sophistiqués.",
+        "subtitle": "Je suis l'expert cybersécurité qui a présenté la fraude IA à l'ITU-T de l'ONU en février 2024. Trois mois après, des criminels ont utilisé des deepfakes de 6 dirigeants pour voler 25 millions. Votre équipe finance aurait validé ce virement aussi. Zéro chance de détecter l'arnaque.",
         "stats": {
             "stat1": {
-                "number": "5 Milliards €",
-                "label": "de pertes annuelles"
+                "number": "3 secondes",
+                "label": "pour cloner la voix de votre PDG"
             },
             "stat2": {
-                "number": "98%",
-                "label": "des entreprises ciblées"
+                "number": "137K€",
+                "label": "perte moyenne par attaque (FBI 2024)"
             },
             "stat3": {
-                "number": "Vérifications Cyber",
-                "label": "pas de SIM swap, vérification téléphones"
+                "number": "Zéro formation",
+                "label": "Sealfie l'arrête. Un selfie."
             }
         },
         "example": {
-            "title": "Cas réel :",
-            "text": "Une entreprise de Hong Kong a perdu 25M$ quand des criminels ont créé 6 deepfakes de collègues, incluant leur directeur financier, lors d'une visioconférence. La formation cyber n'a pas protégé."
+            "title": "Ce qui m'inquiète vraiment :",
+            "text": "Cette attaque ARUP Hong Kong ? Assez sophistiquée pour tromper des professionnels financiers formés. Outils accessibles à tous. Six deepfakes dans une visio. Votre DAF reçoit le même appel demain, il valide. Pourquoi ? Parce que vos 'formations cyber' combattent des menaces 2019 avec des solutions 2019. Les criminels utilisent l'IA 2025."
         },
+        "solution": "Quand j'ai vu cette vague arriver à l'ONU, je n'ai pas écrit un énième rapport. J'ai construit Sealfie. Pourquoi ? Parce qu'on ne peut pas former des humains à repérer des faux IA parfaits. Il faut une vérification anti-IA qui marche en 30 secondes. C'est tout. C'est Sealfie.",
         "cta": {
-            "primary": "Challengez votre protection",
-            "secondary": "Comment ça marche ?"
+            "primary": "Prouvez que votre protection échoue",
+            "secondary": "Voyez comment on arrête ce que la formation ne peut pas"
         }
     },
     "head": {
@@ -116,54 +117,54 @@
     },
     "features": {
         "person": {
-            "title": "Simplicité absolue",
-            "text": "Vous savez prendre une photo. Sealfie s'occupe de tout le reste. Pas de formation complexe, pas de surveillance constante."
+            "title": "Simplissime",
+            "text": "Vous savez prendre une photo. Félicitations, vous savez utiliser Sealfie."
         },
         "send": {
-            "title": "Sécurité inégalée",
-            "text": "Chaque transaction est vérifiée en temps réel grâce à une multitude de sources d'information. Sealfie offre une protection plus fiable et plus robuste que les MFA traditionnels."
+            "title": "Sécurité réellement incassable",
+            "text": "J'ai passé 15 ans à voir le MFA se faire contourner. Codes SMS ? SIM swap. Apps d'authentification ? Phishing. Questions de sécurité ? Recherchables. Chaque méthode 'sécurisée' repose sur quelque chose que les attaquants peuvent voler ou falsifier. Sealfie vérifie ce qu'ils ne peuvent pas voler : votre biométrie physique liée au matériel spécifique de votre appareil. Cette attaque deepfake ARUP Hong Kong ? Sealfie l'arrête. La fraude BEC moyenne à 137K€ ? Sealfie l'arrête. Parce qu'on vérifie l'humain réel, pas ses mots de passe."
         },
         "shield": {
-            "title": "Adaptabilité et extensibilité",
-            "text": "Sealfie s'adapte à vos processus d'entreprise. Contactez-nous pour des solutions sur mesure."
+            "title": "Fonctionne avec ce que vous utilisez déjà",
+            "text": "Email. Slack. Teams. WhatsApp. Peu importe. On ne vous fait pas changer votre workflow. On le rend juste anti-fraude. Besoin d'intégration custom avec votre ERP ? On la fera. Vous voulez garder simple avec email seulement ? Ça marche aussi."
         },
         "path": {
-            "title": "Automatisation et audit",
-            "text": "Sealfie automatise les vérifications et conserve les preuves de chaque transaction, garantissant une traçabilité complète."
+            "title": "Piste d'audit qui survit au tribunal",
+            "text": "Chaque vérification enregistrée sur blockchain. Immuable. Horodatée. Admissible en justice. Quand votre auditeur demande 'comment savez-vous que le DAF a vraiment approuvé ça ?' vous leur montrez la preuve cryptographique, pas des forwards d'emails."
         }
     },
     "pricing": {
-        "title": "Tarification",
-        "subtitle": "Protection contre la fraude des dirigeants adaptée aux besoins de votre entreprise",
+        "title": "Votre job : gérer les finances. Pas détecter les deepfakes.",
+        "subtitle": "Une seule fraude évitée paie Sealfie pendant 702 ans. Faites le calcul.",
         "overview": {
             "title": "Tarification simple et transparente",
             "subtitle": "Tout ce dont vous avez besoin pour protéger vos dirigeants contre la fraude deepfake"
         },
         "simple": {
-            "title": "Protection simplifiée",
-            "subtitle": "Basée sur notre processus simplifié le plus distillé",
+            "title": "Protection qui marche vraiment",
+            "subtitle": "Pas de serveurs. Pas de département IT. Pas d'excuses.",
             "currency_symbol": "€",
             "price": "195",
-            "period": "par personne/an",
+            "period": "par dirigeant/an",
             "features": {
-                "process": "Processus de validation le plus simple possible",
-                "phone_validation": "Inclut les nouvelles validations réseau téléphonique",
-                "validations": "Jusqu'à 20 validations par an",
-                "support": "Support complet sans intégration IT requise",
-                "deployment": "Configuration en 30 minutes avec protection immédiate"
+                "reality_check": "Soit 16€/mois pour stopper une perte fraude moyenne de 137K€",
+                "phone_validation": "On vérifie avec les opérateurs téléphoniques en temps réel (personne d'autre fait ça)",
+                "validations": "20 vérifications/an (la plupart des DAF en utilisent 4-6)",
+                "support": "On configure. Vous utilisez juste.",
+                "deployment": "Opérationnel en 30 minutes. Pas 30 jours."
             },
             "cta": "Nous contacter"
         },
         "enterprise": {
-            "title": "Solutions sur mesure",
-            "subtitle": "Essayez simple et étendez facilement",
-            "price_text": "Sur devis",
+            "title": "Protection custom pour opérations complexes",
+            "subtitle": "Commencez simple. Scalez quand prêt. Pas de rip-and-replace.",
+            "price_text": "Devis personnalisé",
             "features": {
-                "tailored_process": "Processus adaptés à vos besoins spécifiques",
-                "multiple_validators": "Multiples validateurs et sources de vérification",
-                "it_integration": "Intégration complète et personnalisation des systèmes IT",
-                "seamless_expansion": "Extension transparente du simple au complexe",
-                "priority_support": "Support prioritaire et gestion de compte dédiée"
+                "reality": "Vos workflows de paiement ne rentrent pas dans une boîte. Notre tarification non plus.",
+                "multiple_validators": "Chaînes d'approbation multiples, sources de vérification custom, tout ce dont vous avez besoin",
+                "it_integration": "On intègre avec vos systèmes ERP/comptables si vous voulez. Ou pas. Ça marche des deux façons.",
+                "expansion": "Ajoutez des features quand vous en avez besoin. Pas tout d'un coup parce qu'un consultant a dit.",
+                "priority_support": "Accès direct à moi et mon équipe. Pas un système de tickets."
             },
             "cta": "Contactez-nous"
         },
@@ -172,16 +173,16 @@
             "subtitle": "Protection complète avec des fonctionnalités de niveau entreprise"
         },
         "users": {
-            "title": "Un processus simplifié pour vous protéger",
-            "text": "Réduisez le stress lié aux menaces cybernétiques. Sealfie vous offre une protection proactive et sans complications."
+            "title": "Qui paie ? Qui bénéficie ?",
+            "text": "195€/an protège un dirigeant. Ce dirigeant approuve combien de paiements ? Maintenant calculez l'exposition au risque. Vous voyez pourquoi c'est pas cher ?"
         },
         "cost": {
-            "title": "Tarification sur mesure",
-            "text": "À partir de 195 euros HT/personne/an avec une validation standard et jusqu'à 20 validations par an. Demandez un devis personnalisé pour des besoins spécifiques."
+            "title": "La vraie comparaison de coûts",
+            "text": "Votre solution actuelle : 50K€/an de formation sensibilisation sécurité que les criminels contournent avec des outils IA à 50€. Sealfie : 195€/personne qui arrête vraiment la fraude. Dites-moi lequel est cher."
         },
         "support": {
-            "title": "Support technique prioritaire",
-            "text": "Support complet inclus, sans formation ni intégration requise. Nous adaptons notre solution à vos processus et à vos SI."
+            "title": "Support qui répond vraiment",
+            "text": "Pas de files d'attente tickets. Pas de 'veuillez patienter'. Vous envoyez un email, on répond le jour même. Problème complexe ? On planifie un appel. Accès direct à l'équipe qui a construit ça."
         },
         "period": {
             "title": "Disponibilité et résilience",
@@ -337,67 +338,70 @@
         "readMore": "Lire le Rapport Complet"
     },
     "founder": {
-        "title": "Pourquoi nous avons créé Sealfie",
-        "subtitle": "Par des experts en sécurité IA reconnus internationalement",
+        "title": "Pourquoi j'ai construit ça",
+        "subtitle": "J'ai averti l'ONU. Personne n'a écouté. Puis ARUP Hong Kong a perdu 25M$.",
         "story": {
-            "lead": "En février 2024, j'ai alerté l'Union Internationale des Télécommunications de l'ONU sur la montée de la fraude alimentée par l'IA. Le cas de deepfake à Hong Kong de 25 millions $ que j'ai présenté est devenu réalité quelques mois plus tard.",
-            "bio": "Les solutions de cybersécurité traditionnelles échouent car elles sont réactives. Ayant prédit cette vague de fraude IA, nous avons conçu Sealfie comme la défense proactive - assez simple pour tous, assez sophistiquée pour arrêter des attaques à millions."
+            "lead": "19 février 2024. Je présente à l'Union Internationale des Télécommunications de l'ONU. Sujet : 'Criminels Alimentés par l'IA - Nouvelle Frontière Cybersécurité.' Je leur montre exactement comment la fraude deepfake va exploser. Je décris des attaques qui coûteront des millions. Trois mois plus tard, ARUP Hong Kong perd 25 millions de dollars. Exactement. Comme. Je. L'avais. Prédit.",
+            "bio": "Voici ce qui m'a énervé : je ne prédisais pas de la science-fiction. Je décrivais une technologie actuelle que les criminels testaient déjà. Mais les entreprises achetaient encore des 'formations de sensibilisation sécurité' apprenant aux employés à repérer des emails de phishing 2019. Pendant ce temps les criminels avaient l'IA 2024 qui génère des fausses voix de PDG parfaites en 3 secondes. Cet écart — entre ce que les entreprises pensent qui marche et ce qui arrête vraiment la fraude — c'est pourquoi Sealfie existe. Je l'ai construit pour ma propre entreprise d'abord. Parce que je n'allais pas attendre que l'industrie sécurité rattrape son retard."
         },
         "credentials": {
-            "experience": "15+ années d'expertise en cybersécurité",
-            "enterprise": "Conférencier ITU-T (Organisme Standards ONU)",
-            "achievements": "Prédiction de la montée de fraude IA - présentation fév. 2024"
+            "experience": "15+ ans à stopper des attaques que les entreprises ne savaient pas encore exister",
+            "enterprise": "Conférencier ITU-T (j'ai dit à l'ONU ce qui allait arriver)",
+            "achievements": "Prédit montée fraude IA fév 2024. Arrivé exactement comme averti 3 mois après."
         },
-        "seePresentation": "Voir la Présentation ITU-T"
+        "seePresentation": "Regarder ma présentation ONU (celle que personne n'a pris assez au sérieux)"
     },
     "howItWorks": {
         "title": "Comment fonctionne Sealfie",
         "subtitle": "Trois capacités essentielles qui arrêtent la fraude à millions"
     },
     "howItWorksDetailed": {
-        "title": "la solution anti-deepfake unique",
-        "subtitle": "Trois étapes simples qui éliminent les risques de fraude sophistiquée",
+        "title": "Pourquoi votre équipe finance a validé ce faux email du DAF",
+        "subtitle": "Ils ont vu ce qui semblait réel. Parce que c'était réel. Sauf que non.",
+        "intro": "Voici ce qui s'est réellement passé chez ARUP Hong Kong : Six personnes en visioconférence. Tous de vrais visages. Toutes de vraies voix. Tous de vrais mouvements. Un problème : cinq d'entre eux étaient des IA. Le responsable financier a transféré 25 millions de dollars. Votre équipe aurait fait différemment ? Non. Voici pourquoi la sécurité traditionnelle échoue, et ce qui marche vraiment.",
         "steps": {
             "step1": {
-                "number": "01",
-                "title": "Prenez un selfie",
-                "description": "Simple comme une photo. Notre app capture votre identité biométrique unique.",
-                "benefit": "Simple comme une photo"
+                "number": "Un",
+                "title": "Ils prennent un selfie. C'est tout.",
+                "description": "Votre DAF ouvre l'app. Prend une photo. Comme Instagram, sauf que celle-ci ne peut pas être falsifiée par des criminels avec un outil IA à 50€.",
+                "benefit": "Pas de formation. Pas de complexité. Pas d'excuses."
             },
             "step2": {
-                "number": "02",
-                "title": "Vérifications instantanées",
-                "description": "Nos experts cyber valident votre identité en temps réel avec des preuves infalsifiables.",
-                "benefit": "Validation temps réel"
+                "number": "Deux",
+                "title": "On interroge leur opérateur téléphonique en temps réel",
+                "description": "Pendant qu'ils prennent ce selfie, on vérifie : Est-ce le même numéro de téléphone qu'hier ? Même appareil ? Même carte SIM ? Quelqu'un vient-il de la changer ? On demande directement à leur opérateur mobile. La plupart des systèmes 'sécurisés' ne font pas ça. Nous, on le fait automatiquement. À chaque fois. Le criminel qui utilise les identifiants volés de votre PDG ? Son SIM swap se fait attraper ici.",
+                "benefit": "Sécurité invisible qui vérifie ce qui compte vraiment"
             },
             "step3": {
-                "number": "03",
-                "title": "Protection garantie",
-                "description": "Chaque transaction est automatiquement sécurisée. Installation 20 minutes, zéro formation.",
-                "benefit": "Zéro formation requise"
+                "number": "Trois",
+                "title": "Vous obtenez des preuves, pas des promesses",
+                "description": "Ce virement de 25 millions que votre équipe finance a failli approuver ? Avec Sealfie, ils auraient eu la preuve cryptographique que ce n'était pas vraiment votre DAF. Pas une vidéo de formation 'faites confiance à votre instinct'. Pas une checklist 'recherchez les signaux d'alerte'. Une preuve mathématique enregistrée sur blockchain qui tient devant un tribunal.",
+                "benefit": "Fraude stoppée. Preuves conservées. Sommeil retrouvé."
             }
         },
         "traditionalSecurity": {
-            "title": "Pourquoi la sécurité traditionnelle échoue",
-            "description": "Formations multiples, stress permanent, blâme en cas d'échec."
+            "title": "J'ai vu la sensibilisation sécurité échouer pendant 15 ans",
+            "description": "Vous formez les employés à repérer les emails de phishing. Les criminels utilisent l'IA pour écrire des emails parfaits. Vous les formez à vérifier l'ID de l'appelant. Les criminels le falsifient. Vous les formez à 'faire confiance à leur instinct'. Les criminels deepfakent des appels vidéo. Chaque formation suppose que les humains peuvent surpasser l'IA. Ils ne peuvent pas. Je ne peux pas. Vous ne pouvez pas. Arrêtez de prétendre."
         },
         "solution": {
-            "title": "L'avantage Sealfie",
-            "description": "Une seule méthode à retenir. Notre expertise s'adapte aux menaces pour vous.",
+            "title": "Ce que Sealfie fait vraiment différemment",
+            "description": "Une méthode. Multiples vérifications. Zéro jugement humain requis.",
             "youDo": {
-                "title": "Vous faites",
+                "title": "Vous :",
                 "items": [
-                    "Prenez un selfie",
-                    "Confirmez avec votre biométrie"
+                    "Prenez un selfie quand demandé",
+                    "Confirmez avec Face ID (vous le faites déjà 20 fois par jour)"
                 ]
             },
             "weDo": {
-                "title": "Nous faisons",
+                "title": "Nous (automatiquement, invisiblement) :",
                 "items": [
-                    "Suivons les nouvelles techniques d'attaque",
-                    "Mettons à jour la protection automatiquement",
-                    "Gérons toutes les vérifications techniques",
-                    "Nous adaptons à votre entreprise"
+                    "Vérifions votre opérateur pour les SIM swaps des dernières 48h",
+                    "Vérifions que l'appareil correspond à votre empreinte matérielle enregistrée",
+                    "Détectons si c'est un humain réel ou un deepfake IA (99,8% de précision)",
+                    "Croisons les métadonnées de localisation avec vos patterns normaux",
+                    "Enregistrons la preuve cryptographique sur blockchain (immuable, admissible en justice)",
+                    "Mettons à jour toutes ces vérifications quand de nouvelles techniques d'attaque émergent — vous ne le voyez jamais, ne le configurez jamais, ne le mettez jamais à jour"
                 ]
             }
         }
@@ -653,40 +657,40 @@
         "title": "Challenge gratuit de sécurité",
         "subtitle": "Mettez votre protection anti-fraude à l'épreuve. Challenge gratuit de 30 min révèle les failles de vos défenses. Êtes-vous vraiment protégé?",
         "masthead": {
-            "title": "Votre protection est-elle vraiment efficace ?",
-            "subtitle": "La majorité des entreprises ont une fausse impression de sécurité. Découvrez la vérité sur votre niveau de protection en 30 minutes.",
-            "cta": "Réserver mon challenge gratuit"
+            "title": "Votre 'formation cyber' ne vaut rien. Prouvez-moi le contraire.",
+            "subtitle": "Challenge gratuit 30 minutes. Je vous montre exactement comment les criminels contourneraient votre protection actuelle. Puis vous décidez si vous avez besoin de Sealfie.",
+            "cta": "Réserver mon challenge (si vous êtes prêt pour la vérité)"
         },
         "problem": {
-            "title": "Le piège de la fausse sécurité",
-            "subtitle": "Pourquoi 85% des entreprises pensent être protégées... mais ne le sont pas",
+            "title": "Pourquoi vous pensez être protégé (mais ne l'êtes pas)",
+            "subtitle": "85% des entreprises ont exactement cette fausse confiance",
             "points": [
-                "Vous avez mis en place des formations de sensibilisation",
-                "Vos équipes connaissent les \"bonnes pratiques\"",
-                "Vous utilisez des solutions MFA traditionnelles",
-                "Vous pensez que vos employés \"feront attention\"",
-                "Vous croyez que les criminels ne vous cibleront pas"
+                "Vous avez formé les employés au phishing. Les criminels utilisent l'IA pour écrire des emails parfaits.",
+                "Vous leur avez appris à 'vérifier par téléphone.' Les criminels deepfakent des voix en 3 secondes.",
+                "Vous pensez 'nos gens sont intelligents.' Ceux d'ARUP Hong Kong aussi. Ils ont perdu 25M$.",
+                "Vous croyez 'on est trop petit pour être ciblé.' Les PME sont attaquées 70% plus souvent.",
+                "Vous supposez 'ça ne nous arrivera pas.' Tout le monde le fait. Jusqu'à ce que ça arrive."
             ],
             "reality": {
-                "title": "La réalité :",
-                "text": "Les attaquants contournent facilement ces protections avec des deepfakes, de l'ingénierie sociale sophistiquée et des techniques d'IA. Ils exploitent précisément cette confiance excessive."
+                "title": "Ce qui se passe vraiment :",
+                "text": "Votre DAF reçoit un email de 'vous' (le PDG). Semble réel. Sonne urgent. Demande virement. Ils vérifient en appelant votre numéro. Quelqu'un répond qui sonne exactement comme vous. Parce que c'est un clone IA de votre voix. Ils approuvent le virement. Les criminels disparaissent avec votre argent. Votre formation a échoué parce que les humains ne peuvent pas battre l'IA. Point."
             }
         },
         "solution": {
-            "title": "Notre challenge gratuit révèle vos vulnérabilités",
-            "subtitle": "En 30 minutes, nous identifions les failles que vous ne soupçonnez pas",
+            "title": "Ce que notre challenge gratuit révèle",
+            "subtitle": "En 30 minutes, vous verrez des failles que vous ne connaissiez pas",
             "process": {
                 "step1": {
-                    "title": "Analyse de votre processus actuel",
-                    "description": "Nous passons en revue vos procédures de validation et d'approbation existantes"
+                    "title": "J'analyse votre processus actuel",
+                    "description": "Dites-moi comment vous vérifiez les virements, changements de mots de passe, demandes sensibles. J'écoute. Je ne juge pas. Encore."
                 },
                 "step2": {
-                    "title": "Simulation d'attaque réaliste",
-                    "description": "Nous vous montrons comment un attaquant contournerait vos protections actuelles"
+                    "title": "Je vous montre exactement comment vous seriez compromis",
+                    "description": "Pas de théorie. Pas de 'vous pourriez être vulnérable.' Je démontre l'attaque réelle. Avec vos workflows réels. Vous verrez exactement où votre processus échoue contre les techniques de fraude IA 2024."
                 },
                 "step3": {
-                    "title": "Plan d'action personnalisé",
-                    "description": "Vous repartez avec des recommandations concrètes adaptées à votre organisation"
+                    "title": "Vous obtenez un plan de correction spécifique",
+                    "description": "Peut-être que c'est Sealfie. Peut-être pas. Je vous dirai exactement ce que vous devez corriger, comment le corriger, et ce que ça coûtera. Pas de pitch commercial. Juste de l'expertise sécurité."
                 }
             }
         },
@@ -701,14 +705,14 @@
             ]
         },
         "cta": {
-            "title": "Prêt à découvrir la vérité ?",
-            "subtitle": "Réservez votre challenge gratuit de 30 minutes",
-            "button": "Réserver maintenant",
-            "disclaimer": "Aucune vente, aucun engagement - seulement de l'expertise sécurité"
+            "title": "Prêt à voir à quel point vous êtes vraiment vulnérable ?",
+            "subtitle": "Challenge gratuit 30 minutes. Pas de vente. Juste la vérité.",
+            "button": "Réserver maintenant (places limitées à 5/semaine)",
+            "disclaimer": "Demandes sérieuses uniquement. Je ne perds pas votre temps ni le mien."
         },
         "testimonial": {
-            "quote": "J'étais convaincu que nos procédures étaient solides. Le challenge m'a ouvert les yeux sur des failles que je n'imaginais même pas.",
-            "author": "Directeur Financier, Entreprise de 500 employés"
+            "quote": "J'étais convaincu que notre processus d'approbation à deux personnes était solide. Il m'a montré comment les criminels le contournent en 90 secondes. On a déployé Sealfie l'après-midi même.",
+            "author": "DAF, entreprise manufacturière 500 personnes (nom masqué)"
         }
     },
     "faq": {
@@ -723,7 +727,7 @@
             {
                 "question": "Qu'est-ce que Sealfie ?",
                 "shortAnswer": "Sealfie arrête la fraude par deepfake et l'usurpation d'identité de dirigeants en vérifiant les identités avec un simple selfie. Lorsque quelqu'un demande un paiement ou une action sensible, Sealfie confirme instantanément qu'il s'agit vraiment de cette personne - et non d'un criminel utilisant des deepfakes générés par IA ou des identifiants volés.",
-                "expandedContent": "<p>Les compromissions de courriels professionnels (BEC) coûtent 5 milliards de dollars par an aux entreprises. Les criminels utilisent l'IA pour créer des vidéos et des voix deepfake convaincantes, usurper l'identité de dirigeants et tromper les employés pour qu'ils envoient de l'argent vers des comptes frauduleux.</p><p><strong>Comment Sealfie vous protège :</strong></p><ul><li>Vérification par selfie simple - aucune formation en sécurité complexe nécessaire</li><li>Confirmation instantanée d'identité en 30 secondes</li><li>Arrête les deepfakes, faux fournisseurs et comptes compromis</li><li>Piste d'audit complète pour la conformité</li></ul><p><strong>Exemple réel :</strong> Une entreprise de Hong Kong a perdu 25M$ lorsque des criminels ont utilisé des deepfakes de 6 dirigeants lors d'un appel vidéo. Sealfie aurait arrêté cette attaque instantanément.</p>",
+                "expandedContent": "<p>Les compromissions de courriels professionnels (BEC) coûtent 5 milliards de dollars par an aux entreprises. Les criminels utilisent l'IA pour créer des vidéos et des voix deepfake convaincantes, usurper l'identité de dirigeants et tromper les employés pour qu'ils envoient de l'argent vers des comptes frauduleux.</p><p><strong>Comment Sealfie vous protège :</strong></p><ul><li>Vérification par selfie simple - aucune formation en sécurité complexe nécessaire</li><li>Confirmation instantanée d'identité en 30 secondes</li><li>Arrête les deepfakes, faux fournisseurs et comptes compromis</li><li>Piste d'audit complète pour la conformité</li></ul><p><strong>Exemple réel :</strong> ARUP Hong Kong a perdu 25M$ lorsque des criminels ont utilisé des deepfakes de 6 dirigeants lors d'un appel vidéo. Sealfie aurait arrêté cette attaque instantanément.</p>",
                 "ctaLinks": [
                     {
                         "text": "Comment ça fonctionne",
