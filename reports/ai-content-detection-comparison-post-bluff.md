@@ -47,17 +47,17 @@ No industry is safe from sophisticated deepfake attacks."
 ```json
 "title": {
   "line1": "February 2024: I warned the UN this was coming.",
-  "line2": "June 2024: Hong Kong ARUP lost $25M, despite top notch trainings and MFAs for all."
+  "line2": "March 2024: Hong Kong ARUP lost $25M, despite top notch trainings and MFAs for all."
 },
 "subtitle": "I'm the cybersecurity expert who presented AI-powered fraud to the UN's ITU-T
-in February 2024. Three months later, criminals used deepfakes of 6 executives to steal
+in February 2024. One month later, criminals used deepfakes of 6 executives to steal
 $25 million. Your finance team would have approved that transfer too. They had zero chance
 of detecting it."
 ```
 
 **Human Voice Markers:**
 - ✅ First-person narrative ("I warned", "I'm the cybersecurity expert")
-- ✅ Specific dates (February 2024, June 2024)
+- ✅ Specific dates (February 2024, March 2024)
 - ✅ Concrete evidence ($25M ARUP Hong Kong case)
 - ✅ Direct address to reader ("Your finance team would have approved")
 - ✅ Sentence variation: 7 → 45 words
@@ -272,7 +272,7 @@ AI-generated deepfakes in real-time."
 **Additional Human Markers:**
 - ✅ Emotional language ("Here's what pissed me off")
 - ✅ Fragment sentences for emphasis ("Exactly. As. I. Predicted.")
-- ✅ Specific timeline (February 19, 2024, three months later)
+- ✅ Specific timeline (February 19, 2024, one month later)
 - ✅ Contrast narrative (what I predicted vs what happened)
 - ✅ Personal motivation ("I built it for my own company first")
 - ✅ Industry criticism (2019 phishing training vs 2024 AI fraud)
