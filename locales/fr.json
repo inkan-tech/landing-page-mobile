@@ -76,9 +76,9 @@
     "hero": {
         "title": {
             "line1": "Février 2024 : j'ai averti l'ONU que ça allait arriver.",
-            "line2": "Juin 2024 : ARUP Hong Kong perd 25M$, malgré formations top et MFA partout."
+            "line2": "Mars 2024 : ARUP Hong Kong perd 25M$, malgré formations top et MFA partout."
         },
-        "subtitle": "Je suis l'expert cybersécurité qui a présenté la fraude IA à l'ITU-T de l'ONU en février 2024. Trois mois après, des criminels ont utilisé des deepfakes de 6 dirigeants pour voler 25 millions. Votre équipe finance aurait validé ce virement aussi. Zéro chance de détecter l'arnaque.",
+        "subtitle": "Je suis l'expert cybersécurité qui a présenté la fraude IA à l'ITU-T de l'ONU en février 2024. Un mois après, des criminels ont utilisé des deepfakes de 6 dirigeants pour voler 25 millions. Votre équipe finance aurait validé ce virement aussi. Zéro chance de détecter l'arnaque.",
         "stats": {
             "stat1": {
                 "number": "3 secondes",
@@ -358,13 +358,13 @@
         "title": "Pourquoi j'ai construit ça",
         "subtitle": "J'ai averti l'ONU. Personne n'a écouté. Puis ARUP Hong Kong a perdu 25M$.",
         "story": {
-            "lead": "19 février 2024. Je présente à l'Union Internationale des Télécommunications de l'ONU. Sujet : 'Criminels Alimentés par l'IA - Nouvelle Frontière Cybersécurité.' Je leur montre exactement comment la fraude deepfake va exploser. Je décris des attaques qui coûteront des millions. Trois mois plus tard, ARUP Hong Kong perd 25 millions de dollars. Exactement. Comme. Je. L'avais. Prédit.",
+            "lead": "19 février 2024. Je présente à l'Union Internationale des Télécommunications de l'ONU. Sujet : 'Criminels Alimentés par l'IA - Nouvelle Frontière Cybersécurité.' Je leur montre exactement comment la fraude deepfake va exploser. Je décris des attaques qui coûteront des millions. Un mois plus tard, ARUP Hong Kong perd 25 millions de dollars. Exactement. Comme. Je. L'avais. Prédit.",
             "bio": "Voici ce qui m'a énervé : je ne prédisais pas de la science-fiction. Je décrivais une technologie actuelle que les criminels testaient déjà. Mais les entreprises achetaient encore des 'formations de sensibilisation sécurité' apprenant aux employés à repérer des emails de phishing 2019. Pendant ce temps les criminels avaient l'IA 2024 qui génère des fausses voix de PDG parfaites en 3 secondes. Cet écart — entre ce que les entreprises pensent qui marche et ce qui arrête vraiment la fraude — c'est pourquoi Sealfie existe. Je l'ai construit pour ma propre entreprise d'abord. Parce que je n'allais pas attendre que l'industrie sécurité rattrape son retard."
         },
         "credentials": {
             "experience": "15+ ans à stopper des attaques que les entreprises ne savaient pas encore exister",
             "enterprise": "Conférencier ITU-T (j'ai dit à l'ONU ce qui allait arriver)",
-            "achievements": "Prédit montée fraude IA fév 2024. Arrivé exactement comme averti 3 mois après."
+            "achievements": "Prédit montée fraude IA fév 2024. Arrivé exactement comme averti 1 mois après."
         },
         "seePresentation": "Regarder ma présentation ONU (celle que personne n'a pris assez au sérieux)"
     },

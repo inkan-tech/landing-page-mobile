@@ -76,9 +76,9 @@
     "hero": {
         "title": {
             "line1": "February 2024: I warned the UN this was coming.",
-            "line2": "June 2024: Hong Kong ARUP lost $25M, despite top notch trainings and MFAs for all."
+            "line2": "March 2024: Hong Kong ARUP lost $25M, despite top notch trainings and MFAs for all."
         },
-        "subtitle": "I'm the cybersecurity expert who presented AI-powered fraud to the UN's ITU-T in February 2024. Three months later, criminals used deepfakes of 6 executives to steal $25 million. Your finance team would have approved that transfer too. They had zero chance of detecting it.",
+        "subtitle": "I'm the cybersecurity expert who presented AI-powered fraud to the UN's ITU-T in February 2024. One month later, criminals used deepfakes of 6 executives to steal $25 million. Your finance team would have approved that transfer too. They had zero chance of detecting it.",
         "stats": {
             "stat1": {
                 "number": "3 seconds",
@@ -358,13 +358,13 @@
         "title": "Why I built this",
         "subtitle": "I warned the UN. Nobody listened. Then ARUP Hong Kong lost $25M.",
         "story": {
-            "lead": "February 19, 2024. I'm presenting to the UN's International Telecommunication Union. Topic: 'AI-Powered Criminals - A New Cybersecurity Frontier.' I show them exactly how deepfake fraud will surge. I describe attacks that will cost millions. Three months later, ARUP Hong Kong loses $25 million. Exactly. As. I. Predicted.",
+            "lead": "February 19, 2024. I'm presenting to the UN's International Telecommunication Union. Topic: 'AI-Powered Criminals - A New Cybersecurity Frontier.' I show them exactly how deepfake fraud will surge. I describe attacks that will cost millions. One month later, ARUP Hong Kong loses $25 million. Exactly. As. I. Predicted.",
             "bio": "Here's what pissed me off: I wasn't predicting science fiction. I was describing current technology that criminals were already testing. But enterprises were still buying 'security awareness training' teaching employees to spot 2019 phishing emails. Meanwhile criminals had 2024 AI that generates perfect fake CEO voices in 3 seconds. That gap — between what companies think works and what actually stops fraud — is why Sealfie exists. I built it for my own company first. Because I wasn't going to wait for the security industry to catch up."
         },
         "credentials": {
             "experience": "15+ years stopping attacks enterprises didn't know existed yet",
             "enterprise": "ITU-T Workshop Speaker (told the UN what was coming)",
-            "achievements": "Predicted AI fraud surge Feb 2024. Happened exactly as warned 3 months later."
+            "achievements": "Predicted AI fraud surge Feb 2024. Happened exactly as warned 1 month later."
         },
         "seePresentation": "Watch my UN presentation (the one nobody took seriously enough)"
     },
