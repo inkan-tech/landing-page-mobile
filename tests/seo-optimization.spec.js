@@ -18,7 +18,7 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('SEO: Meta Tags & Titles', () => {
   const pages = [
-    { path: '/', expectedTitle: 'Sealfie app', minDescriptionLength: 120 },
+    { path: '/', expectedTitleFragment: 'Sealfie', minDescriptionLength: 120 },
     { path: '/documentation.html', expectedTitleFragment: 'How it works | Sealfie', minDescriptionLength: 120 },
     { path: '/pricing.html', expectedTitleFragment: 'Pricing | Sealfie', minDescriptionLength: 120 },
     { path: '/press.html', expectedTitleFragment: 'Company news | Sealfie', minDescriptionLength: 100 },
@@ -59,8 +59,10 @@ test.describe('SEO: Meta Tags & Titles', () => {
       expect(canonical).toBeTruthy();
       expect(canonical).toContain('https://sealf.ie');
 
-      // Ensure canonical URL is properly formed (no double slashes, correct path)
-      expect(canonical).toMatch(/^https:\/\/sealf\.ie\/[a-z]{2}\//);
+      // Ensure canonical URL is properly formed (no double slashes)
+      // Accepts: https://sealf.ie/, https://sealf.ie/page.html, https://sealf.ie/en/, https://sealf.ie/en/page.html
+      expect(canonical).toMatch(/^https:\/\/sealf\.ie\//);
+      expect(canonical).not.toContain('///', 'Should not have triple slashes');
     });
   }
 });

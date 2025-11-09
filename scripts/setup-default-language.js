@@ -27,14 +27,30 @@ const destDir = path.join(__dirname, '../docs');
 
 console.log('Setting up English as default language...');
 
-// Copy each file
+// Copy each file and fix canonical URLs for root versions
 filesToCopy.forEach(file => {
     const sourcePath = path.join(sourceDir, file);
     const destPath = path.join(destDir, file);
-    
+
     if (fs.existsSync(sourcePath)) {
         try {
-            const content = fs.readFileSync(sourcePath, 'utf8');
+            let content = fs.readFileSync(sourcePath, 'utf8');
+
+            // Fix canonical URL: /en/[file] → /[file] for root versions
+            if (file === 'index.html') {
+                // Homepage: /en/ → / (root)
+                content = content.replace(
+                    '<link rel="canonical" href="https://sealf.ie/en/">',
+                    '<link rel="canonical" href="https://sealf.ie/">'
+                );
+            } else {
+                // Other pages: /en/[file].html → /[file].html
+                content = content.replace(
+                    `<link rel="canonical" href="https://sealf.ie/en/${file}">`,
+                    `<link rel="canonical" href="https://sealf.ie/${file}">`
+                );
+            }
+
             fs.writeFileSync(destPath, content);
             console.log(`✓ Copied ${file} to root`);
         } catch (error) {
