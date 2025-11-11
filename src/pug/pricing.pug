@@ -49,16 +49,63 @@ html(lang=$localeName)
             "@id": "https://sealf.ie/#product",
             "name": "Sealfie - Executive Fraud Protection",
             "description": "#{$i18n.meta.descriptions.pricing}",
+            "image": "https://sealf.ie/assets/favicon.svg",
+            "sku": "SEALFIE-EXEC-001",
+            "mpn": "SEALFIE-2025",
+            "category": "Security Software",
             "brand": {
-              "@id": "https://sealf.ie/#organization"
+              "@type": "Organization",
+              "@id": "https://inkan.link/#organization",
+              "name": "Inkan",
+              "url": "https://inkan.link"
             },
             "offers": {
               "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
+              "price": "195",
+              "priceCurrency": "EUR",
               "availability": "https://schema.org/InStock",
               "priceValidUntil": "2025-12-31",
-              "url": "https://sealf.ie/#{$localeName}/pricing.html"
+              "url": "https://sealf.ie/#{$localeName}/pricing.html",
+              "seller": {
+                "@type": "Organization",
+                "name": "Inkan",
+                "url": "https://inkan.link"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "EUR"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                  }
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "FR"
+                }
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "FR",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              }
             },
             "aggregateRating": {
               "@type": "AggregateRating",
