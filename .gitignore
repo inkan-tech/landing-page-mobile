@@ -54,3 +54,4 @@ tests/**/*-diff.png
 # SEO Audit Reports
 /reports/seo/
 reports/seo/
+analysis_results.json
