@@ -15,7 +15,7 @@ html(lang=$localeName)
     //- Open Graph meta tags for social sharing
     meta(property='og:title', content=$i18n.faq.title + ' | ' + $i18n.title)
     meta(property='og:description', content=$i18n.faq.meta.description)
-    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-og-image.jpg')
+    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-screenshot-1.png')
     meta(property='og:url', content='https://sealf.ie/'+$localeName+'/faq.html')
     meta(property='og:type', content='website')
     meta(property='og:site_name', content='Sealfie')
@@ -26,7 +26,7 @@ html(lang=$localeName)
     meta(name='twitter:site', content='@sealfieapp')
     meta(name='twitter:title', content=$i18n.faq.title + ' | ' + $i18n.title)
     meta(name='twitter:description', content=$i18n.faq.meta.description)
-    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-twitter-card.jpg')
+    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-screenshot-1.png')
 
     //- FAQPage Structured Data (Schema.org JSON-LD) - Generated from i18n data
     script.
@@ -58,6 +58,13 @@ html(lang=$localeName)
   body#page-top
 
     include ../pug/includes/navbar.pug
+
+    // FAQ Page Hero
+    section.hero-section.text-center.py-5
+      .container
+        h1.hero-title #{$i18n.faq.title}
+        if $i18n.faq.meta.description
+          p.lead.text-secondary #{$i18n.faq.meta.description}
 
     // FAQ Section
     include includes/faq
