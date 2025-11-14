@@ -28,7 +28,6 @@ module.exports = grunt => {
                     "docs/challenge.html": ["src/pug/challenge.pug"],
                     "docs/faq.html": ["src/pug/faq.pug"],
                     "docs/terms.html": ["src/pug/terms.pug"],
-                    "docs/offline.html": ["src/pug/offline.pug"],
                     "docs/press.html": ["src/pug/press.pug"],
                 }
             }
@@ -241,7 +240,7 @@ module.exports = grunt => {
         // Sitemap generation with SEO-optimized settings
         sitemap: {
             dist: {
-                pattern: ['docs/en/**/*.html', 'docs/fr/**/*.html', '!docs/fr/offline.html'],
+                pattern: ['docs/en/**/*.html', 'docs/fr/**/*.html'],
                 siteRoot: 'docs/',
                 changefreq: 'weekly',
                 priority: 0.8,

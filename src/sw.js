@@ -7,9 +7,7 @@ const urlsToCache = [
   '/assets/img/InkanLogo-32x32.svg',
   '/assets/img/app-store-badge.svg',
   '/assets/img/google-play-badge.svg',
-  '/assets/favicon.svg',
-  // Offline fallback page
-  '/offline.html'
+  '/assets/favicon.svg'
 ];
 
 // Install Service Worker
@@ -66,16 +64,7 @@ self.addEventListener('fetch', event => {
       })
       .catch(() => {
         // Network failed, try cache
-        return caches.match(event.request)
-          .then(response => {
-            if (response) {
-              return response;
-            }
-            // If no cache match and it's a navigation request, return offline page
-            if (event.request.mode === 'navigate') {
-              return caches.match('/offline.html');
-            }
-          });
+        return caches.match(event.request);
       })
   );
 });
