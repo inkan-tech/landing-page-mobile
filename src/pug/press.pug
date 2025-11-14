@@ -15,6 +15,22 @@ html(lang=$localeName)
     link(rel='alternate', hreflang='en', href='https://sealf.ie/en/press.html')
     link(rel='alternate', hreflang='fr', href='https://sealf.ie/fr/press.html')
 
+    //- Open Graph meta tags for social sharing
+    meta(property='og:title', content=$i18n.press.title + ' | ' + $i18n.title)
+    meta(property='og:description', content=$i18n.meta.descriptions.press)
+    meta(property='og:image', content='https://sealf.ie/assets/img/sealfie-screenshot-1.png')
+    meta(property='og:url', content='https://sealf.ie/'+$localeName+'/press.html')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content='Sealfie')
+    meta(property='og:locale', content=$localeName == 'en' ? 'en_US' : 'fr_FR')
+
+    //- Twitter Card meta tags
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@sealfieapp')
+    meta(name='twitter:title', content=$i18n.press.title + ' | ' + $i18n.title)
+    meta(name='twitter:description', content=$i18n.meta.descriptions.press)
+    meta(name='twitter:image', content='https://sealf.ie/assets/img/sealfie-screenshot-1.png')
+
   body#page-top
     include ../pug/includes/skip-nav.pug
     include ../pug/includes/navbar.pug
