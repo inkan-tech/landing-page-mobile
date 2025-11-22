@@ -91,6 +91,8 @@ html(lang=$localeName)
               | #{$i18n.documentation.hero.title.line1}
               br
               span(class='text-shu-primary') #{$i18n.documentation.hero.title.line2}
+            if $i18n.documentation.intro
+              p(class='text-xl text-gray-600 mb-6 max-w-3xl mx-auto') #{$i18n.documentation.intro}
             p(class='text-xl text-gray-600 mb-12 max-w-3xl mx-auto') #{$i18n.documentation.hero.subtitle}
 
             // Process Overview

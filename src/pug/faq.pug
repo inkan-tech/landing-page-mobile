@@ -63,6 +63,8 @@ html(lang=$localeName)
     section.hero-section.text-center.py-5
       .container
         h1.hero-title #{$i18n.faq.title}
+        if $i18n.faq.intro
+          p.lead.text-secondary.mb-4 #{$i18n.faq.intro}
         if $i18n.faq.meta.description
           p.lead.text-secondary #{$i18n.faq.meta.description}
 
