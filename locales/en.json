@@ -153,6 +153,7 @@
     "pricing": {
         "title": "Your job: manage finances. Not outsmart deepfake experts.",
         "subtitle": "One prevented fraud attack pays for Sealfie for 702 years. Do the math.",
+        "intro": "Protect your business from executive deepfake fraud with Sealfie's biometric verification at $195 for 30-day coverage. Our advanced system prevents CEO impersonation attacks that average $137,000 per incident, using cutting-edge AI detection technology, device fingerprinting, SIM swap monitoring, and blockchain-recorded cryptographic proof for complete protection against deepfake threats.",
         "overview": {
             "title": "Simple, transparent pricing",
             "subtitle": "Everything you need to protect your executives from deepfake fraud"
@@ -533,6 +534,7 @@
             "title": "How Sealfie works - Stop executive fraud in 30 seconds",
             "description": "Discover how Sealfie's biometric verification protects executives from deepfake fraud. Treasury and CEO validation processes explained."
         },
+        "intro": "Complete documentation for implementing Sealfie's biometric protection against executive deepfake fraud. Our system checks phone carriers for SIM swaps, verifies device hardware fingerprints, detects AI-generated deepfakes, cross-references location metadata, and records immutable blockchain proof to prevent CEO impersonation attacks that average $137,000 per incident.",
         "hero": {
             "title": {
                 "line1": "Stop executive fraud",
@@ -735,6 +737,7 @@
     "faq": {
         "title": "Frequently asked questions",
         "subtitle": "Everything you need to know about Sealfie",
+        "intro": "Comprehensive answers about Sealfie's advanced biometric protection against CEO impersonation and deepfake fraud. Discover how our 99.8% accurate AI detection prevents business email compromise attacks, verifies live humans versus AI-generated deepfakes, and provides court-admissible blockchain proof to protect against the rising threat of executive impersonation that costs businesses billions annually.",
         "learnMore": "Learn more",
         "hideDetails": "Hide details",
         "meta": {
