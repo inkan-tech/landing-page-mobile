@@ -136,8 +136,20 @@ html(lang=$localeName)
             "@id": "https://sealf.ie/#mobileapp",
             "name": "Sealfie",
             "description": "#{$i18n.meta.description}",
+            "image": [
+              "https://sealf.ie/assets/img/sealfie-screenshot-1.png",
+              "https://sealf.ie/assets/img/sealfie-screenshot-2.png",
+              "https://sealf.ie/assets/img/sealfie-screenshot-3.png",
+              "https://sealf.ie/assets/img/sealfie-screenshot-4.png",
+              "https://sealf.ie/assets/img/sealfie-screenshot-5.png"
+            ],
             "operatingSystem": ["Android", "iOS"],
             "applicationCategory": "SecurityApplication",
+            "brand": {
+              "@type": "Brand",
+              "@id": "https://inkan.link/#brand",
+              "name": "Inkan"
+            },
             "downloadUrl": [
               "https://apps.apple.com/app/id1635309517",
               "https://play.google.com/store/apps/details?id=link.inkan.sealfie"
@@ -153,7 +165,46 @@ html(lang=$localeName)
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "Inkan",
+                "url": "https://inkan.link"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "USD"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                  }
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              }
             },
             "author": {
               "@id": "https://sealf.ie/#organization"
