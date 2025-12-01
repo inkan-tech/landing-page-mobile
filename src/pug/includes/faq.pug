@@ -7,10 +7,10 @@
 //-   context: Page context for Matomo tracking (e.g., 'homepage', 'pricing', 'documentation')
 
 mixin faq-section(faqData, context)
+  //- Note: FAQPage structured data is handled via JSON-LD in each page's head
+  //- Do NOT add itemtype="FAQPage" here to avoid duplicate schema warnings in Google Search Console
   section.faq-section(
     id=`faq-${context}`
-    itemscope
-    itemtype="https://schema.org/FAQPage"
   )
     .container.px-5
       .row.justify-content-center
@@ -32,9 +32,6 @@ mixin faq-section(faqData, context)
               .faq-item(
                 data-faq-index=index
                 data-faq-question=faq.question
-                itemscope
-                itemprop="mainEntity"
-                itemtype="https://schema.org/Question"
               )
                 //- Question Header (clickable)
                 button.faq-question(
@@ -44,7 +41,7 @@ mixin faq-section(faqData, context)
                   aria-controls=`faq-${context}-${index}`
                   data-question=faq.question
                 )
-                  h3(itemprop="name")= faq.question
+                  h3= faq.question
                   svg.faq-arrow(
                     fill="none"
                     stroke="currentColor"
@@ -61,11 +58,8 @@ mixin faq-section(faqData, context)
                 div.faq-answer-container(
                   id=`faq-${context}-${index}`
                   style="display: none;"
-                  itemscope
-                  itemprop="acceptedAnswer"
-                  itemtype="https://schema.org/Answer"
                 )
-                  div.faq-answer-content(itemprop="text")
+                  div.faq-answer-content
                     //- Short Answer
                     p.faq-short-answer= faq.shortAnswer
 
