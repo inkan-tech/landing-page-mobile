@@ -7,7 +7,7 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 ## 🎯 Test Categories
 
 ### 1. **Japanese Redesign Verification** (`japanese-redesign-verification.spec.js`)
-**Command**: `npm run test:redesign`
+**Command**: `bun run test:redesign`
 
 **Verifies Core Implementation:**
 - ✅ **Traditional Japanese Colors**: Shu-iro (#FF3500), Enji-iro (#C93338), Sango-iro (#F8674F)
@@ -21,7 +21,7 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 - ✅ **Current Hero Content**: "Your business is a target" + "Protect it with a simple selfie"
 
 ### 2. **Cultural Authenticity** (`cultural-authenticity.spec.js`)
-**Command**: `npm run test:cultural`
+**Command**: `bun run test:cultural`
 
 **Verifies Cultural Implementation:**
 - ✅ **Shu-iro Authority**: Traditional vermillion for trust and protection
@@ -33,7 +33,7 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 - ✅ **Traditional Elements**: Hanko/stamp visual metaphors
 
 ### 3. **Theme System Compliance** (`theme-system-compliance.spec.js`)
-**Command**: `npm run test:theme`
+**Command**: `bun run test:theme`
 
 **Verifies Theme Implementation:**
 - ✅ **Light Theme**: Exact color specifications from redesign prompt
@@ -45,7 +45,7 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 - ✅ **Performance**: Smooth theme switching without layout shift
 
 ### 4. **Security Server Verification** (`security-server-verification.spec.js`)
-**Command**: `npm run test:server-security`
+**Command**: `bun run test:server-security`
 
 **Verifies Security Implementation:**
 - ✅ **Directory Security**: Only `/docs` served, source code protected
@@ -63,16 +63,16 @@ This comprehensive test suite verifies that the **Japanese Inkan-inspired redesi
 ### Method 2: Terminal
 ```bash
 # Complete redesign verification
-npm run test:redesign-full
+bun run test:redesign-full
 
 # Individual test suites  
-npm run test:redesign      # Core Japanese design
-npm run test:cultural      # Cultural authenticity
-npm run test:theme         # Theme system
-npm run test:server-security # Server configuration
+bun run test:redesign      # Core Japanese design
+bun run test:cultural      # Cultural authenticity
+bun run test:theme         # Theme system
+bun run test:server-security # Server configuration
 
 # Interactive testing
-npm run test:ui            # Visual test runner
+bun run test:ui            # Visual test runner
 ```
 
 ### Method 3: Debug Mode
@@ -205,15 +205,15 @@ expect(cspMeta).toContain('https://cdnjs.cloudflare.com');
 
 These tests ensure the Japanese redesign implementation remains authentic and functional:
 
-1. **Pre-commit**: Run `npm run test:redesign-full`
-2. **Development**: Use `npm run test:ui` for interactive testing
-3. **Deployment**: Verify with `npm run test:server-security`
-4. **Visual Changes**: Check with `npm run test:visual`
+1. **Pre-commit**: Run `bun run test:redesign-full`
+2. **Development**: Use `bun run test:ui` for interactive testing
+3. **Deployment**: Verify with `bun run test:server-security`
+4. **Visual Changes**: Check with `bun run test:visual`
 
 ## 📝 Test Reports
 
 ### HTML Reports
-- **Interactive Results**: `npm run test:report`
+- **Interactive Results**: `bun run test:report`
 - **Visual Comparisons**: Screenshot diffs for design changes
 - **Performance Metrics**: Load times, Core Web Vitals
 - **Accessibility Results**: WCAG compliance status

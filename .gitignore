@@ -6,6 +6,7 @@ dist-grunt
 .dccache
 docs
 analysis-reports
+package-lock.json
 
 # CodeQL analysis files
 /codeql-database/

@@ -437,7 +437,7 @@ The Ahrefs Site Audit identified **30 SEO issues** affecting sealf.ie. This docu
 
 - **Ahrefs Site Audit**: <https://app.ahrefs.com/site-audit/8667121>
 - **Google Search Console**: <https://search.google.com/search-console>
-- **Lighthouse**: `npm run seo:audit`
+- **Lighthouse**: `bun run seo:audit`
 - **Rich Results Test**: <https://search.google.com/test/rich-results>
 - **Facebook Debugger**: <https://developers.facebook.com/tools/debug/>
 - **Twitter Card Validator**: <https://cards-dev.twitter.com/validator>

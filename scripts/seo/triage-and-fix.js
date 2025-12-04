@@ -349,7 +349,7 @@ function ensureOutputDir() {
 function loadSummary() {
   if (!fs.existsSync(SUMMARY_FILE)) {
     console.error('❌ No summary file found. Run lighthouse audit first:');
-    console.error('   npm run seo:audit');
+    console.error('   bun run seo:audit');
     process.exit(1);
   }
 
@@ -610,8 +610,8 @@ async function main() {
   console.log('\n📖 Next Steps:');
   console.log('   1. Review triage report: ' + path.join(OUTPUT_DIR, 'triage-report.json'));
   console.log('   2. Implement fixes following the provided steps');
-  console.log('   3. Run tests to validate fixes: npm run test:seo');
-  console.log('   4. Re-run audit to verify improvements: npm run seo:audit');
+  console.log('   3. Run tests to validate fixes: bun run test:seo');
+  console.log('   4. Re-run audit to verify improvements: bun run seo:audit');
 
   if (!shouldGenerateTests) {
     console.log('\n   💡 Tip: Run with --generate-tests to auto-create Playwright tests');

@@ -1,11 +1,11 @@
 #!/bin/bash
-# Website Analysis Tools Setup - Homebrew + npm hybrid approach
+# Website Analysis Tools Setup - Homebrew + bun hybrid approach
 # Run with: chmod +x setup-analysis-tools.sh && ./setup-analysis-tools.sh
 
 set -e  # Exit on any error
 
 echo "🍺 Setting up website analysis tools..."
-echo "📋 Using Homebrew (preferred) + npm (essential only)"
+echo "📋 Using Homebrew (preferred) + bun (essential only)"
 
 # Check if Homebrew is installed
 if ! command -v brew &> /dev/null; then
@@ -25,13 +25,13 @@ brew install curl        # For API testing
 brew install imagemagick # For image analysis
 
 echo ""
-echo "2️⃣ Installing essential npm tools (minimal set)..."
+echo "2️⃣ Installing essential bun tools (minimal set)..."
 
 # Essential tools not available via Homebrew
-npm install -g @axe-core/cli
-npm install -g pa11y
-npm install -g browser-sync
-npm install -g playwright
+bun add -g @axe-core/cli
+bun add -g pa11y
+bun add -g browser-sync
+bun add -g playwright
 
 echo ""
 echo "3️⃣ Setting up browser binaries..."
@@ -43,8 +43,8 @@ echo ""
 echo "4️⃣ Installing project-specific analysis tools locally..."
 
 # Add to your project's package.json for local use
-npm install --save-dev backstopjs
-npm install --save-dev webpack-bundle-analyzer
+bun add -d backstopjs
+bun add -d webpack-bundle-analyzer
 
 echo ""
 echo "✅ Installation complete!"

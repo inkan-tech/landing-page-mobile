@@ -65,21 +65,21 @@ All VS Code launch configurations now include:
 **From VS Code Terminal:**
 ```bash
 # Run all tests
-npm test
+bun test
 
 # Run specific test categories
-npm run test:accessibility
-npm run test:mobile
-npm run test:visual
-npm run test:security
-npm run test:redesign-full
+bun run test:accessibility
+bun run test:mobile
+bun run test:visual
+bun run test:security
+bun run test:redesign-full
 
 # Debug mode
-npm run test:headed
-npm run test:ui
+bun run test:headed
+bun run test:ui
 
 # View results
-npm run test:report
+bun run test:report
 ```
 
 **From Command Line with Environment:**
@@ -88,7 +88,7 @@ npm run test:report
 set -o allexport; source .env.test; set +o allexport
 
 # Run tests
-npm test -- tests/accessibility.spec.js
+bun test -- tests/accessibility.spec.js
 ```
 
 ### 6. Playwright Extension Issues
@@ -117,7 +117,7 @@ PLAYWRIGHT_WORKERS=4
 
 **Test configuration:**
 ```bash
-npx playwright test --list | head -10
+bun x playwright test --list | head -10
 ```
 
 **Check server:**
@@ -127,7 +127,7 @@ curl http://localhost:3000/
 
 **Verify Playwright installation:**
 ```bash
-npx playwright --version
+bun x playwright --version
 ```
 
 ## Still Having Issues?

@@ -17,19 +17,19 @@
 
 ```bash
 # Test Japanese redesign implementation
-npm run test:redesign-full
+bun run test:redesign-full
 
 # Individual test suites
-npm run test:redesign      # Color system, design principles
-npm run test:cultural      # Cultural authenticity, Japanese elements  
-npm run test:theme         # Theme switching, CSS variables
+bun run test:redesign      # Color system, design principles
+bun run test:cultural      # Cultural authenticity, Japanese elements  
+bun run test:theme         # Theme switching, CSS variables
 
 # Mobile-specific tests
-npm run test:mobile        # Mobile navigation, responsive design
+bun run test:mobile        # Mobile navigation, responsive design
 
 # Visual testing
-npm run test:visual        # Screenshot comparisons
-npm run test:ui            # Interactive test runner (recommended)
+bun run test:visual        # Screenshot comparisons
+bun run test:ui            # Interactive test runner (recommended)
 ```
 
 ### Method 3: Using Tasks (VS Code UI)
@@ -52,35 +52,35 @@ npm run test:ui            # Interactive test runner (recommended)
 ### Core Redesign Verification
 ```bash
 # Complete redesign verification (recommended first run)
-npm run test:redesign-full
+bun run test:redesign-full
 
 # Individual redesign aspects
-npm run test:redesign      # Core Japanese design implementation
-npm run test:cultural      # Cultural authenticity verification
-npm run test:theme         # Theme system compliance
+bun run test:redesign      # Core Japanese design implementation
+bun run test:cultural      # Cultural authenticity verification
+bun run test:theme         # Theme system compliance
 ```
 
 ### Specialized Testing
 ```bash
 # Mobile & Responsive
-npm run test:mobile        # Mobile navigation, responsive design
+bun run test:mobile        # Mobile navigation, responsive design
 
 # Visual & Performance  
-npm run test:visual        # Screenshot comparisons, visual regression
-npm run test:performance   # Page load, Core Web Vitals
-npm run test:accessibility # ARIA compliance, keyboard navigation
+bun run test:visual        # Screenshot comparisons, visual regression
+bun run test:performance   # Page load, Core Web Vitals
+bun run test:accessibility # ARIA compliance, keyboard navigation
 
 # Security & Infrastructure
-npm run test:security      # CSP validation, Bootstrap loading
-npm test                   # All tests
+bun run test:security      # CSP validation, Bootstrap loading
+bun test                   # All tests
 ```
 
 ### Interactive & Reporting
 ```bash
 # Best for development workflow
-npm run test:ui            # Interactive browser-based test runner
-npm run test:headed        # Run tests with visible browser windows
-npm run test:report        # View detailed HTML test reports
+bun run test:ui            # Interactive browser-based test runner
+bun run test:headed        # Run tests with visible browser windows
+bun run test:report        # View detailed HTML test reports
 ```
 
 ## 🎯 What Each Test Suite Verifies
@@ -149,7 +149,7 @@ The project follows security best practices:
 
 ```bash
 # Verify secure server configuration
-npm start                    # Starts development server on localhost:3000
+bun start                    # Starts development server on localhost:3000
 ```
 
 #### What This Serves:
@@ -176,7 +176,7 @@ curl -I http://localhost:3000/css/styles.css # Should return 200
 ### 🔒 Security Test Verification
 ```bash
 # Run security tests to verify setup
-npm run test:security
+bun run test:security
 
 # Checks performed:
 # ✓ CSP allows required resources (Bootstrap, fonts)
@@ -203,7 +203,7 @@ npm run test:security
 
 ### HTML Reports (Best for Analysis)
 ```bash
-npm run test:report         # Opens interactive HTML report
+bun run test:report         # Opens interactive HTML report
 ```
 
 **Features:**
@@ -215,7 +215,7 @@ npm run test:report         # Opens interactive HTML report
 
 ### Visual Diff Reports (Design Verification)
 ```bash
-npm run test:visual         # Generates visual regression report
+bun run test:visual         # Generates visual regression report
 ```
 
 **What it captures:**
@@ -228,7 +228,7 @@ npm run test:visual         # Generates visual regression report
 ### Console Output (Quick Feedback)
 ```bash
 # Real-time test results in terminal
-npm run test:redesign-full
+bun run test:redesign-full
 
 # Shows:
 # ✓ Passed tests with execution time
@@ -242,36 +242,36 @@ npm run test:redesign-full
 ### 1. First-Time Setup
 ```bash
 # Install dependencies and run initial verification
-npm install
-npm run test:redesign-full    # Verify current implementation status
-npm run test:ui              # Interactive exploration of test results
+bun install
+bun run test:redesign-full    # Verify current implementation status
+bun run test:ui              # Interactive exploration of test results
 ```
 
 ### 2. Daily Development
 ```bash
 # Start development server
-npm start                    # Keep running in one terminal
+bun start                    # Keep running in one terminal
 
 # Run specific tests while developing
-npm run test:cultural        # After changing Japanese design elements
-npm run test:theme          # After modifying theme system
-npm run test:mobile         # After mobile navigation changes
+bun run test:cultural        # After changing Japanese design elements
+bun run test:theme          # After modifying theme system
+bun run test:mobile         # After mobile navigation changes
 ```
 
 ### 3. Before Committing Changes
 ```bash
 # Full verification suite
-npm run test:redesign-full   # All redesign verification
-npm run test:mobile         # Mobile functionality
-npm run test:security       # Security compliance
-npm run test:visual         # Visual regression check
+bun run test:redesign-full   # All redesign verification
+bun run test:mobile         # Mobile functionality
+bun run test:security       # Security compliance
+bun run test:visual         # Visual regression check
 ```
 
 ### 4. Debugging Failed Tests
 1. **Use VS Code Debug**: Select debug configuration → F5
 2. **Check Screenshots**: Failed tests automatically capture screenshots  
-3. **Use Interactive UI**: `npm run test:ui` for visual debugging
-4. **Check HTML Report**: `npm run test:report` for detailed analysis
+3. **Use Interactive UI**: `bun run test:ui` for visual debugging
+4. **Check HTML Report**: `bun run test:report` for detailed analysis
 
 ## 🎨 Japanese Design Implementation Status
 

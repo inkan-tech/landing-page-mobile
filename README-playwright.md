@@ -9,7 +9,7 @@ Playwright is now configured for comprehensive testing and visual analysis of th
 Playwright is already installed. If you need to reinstall browsers:
 
 ```bash
-npx playwright install
+bun x playwright install
 ```
 
 ## Available Test Commands
@@ -17,34 +17,34 @@ npx playwright install
 ### Basic Testing
 ```bash
 # Run all tests
-npm test
+bun test
 
 # Run tests with browser UI (interactive)
-npm run test:ui
+bun run test:ui
 
 # Run tests in headed mode (see browser)
-npm run test:headed
+bun run test:headed
 
 # Show test report
-npm run test:report
+bun run test:report
 ```
 
 ### Specialized Test Suites
 ```bash
 # Mobile-specific tests (iPhone, Android)
-npm run test:mobile
+bun run test:mobile
 
 # Visual regression tests (screenshots)
-npm run test:visual
+bun run test:visual
 
 # Accessibility compliance tests
-npm run test:accessibility
+bun run test:accessibility
 
 # Performance benchmarking
-npm run test:performance
+bun run test:performance
 
 # Security & CSP validation
-npm run test:security
+bun run test:security
 ```
 
 ## Test Suites Included
@@ -94,7 +94,7 @@ npm run test:security
 
 ### Playwright Config (`playwright.config.js`)
 - **Base URL**: `http://localhost:3000`
-- **Auto-server**: Starts `npm start` automatically
+- **Auto-server**: Starts `bun start` automatically
 - **Screenshots**: Taken on failure
 - **Videos**: Recorded on failure
 - **Traces**: Available for debugging
@@ -120,15 +120,15 @@ npm run test:security
 ## Running Tests
 
 ### Development Workflow
-1. **Start dev server**: `npm start` (runs on :3000)
-2. **Run specific test**: `npm run test:mobile`
-3. **Review results**: `npm run test:report`
+1. **Start dev server**: `bun start` (runs on :3000)
+2. **Run specific test**: `bun run test:mobile`
+3. **Review results**: `bun run test:report`
 4. **Update baselines**: Delete `/test-results/` and re-run
 
 ### CI/CD Integration
 ```bash
 # Headless testing (perfect for CI)
-npm test
+bun test
 
 # Generate JSON report for processing
 # Results in: test-results/results.json
@@ -140,7 +140,7 @@ npm test
 - Interactive test results with screenshots
 - Timeline view of test execution
 - Error details with stack traces
-- Access via: `npm run test:report`
+- Access via: `bun run test:report`
 
 ### Visual Diff Reports
 - Before/after screenshot comparison
@@ -152,10 +152,10 @@ npm test
 ### Interactive Debugging
 ```bash
 # Debug specific test interactively
-npx playwright test mobile-navigation.spec.js --debug
+bun x playwright test mobile-navigation.spec.js --debug
 
 # Run with browser visible
-npm run test:headed
+bun run test:headed
 ```
 
 ### Screenshots & Videos

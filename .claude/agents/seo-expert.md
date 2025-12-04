@@ -53,7 +53,7 @@
 
     <tool name="playwright-testing">
       <location>tests/seo/</location>
-      <run-command>npx playwright test tests/seo/</run-command>
+      <run-command>bun x playwright test tests/seo/</run-command>
       <requirement>Tests must validate SEO fixes permanently</requirement>
     </tool>
   </tools>
@@ -107,8 +107,8 @@
   <workflow>
     <phase name="detection">
       <option name="lighthouse" type="automated">
-        <command>npm run seo:audit</command>
-        <command>node scripts/seo/parse-lighthouse.js</command>
+        <command>bun run seo:audit</command>
+        <command>bun scripts/seo/parse-lighthouse.js</command>
         <use-case>Quick local audits, automated testing, performance metrics</use-case>
       </option>
       <option name="ahrefs" type="browsermcp">
@@ -138,8 +138,8 @@
         <task>Update styles (.scss files in src/scss/)</task>
         <task>Follow Japanese design system guidelines</task>
         <task>Ensure i18n compliance (use #{$i18n.*} variables)</task>
-        <task>Test locally: npm start</task>
-        <task>Build: npm run build</task>
+        <task>Test locally: bun start</task>
+        <task>Build: bun run build</task>
       </tasks>
     </phase>
 
@@ -148,7 +148,7 @@
         <task>Create Playwright test in tests/seo/</task>
         <task>Test must verify the fix</task>
         <task>Test must fail if issue regresses</task>
-        <task>Run test: npx playwright test tests/seo/[test-name].spec.js</task>
+        <task>Run test: bun x playwright test tests/seo/[test-name].spec.js</task>
       </tasks>
     </phase>
 
@@ -203,12 +203,12 @@
 
   <quick-start>
     <lighthouse>
-      <command>npm install -g lighthouse</command>
+      <command>bun install -g lighthouse</command>
       <command>lighthouse https://sealf.ie/ --only-categories=seo --view</command>
-      <command>npm start</command>
+      <command>bun start</command>
       <command>lighthouse http://localhost:3000/ --only-categories=seo --output=json --output-path=./reports/seo-audit.json</command>
-      <command>npx playwright test tests/seo/ --headed</command>
-      <command>node scripts/seo/generate-report.js</command>
+      <command>bun x playwright test tests/seo/ --headed</command>
+      <command>bun scripts/seo/generate-report.js</command>
     </lighthouse>
 
     <ahrefs-browsermcp>

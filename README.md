@@ -20,7 +20,7 @@
 To begin using this template, choose one of the following options to get started:
 
 * [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/new-age/)
-* Install via npm: `npm i startbootstrap-new-age`
+* Install via bun: `bun add startbootstrap-new-age`
 * Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-new-age.git`
 * [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-new-age)
 
@@ -32,24 +32,24 @@ After downloading, simply edit the HTML and CSS files included with `dist` direc
 
 ### Advanced Usage
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+Clone the source files of the theme and navigate into the theme's root directory. Run `bun install` and then run `bun start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
 
-#### npm Scripts
+#### Bun Scripts
 
-* `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-* `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
-* `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
-* `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
-* `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
-* `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
-* `npm run start:debug` runs the project in debug mode
-* `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
+* `bun run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
+* `bun run build:assets` copies the files in the `src/assets/` directory into `dist`
+* `bun run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
+* `bun run build:scripts` brings the `src/js/scripts.js` file into `dist`
+* `bun run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
+* `bun run clean` deletes the `dist` directory to prepare for rebuilding the project
+* `bun run start:debug` runs the project in debug mode
+* `bun start` or `bun run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
-You must have npm installed in order to use this build environment.
+You must have Bun installed in order to use this build environment. Install Bun via: `curl -fsSL https://bun.sh/install | bash`
 
-#### npm Audit Warnings
+#### Security Audit
 
-When running `npm audit`, you may see 4 moderate severity vulnerabilities in Pug dependencies. These are **build-time only** vulnerabilities with **low risk** for this project:
+When running `bun pm audit`, you may see vulnerabilities in Pug dependencies. These are **build-time only** vulnerabilities with **low risk** for this project:
 
 - **Status**: Known and accepted
 - **Risk**: Low (static site generator - no runtime Pug execution)

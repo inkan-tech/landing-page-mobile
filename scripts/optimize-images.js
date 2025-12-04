@@ -117,7 +117,7 @@ async function optimizeImages() {
   console.log('\n📋 Next steps:');
   console.log('1. Grunt copy task will include optimized images in build');
   console.log('2. Consider updating templates to use <picture> elements');
-  console.log('3. Run "npm run build" to deploy optimized images');
+  console.log('3. Run "bun run build" to deploy optimized images');
 }
 
 // Run the optimization

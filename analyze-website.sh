@@ -33,7 +33,7 @@ cd "$REPORT_DIR/$TIMESTAMP"
 echo ""
 echo "1️⃣ Building the website..."
 cd ../..
- npm run build
+bun run build
 
 echo ""
 echo "2️⃣ Starting local server..."
@@ -111,7 +111,7 @@ for PAGE in $PAGES; do
         
         # Lighthouse audit (desktop)
         echo "      📊 Desktop performance..."
-        npx lighthouse "$PAGE_URL" \
+        bun x lighthouse "$PAGE_URL" \
           --config-path="$CONFIG_PATH" \
           --output json \
           --output html \
@@ -122,7 +122,7 @@ for PAGE in $PAGES; do
         
         # Lighthouse audit (mobile)
         echo "      📱 Mobile performance..."
-        npx lighthouse "$PAGE_URL" \
+        bun x lighthouse "$PAGE_URL" \
           --config-path="$CONFIG_PATH" \
           --output json \
           --output html \
@@ -151,14 +151,14 @@ for PAGE in $PAGES; do
     mkdir -p "screenshots/${PAGE_NAME}"
     
     # Screenshots at different viewports
-    npx playwright screenshot --viewport-size "320,568" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-small.png"
-    npx playwright screenshot --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-large.png"
-    npx playwright screenshot --viewport-size "768,1024" "$PAGE_URL" "screenshots/${PAGE_NAME}/tablet.png"
-    npx playwright screenshot --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop.png"
-    
+    bun x playwright screenshot --viewport-size "320,568" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-small.png"
+    bun x playwright screenshot --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-large.png"
+    bun x playwright screenshot --viewport-size "768,1024" "$PAGE_URL" "screenshots/${PAGE_NAME}/tablet.png"
+    bun x playwright screenshot --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop.png"
+
     # Full page screenshots (only for mobile and desktop)
-    npx playwright screenshot --full-page --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-fullpage.png"
-    npx playwright screenshot --full-page --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop-fullpage.png"
+    bun x playwright screenshot --full-page --viewport-size "375,812" "$PAGE_URL" "screenshots/${PAGE_NAME}/mobile-fullpage.png"
+    bun x playwright screenshot --full-page --viewport-size "1920,1080" "$PAGE_URL" "screenshots/${PAGE_NAME}/desktop-fullpage.png"
 done
 
 echo ""

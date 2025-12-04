@@ -12,11 +12,11 @@ Transform the Sealfie landing page into a high-converting, performant experience
 **Actions**:
 ```bash
 # Install tools
-npm install --save-dev imagemin imagemin-webp imagemin-mozjpeg
+bun add -d imagemin imagemin-webp imagemin-mozjpeg
 
 # Create WebP conversion script
 # Add to package.json scripts:
-"optimize-images": "node scripts/optimize-images.js"
+"optimize-images": "bun scripts/optimize-images.js"
 ```
 
 **Script** (`scripts/optimize-images.js`):
@@ -115,7 +115,7 @@ img.img-fluid.rounded-circle(
 
 **Setup**:
 ```bash
-npm install --save-dev critical grunt-critical
+bun add -d critical grunt-critical
 ```
 
 **Add to** `Gruntfile.js`:
@@ -145,7 +145,7 @@ critical: {
 
 **Setup**:
 ```bash
-npm install --save-dev @fullhuman/postcss-purgecss
+bun add -d @fullhuman/postcss-purgecss
 ```
 
 **Create** `postcss.config.js`:

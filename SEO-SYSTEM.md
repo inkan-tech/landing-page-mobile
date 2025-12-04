@@ -17,7 +17,7 @@ We've implemented a comprehensive, **100% open-source** SEO optimization system 
 **No expensive tools required** - Everything runs locally using:
 - Google Lighthouse (free, open-source)
 - Playwright (free, open-source testing framework)
-- Node.js scripts (custom automation)
+- Bun scripts (custom automation)
 
 ---
 
@@ -30,26 +30,26 @@ We've implemented a comprehensive, **100% open-source** SEO optimization system 
 # 1. Audit production site with Lighthouse
 # 2. Triage issues and generate fix tests
 # 3. Run all SEO validation tests
-npm run seo:full
+bun run seo:full
 ```
 
 ### Individual Commands
 
 ```bash
 # 1. Audit production site
-npm run seo:audit
+bun run seo:audit
 
 # 2. Audit local development server
-npm run seo:audit:local
+bun run seo:audit:local
 
 # 3. Analyze issues and get fix recommendations
-npm run seo:triage
+bun run seo:triage
 
 # 4. Generate Playwright tests for fixes
-npm run seo:triage:tests
+bun run seo:triage:tests
 
 # 5. Run existing comprehensive SEO tests
-npm run test:seo
+bun run test:seo
 ```
 
 ---
@@ -144,18 +144,18 @@ Task({
 - Quick reference
 - Example outputs
 
-### 5. NPM Scripts
+### 5. Bun Scripts
 
 Added to `package.json`:
 ```json
 {
   "scripts": {
-    "seo:audit": "node scripts/seo/run-lighthouse-audit.js",
-    "seo:audit:local": "node scripts/seo/run-lighthouse-audit.js --local",
-    "seo:triage": "node scripts/seo/triage-and-fix.js",
-    "seo:triage:tests": "node scripts/seo/triage-and-fix.js --generate-tests",
-    "seo:full": "npm run seo:audit && npm run seo:triage:tests && npm run test:seo",
-    "test:seo": "playwright test tests/seo/"
+    "seo:audit": "bun scripts/seo/run-lighthouse-audit.js",
+    "seo:audit:local": "bun scripts/seo/run-lighthouse-audit.js --local",
+    "seo:triage": "bun scripts/seo/triage-and-fix.js",
+    "seo:triage:tests": "bun scripts/seo/triage-and-fix.js --generate-tests",
+    "seo:full": "bun run seo:audit && bun run seo:triage:tests && bun run test:seo",
+    "test:seo": "bun x playwright test tests/seo/"
   }
 }
 ```
@@ -277,8 +277,8 @@ Generated: 2025-11-02T10:35:00.000Z
 📖 Next Steps:
    1. Review triage report: reports/seo/triage/triage-report.json
    2. Implement fixes following the provided steps
-   3. Run tests to validate fixes: npm run test:seo
-   4. Re-run audit to verify improvements: npm run seo:audit
+   3. Run tests to validate fixes: bun run test:seo
+   4. Re-run audit to verify improvements: bun run seo:audit
 ================================================================================
 ```
 
@@ -327,14 +327,14 @@ test.describe('SEO Fixes: homepage', () => {
 
 #### Step 1: Audit Current State
 ```bash
-npm run seo:audit
+bun run seo:audit
 ```
 
 **Result:** Homepage has SEO score of 78/100 with 2 critical issues
 
 #### Step 2: Triage Issues
 ```bash
-npm run seo:triage:tests
+bun run seo:triage:tests
 ```
 
 **Result:**
@@ -375,10 +375,10 @@ script(type="application/ld+json").
 
 #### Step 4: Validate Fixes Locally
 ```bash
-npm run build
-npm start
-npm run seo:audit:local
-npm run test:seo
+bun run build
+bun start
+bun run seo:audit:local
+bun run test:seo
 ```
 
 **Result:** All generated tests pass ✅
@@ -386,11 +386,11 @@ npm run test:seo
 #### Step 5: Deploy and Re-Audit
 ```bash
 # Deploy to production
-npm run build
+bun run build
 # ... deploy process ...
 
 # Re-audit production
-npm run seo:audit
+bun run seo:audit
 ```
 
 **Result:**
@@ -401,13 +401,13 @@ npm run seo:audit
 #### Step 6: Monitor for Regressions
 ```bash
 # Schedule weekly audits
-npm run seo:audit
+bun run seo:audit
 
 # Run before each deploy
-npm run seo:audit:local
+bun run seo:audit:local
 
 # Run tests in CI/CD
-npm run test:seo
+bun run test:seo
 ```
 
 ---
@@ -451,23 +451,23 @@ npm run test:seo
 ### Weekly Monitoring
 ```bash
 # Every Monday
-npm run seo:audit
-npm run seo:triage
+bun run seo:audit
+bun run seo:triage
 # Review reports and plan fixes
 ```
 
 ### Before Every Deploy
 ```bash
 # On staging/local
-npm run seo:audit:local
-npm run test:seo
+bun run seo:audit:local
+bun run test:seo
 # Fix any issues before production
 ```
 
 ### After Content Changes
 ```bash
 # Full workflow
-npm run seo:full
+bun run seo:full
 # Ensure no regressions
 ```
 
@@ -520,10 +520,10 @@ npm run seo:full
 ## ✅ What's Next
 
 ### Immediate Actions
-1. ✅ Run first audit: `npm run seo:audit`
-2. ✅ Review triage report: `npm run seo:triage`
+1. ✅ Run first audit: `bun run seo:audit`
+2. ✅ Review triage report: `bun run seo:triage`
 3. ✅ Fix P0 (critical) issues
-4. ✅ Validate with tests: `npm run test:seo`
+4. ✅ Validate with tests: `bun run test:seo`
 
 ### Ongoing Maintenance
 - Schedule weekly audits

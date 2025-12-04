@@ -42,10 +42,14 @@ jobs:
             apt-get update
             apt-get install -y nasm
           fi
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2
+        with:
+          bun-version: latest
       - name: Install and Build 🔧
         run: |
-          npm install
-          npm run build
+          bun install
+          bun run build
       - name: Verify build output
         run: |
           echo "✅ Build completed successfully!"

@@ -4,12 +4,12 @@
 
   <tools>
     <automated-auditing>
-      <tool name="lighthouse-audit" command="npm run seo:audit">Run full production audit</tool>
-      <tool name="local-audit" command="npm run seo:audit:local">Audit development build</tool>
-      <tool name="issue-triage" command="npm run seo:triage">Categorize and prioritize issues</tool>
-      <tool name="test-generation" command="npm run seo:triage:tests">Generate Playwright tests</tool>
-      <tool name="seo-test-suite" command="npm run test:seo">Validate all SEO requirements</tool>
-      <tool name="full-workflow" command="npm run seo:full">Complete audit → triage → test cycle</tool>
+      <tool name="lighthouse-audit" command="bun run seo:audit">Run full production audit</tool>
+      <tool name="local-audit" command="bun run seo:audit:local">Audit development build</tool>
+      <tool name="issue-triage" command="bun run seo:triage">Categorize and prioritize issues</tool>
+      <tool name="test-generation" command="bun run seo:triage:tests">Generate Playwright tests</tool>
+      <tool name="seo-test-suite" command="bun run test:seo">Validate all SEO requirements</tool>
+      <tool name="full-workflow" command="bun run seo:full">Complete audit → triage → test cycle</tool>
     </automated-auditing>
 
     <ahrefs-browsermcp>
@@ -44,7 +44,7 @@
   <workflow>
     <step name="initial-audit" order="1">
       <option name="lighthouse" type="automated">
-        <command>npm run seo:audit</command>
+        <command>bun run seo:audit</command>
         <command>Read reports/seo/summary.json</command>
       </option>
       <option name="ahrefs" type="browsermcp">
@@ -61,7 +61,7 @@
 
     <step name="triage-issues" order="2">
       <lighthouse-triage>
-        <command>npm run seo:triage</command>
+        <command>bun run seo:triage</command>
         <command>Read reports/seo/triage-report.json</command>
       </lighthouse-triage>
       <ahrefs-triage>
@@ -101,12 +101,12 @@ head
     </step>
 
     <step name="generate-tests" order="5">
-      <command>npm run seo:triage:tests</command>
-      <command>npm run test:seo</command>
+      <command>bun run seo:triage:tests</command>
+      <command>bun run test:seo</command>
     </step>
 
     <step name="validate-fixes" order="6">
-      <command>npm run seo:audit:local</command>
+      <command>bun run seo:audit:local</command>
       <task>Compare scores</task>
       <task>Check reports/seo/summary.json for improvements</task>
     </step>

@@ -6,12 +6,12 @@ Automated SEO audit and optimization system using Google Lighthouse and Playwrig
 
 ```bash
 # Run full SEO workflow (audit → triage → test)
-npm run seo:full
+bun run seo:full
 
 # Or run each step individually:
-npm run seo:audit              # 1. Audit production site
-npm run seo:triage:tests       # 2. Analyze issues and generate tests
-npm run test:seo               # 3. Validate with Playwright
+bun run seo:audit              # 1. Audit production site
+bun run seo:triage:tests       # 2. Analyze issues and generate tests
+bun run test:seo               # 3. Validate with Playwright
 ```
 
 ## Tools Overview
@@ -23,13 +23,13 @@ Runs comprehensive Lighthouse audits on all pages of sealf.ie, generating detail
 **Usage:**
 ```bash
 # Audit production site
-npm run seo:audit
+bun run seo:audit
 
 # Audit local development server
-npm run seo:audit:local
+bun run seo:audit:local
 
 # Audit custom URL
-node scripts/seo/run-lighthouse-audit.js --url=https://sealf.ie/en/pricing.html
+bun scripts/seo/run-lighthouse-audit.js --url=https://sealf.ie/en/pricing.html
 ```
 
 **Output:**
@@ -58,10 +58,10 @@ Analyzes Lighthouse results and provides prioritized fix recommendations.
 **Usage:**
 ```bash
 # Generate triage report
-npm run seo:triage
+bun run seo:triage
 
 # Generate triage report + Playwright test stubs
-npm run seo:triage:tests
+bun run seo:triage:tests
 ```
 
 **Issue Priority Levels:**
@@ -121,13 +121,13 @@ Comprehensive Playwright test suite to ensure SEO best practices.
 **Usage:**
 ```bash
 # Run all SEO tests
-npm run test:seo
+bun run test:seo
 
 # Run specific test file
-npx playwright test tests/seo/homepage-seo-fixes.spec.js
+bun x playwright test tests/seo/homepage-seo-fixes.spec.js
 
 # Run with UI
-npx playwright test tests/seo/ --ui
+bun x playwright test tests/seo/ --ui
 ```
 
 ## Complete Workflow Example
@@ -136,7 +136,7 @@ npx playwright test tests/seo/ --ui
 
 **Step 1: Audit Production**
 ```bash
-npm run seo:audit
+bun run seo:audit
 ```
 
 **Output:**
@@ -163,7 +163,7 @@ Target: https://sealf.ie
 
 **Step 2: Triage Issues**
 ```bash
-npm run seo:triage:tests
+bun run seo:triage:tests
 ```
 
 **Output:**
@@ -233,17 +233,17 @@ html(lang=locale)
 
 Build and test locally:
 ```bash
-npm run build
-npm start
-npm run seo:audit:local
-npm run test:seo
+bun run build
+bun start
+bun run seo:audit:local
+bun run test:seo
 ```
 
 **Step 5: Deploy and Re-Audit**
 
 After deploying:
 ```bash
-npm run seo:audit
+bun run seo:audit
 
 # Compare before/after scores
 # Before: SEO 78/100
@@ -280,27 +280,27 @@ The triage system includes a comprehensive knowledge base for common SEO issues:
 ## Best Practices
 
 ### Before Making Changes
-1. ✅ Run baseline audit: `npm run seo:audit`
+1. ✅ Run baseline audit: `bun run seo:audit`
 2. ✅ Review current issues: `cat reports/seo/summary.json`
-3. ✅ Plan fixes: `npm run seo:triage`
+3. ✅ Plan fixes: `bun run seo:triage`
 
 ### When Implementing Fixes
 1. ✅ Follow Japanese design system guidelines
 2. ✅ Use i18n variables (never hardcode text)
-3. ✅ Test locally: `npm run seo:audit:local`
-4. ✅ Generate validation tests: `npm run seo:triage:tests`
-5. ✅ Run tests: `npm run test:seo`
+3. ✅ Test locally: `bun run seo:audit:local`
+4. ✅ Generate validation tests: `bun run seo:triage:tests`
+5. ✅ Run tests: `bun run test:seo`
 
 ### After Deploying
-1. ✅ Re-audit production: `npm run seo:audit`
+1. ✅ Re-audit production: `bun run seo:audit`
 2. ✅ Compare scores (before/after)
 3. ✅ Verify all tests pass
 4. ✅ Monitor for regressions
 
 ### Monitoring Schedule
-- **Weekly**: Audit production (`npm run seo:audit`)
-- **Before Deploy**: Audit staging (`npm run seo:audit:local`)
-- **After Content Changes**: Full workflow (`npm run seo:full`)
+- **Weekly**: Audit production (`bun run seo:audit`)
+- **Before Deploy**: Audit staging (`bun run seo:audit:local`)
+- **After Content Changes**: Full workflow (`bun run seo:full`)
 - **Monthly**: Review trends and fix regressions
 
 ## Troubleshooting
@@ -323,14 +323,14 @@ pkill -f "chrome"
 ### "Module not found: lighthouse"
 ```bash
 # Reinstall dependencies
-npm install
+bun install
 ```
 
 ### "No summary file found"
 ```bash
 # Run audit first before triage
-npm run seo:audit
-npm run seo:triage
+bun run seo:audit
+bun run seo:triage
 ```
 
 ## File Structure
@@ -371,11 +371,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - run: npm install
-      - run: npm run seo:audit
-      - run: npm run seo:triage
-      - run: npm run test:seo
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run seo:audit
+      - run: bun run seo:triage
+      - run: bun run test:seo
       - uses: actions/upload-artifact@v4
         with:
           name: seo-reports

@@ -35,8 +35,8 @@ mkdir -p "$RESULTS_DIR"
 # Build the project first
 echo "🔨 Building project..."
 cd "$PROJECT_ROOT"
-npm install --silent
-npm run build
+bun install --silent
+bun run build
 
 # Create CodeQL database
 echo "📊 Creating CodeQL database..."
