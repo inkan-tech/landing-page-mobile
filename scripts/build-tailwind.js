@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 'use strict';
 
 const { exec } = require('child_process');
@@ -15,7 +15,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 // Use PostCSS for GitHub Actions compatibility (avoids @parcel/watcher issues)
-const command = `npx postcss ${inputPath} -o ${outputPath} --env production`;
+const command = `bunx postcss ${inputPath} -o ${outputPath} --env production`;
 
 console.log('Building Tailwind CSS...');
 
