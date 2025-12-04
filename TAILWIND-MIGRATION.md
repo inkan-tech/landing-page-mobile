@@ -164,13 +164,13 @@ The build process has been updated to:
 Run build to test:
 
 ```bash
-npm run build
+bun run build
 ```
 
 For development with watch:
 
 ```bash
-npm start
+bun start
 ```
 
 ## Next Steps

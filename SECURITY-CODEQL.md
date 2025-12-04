@@ -44,17 +44,17 @@ CodeQL runs automatically on:
 ### Option 2: Local Analysis
 ```bash
 # Install CodeQL CLI first: https://github.com/github/codeql-cli-binaries
-npm run security:scan
+bun run security:scan
 ```
 
 ### Option 3: Dependency Audit Only
 ```bash
-npm run security:audit
+bun run security:audit
 ```
 
 ### Option 4: Full Security Check
 ```bash
-npm run security:check  # Runs both audit and CodeQL scan
+bun run security:check  # Runs both audit and CodeQL scan
 ```
 
 ## 🔍 Custom Queries Explained
@@ -121,7 +121,7 @@ npm run security:check  # Runs both audit and CodeQL scan
 ### Adding New Queries
 1. Create `.ql` file in `codeql-custom-queries-javascript/`
 2. Follow existing pattern with proper metadata
-3. Test locally with `npm run security:scan`
+3. Test locally with `bun run security:scan`
 4. Update this documentation
 
 ### Adjusting Severity

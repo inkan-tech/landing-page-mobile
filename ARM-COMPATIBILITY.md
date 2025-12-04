@@ -18,7 +18,7 @@ When running GitHub Actions locally with `act` on Apple Silicon (M1/M2/M3), seve
 - **Solution**: Use lighter alternatives like `node:18` or `node:20`
 
 ### 3. **Native Binary Dependencies**
-Some npm packages with native bindings may fail:
+Some packages with native bindings may fail:
 - `node-sass` (older versions)
 - `bcrypt` (may need rebuilding)
 - `sharp` (image processing)
@@ -58,9 +58,9 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
+    - run: bun install
+    - run: bun run build
+    - run: bun test
 ```
 
 ### 4. Use GitHub Codespaces or Cloud CI
@@ -110,14 +110,14 @@ For the Sealfie landing page project:
 - **CodeQL**: Requires x86_64 emulation
 - **Dependencies**: 
   - `node-sass` v9.0.0 - Should work on ARM (v8+ has ARM support)
-  - If you encounter issues, try: `npm rebuild node-sass`
+  - If you encounter issues, try: `bun rebuild node-sass`
 - **Performance**: Building locally is fast, CodeQL is slow
 
 Run locally without CodeQL:
 ```bash
 # Fast local testing
-npm test
-npm run build
+bun test
+bun run build
 
 # Full workflow with emulation (slow)
 act push --container-architecture linux/amd64

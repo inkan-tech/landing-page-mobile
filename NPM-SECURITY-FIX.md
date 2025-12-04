@@ -1,4 +1,4 @@
-# NPM Security Vulnerability Fix Summary
+# Bun Security Vulnerability Fix Summary
 
 ## Results
 
@@ -17,8 +17,8 @@
 ### 1. Update browser-sync (Critical - axios vulnerability)
 
 ```bash
-npm uninstall grunt-browser-sync browser-sync
-npm install --save-dev browser-sync@latest grunt-browser-sync@latest
+bun remove grunt-browser-sync browser-sync
+bun add -d browser-sync@latest grunt-browser-sync@latest
 ```
 
 ### 2. Update pug (Moderate - RCE vulnerability)
@@ -29,8 +29,8 @@ Fix: Already on latest version, but grunt-pug-i18n uses old version
 ### 3. Update imagemin packages (Multiple high severity)
 
 ```bash
-npm uninstall grunt-contrib-imagemin imagemin-cli imagemin-mozjpeg imagemin-webp
-npm install --save-dev grunt-contrib-imagemin@latest imagemin-cli@latest imagemin-mozjpeg@latest imagemin-webp@latest
+bun remove grunt-contrib-imagemin imagemin-cli imagemin-mozjpeg imagemin-webp
+bun add -d grunt-contrib-imagemin@latest imagemin-cli@latest imagemin-mozjpeg@latest imagemin-webp@latest
 ```
 
 ### 4. Remove pkg.json (Critical - parse-url vulnerability)
@@ -38,7 +38,7 @@ npm install --save-dev grunt-contrib-imagemin@latest imagemin-cli@latest imagemi
 This package has critical vulnerabilities and seems unused
 
 ```bash
-npm uninstall pkg.json
+bun remove pkg.json
 ```
 
 ## Manual Updates Required
@@ -65,7 +65,7 @@ Edit package.json to update:
 ## What Was Fixed
 
 1. ✅ Removed `pkg.json` package (critical parse-url vulnerability)
-2. ✅ Added npm overrides for critical packages:
+2. ✅ Added package overrides for critical packages:
    - axios: ^1.7.7
    - braces: ^3.0.3
    - cross-spawn: ^7.0.6
@@ -93,4 +93,4 @@ The critical and high-severity production vulnerabilities have been fixed. The r
 
 1. Monitor for updates to grunt-pug-i18n
 2. Consider migrating from Grunt to a modern build tool (Vite, Webpack)
-3. Regular security audits with `npm audit`
+3. Regular security audits with `bun pm audit`

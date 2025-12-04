@@ -31,8 +31,8 @@ Successfully cleaned up unused dependencies from package.json, reducing technica
 ## 🛠️ Build Process Validation
 
 ### Tests Performed
-1. ✅ **npm install** - Successful dependency installation
-2. ✅ **npm run build** - Production build completed successfully
+1. ✅ **bun install** - Successful dependency installation
+2. ✅ **bun run build** - Production build completed successfully
 3. ✅ **Pug compilation** - All templates compiled (EN/FR)
 4. ✅ **SCSS compilation** - Styles built correctly
 5. ✅ **Asset copying** - All assets copied to docs/
@@ -67,7 +67,7 @@ Sitemap created successfully
 - **Invalid entries**: 0
 
 ### Performance Improvements
-- **Installation time**: Faster npm install (fewer packages to resolve)
+- **Installation time**: Faster bun install (fewer packages to resolve)
 - **Bundle size**: Potential reduction in final bundle (unused dependencies eliminated)
 - **Security surface**: Reduced attack surface (fewer packages to maintain)
 - **Maintenance**: Cleaner dependency tree, easier to maintain
@@ -98,14 +98,14 @@ DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated
 
 Post-cleanup security audit results:
 - **6 vulnerabilities** (2 low, 4 moderate)
-- **Recommendation**: Run `npm audit fix` for automated fixes
+- **Recommendation**: Run `bun pm audit fix` for automated fixes
 - **Manual review**: Some issues may require dependency updates
 
 ## 🎯 Next Steps
 
 ### Immediate Actions
-1. **Run security audit**: `npm audit fix` to address low-risk vulnerabilities
-2. **Test development workflow**: Verify `npm start` works correctly
+1. **Run security audit**: `bun pm audit fix` to address low-risk vulnerabilities
+2. **Test development workflow**: Verify `bun start` works correctly
 3. **Update documentation**: Document the cleaned dependency list
 
 ### Future Improvements
@@ -120,19 +120,19 @@ To verify the cleanup was successful:
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Test production build
-npm run build
+bun run build
 
 # Test development server  
-npm start
+bun start
 
 # Check dependency tree
-npm list --depth=0
+bun pm ls --depth=0
 
 # Security audit
-npm audit
+bun pm audit
 ```
 
 ## 📝 Final Package.json Structure

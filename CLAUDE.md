@@ -184,10 +184,10 @@ h1.hero-title
 #### **1. Google Lighthouse - Automated SEO Auditing**
 ```bash
 # Run full SEO audit on production
-npm run seo:audit
+bun run seo:audit
 
 # Run audit on local development server
-npm run seo:audit:local
+bun run seo:audit:local
 
 # Run audit on custom URL
 node scripts/seo/run-lighthouse-audit.js --url=https://sealf.ie/en/pricing.html
@@ -210,10 +210,10 @@ node scripts/seo/run-lighthouse-audit.js --url=https://sealf.ie/en/pricing.html
 #### **2. SEO Issue Triage System**
 ```bash
 # Analyze audit results and generate fix recommendations
-npm run seo:triage
+bun run seo:triage
 
 # Generate Playwright test stubs for found issues
-npm run seo:triage:tests
+bun run seo:triage:tests
 ```
 
 **Triage Output:**
@@ -231,10 +231,10 @@ npm run seo:triage:tests
 #### **3. SEO Validation Tests (Playwright)**
 ```bash
 # Run existing comprehensive SEO test suite
-npm run test:seo
+bun run test:seo
 
 # Run generated fix validation tests
-npx playwright test tests/seo/*-seo-fixes.spec.js
+bun x playwright test tests/seo/*-seo-fixes.spec.js
 ```
 
 **Existing Test Coverage (`tests/seo-optimization.spec.js`):**
@@ -255,7 +255,7 @@ npx playwright test tests/seo/*-seo-fixes.spec.js
 # 1. Run Lighthouse audit
 # 2. Triage issues and generate tests
 # 3. Run all SEO validation tests
-npm run seo:full
+bun run seo:full
 ```
 
 ### **SEO Expert Agent**
@@ -284,18 +284,18 @@ Task(
 ### **Required SEO Optimization Workflow**
 
 #### **Before Making Content Changes:**
-1. ✅ **Baseline Audit**: Run `npm run seo:audit` to capture current state
+1. ✅ **Baseline Audit**: Run `bun run seo:audit` to capture current state
 2. ✅ **Review Issues**: Check `reports/seo/summary.json` for existing problems
-3. ✅ **Plan Fixes**: Use `npm run seo:triage` for prioritized fix recommendations
+3. ✅ **Plan Fixes**: Use `bun run seo:triage` for prioritized fix recommendations
 
 #### **When Implementing Fixes:**
 1. ✅ **Follow Triage**: Use step-by-step instructions from triage report
-2. ✅ **Test Locally**: Run `npm run seo:audit:local` during development
-3. ✅ **Generate Tests**: Run `npm run seo:triage:tests` to create validation tests
-4. ✅ **Validate**: Run `npm run test:seo` to ensure fixes work
+2. ✅ **Test Locally**: Run `bun run seo:audit:local` during development
+3. ✅ **Generate Tests**: Run `bun run seo:triage:tests` to create validation tests
+4. ✅ **Validate**: Run `bun run test:seo` to ensure fixes work
 
 #### **After Deploying Changes:**
-1. ✅ **Re-Audit**: Run `npm run seo:audit` on production
+1. ✅ **Re-Audit**: Run `bun run seo:audit` on production
 2. ✅ **Compare Scores**: Check improvement in Lighthouse scores
 3. ✅ **Check Ahrefs**: Use BrowserMCP to access Ahrefs Site Audit dashboard
 
@@ -401,9 +401,9 @@ img(src="/assets/img/mockup.png")
 
 ### **SEO Monitoring Schedule**
 
-- **Weekly**: Run `npm run seo:audit` on production
-- **Before Deploy**: Run `npm run seo:audit:local` on staging
-- **After Content Changes**: Run `npm run seo:full` to validate
+- **Weekly**: Run `bun run seo:audit` on production
+- **Before Deploy**: Run `bun run seo:audit:local` on staging
+- **After Content Changes**: Run `bun run seo:full` to validate
 - **Monthly**: Review trend in Lighthouse scores and fix regressions
 
 ## Japanese Color System
@@ -494,7 +494,7 @@ src/
 git restore src/css/styles.css src/css/tailwind.css
 
 # Rebuild site
-NODE_ENV=production npm run build
+NODE_ENV=production bun run build
 ```
 
 **Known issue (November 2024):**
@@ -522,16 +522,16 @@ Hero + Video Demo → BEC Trends Carousel → Enhanced Founder Authority → [Vi
 ### **Build Commands**
 ```bash
 # Development with watch
-npm start
+bun start
 
 # Production build
-npm run build
+bun run build
 
 # Type checking
-npm run typecheck
+bun run typecheck
 
 # Linting
-npm run lint
+bun run lint
 ```
 
 ### **Git Workflow**

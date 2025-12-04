@@ -50,9 +50,9 @@
 - `curl` - HTTP requests
 - `imagemagick` - Image analysis
 
-### Via npm (minimal set) 📦
+### Via bun (minimal set) 📦
 - `@axe-core/cli` - Accessibility testing
-- `pa11y` - Additional accessibility testing  
+- `pa11y` - Additional accessibility testing
 - `browser-sync` - Live reloading development server
 
 ### Project-specific (local) 🏠
@@ -132,9 +132,9 @@ playwright install chromium --force
 # Fix script permissions
 chmod +x *.sh
 
-# Fix npm global installs (if needed)
-npm config set prefix ~/.npm-global
-export PATH=~/.npm-global/bin:$PATH
+# Fix bun global installs (if needed)
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 ```
 
 ## Advanced Usage

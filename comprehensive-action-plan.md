@@ -30,7 +30,7 @@ Transform the Sealfie landing page into a high-converting, performant experience
 
 **Implementation**:
 ```bash
-npm install --save-dev critical grunt-critical @fullhuman/postcss-purgecss
+bun add -d critical grunt-critical @fullhuman/postcss-purgecss
 ```
 
 **Grunt Configuration**:
@@ -473,7 +473,7 @@ document.querySelectorAll('.scroll-reveal').forEach(el => {
 ### Performance Testing
 ```bash
 # Lighthouse CI integration
-npm install --save-dev @lhci/cli
+bun add -d @lhci/cli
 echo '{
   "ci": {
     "collect": {

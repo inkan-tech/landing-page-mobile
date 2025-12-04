@@ -2,7 +2,7 @@
 
 ## Known Security Issues
 
-### npm Audit Vulnerabilities (Build-Time Only)
+### Bun Audit Vulnerabilities (Build-Time Only)
 
 **Status**: Accepted Risk
 **Last Updated**: November 7, 2025
@@ -73,7 +73,7 @@ This project follows these security practices:
 - **Static Site Generation**: No server-side code execution in production
 - **Content Security Policy**: Implemented via meta tags
 - **HTTPS Only**: All production traffic uses TLS
-- **Dependency Scanning**: Regular npm audit checks
+- **Dependency Scanning**: Regular bun pm audit checks
 - **Code Review**: All changes reviewed before merge
 - **Secrets Management**: No credentials in repository
 - **Minimal Attack Surface**: Static HTML reduces vulnerability scope
@@ -82,4 +82,4 @@ This project follows these security practices:
 
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [GitHub Security Advisories](https://github.com/advisories)
-- [npm Security Best Practices](https://docs.npmjs.com/security-best-practices)
+- [Bun Package Manager Security](https://bun.sh/docs/cli/install)
