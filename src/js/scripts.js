@@ -351,6 +351,7 @@ function initializeBECCarousel() {
 
 var _paq = window._paq = window._paq || [];
 /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['appendToTrackingUrl', 'recMode=2']); // enable AI chatbot/bot tracking on JS-executing crawlers
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
