@@ -5,7 +5,7 @@
         "descriptions": {
             "homepage": "Stop executive deepfake fraud with Sealfie. Advanced biometric protection against CEO impersonation. One-photo verification prevents $5B losses. Try demo.",
             "documentation": "Learn how Sealfie works: Step-by-step guide to preventing executive fraud with biometric verification. 30-minute setup, zero training required.",
-            "pricing": "Sealfie pricing: Executive fraud protection starting at $195/person/year. Compare plans, features, enterprise solutions. Get quote.",
+            "pricing": "Sealfie pricing: Executive fraud protection starting at €95/user/month excl. tax. Compare plans, features, enterprise solutions. Get quote.",
             "terms": "Sealfie Terms of Service: Legal terms for executive fraud protection. Subscription terms, refunds, and user responsibilities explained.",
             "privacy": "Sealfie Privacy Policy: How we protect your biometric data and personal information. GDPR compliant privacy practices for security.",
             "support": "Sealfie Customer Support: Get help with executive fraud protection setup, troubleshooting, technical assistance. Contact security experts 24/7.",
@@ -153,7 +153,7 @@
     "pricing": {
         "title": "Your job: manage finances. Not outsmart deepfake experts.",
         "subtitle": "One prevented fraud attack pays for Sealfie for 702 years. Do the math.",
-        "intro": "Protect your business from executive deepfake fraud with Sealfie's biometric verification at $195 for 30-day coverage. Our advanced system prevents CEO impersonation attacks that average $137,000 per incident, using cutting-edge AI detection technology, device fingerprinting, SIM swap monitoring, and blockchain-recorded cryptographic proof for complete protection against deepfake threats.",
+        "intro": "Protect your business from executive deepfake fraud with Sealfie's biometric verification at €95 excl. tax per user per month. Our advanced system prevents CEO impersonation attacks that average $137,000 per incident, using cutting-edge AI detection technology, device fingerprinting, SIM swap monitoring, and blockchain-recorded cryptographic proof for complete protection against deepfake threats.",
         "overview": {
             "title": "Simple, transparent pricing",
             "subtitle": "Everything you need to protect your executives from deepfake fraud"
@@ -161,11 +161,11 @@
         "simple": {
             "title": "Protection that actually works",
             "subtitle": "No servers. No IT department. No excuses.",
-            "currency_symbol": "$",
-            "price": "195",
-            "period": "per executive/year",
+            "currency_symbol": "€",
+            "price": "95",
+            "period": "per user/month excl. tax",
             "features": {
-                "reality_check": "That's $16/month to stop a $137K average fraud loss",
+                "reality_check": "€95/month to stop a €137K average fraud loss",
                 "phone_validation": "We check with phone carriers in real-time (nobody else does this)",
                 "validations": "20 verifications/year (most CFOs use 4-6)",
                 "support": "We set it up. You just use it.",
@@ -192,11 +192,11 @@
         },
         "users": {
             "title": "Who pays? Who benefits?",
-            "text": "$195/year protects one executive. That executive approves how many payments? Now calculate the risk exposure. See why this is cheap?"
+            "text": "€95/month excl. tax protects one user. That user approves how many payments? Now calculate the risk exposure. See why this is cheap?"
         },
         "cost": {
             "title": "The real cost comparison",
-            "text": "Your current solution: $50K/year security awareness training that criminals bypass with $50 AI tools. Sealfie: $195/person that actually stops fraud. You tell me which is expensive."
+            "text": "Your current solution: $50K/year security awareness training that criminals bypass with $50 AI tools. Sealfie: €95/user/month excl. tax that actually stops fraud. You tell me which is expensive."
         },
         "support": {
             "title": "Support that actually responds",
@@ -253,7 +253,7 @@
             },
             "q6": {
                 "question": "How much does Sealfie cost?",
-                "answer": "Plans start at $195 per person per year for executive fraud protection. Enterprise pricing available for teams of 10+ users. Free security challenge demo lets you test deepfake protection before purchase."
+                "answer": "Plans start at €95 excl. tax per user per month for executive fraud protection. Enterprise pricing available for teams of 10+ users. Free security challenge demo lets you test deepfake protection before purchase."
             },
             "q7": {
                 "question": "What platforms does Sealfie support?",
@@ -782,7 +782,7 @@
             },
             {
                 "question": "How much does it cost?",
-                "shortAnswer": "Sealfie starts at $195 per person per year for executive protection. This includes up to 20 verifications annually and full support. Custom enterprise pricing is available for larger teams or higher volumes.",
+                "shortAnswer": "Sealfie starts at €95 excl. tax per user per month for executive protection. This includes up to 20 verifications monthly and full support. Custom enterprise pricing is available for larger teams or higher volumes.",
                 "expandedContent": "<p><strong>What's included:</strong></p><ul><li>Unlimited app access for protected executives</li><li>Up to 20 identity verifications per year</li><li>Full customer support</li><li>Complete audit trail and compliance reporting</li><li>30-minute setup - no IT integration required</li></ul><p><strong>Enterprise options:</strong></p><ul><li>Custom verification volumes</li><li>IT system integration</li><li>Multiple verification sources</li><li>Priority support and account management</li><li>Tailored workflows for your organization</li></ul><p>One prevented fraud attack (average cost: $125K) pays for Sealfie for years.</p>",
                 "ctaLinks": [
                     {

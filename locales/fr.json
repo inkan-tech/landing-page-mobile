@@ -5,7 +5,7 @@
         "descriptions": {
             "homepage": "Stopé la fraude au faux PDG avec Sealfie. Protection biométrique avancée contre les deepfakes d'exécutifs. Vérification en une photo.",
             "documentation": "Comment fonctionne Sealfie : Guide étape par étape pour prévenir la fraude au PDG avec vérification biométrique. Installation 20 min.",
-            "pricing": "Tarifs Sealfie : Protection anti-fraude PDG dès 195€/personne/an. Comparez forfaits et solutions entreprise. Devis personnalisé.",
+            "pricing": "Tarifs Sealfie : Protection anti-fraude PDG dès 95€ HT/utilisateur/mois. Comparez forfaits et solutions entreprise. Devis personnalisé.",
             "terms": "Conditions Générales Sealfie : Termes légaux du service de protection anti-fraude PDG. Abonnement, remboursements, responsabilités.",
             "privacy": "Politique de Confidentialité Sealfie : Protection de vos données biométriques et informations personnelles. Pratiques RGPD sécurité.",
             "support": "Support Client Sealfie : Aide installation, dépannage, assistance technique protection anti-fraude PDG. Contactez experts sécurité 24h/24.",
@@ -153,7 +153,7 @@
     "pricing": {
         "title": "Votre job : gérer les finances. Pas détecter les deepfakes.",
         "subtitle": "Une seule fraude évitée paie Sealfie pendant 702 ans. Faites le calcul.",
-        "intro": "Protégez votre entreprise contre la fraude deepfake de dirigeants avec la vérification biométrique Sealfie à 195€ pour 30 jours de couverture. Notre système avancé prévient les attaques d'usurpation d'identité de PDG qui coûtent en moyenne 137 000€ par incident, utilisant une technologie de détection IA de pointe et des preuves cryptographiques blockchain.",
+        "intro": "Protégez votre entreprise contre la fraude deepfake de dirigeants avec la vérification biométrique Sealfie à 95€ HT par utilisateur et par mois. Notre système avancé prévient les attaques d'usurpation d'identité de PDG qui coûtent en moyenne 137 000€ par incident, utilisant une technologie de détection IA de pointe et des preuves cryptographiques blockchain.",
         "overview": {
             "title": "Tarification simple et transparente",
             "subtitle": "Tout ce dont vous avez besoin pour protéger vos dirigeants contre la fraude deepfake"
@@ -162,10 +162,10 @@
             "title": "Protection qui marche vraiment",
             "subtitle": "Pas de serveurs. Pas de département IT. Pas d'excuses.",
             "currency_symbol": "€",
-            "price": "195",
-            "period": "par dirigeant/an",
+            "price": "95",
+            "period": "par utilisateur/mois HT",
             "features": {
-                "reality_check": "Soit 16€/mois pour stopper une perte fraude moyenne de 137K€",
+                "reality_check": "95€/mois HT pour stopper une perte fraude moyenne de 137K€",
                 "phone_validation": "On vérifie avec les opérateurs téléphoniques en temps réel (personne d'autre fait ça)",
                 "validations": "20 vérifications/an (la plupart des DAF en utilisent 4-6)",
                 "support": "On configure. Vous utilisez juste.",
@@ -192,11 +192,11 @@
         },
         "users": {
             "title": "Qui paie ? Qui bénéficie ?",
-            "text": "195€/an protège un dirigeant. Ce dirigeant approuve combien de paiements ? Maintenant calculez l'exposition au risque. Vous voyez pourquoi c'est pas cher ?"
+            "text": "95€/mois HT protège un utilisateur. Cet utilisateur approuve combien de paiements ? Maintenant calculez l'exposition au risque. Vous voyez pourquoi c'est pas cher ?"
         },
         "cost": {
             "title": "La vraie comparaison de coûts",
-            "text": "Votre solution actuelle : 50K€/an de formation sensibilisation sécurité que les criminels contournent avec des outils IA à 50€. Sealfie : 195€/personne qui arrête vraiment la fraude. Dites-moi lequel est cher."
+            "text": "Votre solution actuelle : 50K€/an de formation sensibilisation sécurité que les criminels contournent avec des outils IA à 50€. Sealfie : 95€/utilisateur/mois HT qui arrête vraiment la fraude. Dites-moi lequel est cher."
         },
         "support": {
             "title": "Support qui répond vraiment",
@@ -253,7 +253,7 @@
             },
             "q6": {
                 "question": "Combien coûte Sealfie?",
-                "answer": "Les forfaits commencent à 195$ par personne et par an pour la protection contre la fraude des dirigeants. Tarification entreprise disponible pour les équipes de 10+ utilisateurs. Une démo gratuite du défi de sécurité vous permet de tester la protection contre les deepfakes avant l'achat."
+                "answer": "Les forfaits commencent à 95€ HT par utilisateur et par mois pour la protection contre la fraude des dirigeants. Tarification entreprise disponible pour les équipes de 10+ utilisateurs. Une démo gratuite du défi de sécurité vous permet de tester la protection contre les deepfakes avant l'achat."
             },
             "q7": {
                 "question": "Quelles plateformes Sealfie supporte-t-il?",
@@ -782,7 +782,7 @@
             },
             {
                 "question": "Combien ça coûte ?",
-                "shortAnswer": "Sealfie commence à 195$ par personne par an pour la protection des dirigeants. Cela inclut jusqu'à 20 vérifications par an et un support complet. Des tarifs entreprise personnalisés sont disponibles pour les grandes équipes ou volumes plus élevés.",
+                "shortAnswer": "Sealfie commence à 95€ HT par utilisateur et par mois pour la protection des dirigeants. Cela inclut jusqu'à 20 vérifications par mois et un support complet. Des tarifs entreprise personnalisés sont disponibles pour les grandes équipes ou volumes plus élevés.",
                 "expandedContent": "<p><strong>Ce qui est inclus :</strong></p><ul><li>Accès illimité à l'application pour les dirigeants protégés</li><li>Jusqu'à 20 vérifications d'identité par an</li><li>Support client complet</li><li>Piste d'audit complète et rapports de conformité</li><li>Configuration en 30 minutes - aucune intégration IT requise</li></ul><p><strong>Options entreprise :</strong></p><ul><li>Volumes de vérification personnalisés</li><li>Intégration avec les systèmes IT</li><li>Sources de vérification multiples</li><li>Support prioritaire et gestion de compte</li><li>Workflows adaptés à votre organisation</li></ul><p>Une seule attaque de fraude évitée (coût moyen : 125K$) paie Sealfie pendant des années.</p>",
                 "ctaLinks": [
                     {
